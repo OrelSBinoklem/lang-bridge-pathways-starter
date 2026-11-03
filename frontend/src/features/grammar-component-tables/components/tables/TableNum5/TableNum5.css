@@ -1,0 +1,89 @@
+
+
+/* === moved from grammar-component-tables.css (page-prefix stripped) === */
+.card.table-num5 .num5-flex-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card.table-num5 .num5-header {
+  display: flex;
+  width: 100%;
+  background: var(--table-head);
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.card.table-num5 .num5-header > div {
+  padding: 8px;
+  text-align: center;
+  border-right: 1px solid var(--border-strong);
+  box-sizing: border-box;
+  flex: 1;
+}
+
+.card.table-num5 .num5-header > div:last-child {
+  border-right: none;
+}
+
+.card.table-num5 .num5-header > div.masc {
+  background: rgba(0, 102, 204, 0.15);
+}
+
+.card.table-num5 .num5-header > div.fem {
+  background: rgba(204, 0, 102, 0.15);
+}
+
+.card.table-num5 .num5-subheader {
+  display: flex;
+  width: 100%;
+  background: var(--table-row-odd);
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-strong);
+  padding: 8px;
+  text-align: center;
+}
+
+.card.table-num5 .num5-row {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.card.table-num5 .num5-row:last-child {
+  border-bottom: none;
+}
+
+.card.table-num5 .num5-cell {
+  padding: 0 8px;
+  border-right: 1px solid var(--border-strong);
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  flex: 1;
+}
+
+.card.table-num5 .num5-cell:last-child {
+  border-right: none;
+}
+
+.card.table-num5 .num5-number {
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+.card.table-num5 .num5-ending-masc {
+  color: #0066cc;
+  font-weight: 600;
+}
+
+.card.table-num5 .num5-ending-fem {
+  color: #cc0066;
+  font-weight: 600;
+}

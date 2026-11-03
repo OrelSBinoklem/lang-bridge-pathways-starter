@@ -1,0 +1,120 @@
+.card.table-vietniekvardi {
+  background: var(--card, #fff);
+  color: var(--text, #1b1f2b);
+  padding: 14px 16px 16px;
+  border-radius: 10px;
+  max-width: 46em;
+  margin: 0 auto;
+  line-height: 1.3;
+}
+
+.card.table-vietniekvardi .vv-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1.5px solid var(--border-strong, #c3cfee);
+  table-layout: fixed;
+}
+
+/* Full grid lines: without vertical rules the rows read as loose blocks. */
+.card.table-vietniekvardi .vv-table th,
+.card.table-vietniekvardi .vv-table td {
+  border: 1px solid var(--border-strong, #c3cfee);
+  padding: 7px 10px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.card.table-vietniekvardi .vv-table th {
+  background: var(--table-head, #f1f3fb);
+  font-size: max(18px, 0.7em);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--muted, #6a748b);
+}
+
+.card.table-vietniekvardi .vv-table th:nth-child(1) {
+  width: 25%;
+}
+.card.table-vietniekvardi .vv-table th:nth-child(2) {
+  width: 29%;
+}
+
+.card.table-vietniekvardi .vv-row:nth-child(even):not(.vv-row--pair) td {
+  background: var(--table-row-odd, #f5f7ff);
+}
+
+/* The two groups that share their words are tinted together. */
+.card.table-vietniekvardi .vv-row--pair td {
+  background: var(--accent3-bg, rgba(217, 107, 40, 0.1));
+}
+
+.card.table-vietniekvardi .vv-name {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+/* Fixed slot keeps the emoji from ragging the left edge of the column. */
+.card.table-vietniekvardi .vv-icon {
+  flex: 0 0 1.35em;
+  width: 1.35em;
+  text-align: center;
+  font-size: max(18px, 1em);
+  line-height: 1.2;
+}
+
+.card.table-vietniekvardi .vv-titles {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.card.table-vietniekvardi .vv-lv {
+  font-weight: 800;
+  font-size: max(18px, 0.84em);
+  color: var(--accent1, #3a7df2);
+}
+
+.card.table-vietniekvardi .vv-row--pair .vv-lv {
+  color: var(--accent3, #d96b28);
+}
+
+.card.table-vietniekvardi .vv-ru {
+  font-size: max(18px, 0.68em);
+  color: var(--muted, #6a748b);
+}
+
+.card.table-vietniekvardi .vv-func {
+  font-size: max(18px, 0.76em);
+}
+
+.card.table-vietniekvardi .vv-words {
+  font-size: max(18px, 0.8em);
+  font-weight: 700;
+  font-style: italic;
+}
+
+.card.table-vietniekvardi .vv-more {
+  font-size: max(18px, 0.85em);
+  font-weight: 500;
+  font-style: normal;
+  color: var(--muted, #6a748b);
+}
+
+.card.table-vietniekvardi .vv-note {
+  margin: 10px 0 0;
+  padding: 7px 9px;
+  border-radius: 8px;
+  background: var(--accent3-bg, rgba(217, 107, 40, 0.1));
+  border-left: 3px solid var(--accent3, #d96b28);
+  font-size: max(18px, 0.75em);
+  line-height: 1.4;
+  color: var(--text, #1b1f2b);
+}
+
+.card.table-vietniekvardi .vv-note em {
+  font-weight: 700;
+  color: var(--accent3, #d96b28);
+  font-style: italic;
+}

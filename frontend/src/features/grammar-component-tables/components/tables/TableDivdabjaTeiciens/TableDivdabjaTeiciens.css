@@ -1,0 +1,129 @@
+.card.table-divdabja-teiciens {
+  background: var(--card, #fff);
+  color: var(--text, #1b1f2b);
+  padding: 14px 16px 16px;
+  border-radius: 10px;
+  max-width: 46em;
+  margin: 0 auto;
+  line-height: 1.35;
+}
+
+.card.table-divdabja-teiciens .dt-intro {
+  margin-bottom: 10px;
+  font-size: max(18px, 0.8em);
+  line-height: 1.4;
+}
+
+.card.table-divdabja-teiciens .dt-types {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.card.table-divdabja-teiciens .dt-type {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-strong, #c3cfee);
+  border-radius: 10px;
+  padding: 8px 10px 9px;
+  background: var(--table-row-odd, #f5f7ff);
+}
+
+.card.table-divdabja-teiciens .dt-type-head {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding-bottom: 6px;
+  margin-bottom: 6px;
+  border-bottom: 2px solid var(--border-strong, #c3cfee);
+}
+
+.card.table-divdabja-teiciens .dt-name {
+  font-size: max(18px, 0.74em);
+  font-weight: 700;
+  color: var(--muted, #6a748b);
+}
+
+.card.table-divdabja-teiciens .dt-endings {
+  align-self: flex-start;
+  padding: 0.05em 0.5em;
+  border-radius: 0.4em;
+  background: var(--accent1, #3a7df2);
+  color: var(--card, #fff);
+  font-size: max(18px, 0.8em);
+  font-weight: 800;
+  font-style: italic;
+}
+
+.card.table-divdabja-teiciens .dt-lv {
+  display: block;
+  font-size: max(18px, 0.84em);
+  font-weight: 600;
+  font-style: italic;
+}
+
+.card.table-divdabja-teiciens .dt-ru {
+  display: block;
+  margin-top: 3px;
+  font-size: max(18px, 0.72em);
+  color: var(--muted, #6a748b);
+}
+
+.card.table-divdabja-teiciens .dt-phrase {
+  color: var(--accent2, #3fa872);
+  border-bottom: 2px solid var(--accent2, #3fa872);
+}
+
+/* The participle is the core of the phrase — the ending should be noticed. */
+.card.table-divdabja-teiciens .dt-part {
+  font-weight: 900;
+  color: var(--accent1, #3a7df2);
+}
+
+.card.table-divdabja-teiciens .dt-comma {
+  color: var(--accent4, #d3547f);
+  font-weight: 900;
+  font-style: normal;
+  font-size: 1.25em;
+}
+
+.card.table-divdabja-teiciens .dt-commas {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 10px;
+  padding: 8px;
+  border-radius: 10px;
+  background: var(--accent4-bg, rgba(211, 84, 127, 0.1));
+  border-left: 3px solid var(--accent4, #d3547f);
+}
+
+.card.table-divdabja-teiciens .dt-commas-head {
+  font-size: max(18px, 0.82em);
+  font-weight: 800;
+  color: var(--accent4, #d3547f);
+}
+
+.card.table-divdabja-teiciens .dt-pos {
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  gap: 10px;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: var(--card, #fff);
+  border: 1px solid var(--border-strong, #c3cfee);
+}
+
+.card.table-divdabja-teiciens .dt-pos-label {
+  display: flex;
+  flex-direction: column;
+  font-size: max(18px, 0.78em);
+  font-weight: 800;
+}
+
+.card.table-divdabja-teiciens .dt-pos-rule {
+  font-size: max(18px, 0.7em);
+  font-weight: 500;
+  color: var(--muted, #6a748b);
+}

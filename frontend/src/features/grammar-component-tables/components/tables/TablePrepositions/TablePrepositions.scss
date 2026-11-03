@@ -1,0 +1,60 @@
+.card.table-prepositions {
+  background: var(--card, #fff);
+  padding: 0;
+  overflow: hidden;
+  margin: 0;
+}
+
+.card.table-prepositions .prepositions-grid {
+  display: flex;
+  gap: 1em;
+}
+
+.card.table-prepositions table {
+  width: 100%;
+  table-layout: auto;
+}
+
+.card.table-prepositions .prepositions-grid > div {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.card.table-prepositions th:first-child,
+.card.table-prepositions td:first-child {
+  width: 70px;
+  min-width: 70px;
+  font-weight: 700;
+}
+
+.card.table-prepositions td.loc-case {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  background: var(--table-head);
+  font-weight: 700;
+  text-align: center;
+  padding: 0.125em 0;
+  border-right: 1.5px solid var(--border-strong);
+  white-space: nowrap;
+  width: 1%;
+}
+
+.card.table-prepositions th.loc-case-header {
+  width: 1%;
+  padding: 0;
+}
+
+.card.table-prepositions .predl-separate {
+  border-bottom: 2px solid #6a748b;
+}
+
+.card.table-prepositions .prepositions-note {
+  margin: 1em 0 0;
+  font-size: 0.875em;
+  font-weight: 600;
+  color: var(--text);
+  background: var(--table-row-odd);
+  padding: 0.625em 0.75em;
+  border-left: 3px solid var(--accent2);
+  border-radius: 4px;
+}

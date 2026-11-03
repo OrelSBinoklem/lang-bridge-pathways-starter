@@ -1,0 +1,113 @@
+.card.table-indicative .indicative-note{
+    padding: 12px 16px;
+    margin-bottom: 0;
+    background: var(--table-row-even);
+    border: 1px solid var(--border-strong);
+    border-bottom: 2px solid var(--border-strong);
+    border-radius: 6px 6px 0 0;
+    font-size: 0.9em;
+    color: var(--text);
+    line-height: 1.5;
+  }
+
+.card.table-indicative .indicative-flex-table{
+    width: 100%;
+    border-radius: 0 0 8px 8px;
+    overflow: hidden;
+  }
+
+.card.table-indicative .indicative-section-title{
+    padding: 10px 16px;
+    background: var(--table-head);
+    font-weight: 700;
+    font-size: 0.95em;
+    color: var(--text);
+    border: 1px solid var(--border-strong);
+    border-bottom: 2px solid #9fa8c0;
+  }
+
+.card.table-indicative .indicative-section-title:first-of-type{
+    /*border-radius: 8px 8px 0 0;*/
+    border-radius: 0;
+  }
+
+:root[data-theme="dark"] .card.table-indicative .indicative-section-title{
+    border-bottom-color: #5a6478;
+  }
+
+.card.table-indicative table{
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--table-bg);
+    table-layout: fixed;
+  }
+
+.card.table-indicative table thead th{
+    padding: 2px 12px;
+    text-align: center;
+    border: 1px solid var(--border-strong);
+    background: var(--table-head);
+    font-weight: 600;
+    font-size: 0.85em;
+    color: var(--text);
+    box-sizing: border-box;
+  }
+
+.card.table-indicative table thead th:first-child{
+    width: 120px;
+    text-align: left;
+  }
+
+.card.table-indicative table tbody td{
+    padding: 2px 12px;
+    border: 1px solid var(--border-strong);
+    text-align: left;
+    font-size: 0.9em;
+    line-height: 1.4;
+    box-sizing: border-box;
+  }
+
+.card.table-indicative table tbody tr{
+    background: var(--table-row-even);
+  }
+
+.card.table-indicative table tbody td:first-child{
+    font-weight: 600;
+    width: 120px;
+  }
+
+.card.table-indicative table tbody td:not(:first-child){
+    background: #fafbff !important;
+  }
+
+.card.table-indicative table tbody td[rowspan]{
+    vertical-align: middle;
+  }
+
+.card.table-indicative .indicative-ending-masc{
+    color: #0066cc;
+    font-weight: 600;
+  }
+
+.card.table-indicative .indicative-ending-fem{
+    color: #cc0066;
+    font-weight: 600;
+  }
+
+.card.table-indicative .indicative-ending-orange{
+    color: #ff9800;
+    font-weight: 600;
+  }
+
+:root[data-theme="dark"] .card.table-indicative table tbody td:not(:first-child){
+    background: #121725 !important;
+  }
+
+.card.table-indicative table thead th:nth-last-child(-n+2), .card.table-indicative table tbody td:nth-last-child(-n+2){
+    background: var(--table-head) !important;
+    width: 150px;
+  }
+
+:root[data-theme="dark"] .card.table-indicative table thead th:nth-last-child(-n+2), :root[data-theme="dark"] .card.table-indicative table tbody td:nth-last-child(-n+2){
+    background: var(--table-head) !important;
+  }

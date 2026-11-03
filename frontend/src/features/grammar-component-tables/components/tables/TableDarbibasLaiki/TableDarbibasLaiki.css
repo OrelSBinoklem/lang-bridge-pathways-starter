@@ -1,0 +1,141 @@
+.card.table-darbibas-laiki {
+  background: var(--card, #fff);
+  color: var(--text, #1b1f2b);
+  padding: 14px 16px 16px;
+  border-radius: 10px;
+  max-width: 46em;
+  margin: 0 auto;
+  line-height: 1.3;
+}
+
+.card.table-darbibas-laiki .dl-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1.5px solid var(--border-strong, #c3cfee);
+  table-layout: fixed;
+}
+
+.card.table-darbibas-laiki .dl-table th,
+.card.table-darbibas-laiki .dl-table td {
+  border: 1px solid var(--border-strong, #c3cfee);
+  padding: 7px 9px;
+  vertical-align: top;
+  text-align: left;
+}
+
+.card.table-darbibas-laiki .dl-corner {
+  width: 15%;
+  background: var(--table-head, #f1f3fb);
+}
+
+.card.table-darbibas-laiki .dl-th {
+  background: var(--table-head, #f1f3fb);
+  text-align: center;
+  font-size: max(18px, 0.85em);
+  font-weight: 800;
+}
+
+.card.table-darbibas-laiki .dl-th--simple {
+  color: var(--accent1, #3a7df2);
+}
+
+.card.table-darbibas-laiki .dl-th--compound {
+  color: var(--accent3, #d96b28);
+}
+
+.card.table-darbibas-laiki .dl-th-ru {
+  display: block;
+  font-size: max(18px, 0.78em);
+  font-weight: 600;
+  color: var(--muted, #6a748b);
+}
+
+/* Row header carries the tense, so each row reads as one idea. */
+.card.table-darbibas-laiki .dl-rowhead {
+  background: var(--table-head, #f1f3fb);
+  vertical-align: middle;
+  text-align: center;
+}
+
+.card.table-darbibas-laiki .dl-rowhead-lv {
+  display: block;
+  font-size: max(18px, 0.85em);
+  font-weight: 800;
+}
+
+.card.table-darbibas-laiki .dl-rowhead-ru {
+  display: block;
+  font-size: max(18px, 0.7em);
+  color: var(--muted, #6a748b);
+}
+
+.card.table-darbibas-laiki .dl-cell {
+  display: table-cell;
+}
+
+.card.table-darbibas-laiki .dl-cell--simple {
+  background: var(--accent1-bg, rgba(58, 125, 242, 0.1));
+}
+
+.card.table-darbibas-laiki .dl-cell--compound {
+  background: var(--accent3-bg, rgba(217, 107, 40, 0.1));
+}
+
+.card.table-darbibas-laiki .dl-name {
+  display: block;
+  font-size: max(18px, 0.8em);
+  font-weight: 800;
+  margin-bottom: 2px;
+}
+
+.card.table-darbibas-laiki .dl-cell--simple .dl-name {
+  color: var(--accent1, #3a7df2);
+}
+
+.card.table-darbibas-laiki .dl-cell--compound .dl-name {
+  color: var(--accent3, #d96b28);
+}
+
+.card.table-darbibas-laiki .dl-func {
+  display: block;
+  font-size: max(18px, 0.72em);
+  color: var(--muted, #6a748b);
+  margin-bottom: 6px;
+}
+
+.card.table-darbibas-laiki .dl-sample {
+  display: block;
+  font-size: max(18px, 0.8em);
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* The one form that actually marks the tense. */
+.card.table-darbibas-laiki .dl-hit {
+  color: var(--accent2, #3fa872);
+  font-weight: 800;
+  border-bottom: 2px solid var(--accent2, #3fa872);
+}
+
+.card.table-darbibas-laiki .dl-gloss {
+  display: block;
+  font-size: max(18px, 0.7em);
+  color: var(--muted, #6a748b);
+}
+
+.card.table-darbibas-laiki .dl-note {
+  margin: 10px 0 0;
+  padding: 7px 9px;
+  border-radius: 8px;
+  background: var(--accent2-bg, rgba(63, 168, 114, 0.1));
+  border-left: 3px solid var(--accent2, #3fa872);
+  font-size: max(18px, 0.75em);
+  line-height: 1.4;
+  color: var(--text, #1b1f2b);
+}
+
+.card.table-darbibas-laiki .dl-note em {
+  font-weight: 800;
+  font-style: italic;
+  color: var(--accent2, #3fa872);
+}

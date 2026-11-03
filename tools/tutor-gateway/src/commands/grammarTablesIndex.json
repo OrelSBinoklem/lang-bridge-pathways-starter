@@ -1,0 +1,487 @@
+[
+  {
+    "tableKey": "alphabet",
+    "tableId": 0,
+    "level": "a1",
+    "title": "ALFABĒTS",
+    "hintId": 0
+  },
+  {
+    "tableKey": "declensions",
+    "tableId": 1,
+    "level": "a1",
+    "title": "Locījumi (M+F) — склонения существительных",
+    "hintId": 1
+  },
+  {
+    "tableKey": "verbEndingsPresent",
+    "tableId": 90,
+    "level": "a1",
+    "title": "Глаголы — окончания (настоящее)",
+    "hintId": 90
+  },
+  {
+    "tableKey": "verbEndingsPast",
+    "tableId": 91,
+    "level": "a1",
+    "title": "Глаголы — окончания (прош./буд.)",
+    "hintId": 91
+  },
+  {
+    "tableKey": "vocative",
+    "tableId": 7,
+    "level": "a1",
+    "title": "Uzrunas forma (звательный падеж)",
+    "hintId": 7
+  },
+  {
+    "tableKey": "consonant",
+    "tableId": 9,
+    "level": "a1",
+    "title": "LĪDZSKAŅU MIJA (ЧЕРЕДОВАНИЕ СОГЛАСНЫХ)",
+    "hintId": 9
+  },
+  {
+    "tableKey": "decl2Exceptions",
+    "tableId": 10,
+    "level": "b1",
+    "title": "2. DEKLINĀCIJAS LIETVĀRDI (IZŅĒMUMI)",
+    "hintId": 10
+  },
+  {
+    "tableKey": "adjEndings",
+    "tableId": 13,
+    "level": "a2",
+    "title": "Īpašības vārdu galotnes (V/S) — окончания прилагательных",
+    "hintId": 13
+  },
+  {
+    "tableKey": "comparison",
+    "tableId": 14,
+    "level": "a2",
+    "title": "SALĪDZINĀMĀS PAKĀPES (Степени сравнения)",
+    "hintId": 14
+  },
+  {
+    "tableKey": "prepositions",
+    "tableId": 16,
+    "level": "a1",
+    "title": "Prievārdi — предлоги и падежи",
+    "hintId": 16
+  },
+  {
+    "tableKey": "pron1",
+    "tableId": 29,
+    "level": "a1",
+    "title": "Personu vietniekvārdi (Личные местоимения)",
+    "hintId": 29
+  },
+  {
+    "tableKey": "pron10",
+    "tableId": 38,
+    "level": "b1",
+    "title": "pats, pati — сам, сама",
+    "hintId": 38
+  },
+  {
+    "tableKey": "pron11",
+    "tableId": 67,
+    "level": "b2",
+    "title": "sev — себя",
+    "hintId": 67
+  },
+  {
+    "tableKey": "pron2",
+    "tableId": 30,
+    "level": "a2",
+    "title": "mans, mana — мой, моя",
+    "hintId": 30
+  },
+  {
+    "tableKey": "pron3",
+    "tableId": 31,
+    "level": "a2",
+    "title": "tavs, tava — твой, твоя",
+    "hintId": 31
+  },
+  {
+    "tableKey": "pron4",
+    "tableId": 32,
+    "level": "a2",
+    "title": "savs, sava — свой, своя",
+    "hintId": 32
+  },
+  {
+    "tableKey": "pron13",
+    "tableId": 33,
+    "level": "a2",
+    "title": "mūsu, jūsu, viņa, viņas, viņu — наш, ваш, его, её, их",
+    "hintId": 33
+  },
+  {
+    "tableKey": "pron12",
+    "tableId": 34,
+    "level": "a1",
+    "title": "kāds, kāda, kādi, kādas — какой, какая, какие",
+    "hintId": 34
+  },
+  {
+    "tableKey": "pron5",
+    "tableId": 35,
+    "level": "a1",
+    "title": "kurš, kura, kuri, kuras — который, которая, которые",
+    "hintId": 35
+  },
+  {
+    "tableKey": "pron6",
+    "tableId": 36,
+    "level": "a1",
+    "title": "tas, tā, tie, tās — этот, эта, эти",
+    "hintId": 36
+  },
+  {
+    "tableKey": "pron7",
+    "tableId": 37,
+    "level": "a1",
+    "title": "šis, šī, šie, šīs — этот, эта, эти",
+    "hintId": 37
+  },
+  {
+    "tableKey": "numbersChart",
+    "tableId": "super-6",
+    "level": "a1",
+    "title": "Числа",
+    "hintId": "6"
+  },
+  {
+    "tableKey": "questionsChart",
+    "tableId": "super-5",
+    "level": "a1",
+    "title": "Вопросы",
+    "hintId": "5"
+  },
+  {
+    "tableKey": "diminutives",
+    "tableId": "diminutivi",
+    "level": "a2",
+    "title": "Уменьшительно ласкательные",
+    "hintId": "92"
+  },
+  {
+    "tableKey": "verbPrefixes",
+    "tableId": "pre-verb",
+    "level": "a2",
+    "title": "Приставки глаголов",
+    "hintId": "99"
+  },
+  {
+    "tableKey": "verbsTablesContainer",
+    "tableId": "irregular-verb-1",
+    "level": "a1",
+    "title": "Нерегулярные глаголы 1",
+    "hintId": "irregular-verb-1"
+  },
+  {
+    "tableKey": "verbsTablesContainer2",
+    "tableId": "irregular-verb-6",
+    "level": "a2",
+    "title": "Нерегулярные глаголы 2",
+    "hintId": "irregular-verb-6"
+  },
+  {
+    "tableKey": "verbsTablesContainer3",
+    "tableId": "irregular-verb-11",
+    "level": "a2",
+    "title": "Нерегулярные глаголы 3",
+    "hintId": "irregular-verb-11"
+  },
+  {
+    "tableKey": "possessionIrNav",
+    "tableId": "sentence-possession",
+    "level": "a1",
+    "title": "Man ir · man nav — у кого есть и нет",
+    "hintId": "sentence-possession"
+  },
+  {
+    "tableKey": "participles",
+    "tableId": 41,
+    "level": "b1",
+    "title": "ПРИЧАСТИЯ (Divdabji)",
+    "hintId": "93"
+  },
+  {
+    "tableKey": "participlesV70V71",
+    "tableId": 45,
+    "level": "b1",
+    "title": "Деепричастия",
+    "hintId": "94"
+  },
+  {
+    "tableKey": "indicativePassiveTimes",
+    "tableId": 47,
+    "level": "b1",
+    "title": "Времена и залоги: все времена латышского языка",
+    "hintId": "96"
+  },
+  {
+    "tableKey": "moodsV75V76V77",
+    "tableId": 51,
+    "level": "b1",
+    "title": "Наклонения: vajadzības, vēlējuma, pavēles izteiksme",
+    "hintId": "95"
+  },
+  {
+    "tableKey": "reportedSimple",
+    "tableId": 54,
+    "level": "b1",
+    "title": "Atstāstījuma izteiksme — косвенная речь (простые времена)",
+    "hintId": "97"
+  },
+  {
+    "tableKey": "reportedCompound",
+    "tableId": 55,
+    "level": "b1",
+    "title": "Atstāstījuma izteiksme — косвенная речь (сложные времена)",
+    "hintId": "98"
+  },
+  {
+    "tableKey": "verbsTablesContainer4",
+    "tableId": "irregular-verb-15",
+    "level": "b1",
+    "title": "Нерегулярные глаголы 4",
+    "hintId": "irregular-verb-15"
+  },
+  {
+    "tableKey": "verbsTablesContainer5",
+    "tableId": "irregular-verb-16",
+    "level": "b1",
+    "title": "Нерегулярные глаголы 5",
+    "hintId": "irregular-verb-16"
+  },
+  {
+    "tableKey": "decimali",
+    "tableId": 65,
+    "level": "b2",
+    "title": "Decimāldaļskaitļi — десятичные дроби",
+    "hintId": 65
+  },
+  {
+    "tableKey": "teikumi",
+    "tableId": 73,
+    "level": "b2",
+    "title": "Предложение и классификация предложений",
+    "hintId": 73
+  },
+  {
+    "tableKey": "saikli",
+    "tableId": 74,
+    "level": "b2",
+    "title": "Использование союзов",
+    "hintId": 74
+  },
+  {
+    "tableKey": "tiesaRuna",
+    "tableId": 75,
+    "level": "b2",
+    "title": "Прямая речь",
+    "hintId": 75
+  },
+  {
+    "tableKey": "netiesaRuna",
+    "tableId": 76,
+    "level": "b2",
+    "title": "Косвенная речь",
+    "hintId": 76
+  },
+  {
+    "tableKey": "uzruna",
+    "tableId": 77,
+    "level": "b2",
+    "title": "Обращение и группа обращения",
+    "hintId": 77
+  },
+  {
+    "tableKey": "uzrunasFormas",
+    "tableId": 78,
+    "level": "b2",
+    "title": "Формы обращения",
+    "hintId": 78
+  },
+  {
+    "tableKey": "iespraudumi",
+    "tableId": 79,
+    "level": "b2",
+    "title": "Вводные слова и выражения",
+    "hintId": 79
+  },
+  {
+    "tableKey": "iespraudumiKomati",
+    "tableId": 80,
+    "level": "b2",
+    "title": "Пунктуация с вводными словами",
+    "hintId": 80
+  },
+  {
+    "tableKey": "savrupinajumi1",
+    "tableId": 81,
+    "level": "b2",
+    "title": "Обособленные члены предложения",
+    "hintId": 81
+  },
+  {
+    "tableKey": "savrupinajumi2",
+    "tableId": 82,
+    "level": "b2",
+    "title": "Обособленные обстоятельства",
+    "hintId": 82
+  },
+  {
+    "tableKey": "divdabjaTeiciens",
+    "tableId": 83,
+    "level": "b2",
+    "title": "Причастный оборот",
+    "hintId": 83
+  },
+  {
+    "tableKey": "vienlidzigi1",
+    "tableId": 84,
+    "level": "b2",
+    "title": "Однородные члены предложения",
+    "hintId": 84
+  },
+  {
+    "tableKey": "vienlidzigi2",
+    "tableId": 85,
+    "level": "b2",
+    "title": "Однородные члены предложения и обобщающее слово",
+    "hintId": 85
+  },
+  {
+    "tableKey": "paligteikumi1",
+    "tableId": 86,
+    "level": "b2",
+    "title": "Придаточные предложения",
+    "hintId": 86
+  },
+  {
+    "tableKey": "paligteikumi2",
+    "tableId": 87,
+    "level": "b2",
+    "title": "Придаточные предложения — расширенная таблица",
+    "hintId": 87
+  },
+  {
+    "tableKey": "paligteikumi3",
+    "tableId": 88,
+    "level": "b2",
+    "title": "Наиболее часто используемые вводные слова придаточных предложений",
+    "hintId": 88
+  },
+  {
+    "tableKey": "vardaSastavs",
+    "tableId": 56,
+    "level": "b2",
+    "title": "Структура слова — Vārda sastāvs",
+    "hintId": 56
+  },
+  {
+    "tableKey": "salikteni",
+    "tableId": 58,
+    "level": "b2",
+    "title": "Salikteņi — сложные слова",
+    "hintId": 58
+  },
+  {
+    "tableKey": "vardskiras1",
+    "tableId": 59,
+    "level": "b2",
+    "title": "Vārdšķiras — части речи",
+    "hintId": 59
+  },
+  {
+    "tableKey": "vardskiras2",
+    "tableId": 60,
+    "level": "b2",
+    "title": "Vārdšķiras — продолжение",
+    "hintId": 60
+  },
+  {
+    "tableKey": "skaitlinieki",
+    "tableId": 61,
+    "level": "b2",
+    "title": "Vienskaitlinieki un daudzskaitlinieki",
+    "hintId": 61
+  },
+  {
+    "tableKey": "galotnes",
+    "tableId": 62,
+    "level": "b2",
+    "title": "Nenoteiktā un noteiktā galotne",
+    "hintId": 62
+  },
+  {
+    "tableKey": "vietniekvardi",
+    "tableId": 66,
+    "level": "b2",
+    "title": "Vietniekvārds — группы местоимений",
+    "hintId": 66
+  },
+  {
+    "tableKey": "tuJus",
+    "tableId": 68,
+    "level": "b2",
+    "title": "Vietniekvārdi tu un jūs — обращение",
+    "hintId": 68
+  },
+  {
+    "tableKey": "darbibasLaiki",
+    "tableId": 70,
+    "level": "b2",
+    "title": "Darbības vārda laiki — времена глагола",
+    "hintId": 70
+  },
+  {
+    "tableKey": "darbibasKartas",
+    "tableId": 71,
+    "level": "b2",
+    "title": "Залоги глагола — Darbības vārda kārtas",
+    "hintId": 71
+  },
+  {
+    "tableKey": "lielieBurti",
+    "tableId": 89,
+    "level": "b2",
+    "title": "Lielie sākumburti nosaukumos",
+    "hintId": 89
+  },
+  {
+    "tableKey": "sufiksi",
+    "tableId": 92,
+    "level": "b2",
+    "title": "Суффиксы и словообразование",
+    "hintId": 101
+  },
+  {
+    "tableKey": "genitivs",
+    "tableId": 94,
+    "level": "b2",
+    "title": "Генитивный оборот и порядок слов",
+    "hintId": 100
+  },
+  {
+    "tableKey": "patikInfinitive",
+    "tableId": "sentence-patik",
+    "level": "a1",
+    "title": "Хочу, могу, нужно, нравится",
+    "hintId": "sentence-patik"
+  },
+  {
+    "tableKey": "englishDemoSentence",
+    "tableId": "en-demo-sentence",
+    "level": "a1",
+    "title": "Простое предложение",
+    "hintId": "en-demo-sentence",
+    "language": "en",
+    "href": "/grammar/english?level=a1#en-demo-sentence"
+  }
+]

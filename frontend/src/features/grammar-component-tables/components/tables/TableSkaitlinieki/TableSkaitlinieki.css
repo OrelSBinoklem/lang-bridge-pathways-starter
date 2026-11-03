@@ -1,0 +1,158 @@
+.card.table-skaitlinieki {
+  background: var(--card, #fff);
+  color: var(--text, #1b1f2b);
+  padding: 14px 16px 16px;
+  border-radius: 10px;
+  max-width: 46em;
+  margin: 0 auto;
+  line-height: 1.35;
+}
+
+.card.table-skaitlinieki .sn-cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+  align-items: start;
+}
+
+.card.table-skaitlinieki .sn-col {
+  border: 1px solid var(--border-strong, #c3cfee);
+  border-radius: 10px;
+  padding: 10px 12px 12px;
+  background: var(--table-row-odd, #f5f7ff);
+}
+
+.card.table-skaitlinieki .sn-col-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* The "1" / "2+" badge is the quickest way to tell the two columns apart. */
+.card.table-skaitlinieki .sn-mark {
+  flex: 0 0 auto;
+  min-width: 1.9em;
+  height: 1.9em;
+  padding: 0 0.35em;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: max(18px, 0.85em);
+  font-weight: 800;
+  color: var(--card, #fff);
+}
+
+.card.table-skaitlinieki .sn-col--sg .sn-mark {
+  background: var(--accent1, #3a7df2);
+}
+
+.card.table-skaitlinieki .sn-col--pl .sn-mark {
+  background: var(--accent3, #d96b28);
+}
+
+.card.table-skaitlinieki .sn-col-titles {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.card.table-skaitlinieki .sn-lv {
+  font-weight: 800;
+  font-size: max(18px, 0.95em);
+}
+
+.card.table-skaitlinieki .sn-col--sg .sn-lv {
+  color: var(--accent1, #3a7df2);
+}
+
+.card.table-skaitlinieki .sn-col--pl .sn-lv {
+  color: var(--accent3, #d96b28);
+}
+
+.card.table-skaitlinieki .sn-abbr {
+  font-size: max(18px, 0.78em);
+  font-weight: 700;
+  opacity: 0.7;
+}
+
+.card.table-skaitlinieki .sn-ru {
+  font-size: max(18px, 0.72em);
+  color: var(--muted, #6a748b);
+}
+
+.card.table-skaitlinieki .sn-rule {
+  margin: 6px 0 10px;
+  font-size: max(18px, 0.75em);
+  font-style: italic;
+  color: var(--muted, #6a748b);
+}
+
+.card.table-skaitlinieki .sn-groups {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card.table-skaitlinieki .sn-group {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.card.table-skaitlinieki .sn-icon {
+  flex: 0 0 auto;
+  font-size: max(18px, 1.1em);
+  line-height: 1.2;
+}
+
+.card.table-skaitlinieki .sn-group-body {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.card.table-skaitlinieki .sn-label {
+  font-size: max(18px, 0.72em);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--muted, #6a748b);
+}
+
+.card.table-skaitlinieki .sn-words {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.card.table-skaitlinieki .sn-word {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.3em;
+  padding: 0.12em 0.45em;
+  border-radius: 0.4em;
+  background: var(--card, #fff);
+  border: 1px solid var(--border-strong, #c3cfee);
+  font-size: max(18px, 0.85em);
+  font-weight: 700;
+}
+
+.card.table-skaitlinieki .sn-col--sg .sn-word {
+  color: var(--accent1, #3a7df2);
+}
+
+.card.table-skaitlinieki .sn-col--pl .sn-word {
+  color: var(--accent3, #d96b28);
+}
+
+.card.table-skaitlinieki .sn-gloss {
+  font-size: max(18px, 0.82em);
+  font-weight: 500;
+  font-style: italic;
+  color: var(--muted, #6a748b);
+}

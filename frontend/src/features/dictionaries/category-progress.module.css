@@ -1,0 +1,45 @@
+/* Primary list: centered level headings and separate progress rails; classic stays untouched. */
+.refined { width: 100%; max-width: 1000px; margin-inline: auto; }
+.refined [data-category-progress]::before { display: none; }
+.refined > li { display: block; }
+.refined [data-category-progress='group'] { width: 100%; margin-right: 0; margin-bottom: 15px; justify-content: center; text-align: center; font-family: var(--font-geist-sans), Arial, sans-serif; font-size: 20px; font-weight: 600; line-height: 1.2; letter-spacing: -.02em; }
+.refined [data-category-progress='group'] + ul { width: 100%; }
+.refined [data-category-progress='group'] > span[aria-hidden] { position: absolute; inset-inline-end: .5rem; margin-left: 0; }
+
+.meter {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  height: 5px;
+  overflow: hidden;
+  z-index: 2;
+  pointer-events: none;
+  background: #dce5e9;
+  box-shadow: inset 0 1px 1px #153c4d21;
+}
+.meter::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(90deg, transparent 0 calc(10% - 1px), #ffffffb3 calc(10% - 1px) 10%);
+}
+.fill {
+  position: relative;
+  display: block;
+  width: calc(var(--category-progress, 0) * 100%);
+  height: 100%;
+  border-radius: 0 3px 3px 0;
+  background: linear-gradient(90deg, #206a86, #23a6b1);
+  box-shadow: inset 0 1px 0 #ffffff66, inset -1px 0 0 #155c72;
+  transition: width .25s ease;
+}
+.meter[data-complete] .fill {
+  background: linear-gradient(90deg, #258164, #54b78a);
+  box-shadow: inset 0 1px 0 #ffffff66;
+}
+:global(html.dark) .meter { background: #34414b; box-shadow: inset 0 1px 1px #00000040; }
+:global(html.dark) .meter::after { background: repeating-linear-gradient(90deg, transparent 0 calc(10% - 1px), #17232b99 calc(10% - 1px) 10%); }
+:global(html.dark) .fill { background: linear-gradient(90deg, #3496b2, #69d3d7); box-shadow: inset 0 1px 0 #ffffff40, inset -1px 0 0 #b2eeef; }
+:global(html.dark) .meter[data-complete] .fill { background: linear-gradient(90deg, #3ca881, #83d8a6); }
+@media (prefers-reduced-motion: reduce) { .fill { transition: none; } }
+@media (max-width: 600px) { .refined [data-category-progress='group'] { font-size: 18px; } }

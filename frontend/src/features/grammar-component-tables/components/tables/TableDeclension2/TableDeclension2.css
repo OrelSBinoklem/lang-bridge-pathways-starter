@@ -1,0 +1,128 @@
+
+
+/* === moved from grammar-component-tables.css (page-prefix stripped) === */
+.card.table-declension2 .declension2-flex-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card.table-declension2 .declension2-header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: var(--table-head);
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.card.table-declension2 .declension2-header-row {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.card.table-declension2 .declension2-header-row > div {
+  padding: 8px;
+  text-align: center;
+  border-right: 1px solid var(--border-strong);
+  box-sizing: border-box;
+}
+
+.card.table-declension2 .declension2-header-row > div:first-child {
+  text-align: left;
+  padding-left: 12px;
+}
+
+.card.table-declension2 .declension2-header-row > div:last-child {
+  border-right: none;
+}
+
+.card.table-declension2 .declension2-header-subrow {
+  display: flex;
+  width: 100%;
+}
+
+.card.table-declension2 .declension2-header-subrow > div {
+  padding: 4px 8px;
+  text-align: center;
+  border-right: 1px solid var(--border-strong);
+  box-sizing: border-box;
+}
+
+.card.table-declension2 .declension2-header-subrow > div:last-child {
+  border-right: none;
+}
+
+.card.table-declension2 .declension2-row {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.card.table-declension2 .declension2-row:last-child {
+  border-bottom: none;
+}
+
+.card.table-declension2 .declension2-cell {
+  padding: 0 8px;
+  border-right: 1px solid var(--border-strong);
+  box-sizing: border-box;
+  line-height: 1.2;
+}
+
+.card.table-declension2 .declension2-cell:last-child {
+  border-right: none;
+}
+
+.card.table-declension2 .declension2-cell.jautajums-cell {
+  width: 150px;
+  text-align: left;
+  padding-left: 12px;
+  font-weight: 600;
+}
+
+.card.table-declension2 .declension2-cell.main-section {
+  flex: 2;
+  display: flex;
+}
+
+.card.table-declension2 .declension2-cell.main-section > div {
+  flex: 1;
+  text-align: left;
+  padding-left: 12px;
+  border-right: 1px solid var(--border-strong);
+}
+
+.card.table-declension2 .declension2-cell.main-section > div:last-child {
+  border-right: none;
+}
+
+.card.table-declension2 .declension2-cell.suns-section {
+  flex: 1;
+  display: flex;
+}
+
+.card.table-declension2 .declension2-cell.suns-section > div {
+  flex: 1;
+  text-align: left;
+  padding-left: 12px;
+  border-right: 1px solid var(--border-strong);
+}
+
+.card.table-declension2 .declension2-cell.suns-section > div:last-child {
+  border-right: none;
+}
+
+.card.table-declension2 .declension2-ending {
+  color: #0066cc;
+  font-weight: 600;
+}
+
+.card.table-declension2 .declension2-word {
+  margin-right: 2px;
+}

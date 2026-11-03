@@ -1,0 +1,138 @@
+.card.table-pron6 {
+  background: var(--card, #fff);
+  padding: 0;
+  overflow: hidden;
+  margin: 0;
+}
+
+.card.table-pron6 .pron6-intro {
+  margin: 0 0 12px 0;
+  padding-left: 12px;
+  color: #4a5568;
+}
+
+.card.table-pron6 .pron6-flex-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid var(--border-strong, #c3cfee);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card.table-pron6 .pron6-header {
+  display: flex;
+  width: 100%;
+  background: var(--table-head, #F1F3FB);
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-strong, #c3cfee);
+}
+
+.card.table-pron6 .pron6-header > div {
+  padding: 0 8px;
+  text-align: center;
+  border-right: 1px solid var(--border-strong, #c3cfee);
+  box-sizing: border-box;
+}
+
+.card.table-pron6 .pron6-header > div:first-child {
+  width: 100px;
+  flex: 0 0 100px;
+  text-align: left;
+  padding-left: 12px;
+}
+
+.card.table-pron6 .pron6-header > div:nth-child(2) {
+  flex: 2;
+}
+
+.card.table-pron6 .pron6-header > div:nth-child(3) {
+  flex: 2;
+  border-right: none;
+}
+
+.card.table-pron6 .pron6-subheader {
+  display: flex;
+  width: 100%;
+  background: var(--table-row-odd, #f5f7ff);
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-strong, #c3cfee);
+  font-size: 0.9em;
+}
+
+.card.table-pron6 .pron6-subheader > div {
+  padding: 0 8px;
+  text-align: center;
+  border-right: 1px solid var(--border-strong, #c3cfee);
+  box-sizing: border-box;
+}
+
+.card.table-pron6 .pron6-subheader > div:first-child {
+  width: 100px;
+  flex: 0 0 100px;
+}
+
+.card.table-pron6 .pron6-subheader > div:nth-child(2),
+.card.table-pron6 .pron6-subheader > div:nth-child(3) {
+  flex: 1;
+  background: #e6f0ff;
+  color: #0066cc;
+}
+
+.card.table-pron6 .pron6-subheader > div:nth-child(4),
+.card.table-pron6 .pron6-subheader > div:nth-child(5) {
+  flex: 1;
+  background: #ffe6f0;
+  color: #cc0066;
+}
+
+.card.table-pron6 .pron6-subheader > div:last-child {
+  border-right: none;
+}
+
+.card.table-pron6 .pron6-row {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--border-strong, #c3cfee);
+}
+
+.card.table-pron6 .pron6-row:last-child {
+  border-bottom: none;
+}
+
+.card.table-pron6 .pron6-cell {
+  padding: 0 8px;
+  border-right: 1px solid var(--border-strong, #c3cfee);
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 0.9em;
+  flex: 1;
+  min-width: 0;
+}
+
+.card.table-pron6 .pron6-cell:first-child {
+  width: 100px;
+  text-align: left;
+  padding-left: 12px;
+  font-weight: 600;
+  flex: 0 0 100px;
+}
+
+.card.table-pron6 .pron6-cell:last-child {
+  border-right: none;
+}
+
+.card.table-pron6 .pron6-ending-masc {
+  color: #0066cc;
+  font-weight: 600;
+}
+
+.card.table-pron6 .pron6-ending-fem {
+  color: #cc0066;
+  font-weight: 600;
+}
+
+:root.dark .card.table-pron6 .pron6-intro {
+  color: var(--muted, #a0aec0);
+}

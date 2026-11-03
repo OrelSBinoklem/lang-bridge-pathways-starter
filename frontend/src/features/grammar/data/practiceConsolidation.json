@@ -1,0 +1,41 @@
+{
+  "kept": ["possessionIrNav", "patikInfinitive"],
+  "additional_sources": {
+    "grammar-b1-technology-definite-debitive": {"tables":["moodsV75V76V77"],"regular_stages":{"technology-definite-forms":["galotnes","adjEndings"]}},
+    "grammar-b2-work-limited-passive": {"tables":["indicativePassiveTimes","participles"]},
+    "grammar-b2-culture-participial-punctuation": {"tables":["participlesV70V71","divdabjaTeiciens"]}
+  },
+  "retired": {
+    "modalInfinitive": {"id":"sentence-modal","slug":"grammar-a1-modal-infinitive","tables":["patikInfinitive"]},
+    "necessityVajag": {"id":"sentence-vajag","slug":"grammar-a2-necessity-vajag","tables":["patikInfinitive"]},
+    "ageDative": {"id":"sentence-age","slug":"grammar-a1-age-dative","tables":["questionsChart"]},
+    "nounAdjAgreement": {"id":"sentence-agreement","slug":"grammar-a1-noun-adjective-agreement","tables":["adjEndings","declensions"]},
+    "determinerNounAgreement": {"id":"sentence-determiner","slug":"grammar-a1-determiner-noun-agreement","tables":["pron6"]},
+    "genitiveAttributive": {"id":"sentence-genitive","slug":"grammar-a1-genitive-attributive","tables":["genitivs"]},
+    "genitiveVsAdjective": {"id":"sentence-genitive-adjective","slug":"grammar-a2-genitive-adjective","tables":["genitivs","adjEndings"]},
+    "genitiveChain": {"id":"sentence-genitive-chain","slug":"grammar-a2-genitive-chain","tables":["genitivs"]},
+    "adjectiveAttachment": {"id":"sentence-adjective-attachment","slug":"grammar-a2-adjective-attachment","tables":["genitivs","adjEndings"]},
+    "quantityGenitive": {"id":"sentence-quantity","slug":"grammar-a1-quantity-genitive","tables":["genitivs","declensions"]},
+    "subjectPredicateAgreement": {"id":"sentence-subject","slug":"grammar-a1-subject-predicate-agreement","tables":["verbEndingsPresent"]},
+    "butIdentity": {"id":"sentence-but","slug":"grammar-a1-but-identity","tables":["verbsTablesContainer","declensions"]},
+    "patikObjectAction": {"id":"sentence-patik-object","slug":"grammar-a1-patik-object-action","tables":["patikInfinitive"]},
+    "prepositionNumber": {"id":"sentence-ar-number","slug":"grammar-a1-preposition-number","tables":["prepositions"]},
+    "placeDirectionSource": {"id":"sentence-place","slug":"grammar-a1-place-direction-source","tables":["prepositions","declensions"],"stages":{"place-locative":["declensions"]}},
+    "questionBuilding": {"id":"sentence-questions","slug":"grammar-a1-question-building","tables":["questionsChart","pron1"]},
+    "transitiveObject": {"id":"sentence-object","slug":"grammar-a1-transitive-object","tables":["declensions","adjEndings"]},
+    "dativeRecipient": {"id":"sentence-recipient","slug":"grammar-a1-dative-recipient","tables":["declensions","pron1"]},
+    "negationPatterns": {"id":"sentence-negation","slug":"grammar-a1-negation-patterns","tables":["verbEndingsPresent","verbsTablesContainer","possessionIrNav"],"stages":{"negation-verb":["verbEndingsPresent"],"negation-but":["verbsTablesContainer"],"negation-possession":["possessionIrNav"]}},
+    "timeSequence": {"id":"sentence-time","slug":"grammar-a1-time-sequence","tables":["darbibasLaiki","verbEndingsPresent","verbEndingsPast"],"stages":{"time-present":["darbibasLaiki","verbEndingsPresent"],"time-past":["darbibasLaiki","verbEndingsPast"],"time-future":["darbibasLaiki","verbEndingsPast"]}},
+    "reflexiveVerbPattern": {"id":"sentence-reflexive","slug":"grammar-a2-reflexive-wish","tables":["verbEndingsPresent","verbEndingsPast"]},
+    "comparisonPattern": {"id":"sentence-comparison","slug":"grammar-a2-comparison","tables":["comparison","prepositions"]},
+    "adjectiveVsAdverb": {"id":"sentence-adjective-adverb","slug":"grammar-a2-adjective-adverb","tables":["vardskiras2","adjEndings"]},
+    "verbGovernment": {"id":"sentence-verb-government","slug":"grammar-a2-verb-government","tables":["prepositions","patikInfinitive"],"stages":{"government-link":["prepositions"],"government-accusative":["prepositions"],"government-like-contrast":["prepositions","patikInfinitive"]}},
+    "definiteContext": {"id":"sentence-definite-context","slug":"grammar-a2-definite-context","tables":["galotnes","adjEndings"]},
+    "debitiveStructure": {"id":"sentence-debitive","slug":"grammar-a2-debitive","tables":["moodsV75V76V77"]},
+    "conditionSentence": {"id":"sentence-condition","slug":"grammar-a2-condition","tables":["paligteikumi2","paligteikumi3"]},
+    "reasonResultSentence": {"id":"sentence-reason-result","slug":"grammar-a2-reason-result","tables":["paligteikumi2","paligteikumi3"]},
+    "relativeClause": {"id":"sentence-relative","slug":"grammar-b1-relative-clause","tables":["paligteikumi2","pron5"]},
+    "passiveAgreement": {"id":"sentence-passive","slug":"grammar-b1-passive-agreement","tables":["indicativePassiveTimes","participles"]},
+    "participialSubject": {"id":"sentence-participial","slug":"grammar-b1-participial-subject","tables":["participlesV70V71","divdabjaTeiciens"]}
+  }
+}

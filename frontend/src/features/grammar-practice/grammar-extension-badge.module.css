@@ -1,0 +1,25 @@
+.badge {
+  display: inline-block;
+  flex-shrink: 0;
+  align-self: center;
+  padding: 2px 5px;
+  border: 1px solid #267b8b;
+  border-radius: 3px;
+  background: #e4f3f5;
+  color: #164b56;
+  font: 600 11px/1.2 Arial, sans-serif;
+  vertical-align: middle;
+}
+:global(.dark) .badge { background: #203e46; border-color: #71b7c4; color: #d1f2f7; }
+.compact {
+  position: absolute;
+  z-index: 2;
+  bottom: 1px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1px;
+  border: 0;
+  font-size: 7px;
+  line-height: 1;
+  opacity: var(--detail-opacity, 1);
+}

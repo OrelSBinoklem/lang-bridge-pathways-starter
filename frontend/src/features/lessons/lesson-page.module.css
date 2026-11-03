@@ -1,0 +1,121 @@
+.root { max-width: 900px; margin: 0 auto; padding: 32px 20px 80px; }
+.withTutor { max-width: 1440px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(340px, 420px); gap: 24px; align-items: start; }
+.lessonContent, .tutorColumn { min-width: 0; }
+.tutorColumn { position: sticky; top: 88px; }
+@media(max-width: 1099px) {
+  .withTutor { grid-template-columns: minmax(0, 1fr); max-width: 900px; }
+  .tutorColumn { position: static; }
+}
+.header { margin-bottom: 32px; }
+.practiceRoot { max-width: 1440px; }
+.practiceRoot:not(.withTutor) .lessonContent { width: 100%; max-width: 860px; margin: 0 auto; }
+.practiceToolbar { grid-column: 1 / -1; min-width: 0; margin-bottom: 28px; }
+.practiceHeading { margin: 0 0 24px; font-size: 28px; line-height: 1.3; overflow-wrap: anywhere; }
+.withTutor .practiceToolbar { margin-bottom: 0; }
+.practiceNav { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; width: 100%; padding-bottom: 16px; border-bottom: 1px solid #ccd8d5; }
+.practiceNav > a, .practiceNav > span { position: relative; display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 9px; min-width: 0; min-height: 96px; padding: 12px 18px; border: 1px solid #c3d1ce; border-bottom: 4px solid #c3d1ce; border-radius: 6px; background: #f2f6f5; color: #314a44; font-size: 17px; font-weight: 600; line-height: 1.3; text-decoration: none; text-shadow: none; }
+.practiceTabTitle { display: inline-flex; align-items: center; gap: 10px; min-width: 0; }
+.practiceTabTitle > span { overflow-wrap: anywhere; }
+.practiceTabTitle > i { flex-shrink: 0; font-size: 21px; }
+.practiceNav > a[aria-current='page'] { border-color: #126452; background: #157c65; color: #fff; font-weight: 700; }
+.practiceNav > a:hover { border-color: #167d70; background: #e1efe9; }
+.practiceNav > a[aria-current='page']:hover { background: #126b58; }
+.practiceNav > a:focus-visible { outline: 3px solid #bf841e; outline-offset: 2px; }
+.practiceNav > span { color: #7a8581; background: #f5f6f6; border-color: #e0e4e2; }
+.practiceVariantToggle { min-width: 0; margin: 0 0 14px; padding: 0; border: 0; }
+.practiceVariantToggle legend { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.practiceVariantOptions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); width: 100%; border: 1px solid #a9bcb6; border-radius: 6px; overflow: hidden; }
+.practiceVariantOptions label { position: relative; min-width: 0; cursor: pointer; }
+.practiceVariantOptions label + label { border-left: 1px solid #a9bcb6; }
+.practiceVariantOptions input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.practiceVariantOption { display: flex; justify-content: center; align-items: center; gap: 10px; height: 48px; padding: 8px; background: #fff; color: #35544a; font-size: 14px; font-weight: 600; text-shadow: none; white-space: nowrap; }
+.practiceVariantOptions input:checked + .practiceVariantOption { background: #d8ede5; color: #124e3a; box-shadow: inset 0 -3px #168365; }
+.practiceVariantOptions label:hover .practiceVariantOption { background: #edf5f1; }
+.practiceVariantOptions input:checked + .practiceVariantOption:hover { background: #cce5da; }
+.practiceVariantOptions input:focus-visible + .practiceVariantOption { outline: 3px solid #bf841e; outline-offset: -3px; }
+.practiceRank { display: inline-flex; align-items: center; justify-content: center; gap: 5px; max-width: 100%; min-height: 26px; padding: 4px 7px; border: 1px solid #a7b4ae; border-radius: 4px; background: #edf1ef; color: #56655e; font-size: 12px; font-weight: 700; line-height: 1.2; text-shadow: none; white-space: nowrap; }
+.practiceRank > i { flex-shrink: 0; font-size: 13px; }
+.practiceRankValue { font-variant-numeric: tabular-nums; }
+.practiceRank[data-rank=bronze] { color: #6a381a; background: #f2d5bb; border-color: #b67a48; box-shadow: 0 2px 0 #9a6333; }
+.practiceRank[data-rank=silver] { color: #304657; background: #e0eaf2; border-color: #8a9eae; box-shadow: 0 2px 0 #687e90; }
+.practiceRank[data-rank=gold] { color: #624300; background: #ffe6a0; border-color: #c69923; box-shadow: 0 2px 0 #9c7711; }
+.practiceRank[data-rank=diamond] { color: #085265; background: #c9f5ff; border-color: #41aabe; box-shadow: 0 2px 0 #207c94; }
+.practiceRank[data-rank=passed] { color: #165137; background: #d9f1e2; border-color: #76af90; }
+.additionalVariants { margin: 8px 0; font-size: 14px; }
+:global(.dark) .practiceNav { border-color: #455a52; }
+:global(.dark) .practiceNav > a { background: #273932; color: #d5e6df; border-color: #567066; }
+:global(.dark) .practiceNav > a:hover { background: #344e42; border-color: #77b39e; }
+:global(.dark) .practiceNav > a[aria-current='page'] { background: #237f66; color: #fff; border-color: #79c9ae; }
+:global(.dark) .practiceNav > span { background: #292e2c; border-color: #424b46; color: #88958d; }
+:global(.dark) .practiceVariantOptions, :global(.dark) .practiceVariantOptions label + label { border-color: #587368; }
+:global(.dark) .practiceVariantOption { background: #242e29; color: #d2e1d9; }
+:global(.dark) .practiceVariantOptions label:hover .practiceVariantOption { background: #334a3f; }
+:global(.dark) .practiceVariantOptions input:checked + .practiceVariantOption { background: #315b48; color: #fff; box-shadow: inset 0 -3px #73d3ac; }
+:global(.dark) .practiceRank[data-rank=pending] { background: #32433a; color: #c0d2c7; border-color: #6a8376; }
+.header h1 { font-size: 28px; margin: 0 0 8px; }
+.description { color: #5b6b74; line-height: 1.6; }
+.completedBanner { display: inline-block; margin-top: 12px; padding: 6px 14px; border-radius: 20px; background: #e0f3e9; color: #167d58; font-weight: 700; }
+:global(.dark) .completedBanner { background: #22503d; color: #69c99c; }
+.status { padding: 40px 0; text-align: center; color: #5b6b74; }
+.blocks { display: grid; grid-template-columns: minmax(0, 1fr); gap: 32px; min-width: 0; }
+.block { min-width: 0; border: 1px solid #d5dce2; border-radius: 12px; padding: 24px; background: #fff; }
+.blockTitle { display: flex; align-items: center; gap: 12px; margin: 0 0 16px; padding-left: 12px; border-left: 4px solid #167d70; color: #17242a; font-size: 22px; font-weight: 700; line-height: 1.3; letter-spacing: 0; }
+.blockTitleText { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.auditLink { flex: 0 0 30px; display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; margin-left: auto; border-radius: 4px; color: #167d70; font-size: 18px; }
+.auditLink:hover, .auditLink:focus-visible { background: #167d7018; outline: 1px solid currentColor; }
+:global(.dark) .blockTitle { color: #f3f6f7; border-left-color: #65d2bb; }
+:global(.dark) .auditLink { color: #65d2bb; }
+.variantPicker { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin: 0 0 18px; font-size: 14px; }
+.variantPicker select { max-width: 100%; min-width: 0; flex: 1 1 180px; padding: 7px 10px; border: 1px solid #9aa7b2; border-radius: 4px; background: #fff; color: #25313a; font: inherit; }
+:global(.dark) .root { color: #edf0f2; }
+:global(.dark) .description, :global(.dark) .status { color: #b5bec5; }
+:global(.dark) .block { background: #23282c; border-color: #454e56; }
+:global(.dark) .variantPicker select { background: #2c3338; color: #edf0f2; border-color: #4b555e; }
+@media(max-width: 900px) {
+  .practiceRankLabel { display: none; }
+}
+@media(max-width: 640px) {
+  .root { padding: 20px 12px 60px; }
+  .practiceNav { gap: 4px; }
+  .practiceNav > a, .practiceNav > span { gap: 8px; min-height: 106px; padding: 10px 1px; font-size: 11px; line-height: 1.2; text-align: center; }
+  .practiceTabTitle { flex-direction: column; gap: 7px; }
+  .practiceTabTitle > span { overflow-wrap: normal; white-space: nowrap; }
+  .practiceVariantOption { gap: 6px; padding: 8px 4px; font-size: 13px; }
+  .practiceVariantWord { display: none; }
+  .practiceRank { min-height: 24px; padding: 4px; gap: 4px; font-size: 11px; }
+  .practiceRankLabel { display: none; }
+  .block { padding: 16px; }
+  .blockTitle { font-size: 20px; padding-left: 10px; gap: 8px; }
+}
+.grammar .block {
+  background: transparent;
+  border: 0;
+  border-top: 1px solid #95959555;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 24px 0;
+}
+.grammar .compactBlock { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 8px 16px; padding: 16px 0; }
+.grammar .blocks { gap: 12px; }
+.compactBlock .blockTitle { margin: 0; }
+@media(max-width: 640px) {
+  .grammar .compactBlock { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+}
+.practiceRoot.combinedPractice .lessonContent { width: 100%; max-width: none; margin: 0; }
+.combinedBlocks { grid-template-columns: minmax(0, 1fr) minmax(340px, 420px); gap: 0 24px; }
+.combinedBlocks > .block { padding: 24px 0; margin-bottom: 28px; border: 0; border-top: 1px solid #c9d4d6; border-radius: 0; background: transparent; }
+.combinedBlocks > .activePracticeBlock { border-top: 3px solid #167d70; }
+.skillLabel { margin: 0 0 12px; font-size: 14px; font-weight: 600; color: #52676c; }
+.activateTutor { display: inline-flex; align-items: center; justify-content: center; gap: 9px; max-width: 100%; margin-top: 20px; padding: 10px 14px; border: 1px solid #167d70; border-radius: 4px; background: #fff; color: #126b58; font: inherit; font-size: 14px; cursor: pointer; }
+.activateTutor[aria-pressed='true'] { background: #e2f2ec; font-weight: 600; }
+.activateTutor:focus-visible { outline: 3px solid #bf841e; outline-offset: 3px; }
+.practiceTutor { min-width: 0; grid-column: 2; grid-row: var(--tutor-row); align-self: start; margin-bottom: 28px; }
+.practiceTutor[hidden] { display: none; }
+:global(.dark) .combinedBlocks > .block { background: transparent; border-color: #536660; }
+:global(.dark) .combinedBlocks > .activePracticeBlock { border-color: #65d2bb; }
+:global(.dark) .skillLabel { color: #b7c9c4; }
+:global(.dark) .activateTutor { background: #23342d; color: #b2eddb; border-color: #65d2bb; }
+@media (max-width: 1099px) {
+  .combinedBlocks { grid-template-columns: minmax(0, 1fr); }
+  .practiceTutor { grid-column: 1; grid-row: var(--mobile-tutor-row); }
+}

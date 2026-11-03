@@ -1,0 +1,164 @@
+
+
+/* === moved from grammar-component-tables.css (page-prefix stripped) === */
+.card.table-word13 .word13-flex-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card.table-word13 .word13-header {
+  display: flex;
+  width: 100%;
+  background: var(--table-head);
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.card.table-word13 .word13-header > div {
+  padding: 8px;
+  text-align: left;
+  border-right: 1px solid var(--border-strong);
+  box-sizing: border-box;
+}
+
+.card.table-word13 .word13-header > div:first-child {
+  width: 150px;
+  flex: 0 0 150px;
+}
+
+.card.table-word13 .word13-header > div:nth-child(2) {
+  width: 200px;
+  flex: 0 0 200px;
+}
+
+.card.table-word13 .word13-header > div:last-child {
+  border-right: none;
+  flex: 1;
+}
+
+.card.table-word13 .word13-row {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.card.table-word13 .word13-row:last-child {
+  border-bottom: none;
+}
+
+.card.table-word13 .word13-cell {
+  padding: 0 8px;
+  border-right: 1px solid var(--border-strong);
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 0.95rem;
+  line-height: 1.2;
+  vertical-align: top;
+}
+
+.card.table-word13 .word13-cell:first-child {
+  width: 150px;
+  font-weight: 600;
+  flex: 0 0 150px;
+}
+
+.card.table-word13 .word13-cell:nth-child(2) {
+  width: 200px;
+  flex: 0 0 200px;
+}
+
+.card.table-word13 .word13-cell:last-child {
+  border-right: none;
+  flex: 1;
+}
+
+.card.table-word13 .word13-question {
+  font-weight: 600;
+  font-style: italic;
+}
+
+.card.table-word13 .word13-flex-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card.table-word13 .word13-header {
+  display: flex;
+  width: 100%;
+  background: var(--table-head);
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.card.table-word13 .word13-header > div {
+  padding: 8px;
+  text-align: left;
+  border-right: 1px solid var(--border-strong);
+  box-sizing: border-box;
+}
+
+.card.table-word13 .word13-header > div:first-child {
+  width: 150px;
+  flex: 0 0 150px;
+}
+
+.card.table-word13 .word13-header > div:nth-child(2) {
+  width: 200px;
+  flex: 0 0 200px;
+}
+
+.card.table-word13 .word13-header > div:last-child {
+  border-right: none;
+  flex: 1;
+}
+
+.card.table-word13 .word13-row {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.card.table-word13 .word13-row:last-child {
+  border-bottom: none;
+}
+
+.card.table-word13 .word13-cell {
+  padding: 0 8px;
+  border-right: 1px solid var(--border-strong);
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 0.95rem;
+  line-height: 1.2;
+  vertical-align: top;
+}
+
+.card.table-word13 .word13-cell:first-child {
+  width: 150px;
+  font-weight: 600;
+  flex: 0 0 150px;
+}
+
+.card.table-word13 .word13-cell:nth-child(2) {
+  width: 200px;
+  flex: 0 0 200px;
+}
+
+.card.table-word13 .word13-cell:last-child {
+  border-right: none;
+  flex: 1;
+}
+
+.card.table-word13 .word13-question {
+  font-weight: 600;
+  font-style: italic;
+}

@@ -1,0 +1,154 @@
+
+
+/* === moved from grammar-component-tables.css (page-prefix stripped) === */
+.card.table-word11 .word11-flex-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card.table-word11 .word11-header {
+  display: flex;
+  width: 100%;
+  background: var(--table-head);
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.card.table-word11 .word11-header > div {
+  padding: 8px;
+  text-align: left;
+  border-right: 1px solid var(--border-strong);
+  box-sizing: border-box;
+}
+
+.card.table-word11 .word11-header > div:first-child {
+  width: 250px;
+  flex: 0 0 250px;
+}
+
+.card.table-word11 .word11-header > div:nth-child(2) {
+  width: 350px;
+  flex: 0 0 350px;
+}
+
+.card.table-word11 .word11-header > div:last-child {
+  border-right: none;
+  flex: 1;
+}
+
+.card.table-word11 .word11-row {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.card.table-word11 .word11-row:last-child {
+  border-bottom: none;
+}
+
+.card.table-word11 .word11-cell {
+  padding: 0 8px;
+  border-right: 1px solid var(--border-strong);
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  vertical-align: top;
+}
+
+.card.table-word11 .word11-cell:first-child {
+  width: 250px;
+  font-weight: 600;
+  flex: 0 0 250px;
+}
+
+.card.table-word11 .word11-cell:nth-child(2) {
+  width: 350px;
+  flex: 0 0 350px;
+}
+
+.card.table-word11 .word11-cell:last-child {
+  border-right: none;
+  flex: 1;
+}
+
+.card.table-word11 .word11-flex-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card.table-word11 .word11-header {
+  display: flex;
+  width: 100%;
+  background: var(--table-head);
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.card.table-word11 .word11-header > div {
+  padding: 8px;
+  text-align: left;
+  border-right: 1px solid var(--border-strong);
+  box-sizing: border-box;
+}
+
+.card.table-word11 .word11-header > div:first-child {
+  width: 250px;
+  flex: 0 0 250px;
+}
+
+.card.table-word11 .word11-header > div:nth-child(2) {
+  width: 350px;
+  flex: 0 0 350px;
+}
+
+.card.table-word11 .word11-header > div:last-child {
+  border-right: none;
+  flex: 1;
+}
+
+.card.table-word11 .word11-row {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.card.table-word11 .word11-row:last-child {
+  border-bottom: none;
+}
+
+.card.table-word11 .word11-cell {
+  padding: 0 8px;
+  border-right: 1px solid var(--border-strong);
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  vertical-align: top;
+}
+
+.card.table-word11 .word11-cell:first-child {
+  width: 250px;
+  font-weight: 600;
+  flex: 0 0 250px;
+}
+
+.card.table-word11 .word11-cell:nth-child(2) {
+  width: 350px;
+  flex: 0 0 350px;
+}
+
+.card.table-word11 .word11-cell:last-child {
+  border-right: none;
+  flex: 1;
+}

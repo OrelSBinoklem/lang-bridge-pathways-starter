@@ -1,0 +1,162 @@
+.table-container{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+
+.polygon-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+    overflow: visible;
+  }
+
+.polygon-overlay.editing{
+    pointer-events: all;
+  }
+
+.polygon-overlay svg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: visible;
+  }
+
+.table-container:hover .polygon-toolbar, .table-container.editing .polygon-toolbar, .polygon-toolbar:hover{
+    opacity: 1;
+    pointer-events: all;
+  }
+
+.card.table-word16{
+    padding: 20px;
+  }
+
+.card.table-word16 .word16-title{
+    color: #2d5016;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 8px;
+    font-size: 1.5em;
+  }
+
+.card.table-word16 .word16-subtitle{
+    color: #2d5016;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.3em;
+  }
+
+.card.table-word16 .word16-flex-table{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 2px solid #000;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+.card.table-word16 .word16-header-row{
+    display: flex;
+    width: 100%;
+    background: var(--table-head);
+    font-weight: 600;
+    border-bottom: 2px solid #000;
+  }
+
+.card.table-word16 .word16-header-row > div{
+    padding: 12px;
+    text-align: center;
+    border-right: 2px solid #000;
+    box-sizing: border-box;
+    font-weight: bold;
+  }
+
+.card.table-word16 .word16-header-row > div:first-child{
+    width: 30%;
+    flex: 0 0 30%;
+  }
+
+.card.table-word16 .word16-header-row > div:nth-child(2){
+    width: 70%;
+    flex: 0 0 70%;
+    border-right: none;
+  }
+
+.card.table-word16 .word16-subheader-row{
+    display: flex;
+    width: 100%;
+    background: var(--table-head);
+    font-weight: 600;
+    border-bottom: 2px solid #000;
+  }
+
+.card.table-word16 .word16-subheader-row > div{
+    padding: 10px;
+    text-align: center;
+    border-right: 2px solid #000;
+    box-sizing: border-box;
+    font-weight: bold;
+  }
+
+.card.table-word16 .word16-subheader-row > div:first-child{
+    width: 30%;
+    flex: 0 0 30%;
+    border-right: 2px solid #000;
+  }
+
+.card.table-word16 .word16-subheader-row > div:nth-child(2), .card.table-word16 .word16-subheader-row > div:nth-child(3){
+    width: 35%;
+    flex: 0 0 35%;
+  }
+
+.card.table-word16 .word16-subheader-row > div:last-child{
+    border-right: none;
+  }
+
+.card.table-word16 .word16-content-row{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+.card.table-word16 .word16-cell{
+    padding: 0 8px;
+    border-right: 2px solid #000;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 0.95rem;
+    line-height: 1.2;
+    vertical-align: top;
+  }
+
+.card.table-word16 .word16-cell:first-child{
+    width: 30%;
+    flex: 0 0 30%;
+  }
+
+.card.table-word16 .word16-cell:nth-child(2), .card.table-word16 .word16-cell:nth-child(3){
+    width: 35%;
+    flex: 0 0 35%;
+  }
+
+.card.table-word16 .word16-cell:last-child{
+    border-right: none;
+  }
+
+.card.table-word16 .word16-example{
+    display: block;
+    margin-bottom: 8px;
+  }
+
+.card.table-word16 .word16-example:last-child{
+    margin-bottom: 0;
+  }

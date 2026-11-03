@@ -1,0 +1,118 @@
+
+
+/* === moved from grammar-component-tables.css (page-prefix stripped) === */
+.card.table-adj2 .adj2-flex-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card.table-adj2 .adj2-section {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid var(--border-strong);
+}
+
+.card.table-adj2 .adj2-section:last-child {
+  border-bottom: none;
+}
+
+.card.table-adj2 .adj2-header {
+  display: flex;
+  width: 100%;
+  background: var(--table-head);
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.card.table-adj2 .adj2-header > div {
+  padding: 8px;
+  text-align: center;
+  border-right: 1px solid var(--border-strong);
+  box-sizing: border-box;
+}
+
+.card.table-adj2 .adj2-header > div:first-child {
+  text-align: left;
+  padding-left: 12px;
+}
+
+.card.table-adj2 .adj2-header > div:last-child {
+  border-right: none;
+}
+
+.card.table-adj2 .adj2-header-sub {
+  display: flex;
+  width: 100%;
+  background: var(--table-head);
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.card.table-adj2 .adj2-header-sub > div {
+  padding: 4px 8px;
+  border-right: 1px solid var(--border-strong);
+  box-sizing: border-box;
+}
+
+.card.table-adj2 .adj2-header-sub > div:first-child {
+  border-right: 1px solid var(--border-strong);
+}
+
+.card.table-adj2 .adj2-header-sub2 {
+  display: flex;
+  width: 100%;
+  background: var(--table-row-odd);
+  border-bottom: 1px solid var(--border-strong);
+  font-size: 0.9rem;
+}
+
+.card.table-adj2 .adj2-header-sub2 > div {
+  padding: 4px;
+  text-align: center;
+  border-right: 1px solid var(--border-strong);
+  box-sizing: border-box;
+}
+
+.card.table-adj2 .adj2-header-sub2 > div:last-child {
+  border-right: none;
+}
+
+.card.table-adj2 .adj2-row {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.card.table-adj2 .adj2-row:last-child {
+  border-bottom: none;
+}
+
+.card.table-adj2 .adj2-cell {
+  padding: 0 8px;
+  border-right: 1px solid var(--border-strong);
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+
+.card.table-adj2 .adj2-cell:last-child {
+  border-right: none;
+}
+
+.card.table-adj2 .adj2-cell.jautajums-cell {
+  width: 100px;
+  text-align: left;
+  padding-left: 12px;
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.card.table-adj2 .adj2-ending {
+  color: #0066cc;
+  font-weight: 600;
+}

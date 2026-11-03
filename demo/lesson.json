@@ -1,0 +1,29 @@
+{
+  "title": "Демо A1: в библиотеке",
+  "slug": "demo-a1-library-reading",
+  "level": "A1",
+  "learn_lang": "lv",
+  "skill": "reading",
+  "description": "Вымышленная короткая история и проверка понимания.",
+  "status": "draft",
+  "is_published": false,
+  "blocks": [
+    {
+      "type": "reading",
+      "title": "Прочитай и ответь",
+      "position": 10,
+      "is_required": true,
+      "weight": 100,
+      "config": {
+        "task_kind": "reading_binary",
+        "text": "Marta ir bibliotēkā. Viņa meklē grāmatu par putniem. Grāmata ir uz galda. Marta paņem grāmatu un lasa pie loga.",
+        "questions": [
+          {"statement": "Marta ir bibliotēkā.", "correct": true, "explanation": "Tekstā teikts, ka Marta ir bibliotēkā."},
+          {"statement": "Viņa meklē grāmatu par zivīm.", "correct": false, "explanation": "Viņa meklē grāmatu par putniem."},
+          {"statement": "Grāmata ir uz galda.", "correct": true, "explanation": "Tekstā grāmata atrodas uz galda."},
+          {"statement": "Marta lasa pie durvīm.", "correct": false, "explanation": "Marta lasa pie loga."}
+        ]
+      }
+    }
+  ]
+}

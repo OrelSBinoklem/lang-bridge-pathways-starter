@@ -1,0 +1,121 @@
+.card.table-tiesa-runa {
+  background: var(--card, #fff);
+  color: var(--text, #1b1f2b);
+  padding: 14px 16px 16px;
+  border-radius: 10px;
+  max-width: 46em;
+  margin: 0 auto;
+  line-height: 1.35;
+}
+
+.card.table-tiesa-runa .tr-intro {
+  margin-bottom: 8px;
+  text-align: center;
+  font-size: max(18px, 0.8em);
+  color: var(--muted, #6a748b);
+}
+
+.card.table-tiesa-runa .tr-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 16px;
+  margin-bottom: 10px;
+  font-size: max(18px, 0.75em);
+  font-weight: 700;
+}
+
+.card.table-tiesa-runa .tr-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card.table-tiesa-runa .tr-row {
+  border: 1px solid var(--border-strong, #c3cfee);
+  border-radius: 10px;
+  padding: 9px 12px 10px;
+  background: var(--table-row-odd, #f5f7ff);
+}
+
+.card.table-tiesa-runa .tr-row-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+  margin-bottom: 4px;
+}
+
+.card.table-tiesa-runa .tr-num {
+  flex: 0 0 auto;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: max(18px, 0.8em);
+  font-weight: 800;
+  color: var(--card, #fff);
+  background: var(--accent1, #3a7df2);
+}
+
+.card.table-tiesa-runa .tr-title {
+  font-size: max(18px, 0.88em);
+  font-weight: 800;
+}
+
+/* The pattern itself, shown as a formula before the real sentences. */
+.card.table-tiesa-runa .tr-scheme {
+  margin-left: auto;
+  padding: 0.1em 0.6em;
+  border-radius: 0.4em;
+  background: var(--card, #fff);
+  border: 1px dashed var(--border-strong, #c3cfee);
+  font-size: max(18px, 0.85em);
+  font-weight: 700;
+  font-style: italic;
+}
+
+.card.table-tiesa-runa .tr-rule {
+  margin-bottom: 6px;
+  font-size: max(18px, 0.75em);
+  color: var(--muted, #6a748b);
+}
+
+.card.table-tiesa-runa .tr-sample {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4px;
+}
+
+.card.table-tiesa-runa .tr-sample-lv {
+  font-size: max(18px, 0.88em);
+  font-weight: 700;
+  font-style: italic;
+}
+
+.card.table-tiesa-runa .tr-sample-ru {
+  font-size: max(18px, 0.72em);
+  color: var(--muted, #6a748b);
+}
+
+.card.table-tiesa-runa .tr-runa {
+  color: var(--accent1, #3a7df2);
+}
+
+.card.table-tiesa-runa .tr-piebilde {
+  color: var(--text, #1b1f2b);
+}
+
+.card.table-tiesa-runa .tr-pn {
+  color: var(--accent4, #d3547f);
+  font-weight: 900;
+  font-style: normal;
+  font-size: 1.15em;
+  padding: 0 0.04em;
+}
+
+.card.table-tiesa-runa .tr-legend .tr-pn {
+  font-size: inherit;
+}

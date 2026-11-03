@@ -1,0 +1,588 @@
+.app {
+  min-height: 100vh;
+  background: #fff;
+  color: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+}
+
+:global(html.dark) .app {
+  background: #0a0a0a;
+  color: #ededed;
+}
+
+/* Toggled by CoursePath while a group with a whole-page background effect (e.g. the
+   Связь-и-технологии grid) is selected. `.app` — not `body` — is the element that actually
+   paints the page's visible backdrop (it's `min-height: 100vh`, wrapping header/main/footer), so
+   it's the one that needs to go transparent for the grid canvas to show through at all. The
+   canvas itself (position: fixed, z-index: 0 — deliberately never negative, since a negative
+   z-index can vanish behind an unrelated ancestor's own background with no easy way to notice) is
+   allowed to paint over `.app`'s now-transparent area; `.main` and `.footer` are separately
+   raised onto their own stacking level below so real content still renders on top of it. */
+:global(body.body-effect-active) .app {
+  background: transparent;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* цвет неба — CSS var, без transition (как в WP), иначе градиенты лого расходятся */
+  background-color: var(--lbp-sky, rgb(208, 224, 240));
+}
+
+.headerBright {
+  color: #111;
+}
+
+.headerDark {
+  color: #fff;
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.searchWrap {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-left: auto;
+  gap: 8px;
+}
+
+.continueMenuItem { display: none; }
+
+@media (min-width: 801px) {
+  .headerContent { flex-wrap: nowrap; gap: 12px; }
+  .searchWrap > div { width: 100%; max-width: 240px; }
+  .searchWrap input { width: 100%; min-width: 0; box-sizing: border-box; }
+}
+
+@media (max-width: 800px) {
+  .continueMenuItem { display: block; }
+}
+
+.menuToggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.menuIcon {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.menuToggle:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.menuToggle:active {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(0.98);
+}
+
+.headerBright .menuToggle,
+.navDark .menuToggle {
+  background: rgba(0, 0, 0, 0.1);
+  color: #000;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.headerBright .menuToggle:hover,
+.navDark .menuToggle:hover {
+  background: rgba(0, 0, 0, 0.2);
+  border-color: rgba(0, 0, 0, 0.4);
+}
+
+.headerDark .menuToggle {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.headerDark .menuToggle:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.primaryMenu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+  flex-direction: column;
+  width: auto;
+  min-width: 250px;
+  max-width: calc(100vw - 20px);
+  max-height: calc(100dvh - 110px);
+  overflow-y: auto;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  left: auto;
+  z-index: 1500;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.primaryMenuOpen {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.headerBright .primaryMenu {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+}
+
+.headerDark .primaryMenu {
+  background: linear-gradient(135deg, #434343 0%, #000000 100%);
+}
+
+.primaryMenu > li {
+  margin: 0;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.primaryMenu > li:last-child {
+  border-bottom: none;
+}
+
+.menuTitleItem > a {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.menuItem > a,
+.menuLinkBtn {
+  color: #fff !important;
+  text-decoration: none;
+  padding: 8px 25px;
+  display: block;
+  width: 100%;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.menuItem > a::before,
+.menuLinkBtn::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+}
+
+.menuItem > a:hover,
+.menuLinkBtn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  padding-left: 30px;
+  text-decoration: none;
+}
+
+.menuItem > a:hover::before,
+.menuLinkBtn:hover::before {
+  transform: scaleY(1);
+}
+
+.menuItem > a.adminLink {
+  padding: 8px 20px;
+}
+
+.menuItem > a.adminLink:hover {
+  padding-left: 24px;
+}
+
+.controlsItem {
+  list-style: none;
+  padding: 0;
+  border-bottom: none !important;
+}
+
+.controlsWrap {
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.toggleRow {
+  flex-direction: row;
+  gap: 0;
+  padding: 4px 8px;
+  width: 100%;
+}
+
+.toggleBtn {
+  flex: 1;
+  width: 50%;
+  padding: 6px 12px;
+  font-size: 13px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 0 -1px 0 0;
+}
+
+.toggleBtn:first-child {
+  border-radius: 4px 0 0 4px;
+}
+
+.toggleBtn:last-child {
+  border-radius: 0 4px 4px 0;
+  margin-right: 0;
+}
+
+.toggleBtnActive {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.toggleBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.fontBtn {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 13px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.fontBtnActive {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.effectComparison { white-space: normal; text-align: left; }
+.effectComparison i { flex-shrink: 0; }
+
+.fontBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.fontCheckbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 12px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.fontBtnActive .fontCheckbox {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+.uiLangLabel {
+  font-size: 12px;
+  opacity: 0.85;
+  margin-right: 4px;
+  white-space: nowrap;
+}
+
+.langFooter {
+  margin-top: 4px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.langFooterInner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 15px;
+}
+
+.langBtn {
+  flex: 1;
+  padding: 10px 16px;
+  font-size: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.langBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.themeWrap {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  background: transparent;
+}
+
+.main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+  flex: 1;
+  width: 100%;
+  background: var(--background);
+  transition: background-color 0.3s ease;
+  /* Keeps this above the grid canvas (position: fixed, z-index: 0) without needing a negative
+   * z-index on the canvas itself — see the `.app` rule below for why. */
+  position: relative;
+  z-index: 1;
+}
+
+/* Toggled by CoursePath while a group with a whole-page background effect (e.g. the
+   Связь-и-технологии grid) is selected. `.main` is just a layout wrapper — the actual visible
+   "content card" is CoursePath's own `.root` (course-path.module.css), which carries the
+   translucent-backdrop treatment instead; `.main` itself goes fully transparent so the grid
+   shows completely unfiltered through its padding/margins. */
+:global(body.body-effect-active) .main {
+  background: transparent;
+}
+
+.footer {
+  background: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  /* Same reasoning as `.main` — stays above the grid canvas without a negative z-index there. */
+  position: relative;
+  z-index: 1;
+  margin-top: auto;
+}
+
+.footerInner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.footerInner p {
+  margin: 0;
+}
+
+.footerGithub,
+.footerTelegram {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footerGithub {
+  background: #24292f;
+}
+
+.footerTelegram {
+  background: #229ed9;
+}
+
+.footerGithub:hover,
+.footerTelegram:hover {
+  filter: brightness(1.08);
+}
+
+.footerIcon {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+.mainFull {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* словари / дерево категорий — шире обычного main */
+.mainWide {
+  max-width: min(1400px, 100%);
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* language modal shell */
+.langModal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+}
+
+.langModalActive {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.langOverlay {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+}
+
+.langContent {
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: modalSlideIn 0.3s ease;
+  color: #111;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.langClose {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 32px;
+  color: #999;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.langClose:hover {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.langTitle {
+  margin: 0 0 30px;
+  font-size: 28px;
+  color: #333;
+  text-align: center;
+}
+
+.langBanners {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 800px) {
+  .headerContent {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 539px) {
+  .langContent {
+    border-radius: 15px;
+    padding: 20px 10px;
+    width: 95%;
+  }
+
+  .langTitle {
+    margin: 0 0 15px;
+    font-size: 20px;
+  }
+
+  .langBanners {
+    gap: 12px;
+  }
+}

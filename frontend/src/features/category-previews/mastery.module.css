@@ -1,0 +1,265 @@
+.card {
+  --mastery-fill: #e6eeea;
+  --mastery-empty: #f3f8f5;
+  --mastery-ink: #23493f;
+  --mastery-muted: #45675d;
+  --mastery-edge: #8daba0;
+  --ink: var(--mastery-ink);
+  --muted: var(--mastery-muted);
+  --accent: var(--mastery-edge);
+  position: relative;
+  isolation: isolate;
+  color: var(--mastery-ink) !important;
+  border-color: color-mix(in srgb, var(--mastery-edge) 45%, var(--mastery-empty)) !important;
+  background: transparent !important;
+}
+
+.card[data-mastery-tier='bronze'] {
+  --mastery-fill: #dfa174;
+  --mastery-empty: #faf0e5;
+  --mastery-ink: #4b2b18;
+  --mastery-muted: #69432c;
+  --mastery-edge: #89502b;
+}
+
+.card[data-mastery-tier='silver'] {
+  --mastery-fill: #c4d2de;
+  --mastery-empty: #f0f4f8;
+  --mastery-ink: #263e50;
+  --mastery-muted: #42586c;
+  --mastery-edge: #637c90;
+}
+
+.card[data-mastery-tier='gold'] {
+  --mastery-fill: #edca6e;
+  --mastery-empty: #fcf6e7;
+  --mastery-ink: #4b390d;
+  --mastery-muted: #6a521d;
+  --mastery-edge: #9b721e;
+}
+
+.card[data-mastery-tier='diamond'] {
+  --mastery-fill: #acd7ed;
+  --mastery-empty: #edf6ff;
+  --mastery-ink: #193b60;
+  --mastery-muted: #35577e;
+  --mastery-edge: #417aa4;
+}
+
+.card[data-mastery-tier='unknown'] {
+  --mastery-fill: #e7e8e8;
+  --mastery-empty: #f1f2f1;
+  --mastery-ink: #424e4b;
+  --mastery-muted: #606b67;
+  --mastery-edge: #81928c;
+}
+
+.paint {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(90deg, var(--mastery-fill) 0%, var(--mastery-fill) var(--mastery-progress), var(--mastery-empty) var(--mastery-progress), var(--mastery-empty) 100%);
+}
+
+.glass.card .paint {
+  background: linear-gradient(150deg, rgb(255 255 255 / 31%), transparent 46%, rgb(255 255 255 / 12%)), linear-gradient(90deg, var(--mastery-fill) 0%, var(--mastery-fill) var(--mastery-progress), var(--mastery-empty) var(--mastery-progress), var(--mastery-empty) 100%);
+}
+
+.glass.card {
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 85%), inset 0 -1px 0 color-mix(in srgb, var(--mastery-edge) 20%, transparent);
+}
+
+.glass.card .meta {
+  grid-column: 1 / -1;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: 4px;
+}
+
+.paper.card {
+  --surface: var(--mastery-empty);
+  --wash: var(--mastery-fill);
+  box-shadow: 0 2px 0 color-mix(in srgb, var(--mastery-edge) 35%, var(--mastery-empty)), inset 0 1px 0 rgb(255 255 255 / 70%);
+}
+
+.paper.card .paint {
+  background: repeating-linear-gradient(0deg, rgb(255 255 255 / 0%) 0 2px, rgb(255 255 255 / 12%) 2px 3px), linear-gradient(117deg, rgb(255 255 255 / 5%) 4%, rgb(255 255 255 / 52%) 28%, transparent 42%, rgb(255 255 255 / 24%) 79%, transparent 90%), linear-gradient(90deg, var(--mastery-fill) 0%, var(--mastery-fill) var(--mastery-progress), var(--mastery-empty) var(--mastery-progress), var(--mastery-empty) 100%);
+}
+
+.paperTitle {
+  background: none !important;
+}
+
+.paper.card .badge {
+  width: fit-content;
+  min-height: 57px;
+  margin-top: 12px;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+.paper.card .prominent svg {
+  width: 33px;
+  height: 35px;
+}
+
+.vitrine.card .paint {
+  background: linear-gradient(115deg, rgb(255 255 255 / 25%), transparent 55%), linear-gradient(90deg, var(--mastery-fill) 0%, var(--mastery-fill) var(--mastery-progress), var(--mastery-empty) var(--mastery-progress), var(--mastery-empty) 100%);
+}
+
+.vitrine.card .badge {
+  margin-top: 9px;
+  max-width: 100%;
+}
+
+.card[data-mastery-tier='diamond'] .paint::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent 0 39%, rgb(255 255 255 / 35%) 39% 40%, transparent 40% 68%, rgb(255 255 255 / 20%) 68% 69%, transparent 69%), linear-gradient(30deg, transparent 0 56%, rgb(255 255 255 / 30%) 56% 57%, transparent 57%);
+}
+
+.badge {
+  --medal-light: #f5d6b0;
+  --medal-mid: #bd7d4c;
+  --medal-dark: #8d522f;
+  --medal-edge: #754323;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: fit-content;
+  max-width: 100%;
+  padding: 3px 5px 3px 4px;
+  border: 1px solid color-mix(in srgb, var(--medal-edge) 24%, transparent);
+  border-radius: 5px;
+  background: rgb(255 255 255 / 31%);
+  color: var(--mastery-ink, #4b2b18);
+  font-size: 8px;
+  line-height: 1.2;
+  font-weight: 650;
+  letter-spacing: .025em;
+  vertical-align: middle;
+}
+
+.badge svg {
+  display: block;
+  flex: 0 0 auto;
+  width: 15px;
+  height: 16px;
+}
+
+.badge[data-mastery-tier='silver'] {
+  --medal-light: #f6fbff;
+  --medal-mid: #a1b5c7;
+  --medal-dark: #6f879d;
+  --medal-edge: #4a647a;
+}
+
+.badge[data-mastery-tier='gold'] {
+  --medal-light: #fff5ae;
+  --medal-mid: #dab34a;
+  --medal-dark: #a7751d;
+  --medal-edge: #7d5a12;
+}
+
+.badge[data-mastery-tier='diamond'] {
+  --medal-light: #f4fdff;
+  --medal-mid: #a4d8f0;
+  --medal-dark: #5898cb;
+  --medal-edge: #3675a5;
+}
+
+.prominent {
+  justify-content: flex-start;
+  gap: 6px;
+  padding: 4px 6px;
+  font-size: 9px;
+}
+
+.prominent svg {
+  width: 23px;
+  height: 25px;
+}
+
+:global(html.dark) .card {
+  --mastery-fill: #2b3832;
+  --mastery-empty: #202e29;
+  --mastery-ink: #e0f3e9;
+  --mastery-muted: #bdd9cb;
+  --mastery-edge: #748d80;
+}
+
+:global(html.dark) .card[data-mastery-tier='bronze'] {
+  --mastery-fill: #75442e;
+  --mastery-empty: #35291f;
+  --mastery-ink: #fff1df;
+  --mastery-muted: #eed0b4;
+  --mastery-edge: #d6a077;
+}
+
+:global(html.dark) .card[data-mastery-tier='silver'] {
+  --mastery-fill: #43596b;
+  --mastery-empty: #252e37;
+  --mastery-ink: #f0f6ff;
+  --mastery-muted: #ccdae9;
+  --mastery-edge: #a3bed4;
+}
+
+:global(html.dark) .card[data-mastery-tier='gold'] {
+  --mastery-fill: #725720;
+  --mastery-empty: #352f20;
+  --mastery-ink: #fff5cc;
+  --mastery-muted: #ead9aa;
+  --mastery-edge: #d8b95c;
+}
+
+:global(html.dark) .card[data-mastery-tier='diamond'] {
+  --mastery-fill: #355e86;
+  --mastery-empty: #243449;
+  --mastery-ink: #eff9ff;
+  --mastery-muted: #c8e3fc;
+  --mastery-edge: #91c7ed;
+}
+
+:global(html.dark) .card[data-mastery-tier='unknown'] {
+  --mastery-fill: #3c4841;
+  --mastery-empty: #29302d;
+  --mastery-ink: #e2eae5;
+  --mastery-muted: #c0cdc5;
+  --mastery-edge: #8faaa0;
+}
+
+:global(html.dark) .card .paint {
+  background: linear-gradient(140deg, rgb(255 255 255 / 4%), transparent 50%), linear-gradient(90deg, var(--mastery-fill) 0%, var(--mastery-fill) var(--mastery-progress), var(--mastery-empty) var(--mastery-progress), var(--mastery-empty) 100%);
+}
+
+:global(html.dark) .card .badge {
+  background: rgb(0 0 0 / 9%);
+  color: var(--mastery-ink);
+}
+
+:global(html.dark) .badge {
+  color: #ecf4f0;
+  background: rgb(255 255 255 / 6%);
+}
+
+@media (max-width: 440px) {
+  .glass.card .badge { font-size: 7px; padding: 2px 3px; gap: 3px; }
+  .glass.card .badge svg { width: 12px; height: 13px; }
+  .vitrine.card .prominent { gap: 4px; padding: 3px 4px; font-size: 8px; }
+  .vitrine.card .prominent svg { width: 19px; height: 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .card * { animation: none !important; transition: none !important; }
+}
+
+@media (forced-colors: active) {
+  .card { border: 1px solid CanvasText !important; color: CanvasText !important; }
+  .badge { border: 1px solid CanvasText; color: CanvasText; }
+}

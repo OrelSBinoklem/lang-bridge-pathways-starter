@@ -1,0 +1,146 @@
+
+
+/* === moved from grammar-component-tables.css (page-prefix stripped) === */
+.card.table-word25 {
+  padding: 20px;
+}
+
+.card.table-word25 .word25-content-wrapper {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+}
+
+.card.table-word25 .word25-left-column {
+  width: 30%;
+  flex: 0 0 30%;
+}
+
+.card.table-word25 .word25-left-title {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #333;
+  line-height: 1.6;
+}
+
+.card.table-word25 .word25-right-column {
+  width: 70%;
+  flex: 0 0 70%;
+}
+
+.card.table-word25 .word25-explanation {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.card.table-word25 .word25-examples {
+  margin-bottom: 20px;
+}
+
+.card.table-word25 .word25-example {
+  display: block;
+  margin-bottom: 12px;
+  line-height: 1.8;
+}
+
+.card.table-word25 .word25-example:last-child {
+  margin-bottom: 0;
+}
+
+.card.table-word25 .word25-underlined {
+  text-decoration: underline;
+}
+
+.card.table-word25 .word25-notes {
+  margin-top: 20px;
+}
+
+.card.table-word25 .word25-note {
+  display: block;
+  margin-bottom: 12px;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+.card.table-word25 .word25-note:last-child {
+  margin-bottom: 0;
+}
+
+.card.table-word25 .word25-note-marker {
+  font-weight: bold;
+  margin-right: 4px;
+}
+
+.card.table-word25 {
+  padding: 20px;
+}
+
+.card.table-word25 .word25-content-wrapper {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+}
+
+.card.table-word25 .word25-left-column {
+  width: 30%;
+  flex: 0 0 30%;
+}
+
+.card.table-word25 .word25-left-title {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #333;
+  line-height: 1.6;
+}
+
+.card.table-word25 .word25-right-column {
+  width: 70%;
+  flex: 0 0 70%;
+}
+
+.card.table-word25 .word25-explanation {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.card.table-word25 .word25-examples {
+  margin-bottom: 20px;
+}
+
+.card.table-word25 .word25-example {
+  display: block;
+  margin-bottom: 12px;
+  line-height: 1.8;
+}
+
+.card.table-word25 .word25-example:last-child {
+  margin-bottom: 0;
+}
+
+.card.table-word25 .word25-underlined {
+  text-decoration: underline;
+}
+
+.card.table-word25 .word25-notes {
+  margin-top: 20px;
+}
+
+.card.table-word25 .word25-note {
+  display: block;
+  margin-bottom: 12px;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+.card.table-word25 .word25-note:last-child {
+  margin-bottom: 0;
+}
+
+.card.table-word25 .word25-note-marker {
+  font-weight: bold;
+  margin-right: 4px;
+}

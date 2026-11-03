@@ -1,0 +1,153 @@
+.page {
+  min-height: calc(100vh - 70px);
+  padding: 32px 18px;
+  background: #f5f7fb;
+  color: #1f2937;
+}
+
+.panel {
+  width: min(920px, 100%);
+  margin: 0 auto;
+  border: 1px solid #d8dee9;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 24px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+.header p {
+  margin: 6px 0 0;
+  color: #64748b;
+}
+
+.status {
+  flex: 0 0 auto;
+  border-radius: 999px;
+  padding: 5px 10px;
+  background: #e5e7eb;
+  color: #475569;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.ready {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.error,
+.closed {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.messages {
+  display: flex;
+  min-height: 360px;
+  max-height: 56vh;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  padding: 24px;
+}
+
+.message {
+  max-width: 76%;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.system {
+  max-width: 100%;
+  border: 1px solid #bfdbfe;
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.assistant {
+  align-self: flex-start;
+  background: #f1f5f9;
+}
+
+.user {
+  align-self: flex-end;
+  background: #0d84ff;
+  color: #fff;
+}
+
+.composer {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  padding: 16px 24px 24px;
+}
+
+.composer input {
+  min-width: 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 11px 12px;
+  font: inherit;
+}
+
+.composer button,
+.quickActions button {
+  border: 0;
+  border-radius: 8px;
+  background: #0d84ff;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+.composer button {
+  padding: 0 18px;
+}
+
+.composer button:disabled,
+.quickActions button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.quickActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0 24px 24px;
+}
+
+.quickActions button {
+  padding: 8px 12px;
+  background: #334155;
+  font-size: 14px;
+}
+
+@media (max-width: 640px) {
+  .header,
+  .composer {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+
+  .message {
+    max-width: 100%;
+  }
+}

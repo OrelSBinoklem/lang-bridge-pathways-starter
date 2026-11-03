@@ -1,0 +1,116 @@
+.card.table-vardskiras2 {
+  background: var(--card, #fff);
+  color: var(--text, #1b1f2b);
+  padding: 14px 16px 16px;
+  border-radius: 10px;
+  max-width: 46em;
+  margin: 0 auto;
+}
+
+.card.table-vardskiras2 .vk-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 10px;
+}
+
+.card.table-vardskiras2 .vk-cards + .vk-cards {
+  margin-top: 10px;
+}
+
+.card.table-vardskiras2 .vk-card {
+  border: 1px solid var(--border-strong, #c3cfee);
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: var(--table-row-odd, #f5f7ff);
+}
+
+.card.table-vardskiras2 .vk-card-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.card.table-vardskiras2 .vk-icon {
+  font-size: max(18px, 1.4em);
+  line-height: 1;
+}
+
+.card.table-vardskiras2 .vk-card-titles {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.card.table-vardskiras2 .vk-lv {
+  font-weight: 800;
+  font-size: max(18px, 1em);
+}
+
+.card.table-vardskiras2 .vk-card--main .vk-lv {
+  color: var(--accent1, #3a7df2);
+}
+.card.table-vardskiras2 .vk-card--aux .vk-lv {
+  color: var(--accent3, #d96b28);
+}
+.card.table-vardskiras2 .vk-card--outside .vk-lv {
+  color: var(--accent4, #d3547f);
+}
+
+.card.table-vardskiras2 .vk-term {
+  font-size: max(18px, 0.72em);
+  color: var(--muted, #6a748b);
+}
+
+.card.table-vardskiras2 .vk-def {
+  margin: 0 0 8px;
+  font-size: max(18px, 0.82em);
+  line-height: 1.4;
+  color: var(--text, #1b1f2b);
+}
+
+.card.table-vardskiras2 .vk-examples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.card.table-vardskiras2 .vk-chip {
+  font-style: italic;
+  font-size: max(18px, 0.78em);
+  font-weight: 600;
+  padding: 0.15em 0.5em;
+  border-radius: 999px;
+  background: var(--table-head, #f1f3fb);
+  border: 1px solid var(--border-strong, #c3cfee);
+  color: var(--text, #1b1f2b);
+}
+
+.card.table-vardskiras2 .vk-divider {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 14px 0 10px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: var(--accent3-bg, rgba(217, 107, 40, 0.1));
+  border-left: 3px solid var(--accent3, #d96b28);
+}
+
+.card.table-vardskiras2 .vk-divider-name {
+  font-weight: 800;
+  font-size: max(18px, 1.05em);
+  color: var(--accent3, #d96b28);
+}
+
+.card.table-vardskiras2 .vk-divider-desc {
+  font-size: max(18px, 0.8em);
+  color: var(--muted, #6a748b);
+}
+
+.card.table-vardskiras2 .vk-card--outside {
+  margin-top: 12px;
+  background: var(--accent4-bg, rgba(211, 84, 127, 0.1));
+  border-color: var(--accent4, #d3547f);
+  border-style: dashed;
+}

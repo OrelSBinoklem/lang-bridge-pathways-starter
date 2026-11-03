@@ -1,0 +1,12 @@
+.verb-conjugation-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  font-weight: bold;
+
+  > .table-card {
+    width: 100%;
+    margin-bottom: 0;
+  }
+}

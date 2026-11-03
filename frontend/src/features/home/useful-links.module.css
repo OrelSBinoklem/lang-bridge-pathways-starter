@@ -1,0 +1,29 @@
+.section {
+  --links-ink: #284747;
+  --links-muted: #496c64;
+  --links-important: #88652d;
+  margin-top: 28px;
+  padding: 18px 0 6px;
+  border-top: 1px solid #b6ceca80;
+}
+
+.heading { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.heading h2 { margin: 0; color: var(--links-ink); font: 600 23px/1.2 Georgia, serif; scroll-margin-top: 100px; }
+.headingIcon { color: #658b7d; font-size: 17px; }
+.headingLine { height: 1px; flex: 1; background: linear-gradient(90deg, #a6c4bb80, transparent); margin-left: 4px; }
+.list { display: grid; gap: 2px; margin: 0; padding: 0; list-style: none; }
+.list > li { min-width: 0; }
+.link { display: flex; align-items: baseline; gap: 10px; width: fit-content; max-width: 100%; padding: 5px 0; color: var(--links-muted); font-size: 14px; line-height: 1.6; text-decoration: none; }
+.link > span { min-width: 0; overflow-wrap: anywhere; text-decoration: underline; text-decoration-color: color-mix(in srgb, currentColor 35%, transparent); text-underline-offset: 3px; }
+.link[data-featured] { color: var(--links-important); font-weight: 600; }
+.icon { flex: 0 0 15px; width: 15px; text-align: center; font-size: 11px; }
+.link:focus-visible { outline: 2px solid #438f80; outline-offset: 4px; }
+@media (hover: hover) { .link:hover > span { text-decoration-color: currentColor; text-decoration-thickness: 2px; } }
+
+:global(html.dark) .section { --links-ink: #e0eeea; --links-muted: #b8d3c9; --links-important: #dfbf87; border-top-color: #93b6ab40; }
+:global(html.dark) .headingIcon { color: #b3d1c4; }
+:global(html.dark) .link:focus-visible { outline-color: #b7dfd2; }
+@media (max-width: 600px) {
+  .section { margin-top: 22px; padding-top: 16px; }
+  .heading h2 { font-size: 22px; }
+}

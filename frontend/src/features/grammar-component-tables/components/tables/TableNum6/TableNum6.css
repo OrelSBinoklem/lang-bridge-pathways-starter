@@ -1,0 +1,112 @@
+
+
+/* === moved from grammar-component-tables.css (page-prefix stripped) === */
+.card.table-num6 .num6-flex-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card.table-num6 .num6-header {
+  display: flex;
+  width: 100%;
+  background: var(--table-head);
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.card.table-num6 .num6-header > div {
+  padding: 8px;
+  text-align: center;
+  border-right: 1px solid var(--border-strong);
+  box-sizing: border-box;
+}
+
+.card.table-num6 .num6-header > div:first-child {
+  width: 100px;
+}
+
+.card.table-num6 .num6-header > div:last-child {
+  border-right: none;
+}
+
+.card.table-num6 .num6-subheader {
+  display: flex;
+  width: 100%;
+  background: var(--table-row-odd);
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-strong);
+  font-size: 0.9rem;
+}
+
+.card.table-num6 .num6-subheader > div {
+  padding: 4px 8px;
+  text-align: center;
+  border-right: 1px solid var(--border-strong);
+  box-sizing: border-box;
+}
+
+.card.table-num6 .num6-subheader > div:first-child {
+  width: 100px;
+}
+
+.card.table-num6 .num6-subheader > div:last-child {
+  border-right: none;
+}
+
+.card.table-num6 .num6-row {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.card.table-num6 .num6-row:last-child {
+  border-bottom: none;
+}
+
+.card.table-num6 .num6-cell {
+  padding: 0 8px;
+  border-right: 1px solid var(--border-strong);
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+
+.card.table-num6 .num6-cell:first-child {
+  width: 100px;
+  text-align: left;
+  padding-left: 12px;
+  font-weight: 600;
+}
+
+.card.table-num6 .num6-cell:last-child {
+  border-right: none;
+}
+
+.card.table-num6 .num6-cell-number {
+  flex: 1;
+}
+
+.card.table-num6 .num6-cell-noun {
+  flex: 1;
+}
+
+.card.table-num6 .num6-ending-masc {
+  color: #0066cc;
+  font-weight: 600;
+}
+
+.card.table-num6 .num6-ending-fem {
+  color: #cc0066;
+  font-weight: 600;
+}
+
+.card.table-num6 .num6-ending-accusative {
+  color: #ff6600;
+  font-weight: 600;
+}

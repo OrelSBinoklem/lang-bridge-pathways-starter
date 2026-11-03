@@ -1,0 +1,447 @@
+{
+  "version": 2,
+  "engine": "langgraph",
+  "name": "Основной репетитор · зебра",
+  "nodes": [
+    {
+      "id": "event_0",
+      "type": "event",
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "data": {
+        "event": "user.message"
+      }
+    },
+    {
+      "id": "event_1",
+      "type": "event",
+      "position": {
+        "x": 0,
+        "y": 140
+      },
+      "data": {
+        "event": "user.audio"
+      }
+    },
+    {
+      "id": "event_2",
+      "type": "event",
+      "position": {
+        "x": 0,
+        "y": 280
+      },
+      "data": {
+        "event": "tool.result"
+      }
+    },
+    {
+      "id": "source_0",
+      "type": "source",
+      "position": {
+        "x": 1230,
+        "y": 0
+      },
+      "data": {
+        "source": "context_summary",
+        "limitChars": 24000
+      }
+    },
+    {
+      "id": "source_1",
+      "type": "source",
+      "position": {
+        "x": 1230,
+        "y": 160
+      },
+      "data": {
+        "source": "parameter_state",
+        "limitChars": 24000
+      }
+    },
+    {
+      "id": "source_2",
+      "type": "source",
+      "position": {
+        "x": 310,
+        "y": 160
+      },
+      "data": {
+        "source": "message_stream",
+        "limitChars": 120000
+      }
+    },
+    {
+      "id": "count_gate",
+      "type": "condition",
+      "position": {
+        "x": 620,
+        "y": 160
+      },
+      "data": {
+        "field": "user_message_count",
+        "operator": "gt",
+        "value": "20"
+      }
+    },
+    {
+      "id": "compact",
+      "type": "compact",
+      "position": {
+        "x": 930,
+        "y": 10
+      },
+      "data": {
+        "keepPairs": 5
+      }
+    },
+    {
+      "id": "prompt",
+      "type": "prompt",
+      "position": {
+        "x": 1230,
+        "y": 320
+      },
+      "data": {
+        "text": "Отвечай понятно, учитывая уровень ученика. Не выдумывай факты."
+      }
+    },
+    {
+      "id": "context",
+      "type": "context",
+      "position": {
+        "x": 1540,
+        "y": 200
+      },
+      "data": {
+        "mode": "object",
+        "inputs": [
+          {
+            "id": "in1",
+            "label": "Инструкции",
+            "key": "instructions"
+          },
+          {
+            "id": "in2",
+            "label": "Резюме",
+            "key": "context_summary"
+          },
+          {
+            "id": "in3",
+            "label": "Параметры",
+            "key": "parameter_state"
+          },
+          {
+            "id": "in4",
+            "label": "Переписка",
+            "key": "message_stream"
+          },
+          {
+            "id": "in5",
+            "label": "Интернет",
+            "key": "web"
+          },
+          {
+            "id": "in6",
+            "label": "Таблицы",
+            "key": "tables"
+          },
+          {
+            "id": "in7",
+            "label": "История команд",
+            "key": "recent_tool_interactions"
+          },
+          {
+            "id": "in8",
+            "label": "Варианты распознавания",
+            "key": "transcript_candidates"
+          }
+        ],
+        "order": [
+          "in1",
+          "in2",
+          "in3",
+          "in4",
+          "in5",
+          "in6",
+          "in7",
+          "in8",
+          "$request"
+        ]
+      }
+    },
+    {
+      "id": "model",
+      "type": "model",
+      "position": {
+        "x": 2450,
+        "y": 200
+      },
+      "data": {
+        "model": "preset",
+        "reasoning": "preset",
+        "maxOutputTokens": 8192
+      }
+    },
+    {
+      "id": "tools",
+      "type": "tools",
+      "position": {
+        "x": 2760,
+        "y": 200
+      },
+      "data": {
+        "allCommands": true,
+        "allowedCommands": [],
+        "maxSteps": 6
+      }
+    },
+    {
+      "id": "reply",
+      "type": "reply",
+      "position": {
+        "x": 3070,
+        "y": 200
+      },
+      "data": {}
+    },
+    {
+      "id": "speech",
+      "type": "speech",
+      "position": {
+        "x": 3380,
+        "y": 200
+      },
+      "data": {
+        "enabled": true
+      }
+    },
+    {
+      "id": "serialize",
+      "type": "serialize",
+      "position": {
+        "x": 2000,
+        "y": 200
+      },
+      "data": {
+        "format": "messages"
+      }
+    },
+    {
+      "id": "source_tools",
+      "type": "source",
+      "position": {
+        "x": 1230,
+        "y": 520
+      },
+      "data": {
+        "source": "recent_tool_interactions",
+        "limitChars": 24000
+      }
+    },
+    {
+      "id": "source_transcripts",
+      "type": "source",
+      "position": {
+        "x": 1230,
+        "y": 700
+      },
+      "data": {
+        "source": "transcript_candidates",
+        "limitChars": 24000
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge_0",
+      "source": "event_0",
+      "target": "source_2",
+      "sourceHandle": "out",
+      "targetHandle": "in"
+    },
+    {
+      "id": "edge_1",
+      "source": "event_1",
+      "target": "source_2",
+      "sourceHandle": "out",
+      "targetHandle": "in"
+    },
+    {
+      "id": "edge_2",
+      "source": "event_2",
+      "target": "source_2",
+      "sourceHandle": "out",
+      "targetHandle": "in"
+    },
+    {
+      "id": "edge_3",
+      "source": "source_2",
+      "target": "count_gate",
+      "sourceHandle": "out",
+      "targetHandle": "in"
+    },
+    {
+      "id": "edge_4",
+      "source": "count_gate",
+      "target": "compact",
+      "sourceHandle": "true",
+      "targetHandle": "in"
+    },
+    {
+      "id": "edge_5",
+      "source": "count_gate",
+      "target": "context",
+      "sourceHandle": "false",
+      "targetHandle": "in4"
+    },
+    {
+      "id": "edge_6",
+      "source": "compact",
+      "target": "context",
+      "sourceHandle": "out",
+      "targetHandle": "in4"
+    },
+    {
+      "id": "edge_7",
+      "source": "count_gate",
+      "target": "source_0",
+      "sourceHandle": "false",
+      "targetHandle": "in"
+    },
+    {
+      "id": "edge_8",
+      "source": "compact",
+      "target": "source_0",
+      "sourceHandle": "out",
+      "targetHandle": "in"
+    },
+    {
+      "id": "edge_9",
+      "source": "count_gate",
+      "target": "source_1",
+      "sourceHandle": "false",
+      "targetHandle": "in"
+    },
+    {
+      "id": "edge_10",
+      "source": "compact",
+      "target": "source_1",
+      "sourceHandle": "out",
+      "targetHandle": "in"
+    },
+    {
+      "id": "edge_11",
+      "source": "count_gate",
+      "target": "prompt",
+      "sourceHandle": "false",
+      "targetHandle": "in"
+    },
+    {
+      "id": "edge_12",
+      "source": "compact",
+      "target": "prompt",
+      "sourceHandle": "out",
+      "targetHandle": "in"
+    },
+    {
+      "id": "edge_13",
+      "source": "source_0",
+      "target": "context",
+      "sourceHandle": "out",
+      "targetHandle": "in2"
+    },
+    {
+      "id": "edge_14",
+      "source": "source_1",
+      "target": "context",
+      "sourceHandle": "out",
+      "targetHandle": "in3"
+    },
+    {
+      "id": "edge_15",
+      "source": "prompt",
+      "target": "context",
+      "sourceHandle": "out",
+      "targetHandle": "in1"
+    },
+    {
+      "id": "edge_16",
+      "source": "context",
+      "target": "serialize",
+      "sourceHandle": "out",
+      "targetHandle": "in"
+    },
+    {
+      "id": "edge_17",
+      "source": "model",
+      "target": "tools",
+      "sourceHandle": "out",
+      "targetHandle": "in"
+    },
+    {
+      "id": "edge_18",
+      "source": "tools",
+      "target": "reply",
+      "sourceHandle": "out",
+      "targetHandle": "in"
+    },
+    {
+      "id": "edge_19",
+      "source": "reply",
+      "target": "speech",
+      "sourceHandle": "out",
+      "targetHandle": "in"
+    },
+    {
+      "id": "serialize_model",
+      "source": "serialize",
+      "target": "model",
+      "sourceHandle": "out",
+      "targetHandle": "in"
+    },
+    {
+      "id": "gate_source_tools",
+      "source": "count_gate",
+      "target": "source_tools",
+      "sourceHandle": "false",
+      "targetHandle": "in"
+    },
+    {
+      "id": "compact_source_tools",
+      "source": "compact",
+      "target": "source_tools",
+      "sourceHandle": "out",
+      "targetHandle": "in"
+    },
+    {
+      "id": "source_tools_context",
+      "source": "source_tools",
+      "target": "context",
+      "sourceHandle": "out",
+      "targetHandle": "in7"
+    },
+    {
+      "id": "gate_source_transcripts",
+      "source": "count_gate",
+      "target": "source_transcripts",
+      "sourceHandle": "false",
+      "targetHandle": "in"
+    },
+    {
+      "id": "compact_source_transcripts",
+      "source": "compact",
+      "target": "source_transcripts",
+      "sourceHandle": "out",
+      "targetHandle": "in"
+    },
+    {
+      "id": "source_transcripts_context",
+      "source": "source_transcripts",
+      "target": "context",
+      "sourceHandle": "out",
+      "targetHandle": "in8"
+    }
+  ]
+}

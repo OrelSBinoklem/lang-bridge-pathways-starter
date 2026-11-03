@@ -1,0 +1,185 @@
+.card.table-adj-endings {
+  background: var(--card, #fff);
+  padding: 0;
+  overflow: hidden;
+  margin: 0;
+}
+
+.card.table-adj-endings .adj-endings-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--card, #fff);
+  border: 1.5px solid var(--border-strong, #c3cfee);
+  box-shadow: var(--table-shadow, 0 10px 26px rgba(41, 56, 101, 0.12));
+}
+
+.card.table-adj-endings col:first-child {
+  width: 170px;
+  min-width: 170px;
+}
+
+.card.table-adj-endings .case {
+  text-align: left;
+  background: var(--table-row-odd, #f5f7ff);
+  font-weight: normal;
+  min-width: 170px;
+  color: var(--text, #1b1f2b);
+  border-right: 1.5px solid var(--border-strong, #c3cfee);
+  white-space: nowrap;
+}
+
+.card.table-adj-endings th {
+  font-weight: normal;
+}
+
+.card.table-adj-endings td {
+  padding-left: 39px;
+  text-align: left;
+  font-weight: bold;
+  border: none;
+}
+
+.card.table-adj-endings td:first-child {
+  padding-left: 10px;
+  background: var(--table-head, #e2e8fb);
+}
+
+.card.table-adj-endings .groups {
+  background: var(--table-head, #e2e8fb);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: var(--text, #1b1f2b);
+}
+
+.card.table-adj-endings .tehnical-row {
+  background: var(--table-head, #e2e8fb);
+  border: 1.5px solid var(--border-strong, #c3cfee);
+}
+
+.card.table-adj-endings .subhead .sub {
+  background: #ffffff;
+  font-weight: normal;
+  text-align: center;
+  border: 1.5px solid var(--border-strong, #c3cfee);
+}
+
+.card.table-adj-endings .group-ii {
+  background: var(--group2-bg, #f0f7f4);
+}
+
+.card.table-adj-endings .c3 {
+  padding-left: 5px;
+  padding-right: 5px;
+  background: var(--accent3-bg, rgba(156, 39, 176, 0.12));
+  color: var(--accent3, #9c27b0);
+}
+
+.card.table-adj-endings .aj {
+  color: #9c27b0;
+  font-weight: 700;
+}
+
+:root.dark .card.table-adj-endings .subhead .sub {
+  background: var(--card, #12141a);
+}
+
+:root.dark .card.table-adj-endings .aj {
+  color: #ce93d8;
+}
+
+/* === moved from grammar-component-tables.css (page-prefix stripped) === */
+.card.table-adj-endings {
+  background: var(--card, #fff);
+  padding: 0;
+  overflow: hidden;
+  margin: 0;
+}
+
+.card.table-adj-endings .adj-endings-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--card, #fff);
+  border: 1.5px solid var(--border-strong, #c3cfee);
+  box-shadow: var(--table-shadow, 0 10px 26px rgba(41, 56, 101, 0.12));
+}
+
+.card.table-adj-endings col:first-child {
+  width: 170px;
+  min-width: 170px;
+}
+
+.card.table-adj-endings .case {
+  text-align: left;
+  background: var(--table-row-odd, #f5f7ff);
+  font-weight: normal;
+  min-width: 170px;
+  color: var(--text, #1b1f2b);
+  border-right: 1.5px solid var(--border-strong, #c3cfee);
+  white-space: nowrap;
+}
+
+.card.table-adj-endings th {
+  font-weight: normal;
+}
+
+.card.table-adj-endings td {
+  padding-left: 39px;
+  text-align: left;
+  font-weight: 400;
+  border: none;
+}
+
+.card.table-adj-endings td:first-child {
+  padding-left: 10px;
+  background: var(--table-head, #e2e8fb);
+}
+
+.card.table-adj-endings .groups {
+  background: var(--table-head, #e2e8fb);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: var(--text, #1b1f2b);
+}
+
+.card.table-adj-endings .tehnical-row {
+  background: var(--table-head, #e2e8fb);
+  border: 1.5px solid var(--border-strong, #c3cfee);
+}
+
+.card.table-adj-endings .subhead .sub {
+  background: #ffffff;
+  font-weight: normal;
+  text-align: center;
+  border: 1.5px solid var(--border-strong, #c3cfee);
+}
+
+.card.table-adj-endings .group-ii {
+  background: var(--group2-bg, #f0f7f4);
+}
+
+.card.table-adj-endings .c3 {
+  padding-left: 5px;
+  padding-right: 5px;
+  background: var(--accent3-bg);
+  color: var(--accent3);
+}
+
+.card.table-adj-endings .aj {
+  color: #9c27b0;
+  font-weight: 700;
+}
+
+/* === moved pass2 from grammar-component-tables.css === */
+:root.dark .card.table-adj-endings .subhead .sub {
+  background: var(--card, #12141a);
+}
+
+:root.dark .card.table-adj-endings .aj {
+  color: #ce93d8;
+}

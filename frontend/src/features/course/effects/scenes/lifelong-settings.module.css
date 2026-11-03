@@ -1,0 +1,45 @@
+.settings {
+  position: fixed;
+  z-index: 10030;
+  top: 82px;
+  right: 12px;
+  max-width: calc(100vw - 24px);
+  color: #f6ecd9;
+  font: 14px/1.45 'Segoe UI', sans-serif;
+  pointer-events: auto;
+}
+.settings summary {
+  width: fit-content;
+  margin-left: auto;
+  padding: 9px 14px;
+  border: 1px solid #d6be8e66;
+  border-radius: 8px;
+  background: #30291feb;
+  cursor: pointer;
+  list-style: none;
+}
+.settings summary::-webkit-details-marker { display: none; }
+.panel {
+  width: 270px;
+  max-width: calc(100vw - 24px);
+  box-sizing: border-box;
+  margin-top: 7px;
+  padding: 14px;
+  border: 1px solid #d6be8e66;
+  border-radius: 10px;
+  background: #30291ff5;
+  box-shadow: 0 8px 24px #0005;
+}
+.panel label { display: grid; gap: 8px; }
+.panel select {
+  width: 100%;
+  min-height: 42px;
+  padding: 7px;
+  border: 1px solid #b5a17b;
+  border-radius: 5px;
+  color: #f6ecd9;
+  background: #403729;
+  font: inherit;
+}
+.panel small { display: block; margin-top: 12px; color: #cebea3; }
+.settings summary:focus-visible, .panel select:focus-visible { outline: 2px solid #eed398; outline-offset: 3px; }

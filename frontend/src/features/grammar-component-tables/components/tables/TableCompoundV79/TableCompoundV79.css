@@ -1,0 +1,172 @@
+.card.table-compound-v79{
+    position: relative;
+  }
+
+.card.table-compound-v79 table{
+    width: auto;
+    max-width: 100%;
+    border-collapse: collapse;
+    border: 1px solid var(--border-strong);
+    border-radius: 0 0 8px 8px;
+    overflow: hidden;
+    table-layout: fixed;
+    border-top: none;
+  }
+
+.card.table-compound-v79 table thead th{
+    padding: 8px 12px;
+    text-align: center;
+    border: 1px solid var(--border-strong);
+    background: var(--table-head);
+    font-weight: 600;
+    font-size: 0.9em;
+    color: var(--text);
+    box-sizing: border-box;
+  }
+
+.card.table-compound-v79 table thead th:first-child,
+.card.table-compound-v79 table tbody td:first-child{
+    width: 187px;
+    text-align: left;
+  }
+
+.card.table-compound-v79 table thead th:not(:first-child),
+.card.table-compound-v79 table tbody td:not(:first-child){
+    width: 280px;
+  }
+
+.card.table-compound-v79 table tbody td{
+    padding: 8px 12px;
+    border: 1px solid var(--border-strong);
+    text-align: left;
+    font-size: 0.9em;
+    line-height: 1.4;
+    box-sizing: border-box;
+    background: var(--table-row-even);
+  }
+
+.card.table-compound-v79 table tbody td:first-child{
+    font-weight: 600;
+  }
+
+.card.table-compound-v79 table tbody td[rowspan]{
+    vertical-align: middle;
+  }
+
+.card.table-compound-v79 .compound-ending-masc{
+    color: #0066cc;
+    font-weight: 600;
+  }
+
+.card.table-compound-v79 .compound-ending-fem{
+    color: #cc0066;
+    font-weight: 600;
+  }
+
+.card.table-compound-v79 table thead th:nth-last-child(-n+2), .card.table-compound-v79 table tbody td:nth-last-child(-n+2){
+    background: var(--table-head) !important;
+  }
+
+.card.table-compound-v79 .compound-section-title{
+    padding: 10px 16px;
+    background: var(--table-head);
+    font-weight: 700;
+    font-size: 0.95em;
+    color: var(--text);
+    border: 1px solid var(--border-strong);
+    border-bottom: 2px solid #9fa8c0;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 0;
+  }
+
+:root[data-theme="dark"] .card.table-compound-v79 .compound-section-title{
+    border-bottom-color: #5a6478;
+  }
+
+/* === moved from grammar-component-tables.css (page-prefix stripped) === */
+.card.table-compound-v79 {
+  position: relative;
+}
+
+.card.table-compound-v79 table {
+  width: auto !important;
+  max-width: 100% !important;
+  border-collapse: collapse;
+  border: 1px solid var(--border-strong);
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+  table-layout: fixed;
+  border-top: none;
+}
+
+.card.table-compound-v79 table thead th {
+  padding: 8px 12px;
+  text-align: center;
+  border: 1px solid var(--border-strong);
+  background: var(--table-head);
+  font-weight: 600;
+  font-size: 0.9em;
+  color: var(--text);
+  box-sizing: border-box;
+}
+
+.card.table-compound-v79 table thead th:first-child,
+.card.table-compound-v79 table tbody td:first-child {
+  width: 187px !important;
+  text-align: left;
+}
+
+.card.table-compound-v79 table thead th:not(:first-child),
+.card.table-compound-v79 table tbody td:not(:first-child) {
+  width: 280px !important;
+}
+
+.card.table-compound-v79 table tbody td {
+  padding: 8px 12px;
+  border: 1px solid var(--border-strong);
+  text-align: left;
+  font-size: 0.9em;
+  line-height: 1.4;
+  box-sizing: border-box;
+  background: var(--table-row-even);
+}
+
+.card.table-compound-v79 table tbody td:first-child {
+  font-weight: 600;
+}
+
+.card.table-compound-v79 table tbody td[rowspan] {
+  vertical-align: middle;
+}
+
+.card.table-compound-v79 .compound-ending-masc {
+  color: #0066cc;
+  font-weight: 600;
+}
+
+.card.table-compound-v79 .compound-ending-fem {
+  color: #cc0066;
+  font-weight: 600;
+}
+
+.card.table-compound-v79 table thead th:nth-last-child(-n+2),
+.card.table-compound-v79 table tbody td:nth-last-child(-n+2) {
+  background: var(--table-head) !important;
+}
+
+.card.table-compound-v79 .compound-section-title {
+  padding: 10px 16px;
+  background: var(--table-head);
+  font-weight: 700;
+  font-size: 0.95em;
+  color: var(--text);
+  border: 1px solid var(--border-strong);
+  border-bottom: 2px solid #9fa8c0;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 0;
+}
+
+/* === moved pass2 from grammar-component-tables.css === */
+:root.dark .card.table-compound-v79 .compound-section-title {
+  border-bottom-color: #5a6478;
+}

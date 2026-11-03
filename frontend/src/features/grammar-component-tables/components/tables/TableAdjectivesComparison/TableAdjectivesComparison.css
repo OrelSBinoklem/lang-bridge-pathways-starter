@@ -1,0 +1,95 @@
+
+
+/* === moved from grammar-component-tables.css (page-prefix stripped) === */
+.card.table-adjectives-comparison {
+  position: relative;
+  background: var(--card);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: var(--btn-shadow);
+  border: 1px solid var(--border);
+}
+
+.card.table-adjectives-comparison h2 {
+  margin: 0 0 16px 0;
+  font-size: 1.3em;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.card.table-adjectives-comparison .comparison-title-banner {
+  display: inline-block;
+  background: #d64343;
+  color: #ffffff;
+  padding: 4px 12px;
+  border-radius: 4px 0 0 4px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-left: 8px;
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 50%, calc(100% - 8px) 100%, 0 100%);
+}
+
+.card.table-adjectives-comparison table.comparison {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--card);
+  border: 1.5px solid var(--border-strong);
+  box-shadow: 0 10px 26px rgba(41, 56, 101, 0.12);
+}
+
+.card.table-adjectives-comparison table.comparison th, .card.table-adjectives-comparison table.comparison td {
+  border: 1.5px solid var(--border-strong);
+  padding: 8px 10px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.card.table-adjectives-comparison table.comparison thead th {
+  background: var(--table-head);
+  font-weight: 600;
+}
+
+.card.table-adjectives-comparison table.comparison tbody td {
+  background: var(--table-row-even);
+}
+
+.card.table-adjectives-comparison table.comparison .gender-header {
+  background: var(--table-head);
+  font-weight: 700;
+  text-align: left;
+  padding-left: 12px;
+}
+
+.card.table-adjectives-comparison table.comparison .gender-header.masc {
+  background: rgba(0, 102, 204, 0.1);
+}
+
+.card.table-adjectives-comparison table.comparison .gender-header.fem {
+  background: rgba(204, 0, 102, 0.1);
+}
+
+.card.table-adjectives-comparison .comparison-ending-masc {
+  color: #0066cc;
+  font-weight: 600;
+}
+
+.card.table-adjectives-comparison .comparison-ending-fem {
+  color: #cc0066;
+  font-weight: 600;
+}
+
+.card.table-adjectives-comparison .comparison-prefix-vis {
+  color: #3fa872;
+  font-weight: 600;
+}
+
+/* === moved pass2 from grammar-component-tables.css === */
+:root.dark .card.table-adjectives-comparison table.comparison .gender-header.masc {
+  background: rgba(79, 195, 247, 0.18);
+}
+
+:root.dark .card.table-adjectives-comparison table.comparison .gender-header.fem {
+  background: rgba(244, 143, 177, 0.18);
+}

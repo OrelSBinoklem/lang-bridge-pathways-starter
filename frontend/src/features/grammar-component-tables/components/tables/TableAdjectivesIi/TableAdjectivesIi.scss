@@ -1,0 +1,109 @@
+.card.table-adjectives-ii{
+    position: relative;
+    background: var(--card);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: var(--btn-shadow);
+    border: 1px solid var(--border);
+  }
+
+.card.table-adjectives-ii h2{
+    margin: 0 0 16px 0;
+    font-size: 1.3em;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+.card.table-adjectives-ii .adjectives-note{
+    margin-bottom: 16px;
+    padding: 12px 16px;
+    background: var(--table-head);
+    border-radius: 6px;
+    font-size: 0.9rem;
+    color: var(--text);
+    line-height: 1.5;
+  }
+
+.card.table-adjectives-ii table.decl{
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 14px;
+    overflow: hidden;
+    background: var(--card);
+    border: 1.5px solid var(--border-strong);
+    box-shadow: 0 10px 26px rgba(41, 56, 101, 0.12);
+  }
+
+.card.table-adjectives-ii table.decl th, .card.table-adjectives-ii table.decl td{
+    border: 1.5px solid var(--border-strong);
+    padding: 8px 10px;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+.card.table-adjectives-ii table.decl thead th{
+    background: var(--table-head);
+  }
+
+.card.table-adjectives-ii table.decl td:nth-child(odd){
+    background: var(--table-row-odd);
+  }
+
+.card.table-adjectives-ii table.decl td:nth-child(even){
+    background: var(--table-row-even);
+  }
+
+.card.table-adjectives-ii table.decl .case{
+    text-align: left;
+    background: var(--table-head);
+    font-weight: 600;
+    min-width: 150px;
+    color: var(--text);
+    border-right: 1.5px solid var(--border-strong);
+  }
+
+.card.table-adjectives-ii table.decl .case .lv{
+    font-weight: 700;
+  }
+
+.card.table-adjectives-ii table.decl .case .ru{
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 2px;
+  }
+
+.card.table-adjectives-ii table.decl .groups{
+    background: var(--table-head);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: var(--text);
+  }
+
+.card.table-adjectives-ii table.decl .subhead .sub{
+    background: var(--table-head);
+    font-weight: 800;
+    text-align: center;
+  }
+
+.card.table-adjectives-ii table.decl .domrow td{
+    background: transparent;
+    border: none;
+    color: var(--muted);
+    font-weight: 700;
+  }
+
+.card.table-adjectives-ii table.decl tr.types th{
+    background: var(--table-head);
+    white-space: nowrap;
+    color: var(--text);
+  }
+
+.card.table-adjectives-ii table.decl .delta{
+    color: #d64343;
+    font-weight: 800;
+  }
+
+:root[data-theme="dark"] .card.table-adjectives-ii table.decl .delta{
+    color: #ff5fa2;
+  }

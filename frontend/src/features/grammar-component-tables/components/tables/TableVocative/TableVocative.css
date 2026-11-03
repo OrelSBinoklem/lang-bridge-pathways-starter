@@ -1,0 +1,251 @@
+.card.table-vocative {
+  background: var(--card, #fff);
+  padding: 0;
+  overflow: hidden;
+}
+
+.card.table-vocative .vocative-flex-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid var(--border-strong, #c3cfee);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card.table-vocative .vocative-body-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.card.table-vocative .vocative-sidebar {
+  width: 120px;
+  padding: 8px;
+  text-align: center;
+  border-right: 1px solid var(--border-strong, #c3cfee);
+  background: var(--table-head, #F1F3FB);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.card.table-vocative #vocative-table-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.card.table-vocative .vocative-section-header {
+  display: flex;
+  width: 100%;
+  background: var(--table-row-odd, #f5f7ff);
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-strong, #c3cfee);
+}
+
+.card.table-vocative .vocative-section-header > div {
+  padding: 8px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.card.table-vocative .vocative-section-header > div.section-title {
+  width: 100%;
+  text-align: center;
+  border-right: none;
+}
+
+.card.table-vocative .vocative-row {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.card.table-vocative .vocative-row:not(:last-child) {
+  border-bottom: 1px solid var(--border-strong, #c3cfee);
+}
+
+.card.table-vocative .vocative-cell {
+  padding: 8px;
+  text-align: center;
+  border-right: 1px solid var(--border-strong, #c3cfee);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.2;
+  box-sizing: border-box;
+}
+
+.card.table-vocative .vocative-cell:last-child {
+  border-right: none;
+}
+
+.card.table-vocative .vocative-cell.content-cell {
+  flex: 1;
+  min-width: 0;
+}
+
+.card.table-vocative .vocative-ending-masc {
+  color: #0066cc;
+  font-weight: 600;
+}
+
+.card.table-vocative .vocative-ending-fem {
+  color: #cc0066;
+  font-weight: 600;
+}
+
+.card.table-vocative .vocative-example {
+  margin-top: 4px;
+  font-size: 0.95em;
+}
+
+/* === moved from grammar-component-tables.css (page-prefix stripped) === */
+.card.table-vocative .vocative-flex-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card.table-vocative .vocative-header {
+  display: flex;
+  width: 100%;
+  background: var(--table-head);
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.card.table-vocative .vocative-header > div {
+  padding: 8px;
+  text-align: center;
+  border-right: 1px solid var(--border-strong);
+  box-sizing: border-box;
+}
+
+.card.table-vocative .vocative-header > div:last-child {
+  border-right: none;
+}
+
+.card.table-vocative .vocative-body-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.card.table-vocative .vocative-sidebar {
+  width: 120px;
+  padding: 8px;
+  text-align: center;
+  border-right: 1px solid var(--border-strong);
+  background: var(--table-head);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.card.table-vocative #vocative-table-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card.table-vocative .vocative-section-header {
+  display: flex;
+  width: 100%;
+  background: var(--table-row-odd);
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.card.table-vocative .vocative-section-header > div {
+  padding: 8px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.card.table-vocative .vocative-section-header > div.section-title {
+  width: 100%;
+  text-align: center;
+  border-right: none;
+}
+
+.card.table-vocative .vocative-row {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.card.table-vocative .vocative-row:not(:last-child) {
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.card.table-vocative .vocative-cell {
+  padding: 0 8px;
+  text-align: center;
+  border-right: 1px solid var(--border-strong);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.2;
+  box-sizing: border-box;
+}
+
+.card.table-vocative .vocative-cell:last-child {
+  border-right: none;
+}
+
+.card.table-vocative .vocative-cell.header-cell {
+  font-weight: 600;
+  text-align: left;
+  padding-left: 12px;
+  width: 120px;
+}
+
+.card.table-vocative .vocative-cell.content-cell {
+  flex: 1;
+}
+
+.card.table-vocative .vocative-ending-masc {
+  color: #0066cc; /* Синий для мужских окончаний */
+  font-weight: 600;
+}
+
+.card.table-vocative .vocative-ending-fem {
+  color: #cc0066; /* Розовый/пурпурный для женских окончаний */
+  font-weight: 600;
+}
+
+.card.table-vocative .vocative-example {
+  margin-top: 4px;
+  font-size: 0.95rem;
+}
+
+.card.table-vocative {
+  background: var(--card);
+  padding: 0;
+  overflow: hidden;
+  margin: 0;
+}
+
+.card.table-vocative .vocative-cell {
+  padding: 8px;
+}
+
+.card.table-vocative #vocative-table-body {
+  min-width: 0;
+}
+
+.card.table-vocative .vocative-cell.content-cell {
+  min-width: 0;
+}
+
+.card.table-vocative .vocative-example {
+  font-size: 0.95em;
+}

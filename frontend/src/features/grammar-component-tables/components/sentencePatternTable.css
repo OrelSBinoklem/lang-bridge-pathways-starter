@@ -1,0 +1,14 @@
+.sentence-pattern-table { --pattern-border: #b8c8cd; background: #fff; color: #21313c; padding: 0; overflow: hidden; }
+.sentence-pattern-table table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 20px; line-height: 1.45; }
+.sentence-pattern-table caption { caption-side: top; padding: 34px 14px 14px; background: #176d73; color: #fff; font-size: 28px; font-weight: 700; text-align: left; }
+.sentence-pattern-table caption span { display: block; font-size: 18px; font-weight: 400; }
+.sentence-pattern-table th, .sentence-pattern-table td { border: 1px solid var(--pattern-border); padding: 11px 12px; text-align: left; overflow-wrap: anywhere; }
+.sentence-pattern-table thead th { background: #e8eff5; font-size: 18px; }
+.sentence-pattern-table tbody .tt-genitive, .sentence-pattern-table tbody .tt-holder, .sentence-pattern-table tbody .tt-infinitive, .sentence-pattern-table tbody .tt-form { background: #e8f3ee; color: #176249; font-weight: 700; }
+.sentence-pattern-table tbody .tt-head, .sentence-pattern-table tbody .tt-object, .sentence-pattern-table tbody .tt-modal, .sentence-pattern-table tbody .tt-meaning { background: #faf0f3; }
+.sentence-pattern-table tfoot td { font-size: 17px; }
+.sentence-pattern-table .tt-warning td { border-left: 4px solid #da9d26; }
+.dark .sentence-pattern-table { --pattern-border: #526069; background: #252b31; color: #ecf2f5; }
+.dark .sentence-pattern-table thead th { background: #353d47; }
+.dark .sentence-pattern-table tbody .tt-genitive, .dark .sentence-pattern-table tbody .tt-holder, .dark .sentence-pattern-table tbody .tt-infinitive, .dark .sentence-pattern-table tbody .tt-form { background: #2b4339; color: #a8e2cd; }
+.dark .sentence-pattern-table tbody .tt-head, .dark .sentence-pattern-table tbody .tt-object, .dark .sentence-pattern-table tbody .tt-modal, .dark .sentence-pattern-table tbody .tt-meaning { background: #49363f; }

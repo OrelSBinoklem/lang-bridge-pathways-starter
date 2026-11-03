@@ -1,0 +1,77 @@
+
+
+/* === moved from grammar-component-tables.css (page-prefix stripped) === */
+.card.table-word7 .word7-flex-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card.table-word7 .word7-header {
+  display: flex;
+  width: 100%;
+  background: var(--table-head);
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.card.table-word7 .word7-header > div {
+  padding: 8px;
+  text-align: left;
+  border-right: 1px solid var(--border-strong);
+  box-sizing: border-box;
+}
+
+.card.table-word7 .word7-header > div:first-child {
+  width: 300px;
+  flex: 0 0 300px;
+}
+
+.card.table-word7 .word7-header > div:nth-child(2), .card.table-word7 .word7-header > div:nth-child(3) {
+  flex: 1;
+}
+
+.card.table-word7 .word7-header > div:last-child {
+  border-right: none;
+}
+
+.card.table-word7 .word7-row {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.card.table-word7 .word7-row:last-child {
+  border-bottom: none;
+}
+
+.card.table-word7 .word7-cell {
+  padding: 0 8px;
+  border-right: 1px solid var(--border-strong);
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  vertical-align: top;
+}
+
+.card.table-word7 .word7-cell:first-child {
+  width: 300px;
+  flex: 0 0 300px;
+}
+
+.card.table-word7 .word7-cell:nth-child(2), .card.table-word7 .word7-cell:nth-child(3) {
+  flex: 1;
+}
+
+.card.table-word7 .word7-cell:last-child {
+  border-right: none;
+}
+
+.card.table-word7 .word7-adjective {
+  font-weight: 700;
+}

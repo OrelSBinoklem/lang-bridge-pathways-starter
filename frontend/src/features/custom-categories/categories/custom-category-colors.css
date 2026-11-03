@@ -1,0 +1,161 @@
+/* Стили для кастомных категорий с цветами */
+
+/* Анимация для групп */
+@keyframes shimmer {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Стили для групп */
+.group-controls {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.group-controls button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.group-controls button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+}
+
+.btn-check-group {
+  background: linear-gradient(45deg, #4CAF50, #45a049);
+  color: white;
+}
+
+.btn-reset-group {
+  background: linear-gradient(45deg, #f44336, #d32f2f);
+  color: white;
+}
+
+/* Группа радуги */
+.rainbow-group {
+  background: linear-gradient(90deg, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #8B00FF);
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px 0;
+  color: white;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.rainbow-group h3 {
+  margin: 0 0 15px 0;
+  font-size: 24px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.rainbow-group .words-container {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.rainbow-word-card {
+  background: rgba(255,255,255,0.2);
+  border-radius: 15px;
+  padding: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.rainbow-word-card .color-name {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Группа смешения цветов */
+.color-mixing-group {
+  background: linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1);
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px 0;
+  color: white;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.color-mixing-group .shimmer-effect {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  animation: shimmer 4s infinite;
+}
+
+.color-mixing-group h3 {
+  margin: 0 0 15px 0;
+  font-size: 24px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  position: relative;
+  z-index: 1;
+}
+
+.color-mixing-group .words-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.mixing-word-card {
+  background: rgba(255,255,255,0.15);
+  border-radius: 15px;
+  padding: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.3);
+  transition: transform 0.3s ease;
+}
+
+.mixing-word-card.card-left {
+  transform: perspective(1000px) rotateY(-5deg);
+}
+
+.mixing-word-card.card-center {
+  transform: perspective(1000px) rotateY(0deg);
+}
+
+.mixing-word-card.card-right {
+  transform: perspective(1000px) rotateY(5deg);
+}
+
+.mixing-word-card .color-name {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .rainbow-group .words-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .color-mixing-group .words-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .mixing-word-card.card-left,
+  .mixing-word-card.card-center,
+  .mixing-word-card.card-right {
+    transform: none;
+  }
+}

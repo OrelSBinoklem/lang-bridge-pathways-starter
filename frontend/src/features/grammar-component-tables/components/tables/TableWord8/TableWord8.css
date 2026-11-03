@@ -1,0 +1,109 @@
+
+
+/* === moved from grammar-component-tables.css (page-prefix stripped) === */
+.card.table-word8 .word8-flex-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card.table-word8 .word8-header {
+  display: flex;
+  width: 100%;
+  background: var(--table-head);
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.card.table-word8 .word8-header-corner {
+  width: 120px;
+  flex: 0 0 120px;
+  padding: 8px;
+  border-right: 1px solid var(--border-strong);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.card.table-word8 .word8-header-group {
+  display: flex;
+  flex: 1;
+}
+
+.card.table-word8 .word8-header-main {
+  display: flex;
+  flex: 1;
+  border-right: 1px solid var(--border-strong);
+}
+
+.card.table-word8 .word8-header-main:last-child {
+  border-right: none;
+}
+
+.card.table-word8 .word8-header > div {
+  padding: 8px;
+  text-align: center;
+  border-right: 1px solid var(--border-strong);
+  box-sizing: border-box;
+  flex: 1;
+}
+
+.card.table-word8 .word8-header > div:last-child {
+  border-right: none;
+}
+
+.card.table-word8 .word8-subheader {
+  padding: 4px 8px;
+  text-align: center;
+  border-right: 1px solid var(--border-strong);
+  box-sizing: border-box;
+  flex: 1;
+  font-size: 0.9rem;
+}
+
+.card.table-word8 .word8-subheader:last-child {
+  border-right: none;
+}
+
+.card.table-word8 .word8-row {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.card.table-word8 .word8-row:last-child {
+  border-bottom: none;
+}
+
+.card.table-word8 .word8-cell {
+  padding: 0 8px;
+  border-right: 1px solid var(--border-strong);
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  flex: 1;
+}
+
+.card.table-word8 .word8-cell:first-child {
+  width: 120px;
+  font-weight: 600;
+  flex: 0 0 120px;
+}
+
+.card.table-word8 .word8-cell:last-child {
+  border-right: none;
+}
+
+.card.table-word8 .word8-ending {
+  color: #0066cc;
+  font-weight: 600;
+}

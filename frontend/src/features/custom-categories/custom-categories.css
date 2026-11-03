@@ -1,0 +1,486 @@
+﻿/* Ported from lbp theme style.css — custom category templates */
+.examen-view-mode-switch {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  margin-bottom: 14px;
+  padding: 10px 12px;
+  background: #fff8e1;
+  border: 1px solid #ffc107;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.examen-view-mode-switch--default-active {
+  background: #e3f2fd;
+  border-color: #2196f3;
+}
+
+.examen-view-mode-switch__label {
+  font-weight: 600;
+  color: #1565c0;
+}
+
+.examen-view-mode-switch__hint {
+  color: #546e7a;
+  font-size: 12px;
+}
+
+.examen-view-mode-switch__btn {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 1px solid #90a4ae;
+  background: #fff;
+  color: #263238;
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.examen-view-mode-switch__btn:hover {
+  background: #f5f5f5;
+  color: #111;
+}
+
+.examen-view-mode-switch__btn--primary {
+  background: #1976d2;
+  border-color: #1565c0;
+  color: #fff;
+}
+
+.examen-view-mode-switch__btn--primary:hover {
+  background: #1565c0;
+  color: #fff;
+}
+
+/* Стили для категории спряжения глаголов */
+.verb-container {
+  background-color: #E3F2FD;
+  padding: 6px;
+  border-radius: 3px;
+  border: 1px solid #2196F3;
+  margin-bottom: 10px;
+}
+
+.verb-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.verb-title {
+  flex: 1;
+}
+
+.verb-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.verb-stats {
+  font-size: 14px;
+  color: #666;
+}
+
+.verb-rows {
+  background-color: white;
+  border-radius: 2px;
+  font-size: 12px;
+}
+
+.verb-row {
+  display: flex;
+  align-items: center;
+  padding: 4px 6px;
+  border-bottom: 1px solid #ddd;
+}
+
+.verb-row:last-child {
+  border-bottom: none;
+}
+
+.verb-pronoun {
+  font-weight: bold;
+  width: 41px;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+.verb-words {
+  display: flex;
+  gap: 8px;
+  flex: 1;
+  align-items: center;
+}
+
+.word-input {
+  min-width: 140px;
+  flex-shrink: 0;
+}
+
+.word-input.empty {
+  width: 140px;
+}
+
+.verb-word-field {
+  display: contents;
+}
+
+.word-input--field-active {
+  position: relative;
+  z-index: 2;
+  outline: 3px solid #1976d2 !important;
+  outline-offset: 3px;
+  border-radius: 6px;
+  background: rgba(33, 150, 243, 0.18) !important;
+  padding: 4px;
+  box-shadow: 0 0 0 6px rgba(33, 150, 243, 0.25);
+  animation: verb-field-active-pulse 1.4s ease-in-out infinite;
+}
+
+.word-input--field-active .word-input-field-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.word-input-field-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  overflow: visible;
+}
+
+/* Всплывашка с правильным ответом при ошибке */
+.word-field-tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 8px;
+  padding: 8px 12px;
+  background: #28a745;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  animation: tooltipFadeIn 0.3s ease;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.word-field-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: #28a745;
+}
+
+@keyframes tooltipFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.word-input .learning-mode-icon-end {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  line-height: 1;
+}
+
+.word-input-field-badge {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.word-input-field-badge--learned {
+  color: #28a745;
+}
+
+.word-input--field-active .word-input-field {
+  border-color: #1976d2 !important;
+  background-color: #fff !important;
+  font-size: 16px !important;
+}
+
+/* iOS Safari: зум при фокусе, если font-size < 16px (в т.ч. landscape / desktop-таблица) */
+@supports (-webkit-touch-callout: none) {
+  .verb-conjugation-category .word-input-field,
+  .verb-conjugation-category input[type="text"].word-input-field {
+    font-size: 16px !important;
+  }
+
+  .verb-conjugation-category .word-input-field::placeholder {
+    font-size: 16px;
+  }
+}
+
+@keyframes verb-field-active-pulse {
+  0%, 100% { box-shadow: 0 0 0 4px rgba(33, 150, 243, 0.2); }
+  50% { box-shadow: 0 0 0 8px rgba(33, 150, 243, 0.35); }
+}
+
+.verb-conjugation-category--training .word-input:not(.word-input--field-active):not(.word-input--cooldown) {
+  opacity: 0.55;
+}
+
+.noun-number-section {
+  margin-bottom: 12px;
+}
+
+.noun-number-section:last-child {
+  margin-bottom: 0;
+}
+
+.noun-number-section__heading {
+  margin: 0;
+  padding: 6px 4px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #37474f;
+  background: #eceff1;
+  border-bottom: 1px solid #cfd8dc;
+}
+
+.verb-row--header {
+  border-bottom: 1px solid #b0bec5;
+  background: #f5f5f5;
+}
+
+.noun-declension-category .noun-number-section .verb-words {
+  display: grid;
+  grid-template-columns: repeat(3, 140px);
+  gap: 8px;
+  align-items: center;
+}
+
+.noun-declension-category .noun-column-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  box-sizing: border-box;
+}
+
+.noun-declension-category .noun-column-cell .verb-word-field {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.noun-declension-category .noun-column-cell .word-input,
+.noun-declension-category .noun-column-cell .word-input.empty {
+  width: 140px;
+  max-width: 100%;
+}
+
+.noun-column-header {
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1565c0;
+  text-align: center;
+  line-height: 1.2;
+  padding: 2px 0 4px;
+}
+
+.noun-column-cell--header {
+  padding-bottom: 2px;
+}
+
+.noun-group-container {
+  background-color: #E8F5E9;
+  border-color: #4CAF50;
+}
+
+.noun-lemma-group {
+  border-bottom: 1px solid #cfd8dc;
+}
+
+.noun-lemma-group:last-child {
+  border-bottom: none;
+}
+
+.noun-lemma-group__heading {
+  color: #1565c0;
+  text-transform: none;
+  text-align: center;
+}
+
+.verb-inline-training-hint {
+  color: #1565c0;
+  font-size: 0.92em;
+}
+
+.verb-inline-training-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+  padding: 10px 14px;
+  background: #e3f2fd;
+  border: 1px solid #90caf9;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.verb-inline-training-bar__finish {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 14px;
+  border: 1px solid #ef9a9a;
+  border-radius: 6px;
+  background: #fff;
+  color: #c62828;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(198, 40, 40, 0.12);
+  transition: background 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.verb-inline-training-bar__finish-x {
+  font-size: 18px;
+  line-height: 1;
+  color: #c62828;
+  font-weight: 400;
+}
+
+.verb-inline-training-bar__finish:hover .verb-inline-training-bar__finish-x {
+  color: #b71c1c;
+}
+
+.verb-inline-training-bar__finish:hover {
+  background: #fff5f5;
+  border-color: #e57373;
+  color: #b71c1c;
+  box-shadow: 0 1px 4px rgba(198, 40, 40, 0.18);
+}
+
+.verb-inline-training-bar__finish:active {
+  background: #ffebee;
+}
+
+@media (max-width: 767px) {
+  .word-input--field-active {
+    margin: 2px 0;
+  }
+}
+
+.verb-rows__mobile {
+  display: none;
+}
+
+.verb-rows__desktop {
+  display: block;
+}
+
+/* Телефон: блок на каждое время — один заголовок, ниже все местоимения с полями */
+@media (max-width: 767px) {
+  .verb-rows__desktop {
+    display: none;
+  }
+
+  .verb-rows__mobile {
+    display: block;
+  }
+
+  .verb-tense-group {
+    border-bottom: 2px solid #cfd8dc;
+  }
+
+  .verb-tense-group:last-child {
+    border-bottom: none;
+  }
+
+  .verb-tense-group__heading {
+    margin: 0;
+    padding: 8px 6px 6px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #37474f;
+    text-transform: lowercase;
+    background: #eceff1;
+    border-bottom: 1px solid #cfd8dc;
+  }
+
+  .verb-tense-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 6px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .verb-tense-group .verb-tense-block:last-child {
+    border-bottom: none;
+  }
+
+  .verb-tense-block .verb-pronoun {
+    flex: 0 0 41px;
+    width: 41px;
+  }
+
+  .verb-tense-stack {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .verb-rows__mobile .word-input {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    flex-shrink: 1 !important;
+  }
+
+  .verb-rows__mobile .word-input > span {
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+  }
+
+  .verb-rows__mobile .word-input .word-input-field,
+  .verb-rows__mobile .word-input input[type="text"] {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    /* iOS Safari не зумит экран при фокусе, если font-size >= 16px */
+    font-size: 16px !important;
+  }
+
+  .verb-rows__mobile .word-input > span > span {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    box-sizing: border-box;
+  }
+}

@@ -1,0 +1,98 @@
+/*
+ * Portals into the fixed header anchor (#course-effect-gui-anchor, see CoursePath.tsx) the
+ * moment its group becomes active, so it reads as part of the site's one "Controls" corner
+ * rather than a popup glued to a card — no separate open/close toggle of its own.
+ *
+ * Visibility instead piggybacks on the *existing* global "⋯" toggle (webgl-gui-toggle.tsx),
+ * which already shows/hides the home page's water-logo dat.GUI via `body.webgl-gui-visible` /
+ * `body.webgl-gui-hidden`. This panel defaults to hidden (matching that toggle's own default)
+ * and only appears once the user has revealed the GUI corner via that same button.
+ */
+.panelDocked,
+.panelFloating {
+  display: none;
+}
+
+:global(body.webgl-gui-visible) .panelDocked,
+:global(body.webgl-gui-visible) .panelFloating {
+  display: block;
+}
+:global(body.garden-preview-controls) .panelFloating { display: block; }
+
+/* Docked under the site's base water-logo GUI (fixed 150px offset — that panel's own field set
+ * never changes at runtime, so a live DOM measurement isn't worth the complexity here; see
+ * EffectTuningPanel.tsx for the fuller reasoning). */
+.panelDocked {
+  position: relative;
+  margin-top: 150px;
+  pointer-events: auto;
+}
+
+/* Fallback for pages with no #course-effect-gui-anchor (e.g. unexpected reuse outside
+ * CoursePath/effects-preview) — floats over the card's own top-right corner instead. */
+.panelFloating {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  pointer-events: auto;
+}
+
+.panelDocked :global(.dg.main),
+.panelFloating :global(.dg.main) {
+  font-size: 11px;
+  max-height: calc(100vh - 190px);
+  overflow-y: auto;
+}
+
+.panelDocked :global(.dg .close-button),
+.panelDocked :global(.dg .close-bottom),
+.panelFloating :global(.dg .close-button),
+.panelFloating :global(.dg .close-bottom) {
+  display: none !important;
+}
+
+/* The genome matrix (see buildGenomeMatrix in EffectTuningPanel.tsx) is raw DOM injected into a
+ * dat.GUI folder rather than one of its own controllers — dat.GUI has no spreadsheet widget — so
+ * it needs its own styling, kept close to the library's own dark theme (li background #1a1a1a,
+ * number-input accent #2FA1D6). */
+.genomeMatrixWrap {
+  overflow-x: auto;
+  padding: 4px 5px 6px;
+  background: #1a1a1a;
+  border-bottom: 1px solid #2c2c2c;
+}
+.genomeMatrixTable {
+  border-collapse: collapse;
+  font-size: 10px;
+  white-space: nowrap;
+}
+.genomeMatrixTable th,
+.genomeMatrixTable td {
+  padding: 1px 2px;
+  text-align: center;
+}
+.genomeMatrixTable thead th {
+  color: #8fa3b5;
+  font-weight: 400;
+}
+.genomeMatrixLabel {
+  text-align: left;
+  max-width: 122px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #cfd8e3;
+  padding-right: 6px;
+  cursor: default;
+}
+.genomeMatrixInput {
+  width: 26px;
+  background: #303030;
+  color: #2fa1d6;
+  border: 1px solid #444;
+  border-radius: 2px;
+  font-size: 10px;
+  text-align: center;
+  padding: 1px 0;
+}
+.genomeMatrixInput:hover { background: #3c3c3c; }
+.genomeMatrixInput:focus { background: #494949; color: #fff; outline: none; }

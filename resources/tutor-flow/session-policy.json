@@ -1,0 +1,8 @@
+{
+  "idleGraceMs": 600000,
+  "maxIdleBytes": 33554432,
+  "maxSnapshotBytes": 1048576,
+  "maxSessions": 512,
+  "maxAttachmentsPerSession": 4,
+  "maxPendingTurns": 2
+}

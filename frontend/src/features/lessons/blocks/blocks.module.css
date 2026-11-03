@@ -1,0 +1,75 @@
+.block { display: grid; gap: 16px; }
+.audio { width: 100%; }
+.assistanceMode { display: flex; flex-wrap: wrap; align-items: center; gap: 0; margin-bottom: 12px; }
+.assistanceMode button { min-height: 36px; padding: 6px 12px; border: 1px solid #a9bfba; border-radius: 0; background: transparent; color: inherit; font: inherit; cursor: pointer; }
+.assistanceMode button:first-child { border-radius: 4px 0 0 4px; }
+.assistanceMode button:nth-of-type(2) { border-left: 0; border-radius: 0 4px 4px 0; }
+.assistanceMode button[aria-pressed='true'] { background: #dceee8; color: #185c48; }
+.assistanceMode button:disabled { cursor: default; }
+.assistanceMode button:focus-visible { outline: 2px solid #168066; outline-offset: 2px; }
+.assistanceMode span { margin-left: 12px; font-size: 12px; }
+:global(html.dark) .assistanceMode button { border-color: #4c6860; }
+:global(html.dark) .assistanceMode button[aria-pressed='true'] { background: #204238; color: #c7eee0; }
+.transcript { font-size: 14px; color: #5b6b74; }
+.transcript summary { cursor: pointer; font-weight: 600; }
+.readingText { white-space: pre-wrap; line-height: 1.6; }
+.question { display: grid; gap: 10px; }
+.questionText { font-weight: 650; margin: 0; }
+.options { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.option { width: 100%; text-align: left; padding: 10px 14px; border: 1px solid #d5dce2; border-radius: 8px; background: white; cursor: pointer; }
+.option:disabled { cursor: default; }
+.option.correct { border-color: #167d58; background: #e0f3e9; }
+.option.wrong { border-color: #c0392b; background: #fbe4e1; }
+.feedback { font-weight: 600; margin: 0; }
+.topic { font-size: 13px; text-transform: uppercase; letter-spacing: .04em; color: #66727b; margin: 0 0 8px; }
+.lessonText { white-space: pre-wrap; line-height: 1.6; margin: 0 0 16px; }
+.practiceImage { display: block; width: min(100%, 420px); max-height: 340px; object-fit: cover; border-radius: 8px; border: 1px solid #d5dce2; }
+.soon { color: #66727b; font-style: italic; }
+.done { color: #167d58; font-weight: 700; }
+.binaryTask { display: grid; gap: 16px; }
+.trainingNotice { margin: 0; padding: 10px 12px; border-left: 3px solid #d58a16; background: #fff5dd; color: #775005; }
+.binaryQuestions { width: 100%; margin: 0; border-collapse: collapse; table-layout: fixed; }
+.binaryQuestions th, .binaryQuestions td { padding: 10px 12px; border: 1px solid #d5dce2; vertical-align: middle; text-align: left; }
+.binaryQuestion th { font-weight: 400; }
+.binaryAnswer { width: 148px; }
+.binaryQuestion p { min-width: 0; margin: 0; overflow-wrap: anywhere; }
+.binaryControls { display: flex; gap: 8px; white-space: nowrap; }
+.binaryControls button, .submitAnswers, .scoreResult button { border: 1px solid #9aa7b2; border-radius: 6px; padding: 7px 13px; background: #fff; color: #25313a; cursor: pointer; font: inherit; }
+.binaryControls button { min-width: 48px; padding-inline: 10px; }
+.binaryControls button:hover, .submitAnswers:hover, .scoreResult button:hover { border-color: #167d58; }
+.binaryControls button:disabled, .submitAnswers:disabled { cursor: default; opacity: .55; }
+.binarySelected { border-color: #167d58 !important; background: #e0f3e9 !important; color: #0d5138 !important; font-weight: 700; }
+.binaryCorrect { border-color: #167d58; background: #f0fbf5; }
+.binaryWrong { border-color: #c0392b; background: #fff5f3; }
+.binaryQuestion .binaryFeedback { margin-top: 8px; color: #8c3028; font-size: 14px; }
+.scoreResult { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; padding: 12px; border-radius: 8px; background: #edf5f1; color: #174e38; }
+.scoreResult span { flex: 1 1 260px; }
+.scoreResult p { flex-basis: 100%; margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.taskError { margin: 0; color: #b42318; font-weight: 600; }
+.translationTask { display: grid; gap: 12px; }
+.translationInstruction { margin: 0; font-weight: 600; }
+.translationSource { margin: 0; padding: 12px; border-left: 3px solid #167d58; background: #f3f7f5; white-space: pre-wrap; }
+.translationTask textarea { width: 100%; resize: vertical; border: 1px solid #9aa7b2; border-radius: 8px; padding: 10px; background: #fff; color: inherit; font: inherit; }
+:global(.dark) .done { color: #69c99c; }
+:global(.dark) .option { background: #2c3338; border-color: #4b555e; color: #edf0f2; }
+:global(.dark) .option.correct { border-color: #69c99c; background: #22503d; }
+:global(.dark) .option.wrong { border-color: #e08585; background: #4a2a27; }
+:global(.dark) .transcript { color: #b5bec5; }
+:global(.dark) .topic, :global(.dark) .soon { color: #b5bec5; }
+:global(.dark) .practiceImage, :global(.dark) .binaryQuestions th, :global(.dark) .binaryQuestions td { border-color: #4b555e; }
+:global(.dark) .binaryQuestion .binaryFeedback { color: #f1aaa2; }
+:global(.dark) .trainingNotice { background: #4a391c; color: #ffe2a3; }
+:global(.dark) .binaryControls button, :global(.dark) .submitAnswers, :global(.dark) .scoreResult button, :global(.dark) .translationTask textarea { background: #2c3338; border-color: #4b555e; color: #edf0f2; }
+:global(.dark) .binarySelected { background: #22503d !important; color: #b9f4d2 !important; }
+:global(.dark) .binaryCorrect { background: #193d30; }
+:global(.dark) .binaryWrong { background: #4a2a27; }
+:global(.dark) .scoreResult { background: #193d30; color: #b9f4d2; }
+:global(.dark) .translationSource { background: #1e302a; }
+.practiceDraft { display: grid; gap: 8px; margin-top: 20px; min-width: 0; }
+.practiceDraft label { font-size: 14px; font-weight: 600; }
+.practiceDraft textarea { box-sizing: border-box; width: 100%; min-width: 0; resize: vertical; padding: 10px 12px; border: 1px solid #9aa7b2; border-radius: 4px; background: #fff; color: #25313a; font: inherit; line-height: 1.6; }
+:global(.dark) .practiceDraft textarea { background: #2c3338; color: #edf0f2; border-color: #65737d; }
+.conversationGoals { line-height: 1.65; overflow-wrap: anywhere; }
+.conversationGoals h3 { font-size: 16px; margin: 0 0 12px; }
+.conversationGoals ul { margin: 0; padding-left: 22px; }
+.conversationGoals li + li { margin-top: 8px; }

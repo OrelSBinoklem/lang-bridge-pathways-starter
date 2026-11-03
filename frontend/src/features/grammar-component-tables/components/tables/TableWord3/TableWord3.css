@@ -1,0 +1,43 @@
+
+
+/* === moved from grammar-component-tables.css (page-prefix stripped) === */
+.card.table-word3 {
+  max-width: 100%;
+}
+
+.card.table-word3 .word3-content {
+  padding: 16px;
+}
+
+.card.table-word3 .word3-title {
+  color: #2d5016;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  margin-bottom: 16px;
+}
+
+.card.table-word3 .word3-paragraph {
+  margin-bottom: 12px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.card.table-word3 .word3-examples {
+  margin-top: 16px;
+}
+
+.card.table-word3 .word3-example-item {
+  margin-bottom: 8px;
+  line-height: 1.8;
+}
+
+.card.table-word3 .word3-verb-base {
+  font-weight: 600;
+  color: #0066cc;
+}
+
+.card.table-word3 .word3-prefix {
+  font-weight: 600;
+  color: #cc0066;
+}

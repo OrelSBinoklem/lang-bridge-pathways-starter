@@ -1,0 +1,57 @@
+/* Opt-in skin: the live homepage keeps its markup, order, queries and controls. */
+.root.root {
+  --u-paper: #fff; --u-ground: #f5f7f6; --u-ink: #26352f; --u-muted: #65766e;
+  --u-line: #d7e3dc; --u-accent: #17694e; --u-soft: #eaf3ed;
+  color: var(--u-ink); font-family: var(--font-geist-sans), Arial, sans-serif;
+  padding-top: 12px; letter-spacing: 0;
+}
+:global(html.dark) .root.root { --u-paper: #161e1a; --u-ground: #202b25; --u-ink: #e9f1ec; --u-muted: #a8bcb0; --u-line: #3a4c40; --u-accent: #86d5b3; --u-soft: #263c30; }
+.root.root :is(a,button):focus-visible { outline: 3px solid var(--u-accent); outline-offset: 4px; }
+.root.root h2 { font-family: inherit; font-size: 20px; font-weight: 600; line-height: 1.4; color: var(--u-ink); }
+.root.root > section:first-of-type { margin: 20px 0 32px; }
+.root.root > section:first-of-type > div:first-child { margin-bottom: 16px; }
+.root.root > section:first-of-type > div:first-child > a { border-color: var(--u-line); color: var(--u-accent); background: var(--u-paper); border-radius: 5px; }
+.root.root > section:first-of-type > div:nth-of-type(2) { gap: 16px; }
+.root.root > section:first-of-type > div:nth-of-type(2) > a { background: var(--u-ground); border: 1px solid var(--u-line); border-radius: 6px; color: var(--u-ink); min-height: 150px; padding: 18px 20px; gap: 12px; }
+.root.root > section:first-of-type > div:nth-of-type(2) > a:hover { background: var(--u-soft); border-color: var(--u-accent); }
+.root.root > section:first-of-type a > span:first-child strong { font-size: 18px; }
+.root.root > section:first-of-type a > span:nth-child(2) > strong { font-size: 26px; font-weight: 600; }
+.root.root > section:first-of-type a > span:nth-child(2) > span { background: transparent; border: 0; padding: 0; font-size: 12px; }
+.root.root > section:first-of-type a > span:nth-child(3) { height: 4px; background: var(--u-line); border-radius: 0; }
+.root.root > section:first-of-type a > small { color: var(--u-muted); font-size: 12px; }
+.root.root > ul { margin-top: 0; }
+.root.root > ul > li { margin-bottom: 12px; background: var(--u-paper); border: 1px solid var(--u-line); box-shadow: none; border-radius: 6px; transition: border-color .15s; }
+.root.root > ul > li:hover { transform: none; border-color: var(--u-accent); }
+.root.root > ul > li > a { min-height: 68px; padding: 16px 20px 16px 108px; color: var(--u-ink) !important; gap: 8px 18px; }
+.root.root > ul h2 { font-size: 16px; font-weight: 600; }
+.root.root > ul > li > a > span:first-child { background: var(--u-soft); color: var(--u-accent); border-radius: 5px 0 0 5px; font-size: 12px; width: 86px; }
+.root.root > ul > li > a > span:nth-last-child(2) { text-decoration: none; font-size: 15px; }
+.root.root > ul > li > a > span:last-child { font-style: normal; color: var(--u-muted); font-size: 12px; }
+.root.root > a { color: var(--u-accent); background: var(--u-ground); border-color: var(--u-line); padding: 18px 20px; gap: 18px; }
+.root.root > a:hover { background: var(--u-soft); }
+.root.root > a h2 { font-size: 17px; font-weight: 550; }
+.root.root > a > i:first-child { font-size: 22px; }
+.root.root > div:has(> button) { gap: 16px; margin-top: 28px; }
+.root.root > div > button { background: var(--u-soft); border: 1px solid var(--u-line); border-radius: 5px; color: var(--u-accent); text-shadow: none; box-shadow: none; font: 600 15px/1.4 var(--font-geist-sans),Arial,sans-serif; padding: 15px 20px; max-width: 280px; }
+.root.root > div > button:hover { background: var(--u-ground); border-color: var(--u-accent); filter: none; }
+.root.root > section:last-of-type:not(:first-of-type) { margin-top: 36px; border-top: 1px solid var(--u-line); padding: 28px 0 0; }
+.root.root > section:last-of-type:not(:first-of-type) > h2 { border: 0; padding: 0; margin-bottom: 18px; }
+.root.root > section:last-of-type:not(:first-of-type) > a { font-size: 14px; color: var(--u-accent); line-height: 1.6; padding: 10px 0; border: 0; border-bottom: 1px solid var(--u-line); margin: 0; }
+.root.root > section:last-of-type:not(:first-of-type) > a::before { content: none; }
+.root.root > section:last-of-type:not(:first-of-type) > a:hover { color: var(--u-ink); text-decoration: underline; text-underline-offset: 3px; }
+.dialog :global(.p-dialog-header),.dialog :global(.p-dialog-content) { background: #fff; color: #26352f; }
+.dialog :global(.p-dialog-header) { border-bottom: 1px solid #d7e3dc; }
+:global(html.dark) .dialog :global(.p-dialog-header),:global(html.dark) .dialog :global(.p-dialog-content) { background: #161e1a; color: #e9f1ec; }
+:global(html.dark) .dialog :global(.p-dialog-content) > div,:global(html.dark) .dialog :global(.p-dialog-content) :is(h2,h3,h4) { color: #e9f1ec; }
+:global(html.dark) .dialog :global(.p-dialog-content) [role='note'] { color: #183a45; }
+@media (max-width: 640px) {
+  .root.root > section:first-of-type > div:nth-of-type(2) { gap: 12px; }
+  .root.root > section:first-of-type > div:nth-of-type(2) > a { padding: 14px; }
+  .root.root > ul h2 { flex-basis: auto; font-size: 15px; }
+  .root.root > ul > li > a { padding: 14px 14px 14px 90px; gap: 7px; }
+  .root.root > ul > li > a > span:first-child { width: 74px; }
+  .root.root > a { gap: 12px; padding-inline: 12px; }
+  .root.root > a h2 { font-size: 15px; }
+  .root.root > div > button { min-width: 0; font-size: 13px; padding-inline: 12px; }
+}
+@media (prefers-reduced-motion: reduce) { .root.root * { transition: none; } }

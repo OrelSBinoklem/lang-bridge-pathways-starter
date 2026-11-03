@@ -1,0 +1,273 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.modal {
+  position: relative;
+  width: min(920px, 100%);
+  max-height: 90vh;
+  overflow: auto;
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px 22px 18px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.28);
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  border: none;
+  background: transparent;
+  font-size: 26px;
+  line-height: 1;
+  color: #666;
+  cursor: pointer;
+}
+
+.title {
+  margin: 0 0 8px;
+  font-size: 18px;
+  color: #311b92;
+}
+
+.hint {
+  margin: 0 0 14px;
+  font-size: 13px;
+  color: #546e7a;
+  line-height: 1.45;
+}
+
+.percentRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.percentLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: #37474f;
+}
+
+.percentOptions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.percentBtn {
+  padding: 5px 11px;
+  border: 1px solid #b39ddb;
+  border-radius: 999px;
+  background: #f3e5f5;
+  color: #4a148c;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.percentBtnActive {
+  background: linear-gradient(135deg, #7b1fa2, #5e35b1);
+  border-color: #5e35b1;
+  color: #fff;
+}
+
+.summary {
+  margin-bottom: 12px;
+  font-size: 13px;
+  color: #455a64;
+}
+
+.chartWrap {
+  margin-bottom: 16px;
+}
+
+.chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 140px;
+  padding: 8px 6px 4px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #fafafa 0%, #f5f5f5 100%);
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.barCol {
+  flex: 0 0 8px;
+  min-width: 8px;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  border-radius: 2px 2px 0 0;
+  opacity: 0.85;
+}
+
+.barColMax {
+  opacity: 1;
+}
+
+.barColSelected {
+  box-shadow: 0 0 0 2px #ff9800;
+  opacity: 1;
+}
+
+.barColDense {
+  opacity: 0.35;
+}
+
+.barStack {
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  min-height: 2px;
+  border-radius: 2px 2px 0 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.barSeg {
+  width: 100%;
+  min-height: 1px;
+}
+
+.barSegDirect {
+  background: linear-gradient(180deg, #42a5f5, #1565c0);
+}
+
+.barSegRevert {
+  background: linear-gradient(180deg, #ab47bc, #6a1b9a);
+}
+
+.barSegEmpty {
+  flex: 1;
+  background: #e0e0e0;
+  min-height: 2px;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  margin-top: 8px;
+  font-size: 11px;
+  color: #607d8b;
+}
+
+.swatch {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 4px;
+  border-radius: 2px;
+  vertical-align: middle;
+}
+
+.swatchDirect {
+  background: #1976d2;
+}
+
+.swatchRevert {
+  background: #8e24aa;
+}
+
+.swatchSelected {
+  background: #fff;
+  box-shadow: 0 0 0 2px #ff9800;
+}
+
+.swatchDense {
+  background: #bdbdbd;
+}
+
+.tooltip {
+  position: fixed;
+  z-index: 100002;
+  transform: translate(-50%, calc(-100% - 8px));
+  max-width: 240px;
+  padding: 8px 10px;
+  background: #fff;
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  text-align: start;
+  pointer-events: none;
+}
+
+.tooltipWord {
+  font-size: 14px;
+  font-weight: 700;
+  color: #263238;
+}
+
+.tooltipTrans {
+  margin-top: 4px;
+  font-size: 13px;
+  color: #455a64;
+}
+
+.tooltipAttempts {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.tooltipDirect {
+  color: #1565c0;
+}
+
+.tooltipRevert {
+  color: #6a1b9a;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 9px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+
+.btnCancel {
+  background: #eceff1;
+  color: #37474f;
+}
+
+.btnConfirm {
+  background: linear-gradient(135deg, #7b1fa2, #5e35b1);
+  color: #fff;
+}
+
+.btnConfirm:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.warn {
+  margin: 10px 0 0;
+  font-size: 13px;
+  color: #c62828;
+}

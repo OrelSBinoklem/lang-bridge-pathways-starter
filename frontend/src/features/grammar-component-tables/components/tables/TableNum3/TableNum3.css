@@ -1,0 +1,61 @@
+
+
+/* === moved from grammar-component-tables.css (page-prefix stripped) === */
+.card.table-num3 .num3-flex-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card.table-num3 .num3-header {
+  display: flex;
+  width: 100%;
+  background: var(--table-head);
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.card.table-num3 .num3-header > div {
+  padding: 8px;
+  text-align: center;
+  border-right: 1px solid var(--border-strong);
+  box-sizing: border-box;
+  flex: 1;
+}
+
+.card.table-num3 .num3-header > div:last-child {
+  border-right: none;
+}
+
+.card.table-num3 .num3-row {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.card.table-num3 .num3-row:last-child {
+  border-bottom: none;
+}
+
+.card.table-num3 .num3-cell {
+  padding: 0 8px;
+  border-right: 1px solid var(--border-strong);
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  flex: 1;
+}
+
+.card.table-num3 .num3-cell:last-child {
+  border-right: none;
+}
+
+.card.table-num3 .num3-number {
+  font-weight: 600;
+  margin-right: 8px;
+}

@@ -1,0 +1,21 @@
+[
+  {
+    "id": "en-demo-sentence",
+    "key": "englishDemoSentence",
+    "level": "a1",
+    "group": "Пример",
+    "title": "Простое предложение",
+    "subtitle": "Кто + действие",
+    "rule": "В простом утверждении подлежащее обычно стоит перед глаголом.",
+    "when": "Когда говорим о привычных действиях.",
+    "rows": [
+      {"id":"first","label":"Я","translation":"Я читаю.","pattern":[{"role":"subject","text":"I"},{"role":"verb","text":"read"}],"example":[{"role":"subject","text":"I"},{"role":"verb","text":"read."}]},
+      {"id":"second","label":"Ты","translation":"Ты рисуешь.","pattern":[{"role":"subject","text":"You"},{"role":"verb","text":"draw"}],"example":[{"role":"subject","text":"You"},{"role":"verb","text":"draw."}]},
+      {"id":"third","label":"Мы","translation":"Мы учимся.","pattern":[{"role":"subject","text":"We"},{"role":"verb","text":"study"}],"example":[{"role":"subject","text":"We"},{"role":"verb","text":"study."}]}
+    ],
+    "notes": ["Это демонстрационная таблица с небольшим набором примеров."],
+    "pitfalls": [{"wrong":"Read I.","right":"I read.","why":"В утверждении подлежащее стоит перед глаголом."}],
+    "related": [],
+    "sources": [{"title":"British Council: грамматика английского","url":"https://learnenglish.britishcouncil.org/grammar"}]
+  }
+]

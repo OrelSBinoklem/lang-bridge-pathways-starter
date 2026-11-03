@@ -1,0 +1,1045 @@
+.table-container{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+
+.polygon-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+    overflow: visible;
+  }
+
+.polygon-overlay.editing{
+    pointer-events: all;
+  }
+
+.polygon-overlay svg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: visible;
+  }
+
+.table-container:hover .polygon-toolbar, .table-container.editing .polygon-toolbar, .polygon-toolbar:hover{
+    opacity: 1;
+    pointer-events: all;
+  }
+
+.card.table-word2 .word2-flex-table{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid var(--border-strong);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+.card.table-word2 .word2-section{
+    border-bottom: 1px solid var(--border-strong);
+  }
+
+.card.table-word2 .word2-section:last-child{
+    border-bottom: none;
+  }
+
+.card.table-word2 .word2-section-header{
+    padding: 12px;
+    background: var(--table-head);
+    font-weight: 600;
+    border-bottom: 1px solid var(--border-strong);
+  }
+
+.card.table-word2 .word2-section-content{
+    padding: 12px;
+  }
+
+.card.table-word2 .word2-subtable{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+  }
+
+.card.table-word2 .word2-subtable th, .card.table-word2 .word2-subtable td{
+    padding: 0 8px;
+    text-align: left;
+    border: 1px solid var(--border-strong);
+    font-size: 0.9rem;
+    line-height: 1.2;
+  }
+
+.card.table-word2 .word2-subtable th{
+    background: var(--table-row-odd);
+    font-weight: 600;
+  }
+
+.card.table-word2 .word2-root{
+    font-weight: 600;
+    color: #0066cc;
+  }
+
+.card.table-word2 .word2-prefix{
+    font-weight: 600;
+    color: #cc0066;
+  }
+
+.card.table-word2 .word2-suffix{
+    font-weight: 600;
+    color: #009900;
+  }
+
+.card.table-word2 .word2-ending{
+    font-weight: 600;
+    color: #ff6600;
+  }
+
+.card.table-word20{
+    padding: 20px;
+  }
+
+.card.table-word20 .word20-title{
+    color: #2d5016;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+  }
+
+.card.table-word20 .word20-flex-table{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid #000;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+.card.table-word20 .word20-header-row{
+    display: flex;
+    width: 100%;
+    background: #e0e0e0;
+    font-weight: 600;
+    border-bottom: 1px solid #000;
+  }
+
+.card.table-word20 .word20-header-row > div{
+    padding: 12px;
+    text-align: center;
+    border-right: 1px solid #000;
+    box-sizing: border-box;
+    font-weight: bold;
+    flex: 1;
+  }
+
+.card.table-word20 .word20-header-row > div:last-child{
+    border-right: none;
+  }
+
+.card.table-word20 .word20-spanning-header{
+    padding: 12px;
+    text-align: center;
+    background: #e0e0e0;
+    font-weight: bold;
+    border-bottom: 1px solid #000;
+  }
+
+.card.table-word20 .word20-row{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid #000;
+  }
+
+.card.table-word20 .word20-row:last-child{
+    border-bottom: none;
+  }
+
+.card.table-word20 .word20-cell{
+    padding: 0 8px;
+    border-right: 1px solid #000;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 0.95rem;
+    line-height: 1.2;
+    vertical-align: top;
+    flex: 1;
+  }
+
+.card.table-word20 .word20-cell:last-child{
+    border-right: none;
+  }
+
+.card.table-word20 .word20-example{
+    display: block;
+    margin-bottom: 8px;
+  }
+
+.card.table-word20 .word20-example:last-child{
+    margin-bottom: 0;
+  }
+
+.card.table-word21{
+    padding: 20px;
+  }
+
+.card.table-word21 .word21-title{
+    color: #2d5016;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+  }
+
+.card.table-word21 .word21-text{
+    text-align: left;
+    line-height: 1.8;
+    color: #333;
+    font-size: 0.95rem;
+  }
+
+.card.table-word22{
+    padding: 20px;
+  }
+
+.card.table-word22 .word22-title{
+    color: #2d5016;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 16px;
+    font-size: 1.5em;
+  }
+
+.card.table-word22 .word22-intro{
+    margin-bottom: 20px;
+    text-align: left;
+    line-height: 1.6;
+    color: #333;
+    font-size: 0.95rem;
+  }
+
+.card.table-word22 .word22-flex-table{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid #000;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+.card.table-word22 .word22-header{
+    display: flex;
+    width: 100%;
+    background: var(--table-head);
+    font-weight: 600;
+    border-bottom: 1px solid #000;
+  }
+
+.card.table-word22 .word22-header > div{
+    padding: 12px;
+    text-align: center;
+    border-right: 1px solid #000;
+    box-sizing: border-box;
+    font-weight: bold;
+    flex: 1;
+  }
+
+.card.table-word22 .word22-header > div:last-child{
+    border-right: none;
+  }
+
+.card.table-word22 .word22-row{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid #000;
+  }
+
+.card.table-word22 .word22-row:last-child{
+    border-bottom: none;
+  }
+
+.card.table-word22 .word22-cell{
+    padding: 0 8px;
+    border-right: 1px solid #000;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 0.95rem;
+    line-height: 1.2;
+    vertical-align: top;
+    font-style: italic;
+    flex: 1;
+  }
+
+.card.table-word22 .word22-cell:last-child{
+    border-right: none;
+  }
+
+.card.table-word22 .word22-example{
+    display: block;
+    margin-bottom: 8px;
+  }
+
+.card.table-word22 .word22-example:last-child{
+    margin-bottom: 0;
+  }
+
+.card.table-word23{
+    padding: 20px;
+  }
+
+.card.table-word23 .word23-intro{
+    margin-bottom: 20px;
+    text-align: left;
+    line-height: 1.6;
+    color: #333;
+    font-size: 0.95rem;
+  }
+
+.card.table-word23 .word23-intro p{
+    margin-bottom: 12px;
+  }
+
+.card.table-word23 .word23-intro p:last-child{
+    margin-bottom: 0;
+  }
+
+.card.table-word23 .word23-flex-table{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid #000;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+.card.table-word23 .word23-header{
+    display: flex;
+    width: 100%;
+    background: var(--table-head);
+    font-weight: 600;
+    border-bottom: 1px solid #000;
+  }
+
+.card.table-word23 .word23-header > div{
+    padding: 12px;
+    text-align: center;
+    border-right: 1px solid #000;
+    box-sizing: border-box;
+    font-weight: bold;
+    flex: 1;
+  }
+
+.card.table-word23 .word23-header > div:last-child{
+    border-right: none;
+  }
+
+.card.table-word23 .word23-row{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid #000;
+  }
+
+.card.table-word23 .word23-row:last-child{
+    border-bottom: none;
+  }
+
+.card.table-word23 .word23-cell{
+    padding: 0 8px;
+    border-right: 1px solid #000;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 0.95rem;
+    line-height: 1.2;
+    vertical-align: top;
+    flex: 1;
+  }
+
+.card.table-word23 .word23-cell:last-child{
+    border-right: none;
+  }
+
+.card.table-word23 .word23-example{
+    display: block;
+    margin-bottom: 8px;
+  }
+
+.card.table-word23 .word23-example:last-child{
+    margin-bottom: 0;
+  }
+
+.card.table-word24{
+    padding: 20px;
+  }
+
+.card.table-word24 .word24-title{
+    color: #2d5016;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 16px;
+    font-size: 1.5em;
+  }
+
+.card.table-word24 .word24-intro{
+    margin-bottom: 20px;
+    text-align: left;
+    line-height: 1.6;
+    color: #333;
+    font-size: 0.95rem;
+  }
+
+.card.table-word24 .word24-flex-table{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid #000;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+.card.table-word24 .word24-header{
+    display: flex;
+    width: 100%;
+    background: var(--table-head);
+    font-weight: 600;
+    border-bottom: 1px solid #000;
+  }
+
+.card.table-word24 .word24-header > div{
+    padding: 12px;
+    text-align: center;
+    border-right: 1px solid #000;
+    box-sizing: border-box;
+    font-weight: bold;
+  }
+
+.card.table-word24 .word24-header > div:first-child{
+    width: 25%;
+    flex: 0 0 25%;
+  }
+
+.card.table-word24 .word24-header > div:nth-child(2){
+    width: 40%;
+    flex: 0 0 40%;
+  }
+
+.card.table-word24 .word24-header > div:last-child{
+    width: 35%;
+    flex: 0 0 35%;
+    border-right: none;
+  }
+
+.card.table-word24 .word24-row{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid #000;
+  }
+
+.card.table-word24 .word24-row:last-child{
+    border-bottom: none;
+  }
+
+.card.table-word24 .word24-cell{
+    padding: 0 8px;
+    border-right: 1px solid #000;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 0.95rem;
+    line-height: 1.2;
+    vertical-align: top;
+  }
+
+.card.table-word24 .word24-cell:first-child{
+    width: 25%;
+    flex: 0 0 25%;
+    font-weight: 600;
+  }
+
+.card.table-word24 .word24-cell:nth-child(2){
+    width: 40%;
+    flex: 0 0 40%;
+  }
+
+.card.table-word24 .word24-cell:last-child{
+    width: 35%;
+    flex: 0 0 35%;
+    border-right: none;
+  }
+
+.card.table-word24 .word24-example{
+    display: block;
+    margin-bottom: 12px;
+  }
+
+.card.table-word24 .word24-example:last-child{
+    margin-bottom: 0;
+  }
+
+.card.table-word24 .word24-underlined{
+    text-decoration: underline;
+  }
+
+.card.table-word25{
+    padding: 20px;
+  }
+
+.card.table-word25 .word25-content-wrapper{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+  }
+
+.card.table-word25 .word25-left-column{
+    width: 30%;
+    flex: 0 0 30%;
+  }
+
+.card.table-word25 .word25-left-title{
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #333;
+    line-height: 1.6;
+  }
+
+.card.table-word25 .word25-right-column{
+    width: 70%;
+    flex: 0 0 70%;
+  }
+
+.card.table-word25 .word25-explanation{
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #333;
+    font-size: 0.95rem;
+  }
+
+.card.table-word25 .word25-examples{
+    margin-bottom: 20px;
+  }
+
+.card.table-word25 .word25-example{
+    display: block;
+    margin-bottom: 12px;
+    line-height: 1.8;
+  }
+
+.card.table-word25 .word25-example:last-child{
+    margin-bottom: 0;
+  }
+
+.card.table-word25 .word25-underlined{
+    text-decoration: underline;
+  }
+
+.card.table-word25 .word25-notes{
+    margin-top: 20px;
+  }
+
+.card.table-word25 .word25-note{
+    display: block;
+    margin-bottom: 12px;
+    line-height: 1.8;
+    font-size: 0.95rem;
+  }
+
+.card.table-word25 .word25-note:last-child{
+    margin-bottom: 0;
+  }
+
+.card.table-word25 .word25-note-marker{
+    font-weight: bold;
+    margin-right: 4px;
+  }
+
+.card.table-word26{
+    padding: 20px;
+  }
+
+.card.table-word26 .word26-title{
+    color: #2d5016;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+  }
+
+.card.table-word26 .word26-definition{
+    margin-bottom: 16px;
+    line-height: 1.6;
+    color: #333;
+    font-size: 0.95rem;
+  }
+
+.card.table-word26 .word26-intro{
+    margin-bottom: 16px;
+    line-height: 1.6;
+    color: #333;
+    font-size: 0.95rem;
+  }
+
+.card.table-word26 .word26-table-wrapper{
+    margin-bottom: 24px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+.card.table-word26 .word26-table{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+.card.table-word26 .word26-header{
+    display: flex;
+    width: 100%;
+    background: var(--table-head);
+    font-weight: 600;
+    border-bottom: 1px solid #000;
+  }
+
+.card.table-word26 .word26-header > div{
+    padding: 12px;
+    text-align: center;
+    border-right: 1px solid #000;
+    box-sizing: border-box;
+    font-weight: bold;
+    width: 25%;
+    flex: 0 0 25%;
+    font-size: 0.9rem;
+  }
+
+.card.table-word26 .word26-header > div:last-child{
+    border-right: none;
+  }
+
+.card.table-word26 .word26-row{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid #000;
+  }
+
+.card.table-word26 .word26-row:last-child{
+    border-bottom: none;
+  }
+
+.card.table-word26 .word26-cell{
+    padding: 0 8px;
+    border-right: 1px solid #000;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 0.95rem;
+    line-height: 1.2;
+    width: 25%;
+    flex: 0 0 25%;
+    vertical-align: top;
+  }
+
+.card.table-word26 .word26-cell:last-child{
+    border-right: none;
+  }
+
+.card.table-word26 .word26-cell-endings{
+    font-weight: 600;
+    color: #0066cc;
+  }
+
+.card.table-word26 .word26-cell-example{
+    line-height: 1.8;
+  }
+
+.card.table-word26 .word26-bold{
+    font-weight: bold;
+  }
+
+.card.table-word26 .word26-punctuation-heading{
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    color: #333;
+    font-size: 1em;
+  }
+
+.card.table-word26 .word26-rules{
+    margin-left: 20px;
+    margin-bottom: 12px;
+  }
+
+.card.table-word26 .word26-rule{
+    margin-bottom: 8px;
+    line-height: 1.6;
+    color: #333;
+    font-size: 0.95rem;
+  }
+
+.card.table-word26 .word26-rule:last-child{
+    margin-bottom: 0;
+  }
+
+.card.table-word27{
+    padding: 20px;
+  }
+
+.card.table-word27 .word27-title{
+    color: #2d5016;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+  }
+
+.card.table-word27 .word27-intro{
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #333;
+    font-size: 0.95rem;
+  }
+
+.card.table-word27 .word27-intro-example{
+    margin-top: 12px;
+    line-height: 1.8;
+  }
+
+.card.table-word27 .word27-intro-question{
+    margin-top: 4px;
+    font-style: italic;
+    color: #666;
+  }
+
+.card.table-word27 .word27-bold{
+    font-weight: bold;
+  }
+
+.card.table-word27 .word27-bold-italic{
+    font-weight: bold;
+    font-style: italic;
+  }
+
+.card.table-word27 .word27-rules{
+    margin-top: 20px;
+  }
+
+.card.table-word27 .word27-rule{
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #333;
+    font-size: 0.95rem;
+  }
+
+.card.table-word27 .word27-rule:last-child{
+    margin-bottom: 0;
+  }
+
+.card.table-word27 .word27-rule-title{
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+  }
+
+.card.table-word27 .word27-rule-text{
+    margin-bottom: 8px;
+  }
+
+.card.table-word27 .word27-rule-example{
+    margin-top: 8px;
+    line-height: 1.8;
+  }
+
+.card.table-word27 .word27-rule-subrule{
+    margin-top: 12px;
+    margin-bottom: 8px;
+  }
+
+.card.table-word28{
+    padding: 20px;
+  }
+
+.card.table-word28 .word28-title{
+    color: #2d5016;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 8px;
+    font-size: 1.5em;
+  }
+
+.card.table-word28 .word28-subtitle{
+    color: #2d5016;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.3em;
+  }
+
+.card.table-word28 .word28-intro{
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #333;
+    font-size: 0.95rem;
+  }
+
+.card.table-word28 .word28-table-wrapper{
+    margin-bottom: 20px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+.card.table-word28 .word28-table{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+.card.table-word28 .word28-header{
+    display: flex;
+    width: 100%;
+    background: var(--table-head);
+    font-weight: 600;
+    border-bottom: 1px solid #000;
+  }
+
+.card.table-word28 .word28-header > div{
+    padding: 12px;
+    text-align: center;
+    border-right: 1px solid #000;
+    box-sizing: border-box;
+    font-weight: bold;
+    width: 50%;
+    flex: 0 0 50%;
+  }
+
+.card.table-word28 .word28-header > div:last-child{
+    border-right: none;
+  }
+
+.card.table-word28 .word28-row{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid #000;
+  }
+
+.card.table-word28 .word28-row:last-child{
+    border-bottom: none;
+  }
+
+.card.table-word28 .word28-cell{
+    padding: 0 8px;
+    border-right: 1px solid #000;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 0.95rem;
+    line-height: 1.2;
+    width: 50%;
+    flex: 0 0 50%;
+    vertical-align: top;
+  }
+
+.card.table-word28 .word28-cell:last-child{
+    border-right: none;
+  }
+
+.card.table-word28 .word28-rule-text{
+    font-family: monospace;
+    line-height: 1.8;
+  }
+
+.card.table-word28 .word28-rule-v-bold{
+    font-weight: bold;
+    font-family: monospace;
+  }
+
+.card.table-word28 .word28-example{
+    line-height: 1.8;
+  }
+
+.card.table-word28 .word28-bold{
+    font-weight: bold;
+  }
+
+.card.table-word28 .word28-legend{
+    margin-top: 16px;
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.6;
+  }
+
+.card.table-word29{
+    padding: 20px;
+  }
+
+.card.table-word29 .word29-title{
+    color: #2d5016;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+  }
+
+.card.table-word29 .word29-intro{
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #333;
+    font-size: 0.95rem;
+  }
+
+.card.table-word29 .word29-intro p{
+    margin-bottom: 12px;
+  }
+
+.card.table-word29 .word29-intro p:last-child{
+    margin-bottom: 0;
+  }
+
+.card.table-word29 .word29-table-wrapper{
+    margin-bottom: 20px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+.card.table-word29 .word29-table{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+.card.table-word29 .word29-header{
+    display: flex;
+    width: 100%;
+    background: var(--table-head);
+    font-weight: 600;
+    border-bottom: 1px solid #000;
+  }
+
+.card.table-word29 .word29-header > div{
+    padding: 12px;
+    text-align: center;
+    border-right: 1px solid #000;
+    box-sizing: border-box;
+    font-weight: bold;
+  }
+
+.card.table-word29 .word29-header > div:first-child{
+    width: 15%;
+    flex: 0 0 15%;
+  }
+
+.card.table-word29 .word29-header > div:nth-child(2){
+    width: 18%;
+    flex: 0 0 18%;
+  }
+
+.card.table-word29 .word29-header > div:nth-child(3){
+    width: 18%;
+    flex: 0 0 18%;
+  }
+
+.card.table-word29 .word29-header > div:nth-child(4){
+    width: 19%;
+    flex: 0 0 19%;
+  }
+
+.card.table-word29 .word29-header > div:last-child{
+    width: 30%;
+    flex: 0 0 30%;
+    border-right: none;
+  }
+
+.card.table-word29 .word29-row{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid #000;
+  }
+
+.card.table-word29 .word29-row:last-child{
+    border-bottom: none;
+  }
+
+.card.table-word29 .word29-cell{
+    padding: 0 8px;
+    border-right: 1px solid #000;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 0.95rem;
+    line-height: 1.2;
+    vertical-align: top;
+  }
+
+.card.table-word29 .word29-cell:first-child{
+    width: 15%;
+    flex: 0 0 15%;
+  }
+
+.card.table-word29 .word29-cell:nth-child(2){
+    width: 18%;
+    flex: 0 0 18%;
+  }
+
+.card.table-word29 .word29-cell:nth-child(3){
+    width: 18%;
+    flex: 0 0 18%;
+  }
+
+.card.table-word29 .word29-cell:nth-child(4){
+    width: 19%;
+    flex: 0 0 19%;
+  }
+
+.card.table-word29 .word29-cell:last-child{
+    width: 30%;
+    flex: 0 0 30%;
+    border-right: none;
+  }
+
+.card.table-word29 .word29-bullet{
+    display: block;
+    margin-bottom: 6px;
+    line-height: 1.6;
+  }
+
+.card.table-word29 .word29-bullet:last-child{
+    margin-bottom: 0;
+  }
+
+.card.table-word29 .word29-bullet::before{
+    content: '• ';
+    margin-right: 4px;
+  }
+
+.card.table-word29 .word29-example{
+    line-height: 1.8;
+  }
+
+.card.table-word29 .word29-bracket{
+    font-weight: normal;
+    font-style: italic;
+    color: #555;
+  }
+
+.card.table-word29 .word29-italic{
+    font-style: italic;
+  }
+
+.card.table-word29 .word29-parentheses{
+    color: #555;
+  }

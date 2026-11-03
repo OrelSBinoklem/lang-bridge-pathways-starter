@@ -1,0 +1,97 @@
+# --- Dependencies ---
+/vendor
+/node_modules
+/frontend/node_modules
+**/node_modules/
+tools/**/node_modules/
+
+# --- Env / secrets ---
+.env
+.env.*
+!.env.example
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+/auth.json
+
+# --- Laravel ---
+/bootstrap/ssr
+/bootstrap/cache/*.php
+!/bootstrap/cache/.gitignore
+/public/build
+/public/hot
+/public/storage
+/public/fonts-manifest.dev.json
+/storage/*.key
+/storage/pail
+/storage/logs/*
+!/storage/logs/.gitignore
+/storage/framework/cache/data/*
+!/storage/framework/cache/data/.gitignore
+/storage/framework/sessions/*
+!/storage/framework/sessions/.gitignore
+/storage/framework/views/*
+!/storage/framework/views/.gitignore
+/storage/framework/testing/*
+!/storage/framework/testing/.gitignore
+/storage/app/private/*
+!/storage/app/private/.gitignore
+/storage/app/public/*
+!/storage/app/public/.gitignore
+/storage/app/dictionary-imports
+/storage/inertia-devtools
+
+# Wayfinder / generated JS
+/resources/js/actions
+/resources/js/routes
+/resources/js/wayfinder
+
+# --- Next.js frontend ---
+/frontend/.next/
+/frontend/out/
+/frontend/build
+/frontend/coverage
+/frontend/*.tsbuildinfo
+/frontend/next-env.d.ts
+
+# --- Local / OSPanel / IDE ---
+.composer-local
+.osp
+.cursor
+.DS_Store
+Thumbs.db
+/.fleet
+/.idea
+/.nova
+/.vscode
+/.zed
+.phpactor.json
+
+# --- Tests / caches ---
+/.phpunit.cache
+.phpunit.result.cache
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- Database local ---
+/database/*.sqlite
+/database/*.sqlite-journal
+/database/dict-uk-work/
+/database/dict-uk-21/
+
+# Homestead
+Homestead.json
+Homestead.yaml
+
+# --- Local agent/tooling leftovers (Codex deploy archives, depth-map tool, temp scripts) ---
+/.codex-*
+/.depth-*
+/.tmp/
+/dump_*.sql
+# Local reference copies supplied by the owner, not public site assets.
+/resources/external-sources/exam-samples/*/*.pdf
+/resources/external-sources/exam-samples/historical/**/*.pdf
+/resources/external-sources/exam-samples/*/*.mp3
+/storage/debugbar/
+/frontend/_*

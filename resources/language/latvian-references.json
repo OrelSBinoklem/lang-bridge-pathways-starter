@@ -1,0 +1,12 @@
+{
+  "read_hosts": ["tezaurs.lv", "www.tezaurs.lv", "mlvv.tezaurs.lv", "llvv.tezaurs.lv", "valodaskonsultacijas.lv", "www.valodaskonsultacijas.lv", "valoda.lv", "www.valoda.lv"],
+  "search_domains": ["tezaurs.lv", "valodaskonsultacijas.lv", "valoda.lv"],
+  "sources": [
+    {"name": "Tēzaurs morphology", "url": "https://morpho-api.tezaurs.lv/", "purpose": "Analyze Latvian wordforms and generate inflections. guess=false; lexical evidence, not a contextual correctness verdict."},
+    {"name": "Tēzaurs", "url": "https://tezaurs.lv/", "purpose": "Meanings, usage labels and lexical entries. Distinguish standard, colloquial, historical and dialectal entries."},
+    {"name": "MLVV", "url": "https://mlvv.tezaurs.lv/", "purpose": "Modern standard Latvian meanings and usage."},
+    {"name": "LLVV", "url": "https://llvv.tezaurs.lv/", "purpose": "Explanatory dictionary of literary Latvian; check publication context and usage labels."},
+    {"name": "LVA language consultations", "url": "https://valodaskonsultacijas.lv/", "purpose": "Normative answers about spelling, word choice, inflection and grammar."},
+    {"name": "Latviešu valodas aģentūra", "url": "https://valoda.lv/", "purpose": "Official language guidance and learning resources."}
+  ]
+}

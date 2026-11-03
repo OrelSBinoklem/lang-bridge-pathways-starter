@@ -1,0 +1,19 @@
+{
+  "name": "Рикс",
+  "emotions": ["neutral", "happy", "delight", "thinking", "surprised", "sad", "proud", "confused"],
+  "targets": [
+    {"id":"course","selector":"main a[href*='/course'][href*='level=']","description":"Путь курса A1–B2: группы слов, грамматики и практики по уровням."},
+    {"id":"grammar","selector":"main a[href='/grammar'], main a[href='/grammar/english']","description":"Грамматические таблицы с правилами, примерами и встроенными заданиями."},
+    {"id":"practice","selector":"main a[href^='/grammar/practice']","description":"Список грамматических заданий."},
+    {"id":"dictionaries","selector":"main a[href^='/dictionaries/']","description":"Словари: темы, части речи, озвучка и тренировка слов."},
+    {"id":"exams","selector":"main a[href^='/exams']","description":"Итоговые экзамены A1–B2: слушание, чтение, письмо и говорение."},
+    {"id":"concepts","selector":"[data-home-module='intro']","description":"Обзорная грамматика и понятия."},
+    {"id":"links","selector":"#home-useful-links-title","description":"Полезные внешние ресурсы выбранного языка."},
+    {"id":"continue","selector":"[data-course-continue-placement]","description":"Умное продолжение курса и выбор цели: бронза 60%, серебро 80%, золото 90%, бриллиант 100%."},
+    {"id":"menu","selector":"#primary-menu","description":"Меню: навигация, кредиты, профиль, настройки тренировки, шрифт, язык и тема."},
+    {"id":"plans","selector":"[data-tour='menu-plans']","description":"Доступ к ИИ услугам: режимы Эконом, Простой и Качественный. Обычное обучение бесплатно; ИИ расходует кредиты."},
+    {"id":"account","selector":"[data-tour='menu-account']","description":"Баланс кредитов и профиль пользователя."},
+    {"id":"language","selector":"[data-tour='menu-learn-lang']","description":"Изучаемый язык: английский или латышский; рядом тема сайта."},
+    {"id":"tutor","selector":"[data-site-character-chat]","description":"Основной чат смотрителя: навигация по сайту и помощь с языком. Осьминог помогает с таблицами; выбранный человек — в экзаменах и практике."}
+  ]
+}

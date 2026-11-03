@@ -1,0 +1,108 @@
+.table-container{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+
+.polygon-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+    overflow: visible;
+  }
+
+.polygon-overlay.editing{
+    pointer-events: all;
+  }
+
+.polygon-overlay svg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: visible;
+  }
+
+.table-container:hover .polygon-toolbar, .table-container.editing .polygon-toolbar, .polygon-toolbar:hover{
+    opacity: 1;
+    pointer-events: all;
+  }
+
+.card.table-v74 .v74-flex-table{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid var(--border-strong);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+.card.table-v74 .v74-header{
+    display: flex;
+    width: 100%;
+    background: var(--table-head);
+    font-weight: 600;
+    border-bottom: 1px solid var(--border-strong);
+  }
+
+.card.table-v74 .v74-header > div{
+    padding: 8px;
+    text-align: center;
+    border-right: 1px solid var(--border-strong);
+    box-sizing: border-box;
+  }
+
+.card.table-v74 .v74-header > div:first-child{
+    width: 100px;
+    text-align: left;
+    padding-left: 12px;
+  }
+
+.card.table-v74 .v74-header > div:last-child{
+    border-right: none;
+  }
+
+.card.table-v74 .v74-row{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid var(--border-strong);
+  }
+
+.card.table-v74 .v74-row:last-child{
+    border-bottom: none;
+  }
+
+.card.table-v74 .v74-cell{
+    padding: 8px 12px;
+    border-right: 1px solid var(--border-strong);
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 0.9rem;
+    flex: 1;
+  }
+
+.card.table-v74 .v74-cell:first-child{
+    width: 100px;
+    font-weight: 600;
+    flex: 0 0 100px;
+  }
+
+.card.table-v74 .v74-cell:last-child{
+    border-right: none;
+  }
+
+.card.table-v74 .v74-ending-masc{
+    color: #0066cc;
+    font-weight: 600;
+  }
+
+.card.table-v74 .v74-ending-fem{
+    color: #cc0066;
+    font-weight: 600;
+  }

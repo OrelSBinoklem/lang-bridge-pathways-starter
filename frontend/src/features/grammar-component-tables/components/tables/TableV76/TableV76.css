@@ -1,0 +1,119 @@
+
+
+/* === moved from grammar-component-tables.css (page-prefix stripped) === */
+.card.table-v76 .v76-flex-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card.table-v76 .v76-header {
+  display: flex;
+  width: 100%;
+  background: var(--table-head);
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.card.table-v76 .v76-header > div {
+  padding: 8px;
+  text-align: center;
+  border-right: 1px solid var(--border-strong);
+  box-sizing: border-box;
+}
+
+.card.table-v76 .v76-header > div:first-child {
+  width: 180px;
+  text-align: left;
+  padding-left: 12px;
+  flex: 0 0 180px;
+}
+
+.card.table-v76 .v76-header > div:nth-child(2) {
+  width: 250px;
+  flex: 0 0 250px;
+}
+
+.card.table-v76 .v76-header > div:last-child {
+  border-right: none;
+  width: 200px;
+  flex: 0 0 200px;
+}
+
+.card.table-v76 .v76-header-group {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--border-strong);
+  flex: 1;
+}
+
+.card.table-v76 .v76-header-group > div:first-child {
+  border-bottom: 1px solid var(--border-strong);
+  padding: 8px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.card.table-v76 .v76-header-group > div:last-child {
+  display: flex;
+}
+
+.card.table-v76 .v76-header-group .v76-subheader {
+  padding: 8px;
+  text-align: center;
+  border-right: 1px solid var(--border-strong);
+  box-sizing: border-box;
+  flex: 1;
+  font-weight: 600;
+}
+
+.card.table-v76 .v76-header-group .v76-subheader:last-child {
+  border-right: none;
+}
+
+.card.table-v76 .v76-row {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.card.table-v76 .v76-row:last-child {
+  border-bottom: none;
+}
+
+.card.table-v76 .v76-cell {
+  padding: 8px 12px;
+  border-right: 1px solid var(--border-strong);
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.card.table-v76 .v76-cell:first-child {
+  width: 180px;
+  font-weight: 600;
+  flex: 0 0 180px;
+}
+
+.card.table-v76 .v76-cell:nth-child(2) {
+  width: 250px;
+  flex: 0 0 250px;
+}
+
+.card.table-v76 .v76-cell:nth-child(3), .card.table-v76 .v76-cell:nth-child(4), .card.table-v76 .v76-cell:nth-child(5) {
+  flex: 1;
+}
+
+.card.table-v76 .v76-cell:last-child {
+  border-right: none;
+  width: 200px;
+  flex: 0 0 200px;
+}
+
+.card.table-v76 .v76-prefix-ja {
+  font-weight: 700;
+}

@@ -1,0 +1,18 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: #e4e9e7 url('/course/effects/curiosity-art-1920.jpg') center / cover;
+}
+.backdrop canvas { display: block; width: 100%; height: 100%; }
+.backdrop canvas:not([data-artwork-ready='true']) { opacity: 0; }
+:global(.dark) .backdrop {
+  background-color: #202123;
+  background-image: url('/course/effects/curiosity-art-dark-1920.jpg');
+}
+
+@media (min-width: 2201px), (min-resolution: 1.5dppx) {
+  .backdrop { background-image: url('/course/effects/curiosity-art-4k.jpg'); }
+  :global(.dark) .backdrop { background-image: url('/course/effects/curiosity-art-dark-4k.jpg'); }
+}

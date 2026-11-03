@@ -1,0 +1,385 @@
+
+
+/* === moved from grammar-component-tables.css (page-prefix stripped) === */
+.card.table-word32,
+#word32-table-container {
+  padding: 0;
+  background: transparent;
+}
+
+.card.table-word32 .word32-title {
+  color: #2d5016;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+.card.table-word32 .word32-section-title {
+  padding: 10px 16px;
+  background: var(--table-head);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text);
+  border: 1px solid var(--border-strong);
+  border-bottom: 2px solid #9fa8c0;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 0;
+}
+
+.card.table-word32 .word32-table-wrapper {
+  border: 1px solid var(--border-strong);
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+}
+
+.card.table-word32 .word32-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.card.table-word32 .word32-table thead {
+  background: var(--table-head);
+}
+
+.card.table-word32 .word32-table th {
+  padding: 12px 8px;
+  text-align: center;
+  border: 1px solid var(--border-strong);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.card.table-word32 .word32-table th:nth-child(2), .card.table-word32 .word32-table th:nth-child(3), .card.table-word32 .word32-table tbody td:nth-child(2), .card.table-word32 .word32-table tbody td:nth-child(3) {
+  width: 90px;
+  min-width: 90px;
+  max-width: 90px;
+}
+
+.card.table-word32 .word32-table th:nth-child(4), .card.table-word32 .word32-table tbody td:nth-child(4) {
+  width: 140px;
+  min-width: 140px;
+  max-width: 140px;
+}
+
+.card.table-word32 .word32-table th:nth-child(5), .card.table-word32 .word32-table tbody td:nth-child(5) {
+  width: 180px;
+  min-width: 180px;
+  max-width: 180px;
+}
+
+.card.table-word32 .word32-table tbody td {
+  padding: 10px 8px;
+  border: 1px solid var(--border-strong);
+  text-align: left;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  vertical-align: middle;
+}
+
+.card.table-word32 .word32-table tbody td:first-child {
+  text-align: center;
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+.card.table-word32 .word32-table tbody td:nth-child(2) {
+  text-align: center;
+  font-weight: 600;
+}
+
+.card.table-word32 .word32-declension-cell {
+  text-align: center;
+  font-weight: 600;
+}
+
+.card.table-word32 .word32-table tbody td:nth-child(3) {
+  text-align: center;
+  font-weight: 600;
+}
+
+.card.table-word32 .word32-piedeklis-cell {
+  text-align: center !important;
+  font-weight: 600 !important;
+}
+
+.card.table-word32 .word32-piedeklis-blue {
+  background: #B3E5FC;
+}
+
+.card.table-word32 .word32-piedeklis-yellow {
+  background: #FFECB3;
+}
+
+.card.table-word32 .word32-piedeklis-white {
+  background: white;
+}
+
+.card.table-word32 .word32-masculine {
+  background: #e1f5fe;
+}
+
+.card.table-word32 .word32-feminine {
+  background: #fff8e1;
+}
+
+.card.table-word32 .word32-gender-cell {
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.card.table-word32 .word32-masculine-bg {
+  background: #b3e5fc;
+}
+
+.card.table-word32 .word32-feminine-bg {
+  background: #ffecb3;
+}
+
+.card.table-word32 .word32-special-bg {
+  background: #B3E5FC !important;
+}
+
+.card.table-word32 .word32-special-bg-fem {
+  background: #FFECB3 !important;
+}
+
+.card.table-word32 .word32-suffix {
+  color: #dc3545;
+  font-weight: 600;
+}
+
+.card.table-word32,
+#word32-table-container {
+  padding: 0;
+  background: transparent;
+}
+
+.card.table-word32 .word32-title {
+  color: #2d5016;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+.card.table-word32 .word32-section-title {
+  padding: 10px 16px;
+  background: var(--table-head);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text);
+  border: 1px solid var(--border-strong);
+  border-bottom: 2px solid #9fa8c0;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 0;
+}
+
+.card.table-word32 .word32-table-wrapper {
+  border: 1px solid var(--border-strong);
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+}
+
+.card.table-word32 .word32-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.card.table-word32 .word32-table thead {
+  background: var(--table-head);
+}
+
+.card.table-word32 .word32-table th {
+  padding: 12px 8px;
+  text-align: center;
+  border: 1px solid var(--border-strong);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.card.table-word32 .word32-table th:nth-child(2), .card.table-word32 .word32-table th:nth-child(3), .card.table-word32 .word32-table tbody td:nth-child(2), .card.table-word32 .word32-table tbody td:nth-child(3) {
+  width: 90px;
+  min-width: 90px;
+  max-width: 90px;
+}
+
+.card.table-word32 .word32-table th:nth-child(4), .card.table-word32 .word32-table tbody td:nth-child(4) {
+  width: 140px;
+  min-width: 140px;
+  max-width: 140px;
+}
+
+.card.table-word32 .word32-table th:nth-child(5), .card.table-word32 .word32-table tbody td:nth-child(5) {
+  width: 180px;
+  min-width: 180px;
+  max-width: 180px;
+}
+
+.card.table-word32 .word32-table tbody td {
+  padding: 10px 8px;
+  border: 1px solid var(--border-strong);
+  text-align: left;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  vertical-align: middle;
+}
+
+.card.table-word32 .word32-table tbody td:first-child {
+  text-align: center;
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+.card.table-word32 .word32-table tbody td:nth-child(2) {
+  text-align: center;
+  font-weight: 600;
+}
+
+.card.table-word32 .word32-declension-cell {
+  text-align: center;
+  font-weight: 600;
+}
+
+.card.table-word32 .word32-table tbody td:nth-child(3) {
+  text-align: center;
+  font-weight: 600;
+}
+
+.card.table-word32 .word32-piedeklis-cell {
+  text-align: center !important;
+  font-weight: 600 !important;
+}
+
+.card.table-word32 .word32-piedeklis-blue {
+  background: #B3E5FC;
+}
+
+.card.table-word32 .word32-piedeklis-yellow {
+  background: #FFECB3;
+}
+
+.card.table-word32 .word32-piedeklis-white {
+  background: white;
+}
+
+.card.table-word32 .word32-masculine {
+  background: #e1f5fe;
+}
+
+.card.table-word32 .word32-feminine {
+  background: #fff8e1;
+}
+
+.card.table-word32 .word32-gender-cell {
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.card.table-word32 .word32-masculine-bg {
+  background: #b3e5fc;
+}
+
+.card.table-word32 .word32-feminine-bg {
+  background: #ffecb3;
+}
+
+.card.table-word32 .word32-special-bg {
+  background: #B3E5FC !important;
+}
+
+.card.table-word32 .word32-special-bg-fem {
+  background: #FFECB3 !important;
+}
+
+.card.table-word32 .word32-suffix {
+  color: #dc3545;
+  font-weight: 600;
+}
+
+/* === moved pass2 from grammar-component-tables.css === */
+:root.dark .card.table-word32 .word32-section-title {
+  border-bottom-color: #5a6478;
+}
+
+:root.dark .card.table-word32 .word32-piedeklis-white {
+  background: var(--bg);
+}
+
+:root.dark .card.table-word32 .word32-table {
+  background: var(--bg);
+}
+
+:root.dark .card.table-word32 .word32-masculine {
+  background: #1a237e;
+}
+
+:root.dark .card.table-word32 .word32-feminine {
+  background: #3e2723;
+}
+
+:root.dark .card.table-word32 .word32-masculine-bg {
+  background: #283593;
+}
+
+:root.dark .card.table-word32 .word32-feminine-bg {
+  background: #5d4037;
+}
+
+:root.dark .card.table-word32 .word32-section-title {
+  border-bottom-color: #5a6478;
+}
+
+:root.dark .card.table-word32 .word32-piedeklis-white {
+  background: var(--bg);
+}
+
+:root.dark .card.table-word32 .word32-table {
+  background: var(--bg);
+}
+
+:root.dark .card.table-word32 .word32-masculine {
+  background: #1a237e;
+}
+
+:root.dark .card.table-word32 .word32-feminine {
+  background: #3e2723;
+}
+
+:root.dark .card.table-word32 .word32-masculine-bg {
+  background: #283593;
+}
+
+:root.dark .card.table-word32 .word32-feminine-bg {
+  background: #5d4037;
+}
+
+:root.dark .card.table-word32 .word32-table,
+:root.dark .card.table-word32 .word32-piedeklis-white,
+:root.dark #verbs-tables-container .verb-flex-table > div:first-child,
+:root.dark #verbs-tables-container-2 .verb-flex-table > div:first-child {
+  background: var(--table-bg);
+}
+
+:root.dark .card.table-word32 .word32-piedeklis-blue,
+:root.dark .card.table-word32 .word32-masculine,
+:root.dark .card.table-word32 .word32-masculine-bg,
+:root.dark .card.table-word32 .word32-special-bg {
+  background: #d4d4d4 !important;
+}
+
+:root.dark .card.table-word32 .word32-piedeklis-yellow,
+:root.dark .card.table-word32 .word32-feminine,
+:root.dark .card.table-word32 .word32-feminine-bg {
+  background: #493914;
+}

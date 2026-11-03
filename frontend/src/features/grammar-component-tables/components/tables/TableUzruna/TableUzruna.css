@@ -1,0 +1,112 @@
+.card.table-uzruna {
+  background: var(--card, #fff);
+  color: var(--text, #1b1f2b);
+  padding: 14px 16px 16px;
+  border-radius: 10px;
+  max-width: 46em;
+  margin: 0 auto;
+  line-height: 1.35;
+}
+
+.card.table-uzruna .uz-defs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.card.table-uzruna .uz-def {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border-strong, #c3cfee);
+  background: var(--table-row-odd, #f5f7ff);
+}
+
+.card.table-uzruna .uz-def-name {
+  font-size: max(18px, 0.88em);
+  font-weight: 800;
+  color: var(--accent1, #3a7df2);
+}
+
+.card.table-uzruna .uz-def-text {
+  font-size: max(18px, 0.75em);
+  line-height: 1.4;
+}
+
+.card.table-uzruna .uz-def-text em {
+  font-weight: 700;
+}
+
+.card.table-uzruna .uz-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1.5px solid var(--border-strong, #c3cfee);
+  table-layout: fixed;
+}
+
+.card.table-uzruna .uz-table th,
+.card.table-uzruna .uz-table td {
+  border: 1px solid var(--border-strong, #c3cfee);
+  padding: 8px 10px;
+  vertical-align: top;
+  text-align: left;
+}
+
+.card.table-uzruna .uz-table thead th {
+  background: var(--table-head, #f1f3fb);
+  font-size: max(18px, 0.85em);
+  font-weight: 800;
+  text-align: center;
+}
+
+.card.table-uzruna .uz-corner {
+  width: 18%;
+}
+
+.card.table-uzruna .uz-rowhead {
+  background: var(--table-head, #f1f3fb);
+  vertical-align: middle;
+  font-size: max(18px, 0.8em);
+  font-weight: 700;
+  color: var(--muted, #6a748b);
+}
+
+.card.table-uzruna .uz-lv {
+  display: block;
+  font-size: max(18px, 0.85em);
+  font-weight: 700;
+  font-style: italic;
+}
+
+.card.table-uzruna .uz-ru {
+  display: block;
+  margin-top: 2px;
+  font-size: max(18px, 0.72em);
+  color: var(--muted, #6a748b);
+}
+
+.card.table-uzruna .uz-addr {
+  color: var(--accent1, #3a7df2);
+  font-weight: 800;
+  border-bottom: 2px solid var(--accent1, #3a7df2);
+}
+
+.card.table-uzruna .uz-comma {
+  color: var(--accent4, #d3547f);
+  font-weight: 900;
+  font-style: normal;
+  font-size: 1.25em;
+}
+
+.card.table-uzruna .uz-note {
+  margin-top: 10px;
+  padding: 7px 9px;
+  border-radius: 8px;
+  background: var(--accent4-bg, rgba(211, 84, 127, 0.1));
+  border-left: 3px solid var(--accent4, #d3547f);
+  font-size: max(18px, 0.75em);
+  line-height: 1.4;
+}

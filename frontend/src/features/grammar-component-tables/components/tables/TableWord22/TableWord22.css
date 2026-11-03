@@ -1,0 +1,176 @@
+
+
+/* === moved from grammar-component-tables.css (page-prefix stripped) === */
+.card.table-word22 {
+  padding: 20px;
+}
+
+.card.table-word22 .word22-title {
+  color: #2d5016;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 1.5em;
+}
+
+.card.table-word22 .word22-intro {
+  margin-bottom: 20px;
+  text-align: left;
+  line-height: 1.6;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.card.table-word22 .word22-flex-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid #000;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.card.table-word22 .word22-header {
+  display: flex;
+  width: 100%;
+  background: var(--table-head);
+  font-weight: 600;
+  border-bottom: 1px solid #000;
+}
+
+.card.table-word22 .word22-header > div {
+  padding: 12px;
+  text-align: center;
+  border-right: 1px solid #000;
+  box-sizing: border-box;
+  font-weight: bold;
+  flex: 1;
+}
+
+.card.table-word22 .word22-header > div:last-child {
+  border-right: none;
+}
+
+.card.table-word22 .word22-row {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid #000;
+}
+
+.card.table-word22 .word22-row:last-child {
+  border-bottom: none;
+}
+
+.card.table-word22 .word22-cell {
+  padding: 0 8px;
+  border-right: 1px solid #000;
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 0.95rem;
+  line-height: 1.2;
+  vertical-align: top;
+  font-style: italic;
+  flex: 1;
+}
+
+.card.table-word22 .word22-cell:last-child {
+  border-right: none;
+}
+
+.card.table-word22 .word22-example {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.card.table-word22 .word22-example:last-child {
+  margin-bottom: 0;
+}
+
+.card.table-word22 {
+  padding: 20px;
+}
+
+.card.table-word22 .word22-title {
+  color: #2d5016;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 1.5em;
+}
+
+.card.table-word22 .word22-intro {
+  margin-bottom: 20px;
+  text-align: left;
+  line-height: 1.6;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.card.table-word22 .word22-flex-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid #000;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.card.table-word22 .word22-header {
+  display: flex;
+  width: 100%;
+  background: var(--table-head);
+  font-weight: 600;
+  border-bottom: 1px solid #000;
+}
+
+.card.table-word22 .word22-header > div {
+  padding: 12px;
+  text-align: center;
+  border-right: 1px solid #000;
+  box-sizing: border-box;
+  font-weight: bold;
+  flex: 1;
+}
+
+.card.table-word22 .word22-header > div:last-child {
+  border-right: none;
+}
+
+.card.table-word22 .word22-row {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid #000;
+}
+
+.card.table-word22 .word22-row:last-child {
+  border-bottom: none;
+}
+
+.card.table-word22 .word22-cell {
+  padding: 0 8px;
+  border-right: 1px solid #000;
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 0.95rem;
+  line-height: 1.2;
+  vertical-align: top;
+  font-style: italic;
+  flex: 1;
+}
+
+.card.table-word22 .word22-cell:last-child {
+  border-right: none;
+}
+
+.card.table-word22 .word22-example {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.card.table-word22 .word22-example:last-child {
+  margin-bottom: 0;
+}

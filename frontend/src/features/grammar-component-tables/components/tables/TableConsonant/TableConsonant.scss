@@ -1,0 +1,145 @@
+.card.table-consonant {
+  background: var(--card, #fff);
+  padding: 0;
+  overflow: hidden;
+}
+
+.card.table-consonant .consonant-flex-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid var(--border-strong, #c3cfee);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card.table-consonant .consonant-header {
+  display: flex;
+  width: 100%;
+  background: var(--table-head, #F1F3FB);
+  font-weight: 600;
+}
+
+.card.table-consonant .consonant-header-title {
+  width: 100%;
+  text-align: center;
+  color: #0066cc;
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-strong, #c3cfee);
+  padding: 8px 12px;
+  background: var(--table-head, #F1F3FB);
+  box-sizing: border-box;
+}
+
+.card.table-consonant .consonant-header-sub {
+  display: flex;
+  width: 100%;
+  background: var(--table-head, #F1F3FB);
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-strong, #c3cfee);
+}
+
+.card.table-consonant .consonant-header-sub > div {
+  padding: 8px 12px;
+  text-align: center;
+  border-right: 1px solid var(--border-strong, #c3cfee);
+  box-sizing: border-box;
+}
+
+.card.table-consonant .consonant-header-sub > div:last-child {
+  border-right: none;
+}
+
+.card.table-consonant .consonant-header-type {
+  text-align: center;
+}
+
+.card.table-consonant .consonant-header-pair {
+  text-align: center;
+}
+
+.card.table-consonant .consonant-header-row {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid var(--border-strong, #c3cfee);
+}
+
+.card.table-consonant .consonant-header-row > div {
+  padding: 8px;
+  text-align: center;
+  border-right: 1px solid var(--border-strong, #c3cfee);
+  box-sizing: border-box;
+}
+
+.card.table-consonant .consonant-header-row > div:first-child {
+  text-align: left;
+  padding-left: 12px;
+}
+
+.card.table-consonant .consonant-header-row > div:last-child {
+  border-right: none;
+}
+
+.card.table-consonant .consonant-header-subrow {
+  display: flex;
+  width: 100%;
+}
+
+.card.table-consonant .consonant-header-subrow > div {
+  padding: 4px 8px;
+  text-align: center;
+  border-right: 1px solid var(--border-strong, #c3cfee);
+  box-sizing: border-box;
+}
+
+.card.table-consonant .consonant-header-subrow > div:last-child {
+  border-right: none;
+}
+
+.card.table-consonant #consonant-table-body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+}
+
+.card.table-consonant .consonant-row {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--border-strong, #c3cfee);
+}
+
+.card.table-consonant .consonant-row:last-child {
+  border-bottom: none;
+}
+
+.card.table-consonant .consonant-cell {
+  padding: 0 8px;
+  border-right: 1px solid var(--border-strong, #c3cfee);
+  box-sizing: border-box;
+  text-align: left;
+  line-height: 1.2;
+  }
+
+.card.table-consonant .consonant-cell-type {
+  width: 60px;
+  flex: 0 0 60px;
+  text-align: center;
+    font-size: 0.9em;
+  border-right: none !important;
+}
+
+.card.table-consonant .consonant-cell-pair {
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+}
+
+.card.table-consonant .consonant-cell:last-child {
+  border-right: none;
+}
+
+:root.dark .card.table-consonant .consonant-header-title {
+  color: #4da3ff;
+}

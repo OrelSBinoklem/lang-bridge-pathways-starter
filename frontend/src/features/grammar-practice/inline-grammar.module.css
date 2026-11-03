@@ -1,0 +1,20 @@
+.card { position: relative; min-width: 0; color: #213547; background: #fff; border-radius: 6px; }
+.card[data-fill-height] { width: 100%; height: 100%; }
+.card[data-fill-height] .tableView { height: calc(100% - 40px); }
+.card[data-fill-height] .panel { max-height: 100%; height: 100%; }
+.card[data-fill-height] .header { padding-inline: 52px; }
+@media(max-width: 600px) { .card[data-fill-height] .header { padding: 42px 0 0; flex-wrap: wrap; } }
+.panel { padding: 12px; max-height: min(72dvh, 800px); overflow: auto; cursor: default; font-size: 14px; line-height: 1.5; }
+.header { display: flex; align-items: start; gap: 10px; justify-content: space-between; margin-bottom: 12px; }
+.header strong { font-size: 15px; }.header button { flex-shrink: 0; }
+.open { display: block; width: 100%; padding: 7px 12px 17px; border: 0; background: #f3f7f8; color: #157567; text-align: left; font-size: 13px; font-weight: 650; cursor: pointer; }
+.header button, .controls button { border: 1px solid #bbcad4; border-radius: 4px; background: #f8fafb; color: #305267; padding: 5px 9px; cursor: pointer; }
+.controls { display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: center; margin-bottom: 12px; font-size: 12px; }
+.controls [role='group'] { display: flex; gap: 3px; }.controls button[aria-pressed='true'] { background: #d6ece6; color: #12614f; border-color: #87baab; }
+.controls select { padding: 4px; max-width: 170px; color: inherit; background: transparent; border: 1px solid #bbcad4; border-radius: 4px; }
+.lesson { min-width: 0; }.lesson p { margin: 8px 0; }.lesson button { font: inherit; }.lesson input, .lesson select { font: inherit; }
+.status { margin: 0; padding: 8px 12px 18px; font-size: 12px; }
+:global(.dark) .card { color: #e4edf6; background: #202d3b; }
+:global(.dark) .open { background: #263846; color: #93dbc9; }
+:global(.dark) .header button, :global(.dark) .controls button { background: #2d3e50; color: #e0edf9; border-color: #5a7189; }
+:global(.dark) .controls button[aria-pressed='true'] { background: #234e43; border-color: #6aab97; }

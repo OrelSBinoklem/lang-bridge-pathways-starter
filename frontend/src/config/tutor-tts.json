@@ -1,0 +1,50 @@
+{
+  "defaultModel": "gemini-3.8-flash-tts",
+  "defaultVoice": "Enceladus",
+  "models": [
+    {
+      "id": "gemini-3.8-flash-lite-tts",
+      "provider": "google",
+      "defaultVoice": "Enceladus",
+      "voices": ["Achernar", "Achird", "Algenib", "Algieba", "Alnilam", "Aoede", "Autonoe", "Callirrhoe", "Charon", "Despina", "Enceladus", "Erinome", "Fenrir", "Gacrux", "Iapetus", "Kore", "Laomedeia", "Leda", "Orus", "Puck", "Pulcherrima", "Rasalgethi", "Sadachbia", "Sadaltager", "Schedar", "Sulafat", "Umbriel", "Vindemiatrix", "Zephyr", "Zubenelgenubi"]
+    },
+    {
+      "id": "gemini-3.8-flash-tts",
+      "provider": "google",
+      "defaultVoice": "Enceladus",
+      "voices": ["Achernar", "Achird", "Algenib", "Algieba", "Alnilam", "Aoede", "Autonoe", "Callirrhoe", "Charon", "Despina", "Enceladus", "Erinome", "Fenrir", "Gacrux", "Iapetus", "Kore", "Laomedeia", "Leda", "Orus", "Puck", "Pulcherrima", "Rasalgethi", "Sadachbia", "Sadaltager", "Schedar", "Sulafat", "Umbriel", "Vindemiatrix", "Zephyr", "Zubenelgenubi"]
+    },
+    {
+      "id": "gpt-4o-mini-tts",
+      "provider": "openai",
+      "defaultVoice": "onyx",
+      "voices": ["marin", "cedar", "alloy", "ash", "ballad", "coral", "echo", "fable", "onyx", "nova", "sage", "shimmer", "verse"]
+    },
+    {
+      "id": "gpt-4o-mini-tts-2025-12-15",
+      "provider": "openai",
+      "defaultVoice": "onyx",
+      "voices": ["marin", "cedar", "alloy", "ash", "ballad", "coral", "echo", "fable", "onyx", "nova", "sage", "shimmer", "verse"]
+    },
+    {
+      "id": "tts-1",
+      "provider": "openai",
+      "defaultVoice": "nova",
+      "voices": ["alloy", "ash", "coral", "echo", "fable", "onyx", "nova", "sage", "shimmer"]
+    },
+    {
+      "id": "tts-1-hd",
+      "provider": "openai",
+      "defaultVoice": "nova",
+      "voices": ["alloy", "ash", "coral", "echo", "fable", "onyx", "nova", "sage", "shimmer"]
+    }
+  ],
+  "geminiVoiceGenders": {
+    "Achernar": "female", "Achird": "male", "Algenib": "male", "Algieba": "male", "Alnilam": "male",
+    "Aoede": "female", "Autonoe": "female", "Callirrhoe": "female", "Charon": "male", "Despina": "female",
+    "Enceladus": "male", "Erinome": "female", "Fenrir": "male", "Gacrux": "female", "Iapetus": "male",
+    "Kore": "female", "Laomedeia": "female", "Leda": "female", "Orus": "male", "Puck": "male",
+    "Pulcherrima": "neutral", "Rasalgethi": "male", "Sadachbia": "male", "Sadaltager": "male", "Schedar": "male",
+    "Sulafat": "female", "Umbriel": "male", "Vindemiatrix": "female", "Zephyr": "female", "Zubenelgenubi": "male"
+  }
+}

@@ -1,0 +1,166 @@
+.card.table-savrupinajumi {
+  background: var(--card, #fff);
+  color: var(--text, #1b1f2b);
+  padding: 14px 16px 16px;
+  border-radius: 10px;
+  max-width: 46em;
+  margin: 0 auto;
+  line-height: 1.35;
+}
+
+.card.table-savrupinajumi .sv-intro {
+  margin-bottom: 10px;
+  font-size: max(18px, 0.8em);
+  line-height: 1.4;
+}
+
+.card.table-savrupinajumi .sv-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  align-items: stretch;
+}
+
+.card.table-savrupinajumi .sv-col {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-strong, #c3cfee);
+  border-radius: 10px;
+  padding: 9px 11px 10px;
+  background: var(--table-row-odd, #f5f7ff);
+}
+
+.card.table-savrupinajumi .sv-col-head {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 6px;
+  margin-bottom: 7px;
+  border-bottom: 2px solid var(--border-strong, #c3cfee);
+}
+
+.card.table-savrupinajumi .sv-lv {
+  font-size: max(18px, 0.88em);
+  font-weight: 800;
+}
+
+.card.table-savrupinajumi .sv-col--attr .sv-lv { color: var(--accent1, #3a7df2); }
+.card.table-savrupinajumi .sv-col--appos .sv-lv { color: var(--accent3, #d96b28); }
+
+.card.table-savrupinajumi .sv-ru {
+  font-size: max(18px, 0.72em);
+  color: var(--muted, #6a748b);
+}
+
+.card.table-savrupinajumi .sv-func {
+  margin-bottom: 7px;
+  font-size: max(18px, 0.76em);
+  line-height: 1.35;
+}
+
+/* Normal word order vs. the separated one — the move is the whole idea. */
+.card.table-savrupinajumi .sv-shift {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 8px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  background: var(--card, #fff);
+  border: 1px dashed var(--border-strong, #c3cfee);
+  font-size: max(18px, 0.8em);
+  font-weight: 700;
+  font-style: italic;
+}
+
+.card.table-savrupinajumi .sv-shift-from {
+  color: var(--muted, #6a748b);
+}
+
+.card.table-savrupinajumi .sv-arrow {
+  color: var(--muted, #6a748b);
+  font-style: normal;
+}
+
+.card.table-savrupinajumi .sv-samples {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: auto;
+}
+
+.card.table-savrupinajumi .sv-sample {
+  display: flex;
+  flex-direction: column;
+}
+
+.card.table-savrupinajumi .sv-sample-lv {
+  font-size: max(18px, 0.84em);
+  font-weight: 700;
+  font-style: italic;
+}
+
+.card.table-savrupinajumi .sv-sample-ru {
+  font-size: max(18px, 0.72em);
+  color: var(--muted, #6a748b);
+}
+
+.card.table-savrupinajumi .sv-hit {
+  color: var(--accent2, #3fa872);
+  border-bottom: 2px solid var(--accent2, #3fa872);
+}
+
+.card.table-savrupinajumi .sv-pn {
+  color: var(--accent4, #d3547f);
+  font-weight: 900;
+  font-style: normal;
+  font-size: 1.2em;
+}
+
+.card.table-savrupinajumi .sv-kinds {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.card.table-savrupinajumi .sv-kind {
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  gap: 10px;
+  align-items: start;
+  padding: 7px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border-strong, #c3cfee);
+  background: var(--table-row-odd, #f5f7ff);
+}
+
+.card.table-savrupinajumi .sv-kind-label {
+  font-size: max(18px, 0.74em);
+  font-weight: 800;
+  color: var(--accent1, #3a7df2);
+}
+
+.card.table-savrupinajumi .sv-not {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 10px;
+  padding: 8px;
+  border-radius: 10px;
+  background: var(--accent4-bg, rgba(211, 84, 127, 0.1));
+  border-left: 3px solid var(--accent4, #d3547f);
+}
+
+.card.table-savrupinajumi .sv-not-head {
+  font-size: max(18px, 0.8em);
+  font-weight: 800;
+  color: var(--accent4, #d3547f);
+}
+
+.card.table-savrupinajumi .sv-not .sv-kind {
+  background: var(--card, #fff);
+}
+
+.card.table-savrupinajumi .sv-not .sv-kind-label {
+  color: var(--muted, #6a748b);
+}

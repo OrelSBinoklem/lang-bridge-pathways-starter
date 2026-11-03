@@ -1,0 +1,16 @@
+[Unit]
+Description=LangBridge Pathways Tutor Gateway
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/var/www/langbridge-pathways.com/current/tools/tutor-gateway
+EnvironmentFile=/var/www/langbridge-pathways.com/current/tools/tutor-gateway/.env
+ExecStart=/usr/bin/node /var/www/langbridge-pathways.com/current/tools/tutor-gateway/src/server.mjs
+Restart=always
+RestartSec=3
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target

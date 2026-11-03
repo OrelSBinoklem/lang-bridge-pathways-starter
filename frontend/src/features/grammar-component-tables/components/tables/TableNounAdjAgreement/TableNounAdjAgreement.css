@@ -1,0 +1,25 @@
+.table-noun-adj-agreement {
+  --agreement-border: #b8c8cd;
+  --agreement-adjective: #146b59;
+  --agreement-noun: #9d3c52;
+  background: #fff;
+  color: #21313c;
+  padding: 0;
+  overflow: hidden;
+}
+.table-noun-adj-agreement table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 20px; line-height: 1.45; }
+.table-noun-adj-agreement caption { caption-side: top; padding: 34px 14px 14px; background: #176d73; color: #fff; font-size: 27px; font-weight: 700; text-align: left; }
+.table-noun-adj-agreement caption span { display: block; font-size: 18px; font-weight: 400; }
+.table-noun-adj-agreement th, .table-noun-adj-agreement td { border: 1px solid var(--agreement-border); padding: 13px 10px; text-align: left; overflow-wrap: anywhere; }
+.table-noun-adj-agreement thead th { background: #e8eff5; font-size: 17px; }
+.table-noun-adj-agreement small { display: block; font-size: 14px; font-weight: 400; }
+.table-noun-adj-agreement tbody .tt-question { background: #f0f3f5; }
+.table-noun-adj-agreement tbody .tt-plural { background: #f5f8f7; }
+.table-noun-adj-agreement .tt-adjective { color: var(--agreement-adjective); font-weight: 700; }
+.table-noun-adj-agreement .tt-noun { color: var(--agreement-noun); }
+.table-noun-adj-agreement tfoot td { font-size: 17px; }
+.table-noun-adj-agreement .tt-warning td { border-left: 4px solid #da9d26; }
+.dark .table-noun-adj-agreement { --agreement-border: #526069; --agreement-adjective: #9be0ce; --agreement-noun: #f2b3c1; background: #252b31; color: #ecf2f5; }
+.dark .table-noun-adj-agreement thead th { background: #353d47; }
+.dark .table-noun-adj-agreement tbody .tt-question { background: #30383e; }
+.dark .table-noun-adj-agreement tbody .tt-plural { background: #2c3834; }

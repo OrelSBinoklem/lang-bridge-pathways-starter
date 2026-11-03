@@ -1,0 +1,19 @@
+{
+  "dialogueActs": "120",
+  "callsPerAct": "1.2",
+  "memorySearchesPerHour": "3",
+  "memoryQueryTokens": "80",
+  "memoryResultTokens": "1000",
+  "fixedContextTokens": "12000",
+  "initialHistoryTokens": "3000",
+  "userTokensPerAct": "60",
+  "outputTokensPerCall": "120",
+  "reasoningTokensPerCall": "200",
+  "toolTokensPerCall": "300",
+  "cacheHitPercent": "90",
+  "historyTokenLimit": "32000",
+  "retainedHistoryActs": "5",
+  "summaryBatchActs": "10",
+  "summaryTokensPerRun": "400",
+  "summaryReasoningTokensPerRun": "100"
+}

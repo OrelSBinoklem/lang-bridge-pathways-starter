@@ -1,0 +1,154 @@
+.card.table-vienlidzigi {
+  background: var(--card, #fff);
+  color: var(--text, #1b1f2b);
+  padding: 14px 16px 16px;
+  border-radius: 10px;
+  max-width: 46em;
+  margin: 0 auto;
+  line-height: 1.35;
+}
+
+.card.table-vienlidzigi .vl-intro {
+  margin-bottom: 10px;
+  font-size: max(18px, 0.8em);
+  line-height: 1.4;
+}
+
+.card.table-vienlidzigi .vl-block {
+  display: block;
+  margin-top: 4px;
+}
+
+.card.table-vienlidzigi .vl-lv {
+  font-size: max(18px, 0.84em);
+  font-weight: 600;
+  font-style: italic;
+}
+
+.card.table-vienlidzigi .vl-ru {
+  display: block;
+  font-size: max(18px, 0.72em);
+  color: var(--muted, #6a748b);
+}
+
+.card.table-vienlidzigi .vl-mem {
+  color: var(--accent1, #3a7df2);
+  font-weight: 800;
+  border-bottom: 2px solid var(--accent1, #3a7df2);
+}
+
+.card.table-vienlidzigi .vl-gen {
+  color: var(--accent3, #d96b28);
+  font-weight: 900;
+  border-bottom: 2px solid var(--accent3, #d96b28);
+}
+
+.card.table-vienlidzigi .vl-pn {
+  color: var(--accent4, #d3547f);
+  font-weight: 900;
+  font-style: normal;
+  font-size: 1.25em;
+}
+
+.card.table-vienlidzigi .vl-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card.table-vienlidzigi .vl-row {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border: 1px solid var(--border-strong, #c3cfee);
+  border-radius: 10px;
+  padding: 8px 11px 9px;
+  background: var(--table-row-odd, #f5f7ff);
+}
+
+.card.table-vienlidzigi .vl-row-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px 10px;
+}
+
+.card.table-vienlidzigi .vl-when {
+  font-size: max(18px, 0.82em);
+  font-weight: 800;
+  font-style: italic;
+}
+
+.card.table-vienlidzigi .vl-badge {
+  padding: 0.1em 0.5em;
+  border-radius: 999px;
+  font-size: max(18px, 0.72em);
+  font-weight: 800;
+  color: var(--card, #fff);
+}
+
+.card.table-vienlidzigi .vl-badge--yes { background: var(--accent2, #3fa872); }
+.card.table-vienlidzigi .vl-badge--no { background: var(--accent4, #d3547f); }
+
+.card.table-vienlidzigi .vl-sample {
+  display: flex;
+  flex-direction: column;
+}
+
+.card.table-vienlidzigi .vl-extra {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5px;
+  border-top: 1px dashed var(--border-strong, #c3cfee);
+}
+
+.card.table-vienlidzigi .vl-extra-text {
+  font-size: max(18px, 0.72em);
+  color: var(--muted, #6a748b);
+}
+
+.card.table-vienlidzigi .vl-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 18px;
+  margin-bottom: 8px;
+  font-size: max(18px, 0.76em);
+}
+
+.card.table-vienlidzigi .vl-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1.5px solid var(--border-strong, #c3cfee);
+  table-layout: fixed;
+}
+
+.card.table-vienlidzigi .vl-table td {
+  border: 1px solid var(--border-strong, #c3cfee);
+  padding: 7px 10px;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.card.table-vienlidzigi .vl-scheme {
+  width: 34%;
+  background: var(--table-head, #f1f3fb);
+  font-size: max(18px, 0.84em);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.card.table-vienlidzigi .vl-note {
+  margin-top: 10px;
+  padding: 7px 9px;
+  border-radius: 8px;
+  background: var(--accent3-bg, rgba(217, 107, 40, 0.1));
+  border-left: 3px solid var(--accent3, #d96b28);
+  font-size: max(18px, 0.75em);
+  line-height: 1.4;
+}
+
+.card.table-vienlidzigi .vl-note em {
+  font-weight: 800;
+}

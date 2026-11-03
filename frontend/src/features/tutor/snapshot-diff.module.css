@@ -1,0 +1,186 @@
+.pair {
+  overflow: hidden;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  background: #0f172a;
+}
+
+.pairSummary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  padding: 12px 14px;
+  background: linear-gradient(180deg, #172033, #111827);
+  color: #e5edf8;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.pairSummary strong {
+  margin-right: auto;
+  font-size: 15px;
+}
+
+.pairSummary span {
+  border: 1px solid #334155;
+  border-radius: 999px;
+  background: #111c2f;
+  color: #cbd5e1;
+  padding: 5px 10px;
+  font-weight: 800;
+}
+
+.diff {
+  border-top: 1px solid #26364f;
+  background: #0b1220;
+}
+
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-bottom: 1px solid #243449;
+  background: #121b2c;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.toolbar > span {
+  border: 1px solid #334155;
+  border-radius: 999px;
+  padding: 4px 10px;
+}
+
+.statAdded {
+  color: #bbf7d0;
+}
+
+.statRemoved {
+  color: #fecaca;
+}
+
+.statWarn {
+  color: #fde68a;
+}
+
+.toolbarButton {
+  margin-left: auto;
+  border: 1px solid #475569;
+  border-radius: 7px;
+  background: #1e293b;
+  color: #e2e8f0;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 5px 10px;
+}
+
+.toolbarButton:hover {
+  background: #334155;
+}
+
+.rows {
+  font-family: var(--font-geist-mono), Consolas, monospace;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 46px 46px 18px minmax(0, 1fr);
+  border-left: 3px solid transparent;
+}
+
+.rowAdded {
+  border-left-color: #22c55e;
+  background: rgba(34, 197, 94, 0.13);
+}
+
+.rowRemoved {
+  border-left-color: #ef4444;
+  background: rgba(239, 68, 68, 0.13);
+}
+
+.no {
+  padding: 0 6px;
+  color: #64748b;
+  text-align: right;
+  user-select: none;
+}
+
+.mark {
+  color: #94a3b8;
+  text-align: center;
+  user-select: none;
+}
+
+.rowAdded .mark {
+  color: #4ade80;
+}
+
+.rowRemoved .mark {
+  color: #f87171;
+}
+
+.text {
+  min-width: 0;
+  padding: 0 12px 0 4px;
+  color: #dbeafe;
+  font: inherit;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.rowRemoved .text {
+  color: #fecaca;
+}
+
+.rowAdded .text {
+  color: #bbf7d0;
+}
+
+.charAdded,
+.charRemoved {
+  border-radius: 3px;
+  color: inherit;
+}
+
+.charAdded {
+  background: rgba(34, 197, 94, 0.55);
+  color: #f0fdf4;
+}
+
+.charRemoved {
+  background: rgba(239, 68, 68, 0.55);
+  color: #fef2f2;
+}
+
+.fold {
+  display: block;
+  width: 100%;
+  border: 0;
+  border-top: 1px solid #1e293b;
+  border-bottom: 1px solid #1e293b;
+  background: #101a2c;
+  color: #7dd3fc;
+  cursor: pointer;
+  font: inherit;
+  padding: 4px 12px;
+  text-align: left;
+}
+
+.fold:hover {
+  background: #162238;
+}
+
+.empty {
+  padding: 16px;
+  color: #cbd5e1;
+  font-size: 13px;
+}

@@ -1,0 +1,16 @@
+.verbs-tables-section {
+  position: relative;
+
+  #verbs-tables-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 1200px) {
+  .verbs-tables-section #verbs-tables-container {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,42 @@
+.grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; padding: 8px 0 12px; }
+.card { --ink: #fff0e3; --muted: #f5d6c8; --line: #ffe6d04d; --accent: #f8d8a9; --rank-ink: #713c1f; position: relative; isolation: isolate; display: flex; flex-direction: column; min-width: 0; padding: 18px 16px 15px; border: 1px solid #ffffffb3; border-radius: 8px 45px 8px 8px; color: var(--ink) !important; text-decoration: none; background: radial-gradient(#ffe5d41c .7px, transparent .8px), linear-gradient(135deg, #b87e67, #a26d5e); background-size: 4px 4px, auto; box-shadow: 0 16px 32px -25px #344b5770, inset 0 1px 0 #ffffffb3; overflow: hidden; transition: transform .3s, box-shadow .3s; }
+.card::before { content: ''; position: absolute; inset: 7px; border: 1px solid #ffffff66; border-radius: 5px 38px 5px 5px; pointer-events: none; z-index: -1; }
+.card::after { content: ''; position: absolute; inset: -50% -100%; background: linear-gradient(100deg, transparent 44%, #ffffff33 50%, transparent 56%); opacity: 0; transform: translateX(-45%); transition: transform .7s, opacity .4s; pointer-events: none; }
+.card[data-level='A2'] { --ink: #185267; --muted: #39778a; --line: #477c9d38; --accent: #398fa9; background: linear-gradient(130deg, #c0f0e6, #add5df 55%, #d7e6e8); }
+.card[data-level='B1'] { --ink: #f3eaff; --muted: #c5bbd7; --line: #cab4f14d; --accent: #c3a0f7; background: radial-gradient(ellipse at 115% 0, #c08d7a61, transparent 55%), linear-gradient(145deg, #43475a, #303247); border-color: #b6a7cb80; }
+.card[data-level='B2'] { --ink: #6d3f26; --muted: #875b3c; --line: #b8793940; --accent: #bd8450; background: linear-gradient(130deg, #f9edcd, #edcdae 57%, #f7e2b8); }
+.card[data-rank='bronze'] { --accent: #f3c298; --rank-ink: #713c1f; }
+.card[data-rank='silver'] { --accent: #edf5ff; --rank-ink: #263e50; }
+.card[data-rank='gold'] { --accent: #ffe49a; --rank-ink: #6c4a10; }
+.card[data-rank='diamond'] { --accent: #d3f1ff; --rank-ink: #193b60; }
+.card:focus-visible { outline: 3px solid #25858b; outline-offset: 5px; }
+.top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; margin-top: 0; }
+.top > strong { font: 400 48px/1.05 Georgia, serif; letter-spacing: -.055em; }
+.top > span { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+.card h3 { margin: 8px 0; min-height: 36px; font: 500 13px/1.35 Arial, sans-serif; overflow-wrap: anywhere; }
+.rank { --mastery-ink: var(--rank-ink); position: absolute; top: 14px; right: 20px; display: flex; align-items: center; justify-content: flex-end; }
+.rank > span[data-mastery-tier] { max-width: 100%; padding: 4px 7px; gap: 5px; border-radius: 7px; background: linear-gradient(135deg, #ffffffed, #ffffffa6); color: var(--rank-ink); border-color: #ffffff9c; box-shadow: 0 3px 7px #102a3a18, inset 0 1px 0 #fff; font: 700 12px/1.2 Arial, sans-serif; letter-spacing: 0; }
+.rank > span[data-mastery-tier] svg { width: 21px; height: 22px; }
+.rank > span[data-mastery-tier='bronze'] { background: linear-gradient(135deg, #fff0de, #eab48d); }
+.rank > span[data-mastery-tier='silver'] { background: linear-gradient(135deg, #ffffff, #c5d7e4); }
+.rank > span[data-mastery-tier='gold'] { background: linear-gradient(135deg, #fff9d6, #f0ca68); }
+.rank > span[data-mastery-tier='diamond'] { background: linear-gradient(135deg, #f4fdff, #a8d9f1); }
+.art { display: block; position: relative; flex: 0 0 auto; width: 100%; height: 156px; margin: 4px 0 16px; pointer-events: none; }
+.figure { display: block; position: relative; z-index: 1; width: 100%; height: 100%; filter: drop-shadow(0 8px 7px #12374716); }
+.frame { position: absolute; inset: 0 0 3%; border: 1px solid #ffffff73; border-radius: 50% 50% 14px 14px; transform: rotate(-5deg); background: linear-gradient(140deg, #ffffff17, transparent); }
+.frame::after { content: ''; position: absolute; inset: 5px -5px -5px 6px; border: 1px solid #ffffff52; border-radius: inherit; transform: rotate(8deg); }
+.plinth { position: absolute; z-index: 2; bottom: 0; left: -4%; width: 108%; height: 16px; border: 1px solid #ffffff66; border-radius: 50%; background: linear-gradient(90deg, transparent, #ffffff1a, transparent); }
+.progress { display: block; width: 100%; height: 4px; margin-top: auto; overflow: hidden; border: 0; border-radius: 4px; background: var(--line); accent-color: var(--accent); }
+.progress::-webkit-progress-bar { background: var(--line); border-radius: inherit; }
+.progress::-webkit-progress-value { background: var(--accent); border-radius: inherit; }
+.progress::-moz-progress-bar { background: var(--accent); border-radius: inherit; }
+.bottom { display: flex; justify-content: space-between; align-items: center; gap: 6px; margin-top: 10px; color: var(--muted); font: 10px/1.35 Arial, sans-serif; }
+.bottom > i { display: grid; place-items: center; flex: 0 0 24px; height: 24px; border: 1px solid var(--line); border-radius: 50%; color: var(--ink); font-size: 10px; }
+.card:is([data-level='A2'], [data-level='B2'])[data-rank] { --accent: var(--rank-ink); }
+@media (hover: hover) { .card:hover { transform: translateY(-5px); box-shadow: 0 23px 36px -25px #344b5799, inset 0 1px 0 #fff; } .card:hover::after { opacity: .8; transform: translateX(45%); } }
+:global(html.dark) .card { border-color: #ffffff42; box-shadow: 0 14px 30px -23px #0009, inset 0 1px 0 #ffffff47; }
+:global(html.dark) .card::before { border-color: #ffffff38; }
+:global(html.dark) .card:focus-visible { outline-color: #a7e3e5; }
+@media (max-width: 900px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; } .art { max-width: 230px; align-self: center; } .card h3 { min-height: 21px; } }
+@media (max-width: 480px) { .grid { gap: 10px; } .card { padding: 13px 11px 12px; border-radius: 8px 37px 8px 8px; } .card::before { inset: 6px; border-radius: 4px 31px 4px 4px; } .edition { font-size: 7px; letter-spacing: .04em; } .edition > :last-child { font-size: 7px; } .card[data-current] .edition > :last-child:not(.rank) { padding: 3px 5px; } .top { margin-top: 7px; } .top > strong { font-size: 42px; } .top > span { font-size: 11px; } .card h3 { font-size: 12px; min-height: 33px; margin-block: 7px; } .rank > span[data-mastery-tier] { font-size: 10px; padding: 4px 5px; gap: 3px; } .rank > span[data-mastery-tier] svg { width: 17px; height: 18px; } .art { height: 112px; margin: 4px 0 12px; } .bottom { font-size: 9px; gap: 4px; margin-top: 8px; } .bottom > i { flex-basis: 21px; height: 21px; font-size: 9px; } }
+@media (prefers-reduced-motion: reduce) { .card, .card::after { transition: none; } .card:hover { transform: none; } .card::after { display: none; } }

@@ -1,0 +1,152 @@
+.card.table-questions-chart {
+  background: #fff;
+  padding: 10px 12px 12px;
+  border-radius: 8px;
+  overflow: visible;
+  color: #222;
+  font-size: 0.95em;
+}
+
+.card.table-questions-chart .q-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+.card.table-questions-chart .q-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  background: #fff;
+  border: 1.5px solid #c3cfee;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(41, 56, 101, 0.08);
+}
+
+.card.table-questions-chart .q-table td {
+  border: 1px solid #c3cfee;
+  padding: 6px 8px;
+  vertical-align: top;
+  line-height: 1.35;
+  white-space: normal;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+}
+
+.card.table-questions-chart .q-lv {
+  width: 22%;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.card.table-questions-chart .q-ru {
+  width: 28%;
+  font-weight: 500;
+  color: #333;
+}
+
+.card.table-questions-chart .q-ex {
+  width: 50%;
+  font-weight: 400;
+  color: #2a2a2a;
+}
+
+.card.table-questions-chart .q-ru-highlight {
+  font-weight: 700;
+  color: #c05621;
+  background: #fff3cd;
+  padding: 0 0.2em;
+  border-radius: 3px;
+}
+
+.card.table-questions-chart .q-ru-lower {
+  display: block;
+  margin-top: 0.55em;
+}
+
+
+@media (max-width: 640px) {
+  .card.table-questions-chart .q-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === moved from grammar-component-tables.css (page-prefix stripped) === */
+.card.table-questions-chart {
+  background: #fff;
+  padding: 10px 12px 12px;
+  border-radius: 8px;
+  overflow: visible;
+  color: #222;
+  font-size: 0.95em;
+}
+
+.card.table-questions-chart .q-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+.card.table-questions-chart .q-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  background: #fff;
+  border: 1.5px solid #c3cfee;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(41, 56, 101, 0.08);
+}
+
+.card.table-questions-chart .q-table td {
+  border: 1px solid #c3cfee;
+  padding: 6px 8px;
+  vertical-align: top;
+  line-height: 1.35;
+  white-space: normal;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+}
+
+.card.table-questions-chart .q-lv {
+  width: 22%;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.card.table-questions-chart .q-ru {
+  width: 28%;
+  font-weight: 500;
+  color: #333;
+}
+
+.card.table-questions-chart .q-ex {
+  width: 50%;
+  font-weight: 400;
+  color: #2a2a2a;
+}
+
+.card.table-questions-chart .q-ru-highlight {
+  font-weight: 700;
+  color: #c05621;
+  background: #fff3cd;
+  padding: 0 0.2em;
+  border-radius: 3px;
+}
+
+.card.table-questions-chart .q-ru-lower {
+  display: block;
+  margin-top: 0.55em;
+}
+
+@media (max-width: 640px) {
+.card.table-questions-chart .q-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

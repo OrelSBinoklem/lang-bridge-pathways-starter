@@ -1,0 +1,142 @@
+.card.table-salikteni {
+  background: var(--card, #fff);
+  color: var(--text, #1b1f2b);
+  padding: 14px 16px 16px;
+  border-radius: 10px;
+  max-width: 46em;
+  margin: 0 auto;
+  line-height: 1.35;
+}
+
+/* Schema of the whole idea, before the three concrete ways. */
+.card.table-salikteni .sk-hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 12px 0 14px;
+  padding: 10px;
+  border-radius: 10px;
+  background: var(--table-head, #f1f3fb);
+  border: 1px solid var(--border-strong, #c3cfee);
+  font-size: max(18px, 1.05em);
+}
+
+.card.table-salikteni .sk-rules {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 10px;
+}
+
+.card.table-salikteni .sk-rule {
+  border: 1px solid var(--border-strong, #c3cfee);
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: var(--table-row-odd, #f5f7ff);
+}
+
+.card.table-salikteni .sk-rule-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card.table-salikteni .sk-num {
+  flex: 0 0 auto;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: max(18px, 0.8em);
+  font-weight: 800;
+  color: var(--card, #fff);
+  background: var(--text, #1b1f2b);
+}
+
+.card.table-salikteni .sk-rule-ru {
+  font-weight: 800;
+  font-size: max(18px, 0.92em);
+}
+
+.card.table-salikteni .sk-rule-lv {
+  margin: 4px 0 8px;
+  font-size: max(18px, 0.75em);
+  font-style: italic;
+  color: var(--muted, #6a748b);
+}
+
+.card.table-salikteni .sk-examples {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.card.table-salikteni .sk-formula {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.card.table-salikteni .sk-word {
+  font-weight: 700;
+  font-size: max(18px, 0.92em);
+}
+
+.card.table-salikteni .sk-word--res {
+  padding: 0.1em 0.45em;
+  border-radius: 0.4em;
+  background: var(--card, #fff);
+  border: 1px solid var(--border-strong, #c3cfee);
+}
+
+/* Colours carry meaning: where each piece of the compound came from. */
+.card.table-salikteni .sk-part--a {
+  color: var(--accent1, #3a7df2);
+}
+
+.card.table-salikteni .sk-part--b {
+  color: var(--accent3, #d96b28);
+}
+
+.card.table-salikteni .sk-cut {
+  color: var(--accent4, #d3547f);
+  text-decoration: line-through;
+  text-decoration-thickness: 0.1em;
+  opacity: 0.85;
+}
+
+.card.table-salikteni .sk-tail {
+  color: var(--accent2, #3fa872);
+  border-bottom: 2px solid var(--accent2, #3fa872);
+}
+
+.card.table-salikteni .sk-op {
+  color: var(--muted, #6a748b);
+  font-weight: 700;
+  font-size: max(18px, 0.85em);
+}
+
+.card.table-salikteni .sk-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  justify-content: center;
+  margin-top: 12px;
+  font-size: max(18px, 0.72em);
+  color: var(--muted, #6a748b);
+}
+
+.card.table-salikteni .sk-legend-item {
+  white-space: nowrap;
+}
+
+.card.table-salikteni .sk-legend .sk-part--a,
+.card.table-salikteni .sk-legend .sk-part--b,
+.card.table-salikteni .sk-legend .sk-cut,
+.card.table-salikteni .sk-legend .sk-tail {
+  font-weight: 700;
+}

@@ -1,0 +1,15 @@
+.panel {
+  margin-top: 1.5rem;
+  border: 1px dashed #f59e0b;
+  border-radius: 0.85rem;
+  padding: 1rem;
+  background: #fffbeb;
+  display: grid;
+  gap: 1rem;
+}
+
+:global(html.dark) .panel {
+  background: rgba(120, 53, 15, 0.25);
+  border-color: #b45309;
+  color: #f4f4f5;
+}

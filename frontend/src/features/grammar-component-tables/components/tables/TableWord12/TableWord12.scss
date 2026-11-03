@@ -1,0 +1,72 @@
+.table-container{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+
+.polygon-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+    overflow: visible;
+  }
+
+.polygon-overlay.editing{
+    pointer-events: all;
+  }
+
+.polygon-overlay svg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: visible;
+  }
+
+.table-container:hover .polygon-toolbar, .table-container.editing .polygon-toolbar, .polygon-toolbar:hover{
+    opacity: 1;
+    pointer-events: all;
+  }
+
+.card.table-word12{
+    padding: 20px;
+  }
+
+.card.table-word12 .word12-title{
+    color: #2d5016;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.3em;
+  }
+
+.card.table-word12 .word12-content{
+    line-height: 1.8;
+    font-size: 1em;
+    color: #333;
+  }
+
+.card.table-word12 .word12-content p{
+    margin-bottom: 16px;
+  }
+
+.card.table-word12 .word12-content strong{
+    font-weight: 600;
+  }
+
+.card.table-word12 .word12-example{
+    margin-top: 12px;
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+.card.table-word12 .word12-example-label{
+    font-weight: 600;
+    font-style: normal;
+  }

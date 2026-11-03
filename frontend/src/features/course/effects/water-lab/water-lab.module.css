@@ -1,0 +1,24 @@
+.lab { position: fixed; inset: 0; z-index: 100; display: flex; flex-direction: column; background: #172f30; color: #263b39; letter-spacing: 0; }
+.toolbar { flex: none; display: flex; align-items: center; gap: 16px; padding: 10px 18px; background: #fafcfa; border-bottom: 1px solid #d3ded9; }
+.tabs { display: flex; gap: 3px; align-items: stretch; }
+.tabs button { min-height: 38px; padding: 7px 13px; background: transparent; border: 1px solid transparent; border-radius: 5px; color: inherit; cursor: pointer; font-size: 14px; line-height: 20px; }
+.tabs button[aria-pressed='true'] { background: #dcece6; border-color: #a7cabc; color: #154c3b; }
+.tabs button:hover { background: #e8efeb; }
+.actions { margin-left: auto; display: flex; gap: 5px; }
+.icon { display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; flex: none; color: #36594f; background: transparent; border: 1px solid #cbd8d2; border-radius: 5px; cursor: pointer; text-decoration: none; }
+.icon:hover { background: #e3eee8; }
+.options { display: flex; align-items: center; flex-wrap: wrap; gap: 14px 28px; padding: 8px 18px; flex: none; background: #eef3ef; border-bottom: 1px solid #c8d7cf; }
+.options label { display: flex; align-items: center; gap: 9px; font-size: 13px; }
+.options input { width: 112px; accent-color: #298b72; cursor: pointer; }
+.options output { width: 23px; font-variant-numeric: tabular-nums; }
+.stage { position: relative; flex: 1; min-height: 0; overflow: hidden; touch-action: none; }
+.lab :is(a,button,input):focus-visible { outline: 2px solid #bf7331; outline-offset: 2px; }
+@media (max-width: 600px) {
+  .toolbar { gap: 7px; padding: 8px; }
+  .tabs button { font-size: 12px; padding: 6px 8px; }
+  .options { padding: 6px 10px; gap: 8px 15px; }
+  .options > .tabs { width: 100%; }
+  .options input { width: 80px; }
+  .icon { width: 32px; height: 36px; }
+  .actions { gap: 3px; }
+}

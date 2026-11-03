@@ -1,0 +1,81 @@
+.root { --hub-ink: #2c444b; --hub-muted: #657b7f; --hub-line: #688b8d30; --hub-paper: #f8f7ef; color: var(--hub-ink); margin-top: 28px; }
+.technicalCaption { margin: 25px 0 12px; color: var(--hub-muted); font-size: 12px; line-height: 1.45; }
+.introButtons[data-single] { grid-template-columns: minmax(0, 1fr); }
+.root :is(a,button):focus-visible { outline: 3px solid #2f8b91; outline-offset: 5px; }
+.columns { display: grid; grid-template-columns: .92fr 1.08fr; gap: 24px; align-items: stretch; }
+.practice { padding: 22px 0 8px; min-width: 0; }
+.heading { position: relative; margin-bottom: 24px; }
+.kicker { display: block; font-size: 9px; font-weight: 650; letter-spacing: .17em; line-height: 1.4; }
+.heading h2 { margin: 0; color: var(--hub-ink); font: 500 24px/1.2 Arial, sans-serif; letter-spacing: -.04em; }
+.heading > i { position: absolute; right: 0; top: 0; color: #ae6545; font-size: 20px; }
+.tools { display: grid; gap: 17px; }
+.tool { position: relative; isolation: isolate; display: flex; align-items: center; min-width: 0; min-height: 137px; gap: 13px; padding: 23px 22px; border: 1px solid #ffffffde; color: #4d514b; text-decoration: none; border-radius: 7px 26px 26px 7px; box-shadow: 0 14px 24px -24px #30474a80; transition: transform .25s, box-shadow .25s; overflow: hidden; }
+.paper { background: linear-gradient(90deg, transparent 17px, #b1875e26 18px, transparent 19px), repeating-linear-gradient(0deg, #f4f1e7 0 23px, #d0d9d080 23px 24px); }
+.paper::after { content: ''; position: absolute; right: 0; top: 0; width: 29px; height: 29px; background: linear-gradient(225deg, #ead9bd 47%, #b8a4814d 50%, #fff5e6 55%); border-radius: 0 24px 0 8px; }
+.glass { border-radius: 27px 27px 27px 6px; color: #285e69; background: radial-gradient(ellipse at 100% 0, #ffffff70, transparent 65%), linear-gradient(130deg, #c9e4e3c9, #e2efeca8); border-color: #e1f5f0; }
+.glass::before { content: ''; position: absolute; inset: 6px; border: 1px solid #ffffff65; border-radius: 21px 21px 21px 3px; pointer-events: none; }
+.serial { align-self: flex-start; margin-top: 2px; opacity: .6; font: italic 11px/1.4 Georgia, serif; }
+.toolCopy { display: grid; gap: 11px; flex: 1; min-width: 0; position: relative; z-index: 1; }
+.toolCopy strong { font: 550 16px/1.35 Arial, sans-serif; overflow-wrap: anywhere; }
+.toolCopy small { color: inherit; opacity: .75; font-size: 11px; line-height: 1.45; }
+.levels { display: flex; align-items: center; gap: 10px; font-size: 9px; letter-spacing: .05em; opacity: .65; }
+.grammarGlyph { align-self: flex-end; flex: 0 0 38px; color: #7b88765e; font: italic 56px/.8 Georgia, serif; pointer-events: none; }
+.grammarGlyph small { display: block; font: 8px Arial, sans-serif; letter-spacing: 2px; margin: 11px 0 2px 4px; }
+.cornerIcon { position: absolute; top: 14px; right: 13px; font-size: 9px; opacity: .45; }
+.exerciseGlyph { display: grid; place-items: center; align-self: flex-end; gap: 3px; flex: 0 0 39px; padding: 9px 6px; background: #ffffff80; border: 1px solid #ffffffa1; border-radius: 7px; transform: rotate(-8deg); font: 12px/1 Georgia, serif; color: #3d7d82; box-shadow: 2px 4px 6px #245f6312; }
+.exerciseGlyph > :nth-child(2) { color: #ba8750; font-size: 18px; }
+.library { padding: 24px 22px 23px; min-width: 0; border: 1px solid #ffffffdb; border-radius: 8px 34px 8px 24px; background: radial-gradient(ellipse at 0 0, #d3e7e448, transparent 70%), linear-gradient(135deg, #f0f5f2, #f6f1e8); box-shadow: 0 14px 25px -24px #2b535477, inset 0 1px 0 #fff; }
+.library .heading { padding-right: 24px; }
+.library .heading h2 { font-size: 23px; }
+.books { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; list-style: none; padding: 4px 6px 8px 0; margin: 0; }
+.books > li { min-width: 0; }
+.book { position: relative; display: flex; flex-direction: column; min-width: 0; min-height: 270px; height: 100%; padding: 20px 16px 18px 23px; color: #e5f0eb; text-decoration: none; border: 1px solid #7d9fa5; border-radius: 5px 16px 16px 5px; background: radial-gradient(ellipse at 100% 0, #68949d61, transparent 65%), linear-gradient(110deg, #234b5e, #365867); box-shadow: 4px 5px 0 -2px #f0eadd, 5px 6px 0 -2px #9ba9a3, 7px 8px 0 -2px #f0eadd, 9px 12px 22px -9px #23364263, inset 4px 0 5px #0e2b4266; transition: transform .3s, box-shadow .3s; }
+.book::before { content: ''; position: absolute; inset: 8px 7px 8px 16px; border: 1px solid #e2e5d22e; border-radius: 2px 10px 10px 2px; pointer-events: none; }
+.book::after { content: ''; position: absolute; right: 14px; top: -1px; width: 11px; height: 29px; background: linear-gradient(90deg, #c79364, #d7b48c); clip-path: polygon(0 0,100% 0,100% 100%,50% 80%,0 100%); }
+.book[data-cover='1'] { color: #6b513c; border-color: #fff2dc; background: radial-gradient(#8f6f491a .6px, transparent .8px), linear-gradient(110deg, #e5d7bc, #eee5d3); background-size: 4px 4px, auto; box-shadow: 4px 5px 0 -2px #fff6e9, 5px 6px 0 -2px #bba78f, 7px 8px 0 -2px #fff6e9, 9px 12px 22px -9px #6b4f3863, inset 4px 0 5px #7c583a26; transform: translateY(8px) rotate(1deg); }
+.book[data-cover='1']::before { border-color: #8c705b33; }
+.book[data-cover='1']::after { background: linear-gradient(90deg, #548591, #93b8b9); }
+.spine { position: absolute; left: 5px; top: 35px; writing-mode: vertical-rl; font-size: 5px; letter-spacing: 1.4px; opacity: .55; }
+.edition { display: block; font-size: 7px; letter-spacing: .09em; opacity: .7; padding-right: 24px; }
+.monogram { display: block; font: italic 61px/.95 Georgia, serif; letter-spacing: -.06em; margin: 26px 0 24px; }
+.monogram small { display: block; font: 8px Georgia, serif; letter-spacing: .26em; opacity: .5; margin: 10px 0 0 3px; }
+.bookTitle { flex: 1; min-width: 0; }
+.bookTitle strong { display: block; font: 550 13px/1.4 Arial, sans-serif; overflow-wrap: anywhere; }
+.bookTitle small { display: block; margin-top: 8px; font-size: 9px; opacity: .7; }
+.bookBottom { display: flex; justify-content: space-between; align-items: end; gap: 5px; margin-top: 20px; padding-top: 13px; border-top: 1px solid #afc1c24d; }
+.bookBottom > span { font: 25px/1 Georgia, serif; font-variant-numeric: tabular-nums; }
+.bookBottom small { display: block; margin-top: 5px; font: 7px Arial, sans-serif; letter-spacing: .15em; opacity: .65; }
+.bookBottom > i { font-size: 10px; opacity: .7; }
+.audio { position: absolute; top: 20px; right: 33px; font-size: 10px; opacity: .7; }
+.notice { color: var(--hub-muted); font-size: 13px; line-height: 1.5; }
+.exam { position: relative; isolation: isolate; display: flex; align-items: center; gap: 22px; margin-top: 25px; padding: 23px 25px; border: 1px solid #f7d9a1; border-radius: 9px 30px 9px 9px; color: #714d2d; background: radial-gradient(ellipse at 85% 10%, #fff8de, transparent 62%), linear-gradient(110deg, #e9c99f, #f6e7cb); box-shadow: 0 12px 22px -22px #744d2e99, inset 0 1px 0 #fff9; text-decoration: none; transition: transform .25s; overflow: hidden; }
+.exam::before { content: ''; position: absolute; inset: 7px; z-index: -1; border: 1px solid #a9814e26; border-radius: 5px 23px 5px 5px; pointer-events: none; }
+.exam::after { content: ''; position: absolute; right: 155px; top: 14px; bottom: 14px; border-left: 1px dashed #a97d5140; }
+.examSeal { display: grid; place-items: center; align-content: center; gap: 7px; flex: 0 0 58px; height: 58px; border: 1px solid #a5754473; border-radius: 50%; transform: rotate(-12deg); }
+.examSeal i { font-size: 22px; }.examSeal small { font: 8px/1 Arial, sans-serif; letter-spacing: .15em; }
+.examCopy { display: grid; gap: 7px; flex: 1; min-width: 0; }
+.examCopy > strong { font: 550 22px/1.2 Arial, sans-serif; }
+.examCopy > small { font-size: 12px; line-height: 1.4; opacity: .8; }
+.examAction { display: inline-flex; align-items: center; gap: 14px; flex: 0 0 auto; font-size: 12px; padding-left: 20px; }
+.intro { margin-top: 25px; padding: 21px 22px 19px; border: 1px solid var(--hub-line); border-radius: 22px 7px 22px 7px; background: linear-gradient(130deg, #f8f5eec9, #e9f2f1b3); }
+.introButtons { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.introButtons button { display: flex; align-items: center; gap: 13px; min-height: 64px; padding: 15px 18px; border: 1px solid #ffffffde; border-radius: 8px 22px 8px 8px; background: #f2dfc3a6; color: #6b4c33; font: 550 16px/1.3 Arial, sans-serif; text-align: left; cursor: pointer; box-shadow: 0 5px 10px -9px #50402f80, inset 0 1px 0 #fff; transition: background .2s, transform .2s; }
+.introButtons button > span { flex: 1; min-width: 0; }
+.introButtons .overviewButton { background: linear-gradient(135deg, #f7ead6, #ecd2b3); }
+.introButtons button > i:first-child { font-size: 21px; opacity: .65; }.introButtons button > i:last-child { font-size: 11px; opacity: .6; }
+.introButtons .conceptsButton { background: #d3e9e9b0; color: #285e69; }
+.intro p { margin: 18px 0 0; max-width: 720px; color: var(--hub-muted); font-size: 12px; line-height: 1.65; }
+.intro p > strong { display: block; margin-bottom: 5px; color: var(--hub-ink); font-weight: 550; }
+@media (hover: hover) { .tool:hover { transform: translateY(-3px); box-shadow: 0 16px 25px -23px #30474a99; } .book:hover { transform: translateY(-4px) rotate(-1deg); } .book[data-cover='1']:hover { transform: translateY(3px) rotate(2deg); } .exam:hover { transform: translateY(-2px); } .introButtons button:hover { transform: translateY(-2px); background: #ead1af; } .introButtons .conceptsButton:hover { background: #bddcdd; } }
+:global(html.dark) .root { --hub-ink: #e0eae7; --hub-muted: #afc3bc; --hub-line: #a7c7bb33; }
+:global(html.dark) .root :is(a,button):focus-visible { outline-color: #a1dfd5; }
+:global(html.dark) .paper { color: #eddfc9; border-color: #7c74634d; background: linear-gradient(90deg, transparent 17px, #d7b78826 18px, transparent 19px), repeating-linear-gradient(0deg, #38362f 0 23px, #817d6240 23px 24px); }
+:global(html.dark) .glass { color: #cee7e2; background: linear-gradient(130deg, #284849, #263a3a); border-color: #719a924d; }
+:global(html.dark) .glass::before { border-color: #e9fffa1f; }
+:global(html.dark) .grammarGlyph { color: #c6cba270; }
+:global(html.dark) .library { background: linear-gradient(135deg, #243a36, #2f342e); border-color: #a3c0b533; box-shadow: inset 0 1px 0 #ffffff0f; }
+:global(html.dark) .intro { background: linear-gradient(130deg, #36372e, #263e3b); }
+:global(html.dark) .introButtons button { border-color: #ffffff33; box-shadow: inset 0 1px 0 #fff4; }
+@media (max-width: 720px) { .columns { grid-template-columns: minmax(0, 1fr); gap: 18px; } .practice { padding-top: 8px; } .heading { margin-bottom: 18px; } .tools { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; } .tool { padding: 20px 16px; align-items: start; min-height: 170px; gap: 10px; } .toolCopy { gap: 10px; } .toolCopy strong { font-size: 15px; } .toolCopy small { padding-right: 15px; } .grammarGlyph, .exerciseGlyph { position: absolute; right: 13px; bottom: 14px; transform: scale(.7); transform-origin: right bottom; } .library { padding: 22px 20px; } .library .heading h2 { font-size: 23px; } .book { min-height: 255px; } .exam { padding: 20px; gap: 16px; } .examAction { font-size: 0; padding-left: 0; } .examAction i { font-size: 16px; } .exam::after { right: 55px; } }
+@media (max-width: 440px) { .heading h2, .library .heading h2 { font-size: 22px; } .tools { grid-template-columns: minmax(0, 1fr); } .tool { min-height: 122px; padding: 20px; } .toolCopy small { padding-right: 0; } .grammarGlyph, .exerciseGlyph { position: relative; align-self: center; right: auto; bottom: auto; transform: scale(.85); } .library { padding: 20px 14px 21px; } .books { gap: 12px; } .book { min-height: 244px; padding: 18px 12px 16px 19px; } .edition { font-size: 6px; padding-right: 20px; } .audio { right: 27px; font-size: 9px; top: 18px; } .book::after { right: 10px; width: 10px; } .monogram { font-size: 50px; margin: 24px 0 20px; } .bookTitle strong { font-size: 12px; } .bookBottom > span { font-size: 23px; } .exam { gap: 13px; padding: 20px 16px; } .examSeal { flex-basis: 40px; height: 40px; gap: 4px; } .examSeal i { font-size: 17px; }.examSeal small { font-size: 6px; } .examCopy > strong { font-size: 20px; } .examCopy .kicker { font-size: 7px; }.examCopy > small { font-size: 11px; } .exam::after { display: none; } .intro { padding: 16px 13px; } .introButtons { grid-template-columns: minmax(0, 1fr); gap: 10px; } .introButtons button { min-height: 58px; padding: 13px; font-size: 15px; }.intro p { font-size: 11px; } }
+@media (prefers-reduced-motion: reduce) { .tool, .book, .exam, .introButtons button { transition: none; } .tool:hover, .book:hover, .book[data-cover='1']:hover, .exam:hover, .introButtons button:hover { transform: none; } }

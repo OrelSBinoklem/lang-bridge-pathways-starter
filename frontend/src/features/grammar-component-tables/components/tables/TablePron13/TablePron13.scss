@@ -1,0 +1,93 @@
+.card.table-pron13 {
+  background: var(--card, #fff);
+  padding: 0;
+  overflow: hidden;
+  margin: 0;
+}
+
+.card.table-pron13 .pron13-intro {
+  margin: 0 0 12px 0;
+  padding-left: 12px;
+  color: #4a5568;
+}
+
+.card.table-pron13 .pron13-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--border-strong, #c3cfee);
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 0.9em;
+}
+
+.card.table-pron13 .pron13-table th,
+.card.table-pron13 .pron13-table td {
+  border: 1px solid var(--border-strong, #c3cfee);
+  padding: 0 8px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.card.table-pron13 .pron13-table th {
+  background: var(--table-head, #F1F3FB);
+  font-weight: 600;
+}
+
+.card.table-pron13 .pron13-table .pron13-gender-header-masc {
+  background: #e6f0ff;
+  color: #0066cc;
+}
+
+.card.table-pron13 .pron13-table .pron13-gender-header-fem {
+  background: #ffe6f0;
+  color: #cc0066;
+}
+
+.card.table-pron13 .pron13-table .pron13-subheader-masc {
+  background: #e6f0ff;
+  color: #0066cc;
+}
+
+.card.table-pron13 .pron13-table .pron13-subheader-fem {
+  background: #ffe6f0;
+  color: #cc0066;
+}
+
+.card.table-pron13 .pron13-table .pron13-left-cell {
+  text-align: left;
+  padding: 0 12px;
+  font-weight: 600;
+}
+
+.card.table-pron13 .pron13-table .pron13-pronoun {
+  text-align: left;
+  padding: 0 12px;
+}
+
+.card.table-pron13 .pron13-table .pron13-pronoun-ending {
+  font-weight: 600;
+}
+
+.card.table-pron13 .pron13-table .pron13-noun-cell {
+  background: var(--table-row-odd, #f5f7ff);
+  font-weight: 600;
+}
+
+.card.table-pron13 .pron13-table .pron13-noun-data {
+  text-align: left;
+  padding: 0 12px;
+}
+
+.card.table-pron13 .pron13-table .pron13-ending-masc {
+  color: #0066cc;
+  font-weight: 600;
+}
+
+.card.table-pron13 .pron13-table .pron13-ending-fem {
+  color: #cc0066;
+  font-weight: 600;
+}
+
+:root.dark .card.table-pron13 .pron13-intro {
+  color: var(--muted, #a0aec0);
+}

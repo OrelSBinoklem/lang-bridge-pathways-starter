@@ -1,0 +1,158 @@
+.table-container{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+
+.polygon-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+    overflow: visible;
+  }
+
+.polygon-overlay.editing{
+    pointer-events: all;
+  }
+
+.polygon-overlay svg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: visible;
+  }
+
+.table-container:hover .polygon-toolbar, .table-container.editing .polygon-toolbar, .polygon-toolbar:hover{
+    opacity: 1;
+    pointer-events: all;
+  }
+
+.card.table-participle-super .participle-super-flex-table{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid var(--border-strong);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+.card.table-participle-super .participle-super-header{
+    display: flex;
+    width: 100%;
+    background: var(--table-head);
+    font-weight: 600;
+    border-bottom: 1px solid var(--border-strong);
+    color: var(--text);
+  }
+
+.card.table-participle-super .participle-super-header > div{
+    padding: 5px 8px;
+    text-align: center;
+    border-right: 1px solid var(--border-strong);
+    box-sizing: border-box;
+  }
+
+.card.table-participle-super .participle-super-header > div:first-child{
+    width: 180px;
+    text-align: left;
+    padding-left: 12px;
+  }
+
+.card.table-participle-super .participle-super-header > div:nth-child(2){
+    width: 150px;
+    text-align: left;
+    padding-left: 12px;
+  }
+
+.card.table-participle-super .participle-super-header > div:last-child{
+    border-right: none;
+  }
+
+.card.table-participle-super .participle-super-subheader{
+    display: flex;
+    width: 100%;
+    background: var(--table-head);
+    font-weight: 600;
+    border-bottom: 1px solid var(--border-strong);
+    font-size: 0.9rem;
+    color: var(--text);
+  }
+
+.card.table-participle-super .participle-super-subheader > div{
+    padding: 5px 8px;
+    text-align: center;
+    border-right: 1px solid var(--border-strong);
+    box-sizing: border-box;
+  }
+
+.card.table-participle-super .participle-super-subheader > div:first-child{
+    width: 180px;
+  }
+
+.card.table-participle-super .participle-super-subheader > div:nth-child(2){
+    width: 150px;
+  }
+
+.card.table-participle-super .participle-super-subheader > div:last-child{
+    border-right: none;
+  }
+
+.card.table-participle-super .participle-super-row{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid var(--border-strong);
+    background: var(--table-row-even);
+  }
+
+.card.table-participle-super .participle-super-row:last-child{
+    border-bottom: none;
+  }
+
+.card.table-participle-super .participle-super-cell{
+    padding: 5px 8px;
+    border-right: 1px solid var(--border-strong);
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 0.9rem;
+    line-height: 1.2;
+    flex: 1;
+  }
+
+.card.table-participle-super .participle-super-cell:first-child{
+    width: 180px;
+    font-weight: 600;
+    flex: 0 0 180px;
+  }
+
+.card.table-participle-super .participle-super-cell:nth-child(2){
+    width: 150px;
+    font-weight: 600;
+    flex: 0 0 150px;
+  }
+
+.card.table-participle-super .participle-super-cell:last-child{
+    border-right: none;
+  }
+
+.card.table-participle-super .participle-super-ending-masc{
+    color: #0066cc;
+    font-weight: 600;
+  }
+
+.card.table-participle-super .participle-super-ending-fem{
+    color: #cc0066;
+    font-weight: 600;
+  }
+
+.card.table-participle-super .participle-super-section-header{
+    background: var(--table-row-even);
+    font-weight: 700;
+    font-size: 0.95rem;
+  }

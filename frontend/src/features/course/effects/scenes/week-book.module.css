@@ -1,0 +1,14 @@
+.controls { position:absolute; bottom:max(92px,env(safe-area-inset-bottom)); left:50%; transform:translateX(-50%); width:max-content; max-width:calc(100% - 20px); padding:12px; border:1px solid #c5b28e60; border-radius:16px; background:#142b30ed; color:#f1e6d0; pointer-events:auto; touch-action:manipulation; backdrop-filter:blur(10px); box-shadow:0 8px 32px #0005; z-index:3; }
+.caption { display:flex; justify-content:center; gap:12px; align-items:baseline; margin:0 4px 9px; font:12px/1.4 system-ui,sans-serif; }
+.caption strong { font-family:Georgia,serif; font-size:18px; font-weight:400; }
+.caption span { color:#bfcfc6; }
+.row,.days { display:flex; align-items:center; justify-content:center; gap:5px; }
+.controls button { width:40px; height:40px; flex-shrink:0; border:1px solid #7a94866b; border-radius:8px; background:#263f42; color:inherit; cursor:pointer; font:13px/1 system-ui,sans-serif; }
+.row>button { font-size:27px; width:32px; }
+.controls button:hover,.controls button[aria-pressed=true] { background:#e1c795; border-color:#f0d9a8; color:#263a39; }
+.controls button:focus-visible,.controls select:focus-visible { outline:3px solid #f3cf83; outline-offset:3px; }
+.controls select { width:min(230px,calc(100vw - 124px)); min-width:0; height:32px; border:1px solid #7a9486; border-radius:7px; background:#21393c; color:#f1e6d0; padding:3px 7px; font:11px system-ui,sans-serif; }
+.compact { left:auto; right:8px; bottom:8px; transform:none; padding:5px; border-radius:10px; }
+.floating { position:fixed; z-index:10040; }
+.compact button { height:32px; width:28px; }
+@media(max-width:600px) { .controls { padding:9px; } .caption { flex-direction:column; gap:3px; align-items:center; } .caption span { font-size:11px; } .days button { width:32px; height:36px; font-size:12px; } .row>button { width:26px; height:36px; } .row,.days { gap:3px; } }

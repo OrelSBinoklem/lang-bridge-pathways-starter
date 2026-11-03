@@ -1,0 +1,571 @@
+{
+  "stages": {
+    "1786:late-stories": {
+      "card": "/course/effects/lifelong/postcards-poster-card.webp",
+      "body": "/course/effects/lifelong/postcards-poster-full.webp"
+    },
+    "1763:certificate-bureau": {
+      "card": "/course/effects/previews/1763-certificate-bureau-card.webp",
+      "body": "/course/effects/previews/1763-certificate-bureau-full.webp"
+    },
+    "1763:default": {
+      "card": "/course/effects/previews/1763-default-card.webp",
+      "body": "/course/effects/previews/1763-default-full.webp"
+    },
+    "1763:legacy-1763": {
+      "card": "/course/effects/previews/1763-legacy-1763-card.webp",
+      "body": "/course/effects/previews/1763-legacy-1763-full.webp"
+    },
+    "1764:default": {
+      "card": "/course/effects/previews/1764-default-card.webp",
+      "body": "/course/effects/previews/1764-default-full.webp"
+    },
+    "1765:default": {
+      "card": "/course/effects/previews/1765-default-card.webp",
+      "body": "/course/effects/previews/1765-default-full.webp"
+    },
+    "1766:default": {
+      "card": "/course/effects/previews/1766-default-card.webp",
+      "body": "/course/effects/previews/1766-default-full.webp"
+    },
+    "1767:default": {
+      "card": "/course/effects/previews/platskart-journey.webp",
+      "body": "/course/effects/previews/platskart-journey.webp"
+    },
+    "1767:platskart-journey": {
+      "card": "/course/effects/previews/platskart-journey.webp",
+      "body": "/course/effects/previews/platskart-journey.webp"
+    },
+    "1767:legacy-1767": {
+      "card": "/course/effects/previews/1767-legacy-1767-card.webp",
+      "body": "/course/effects/previews/1767-legacy-1767-full.webp"
+    },
+    "1767:pizza-express": {
+      "card": "/course/effects/previews/1767-pizza-express-card.webp",
+      "body": "/course/effects/previews/1767-pizza-express-full.webp"
+    },
+    "1767:transit-machine": {
+      "card": "/course/effects/previews/1767-transit-machine-card.webp",
+      "body": "/course/effects/previews/1767-transit-machine-full.webp"
+    },
+    "1768:default": {
+      "card": "/course/effects/previews/1768-default-card.webp",
+      "body": "/course/effects/previews/1768-default-full.webp"
+    },
+    "1768:hourglass": {
+      "card": "/course/effects/previews/1768-hourglass-card.webp",
+      "body": "/course/effects/previews/1768-hourglass-full.webp"
+    },
+    "1769:default": {
+      "card": "/course/effects/previews/1769-default-card.webp",
+      "body": "/course/effects/previews/1769-default-full.webp"
+    },
+    "1769:legacy-1769": {
+      "card": "/course/effects/previews/1769-legacy-1769-card.webp",
+      "body": "/course/effects/previews/1769-legacy-1769-full.webp"
+    },
+    "1770:default": {
+      "card": "/course/effects/previews/1770-default-card.webp",
+      "body": "/course/effects/previews/1770-default-full.webp"
+    },
+    "1770:vegetarian": {
+      "card": "/course/effects/previews/1770-vegetarian-card.webp",
+      "body": "/course/effects/previews/1770-vegetarian-full.webp"
+    },
+    "1771:balloons": {
+      "card": "/course/effects/previews/1771-balloons-card.webp",
+      "body": "/course/effects/previews/1771-balloons-full.webp"
+    },
+    "1771:cloud-carnival": {
+      "card": "/course/effects/previews/1771-cloud-carnival-card.webp",
+      "body": "/course/effects/previews/1771-park-video-full.webp"
+    },
+    "1771:default": {
+      "card": "/course/effects/previews/1771-default-card.webp",
+      "body": "/course/effects/previews/1771-cube-pinball-full.webp"
+    },
+    "1771:speakers": {
+      "card": "/course/effects/previews/1771-speakers-card.webp",
+      "body": "/course/effects/previews/1771-speakers-full.webp"
+    },
+    "1772:default": {
+      "card": "/course/effects/previews/1772-highway-panorama-card.webp",
+      "body": "/course/effects/previews/1772-highway-panorama-full.webp"
+    },
+    "1772:highway-panorama": {
+      "card": "/course/effects/previews/1772-highway-panorama-card.webp",
+      "body": "/course/effects/previews/1772-highway-panorama-full.webp"
+    },
+    "1772:street-relight": {
+      "card": "/course/effects/previews/1772-street-relight-card.webp",
+      "body": "/course/effects/previews/1772-street-relight-full.webp"
+    },
+    "1773:default": {
+      "card": "/course/effects/previews/1773-default-card.webp",
+      "body": "/course/effects/previews/1773-default-full.webp"
+    },
+    "1774:chalkboard": {
+      "card": "/course/effects/previews/1774-chalkboard-card.webp",
+      "body": "/course/effects/previews/1774-chalkboard-full.webp"
+    },
+    "1774:default": {
+      "card": "/course/effects/previews/1774-default-card.webp",
+      "body": "/course/effects/previews/1774-default-full.webp"
+    },
+    "1774:optics-bench": {
+      "card": "/course/effects/previews/1774-optics-bench-card.webp",
+      "body": "/course/effects/previews/1774-optics-bench-full.webp"
+    },
+    "1775:default": {
+      "card": "/course/effects/previews/1775-legacy-1775-card.webp",
+      "body": "/course/effects/previews/1775-legacy-1775-full.webp"
+    },
+    "1775:family-supper": {
+      "card": "/course/effects/previews/1775-family-supper-card.webp",
+      "body": "/course/effects/previews/1775-family-supper-full.webp"
+    },
+    "1775:legacy-1775": {
+      "card": "/course/effects/previews/1775-legacy-1775-card.webp",
+      "body": "/course/effects/previews/1775-legacy-1775-full.webp"
+    },
+    "1776:default": {
+      "card": "/course/effects/previews/1776-default-card.webp",
+      "body": "/course/effects/previews/1776-default-full.webp"
+    },
+    "1776:face-atelier": {
+      "card": "/course/effects/previews/1776-face-atelier-card.webp",
+      "body": "/course/effects/previews/1776-face-atelier-full.webp"
+    },
+    "1776:legacy-1776": {
+      "card": "/course/effects/previews/1776-legacy-1776-card.webp",
+      "body": "/course/effects/previews/1776-legacy-1776-full.webp"
+    },
+    "1776:polite-mask": {
+      "card": "/course/effects/previews/1776-polite-mask-card.webp",
+      "body": "/course/effects/previews/1776-polite-mask-full.webp"
+    },
+    "1776:prism-personas-faceted": {
+      "card": "/course/effects/previews/1776-prism-personas-faceted-card.webp",
+      "body": "/course/effects/previews/1776-prism-personas-faceted-full.webp"
+    },
+    "1777:default": {
+      "card": "/course/effects/previews/1777-default-card.webp",
+      "body": "/course/effects/previews/1777-default-full.webp"
+    },
+    "1777:holo-island": {
+      "card": "/course/effects/previews/1777-holo-island-card.webp",
+      "body": "/course/effects/previews/1777-holo-island-full.webp"
+    },
+    "1777:holo-silver": {
+      "card": "/course/effects/previews/1777-holo-silver-card.webp",
+      "body": "/course/effects/previews/1777-holo-silver-full.webp"
+    },
+    "1777:iso-town": {
+      "card": "/course/effects/previews/1777-iso-town-card.webp",
+      "body": "/course/effects/previews/1777-iso-town-full.webp"
+    },
+    "1778:default": {
+      "card": "/course/effects/previews/1778-default-card.webp",
+      "body": "/course/effects/previews/1778-default-full.webp"
+    },
+    "1778:leaves": {
+      "card": "/course/effects/previews/1778-leaves-card.webp",
+      "body": "/course/effects/previews/1778-leaves-full.webp"
+    },
+    "1778:leaves-full": {
+      "card": "/course/effects/previews/1778-leaves-full-card.webp",
+      "body": "/course/effects/previews/1778-leaves-full-full.webp"
+    },
+    "1778:sakura": {
+      "card": "/course/effects/previews/1778-sakura-card.webp",
+      "body": "/course/effects/previews/1778-sakura-full.webp"
+    },
+    "1778:sakura-landscape": {
+      "card": "/course/effects/previews/1778-sakura-landscape-card.webp",
+      "body": "/course/effects/previews/1778-sakura-landscape-full.webp"
+    },
+    "1779:default": {
+      "card": "/course/effects/previews/1779-default-card.webp",
+      "body": "/course/effects/previews/1779-default-full.webp"
+    },
+    "1779:focus-clock": {
+      "card": "/course/effects/previews/1779-focus-clock-card.webp",
+      "body": "/course/effects/previews/1779-focus-clock-full.webp"
+    },
+    "1779:planner": {
+      "card": "/course/effects/previews/1779-planner-card.webp",
+      "body": "/course/effects/previews/1779-planner-full.webp"
+    },
+    "1779:time-switchyard": {
+      "card": "/course/effects/previews/1779-time-switchyard-card.webp",
+      "body": "/course/effects/previews/1779-time-switchyard-full.webp"
+    },
+    "1780:default": {
+      "card": "/course/effects/previews/1780-default-card.webp",
+      "body": "/course/effects/previews/1780-default-full.webp"
+    },
+    "1781:default": {
+      "card": "/course/effects/previews/1781-default-card.webp",
+      "body": "/course/effects/previews/1781-default-full.webp"
+    },
+    "1782:default": {
+      "card": "/course/effects/previews/1782-default-card.webp",
+      "body": "/course/effects/previews/1782-default-full.webp"
+    },
+    "1782:lantern-water": {
+      "card": "/course/effects/previews/1782-lantern-water-card.webp",
+      "body": "/course/effects/previews/1782-lantern-water-full.webp"
+    },
+    "1783:default": {
+      "card": "/course/effects/previews/1783-default-card.webp",
+      "body": "/course/effects/previews/1783-default-full.webp"
+    },
+    "1783:fireworks": {
+      "card": "/course/effects/previews/1783-fireworks-card.webp",
+      "body": "/course/effects/previews/1783-fireworks-full.webp"
+    },
+    "1784:career-ladder": {
+      "card": "/course/effects/previews/1784-career-ladder-card.webp",
+      "body": "/course/effects/previews/1784-career-ladder-full.webp"
+    },
+    "1784:default": {
+      "card": "/course/effects/previews/1784-default-card.webp",
+      "body": "/course/effects/previews/1784-default-full.webp"
+    },
+    "1784:domino-archipelago": {
+      "card": "/course/effects/previews/1784-domino-archipelago-card.webp",
+      "body": "/course/effects/previews/1784-domino-archipelago-full.webp"
+    },
+    "1784:jetpack-aviator": {
+      "card": "/course/effects/previews/1784-jetpack-aviator-card.webp",
+      "body": "/course/effects/previews/1784-jetpack-aviator-full.webp"
+    },
+    "1784:skill-tree": {
+      "card": "/course/effects/previews/1784-skill-tree-card.webp",
+      "body": "/course/effects/previews/1784-skill-tree-full.webp"
+    },
+    "1784:zero-gravity-drop": {
+      "card": "/course/effects/previews/1784-zero-gravity-drop-card.webp",
+      "body": "/course/effects/previews/1784-zero-gravity-drop-full.webp"
+    },
+    "1785:default": {
+      "card": "/course/effects/previews/1785-default-card.webp",
+      "body": "/course/effects/previews/1785-default-full.webp"
+    },
+    "1786:default": {
+      "card": "/course/effects/lifelong/postcards-poster-card.webp",
+      "body": "/course/effects/lifelong/postcards-poster-full.webp"
+    },
+    "1786:legacy-1786": {
+      "card": "/course/effects/previews/1786-legacy-1786-card.webp",
+      "body": "/course/effects/previews/1786-legacy-1786-full.webp"
+    },
+    "1786:second-chance": {
+      "card": "/course/effects/previews/1786-second-chance-card.webp",
+      "body": "/course/effects/previews/1786-second-chance-full.webp"
+    },
+    "1787:default": {
+      "card": "/course/effects/previews/1787-fireflies-card.webp",
+      "body": "/course/effects/previews/1787-fireflies-full.webp"
+    },
+    "1787:fireflies": {
+      "card": "/course/effects/previews/1787-fireflies-card.webp",
+      "body": "/course/effects/previews/1787-fireflies-full.webp"
+    },
+    "1787:fireflies-full": {
+      "card": "/course/effects/previews/1787-fireflies-full-card.webp",
+      "body": "/course/effects/previews/1787-fireflies-full-full.webp"
+    },
+    "1788:default": {
+      "card": "/course/effects/previews/1788-default-card.webp",
+      "body": "/course/effects/previews/1788-default-full.webp"
+    },
+    "1788:home-windows": {
+      "card": "/course/effects/previews/1788-home-windows-card.webp",
+      "body": "/course/effects/previews/1788-home-windows-full.webp"
+    },
+    "1788:iso-town": {
+      "card": "/course/effects/previews/1788-iso-town-card.webp",
+      "body": "/course/effects/previews/1788-iso-town-full.webp"
+    },
+    "1789:default": {
+      "card": "/course/effects/previews/1789-default-card.webp",
+      "body": "/course/effects/previews/1789-default-full.webp"
+    },
+    "1789:fogged-blackheads": {
+      "card": "/course/effects/previews/1789-fogged-blackheads-card.webp",
+      "body": "/course/effects/previews/1789-fogged-blackheads-full.webp"
+    },
+    "1790:default": {
+      "card": "/course/effects/previews/1790-default-card.webp",
+      "body": "/course/effects/previews/1790-default-full.webp"
+    },
+    "1791:default": {
+      "card": "/course/effects/previews/dragon-burner-card-v1.webp",
+      "body": "/course/effects/previews/1791-default-full.webp"
+    },
+    "1792:default": {
+      "card": "/course/effects/previews/1792-lcd-screen-card.webp",
+      "body": "/course/effects/previews/1792-lcd-screen-full.webp"
+    },
+    "1792:digital-rain": {
+      "card": "/course/effects/previews/1792-digital-rain-card.webp",
+      "body": "/course/effects/previews/1792-digital-rain-full.webp"
+    },
+    "1792:lcd-screen": {
+      "card": "/course/effects/previews/1792-lcd-screen-card.webp",
+      "body": "/course/effects/previews/1792-lcd-screen-full.webp"
+    },
+    "1792:nixie-clock": {
+      "card": "/course/effects/previews/1792-nixie-clock-card.webp",
+      "body": "/course/effects/previews/1792-nixie-clock-full.webp"
+    },
+    "1792:nixie-clock-full": {
+      "card": "/course/effects/previews/1792-nixie-clock-full-card.webp",
+      "body": "/course/effects/previews/1792-nixie-clock-full-full.webp"
+    },
+    "1793:default": {
+      "card": "/course/effects/previews/1793-default-card.webp",
+      "body": "/course/effects/previews/1793-default-full.webp"
+    },
+    "1794:default": {
+      "card": "/course/effects/previews/1794-default-card.webp",
+      "body": "/course/effects/previews/1794-default-full.webp"
+    },
+    "1794:glitter-full": {
+      "card": "/course/effects/previews/1794-glitter-full-card.webp",
+      "body": "/course/effects/previews/1794-glitter-full-full.webp"
+    },
+    "1795:default": {
+      "card": "/course/effects/previews/1795-default-card.webp",
+      "body": "/course/effects/previews/1795-default-full.webp"
+    },
+    "1796:default": {
+      "card": "/course/effects/previews/1796-default-card.webp",
+      "body": "/course/effects/previews/1796-default-full.webp"
+    },
+    "1797:default": {
+      "card": "/course/effects/previews/1797-default-card.webp",
+      "body": "/course/effects/previews/1797-default-full.webp"
+    },
+    "1797:sun-water": {
+      "card": "/course/effects/previews/1797-sun-water-card.webp",
+      "body": "/course/effects/previews/1797-sun-water-full.webp"
+    },
+    "1798:default": {
+      "card": "/course/effects/previews/1798-default-card.webp",
+      "body": "/course/effects/previews/1798-default-full.webp"
+    },
+    "1799:default": {
+      "card": "/course/effects/previews/1799-default-card.webp",
+      "body": "/course/effects/previews/1799-default-full.webp"
+    },
+    "1800:amber": {
+      "card": "/course/effects/previews/1800-amber-card.webp",
+      "body": "/course/effects/previews/1800-amber-full.webp"
+    },
+    "1800:default": {
+      "card": "/course/effects/previews/1800-default-card.webp",
+      "body": "/course/effects/previews/1800-default-full.webp"
+    },
+    "1800:song-fire": {
+      "card": "/course/effects/previews/1800-song-fire-card.webp",
+      "body": "/course/effects/previews/1800-song-fire-full.webp"
+    },
+    "1786:late-postcards": {
+      "card": "/course/effects/lifelong/postcards-poster-card.webp",
+      "body": "/course/effects/lifelong/postcards-poster-full.webp"
+    },
+    "1786:late-choir": {
+      "card": "/course/effects/lifelong/choir-poster-card.webp",
+      "body": "/course/effects/lifelong/choir-poster-full.webp"
+    },
+    "1786:late-workshop": {
+      "card": "/course/effects/lifelong/workshop-poster-card.webp",
+      "body": "/course/effects/lifelong/workshop-poster-full.webp"
+    },
+    "1786:late-neighbours": {
+      "card": "/course/effects/lifelong/neighbours-poster-card.webp",
+      "body": "/course/effects/lifelong/neighbours-poster-full.webp"
+    },
+    "1775:family-campfire": {
+      "card": "/course/effects/previews/family-campfire-card.webp",
+      "body": "/course/effects/previews/family-campfire-full.webp"
+    },
+    "1779:day-astrolabe": {
+      "card": "/course/effects/previews/day-astrolabe-card.webp",
+      "body": "/course/effects/previews/day-astrolabe-full.webp"
+    },
+    "1784:spiral-library": {
+      "card": "/course/effects/previews/spiral-library-card.webp",
+      "body": "/course/effects/previews/spiral-library-full.webp"
+    },
+    "1788:snow-globe-town": {
+      "card": "/course/effects/previews/snow-globe-town-card.webp",
+      "body": "/course/effects/previews/snow-globe-town-full.webp"
+    },
+    "1779:week-gardens": {
+      "card": "/course/effects/previews/week-gardens-card.webp",
+      "body": "/course/effects/previews/week-gardens-full.webp"
+    },
+    "1788:folding-home": {
+      "card": "/course/effects/previews/folding-home-card.webp",
+      "body": "/course/effects/previews/folding-home-full.webp"
+    }
+  },
+  "scenes": {
+    "week-book": "/course/effects/previews/week-book-full.webp",
+    "late-stories": "/course/effects/lifelong/postcards-poster-full.webp",
+    "platskart-journey": "/course/effects/previews/platskart-journey.webp",
+    "certificate-bureau": "/course/effects/previews/1763-certificate-bureau-full.webp",
+    "hello-orbit": "/course/effects/previews/1763-default-full.webp",
+    "greetings": "/course/effects/previews/1763-legacy-1763-full.webp",
+    "string-lights": "/course/effects/previews/1764-default-full.webp",
+    "fountain-yard": "/course/effects/previews/1765-default-full.webp",
+    "genome-garden": "/course/effects/previews/1766-default-full.webp",
+    "transit-globe": "/course/effects/previews/1767-default-full.webp",
+    "route-map": "/course/effects/previews/1767-legacy-1767-full.webp",
+    "pizza-express": "/course/effects/previews/1767-pizza-express-full.webp",
+    "transit-machine": "/course/effects/previews/1767-transit-machine-full.webp",
+    "pixel-hourglass": "/course/effects/previews/1768-default-full.webp",
+    "hourglass": "/course/effects/previews/1768-hourglass-full.webp",
+    "midnight-arcade": "/course/effects/previews/1769-default-full.webp",
+    "neon-signs": "/course/effects/previews/1769-legacy-1769-full.webp",
+    "balloons": "/course/effects/previews/1771-balloons-full.webp",
+    "cloud-carnival": "/course/effects/previews/1771-park-video-full.webp",
+    "voxel-led-cube": "/course/effects/previews/1771-default-full.webp",
+    "speakers": "/course/effects/previews/1771-speakers-full.webp",
+    "highway": "/course/effects/previews/1772-default-full.webp",
+    "highway-panorama": "/course/effects/previews/1772-highway-panorama-full.webp",
+    "mandala": "/course/effects/previews/1773-default-full.webp",
+    "chalkboard": "/course/effects/previews/1774-chalkboard-full.webp",
+    "optics-lab": "/course/effects/previews/1774-default-full.webp",
+    "memory-mobile": "/course/effects/previews/1775-default-full.webp",
+    "family-supper": "/course/effects/previews/1775-family-supper-full.webp",
+    "polaroids": "/course/effects/previews/1775-legacy-1775-full.webp",
+    "prism-personas": "/course/effects/previews/1776-default-full.webp",
+    "face-atelier": "/course/effects/previews/1776-face-atelier-full.webp",
+    "constellation": "/course/effects/previews/1776-legacy-1776-full.webp",
+    "polite-mask": "/course/effects/previews/1776-polite-mask-full.webp",
+    "prism-personas-faceted": "/course/effects/previews/1776-prism-personas-faceted-full.webp",
+    "sky-islands": "/course/effects/previews/1777-default-full.webp",
+    "iso-town": "/course/effects/previews/1777-iso-town-full.webp",
+    "astral-planner": "/course/effects/previews/1779-default-full.webp",
+    "focus-clock": "/course/effects/previews/1779-focus-clock-full.webp",
+    "planner": "/course/effects/previews/1779-planner-full.webp",
+    "time-switchyard": "/course/effects/previews/1779-time-switchyard-full.webp",
+    "gems": "/course/effects/previews/1780-default-full.webp",
+    "fireworks": "/course/effects/previews/1783-fireworks-full.webp",
+    "career-ladder": "/course/effects/previews/1784-career-ladder-full.webp",
+    "knowledge-launch": "/course/effects/previews/1784-default-full.webp",
+    "domino-archipelago": "/course/effects/previews/1784-domino-archipelago-full.webp",
+    "jetpack-aviator": "/course/effects/previews/1784-jetpack-aviator-full.webp",
+    "skill-tree": "/course/effects/previews/1784-skill-tree-full.webp",
+    "zero-gravity-drop": "/course/effects/previews/1784-zero-gravity-drop-full.webp",
+    "time-reborn": "/course/effects/previews/1786-default-full.webp",
+    "time-vortex": "/course/effects/previews/1786-legacy-1786-full.webp",
+    "second-chance": "/course/effects/previews/1786-second-chance-full.webp",
+    "light-circle": "/course/effects/previews/1787-default-full.webp",
+    "fireflies": "/course/effects/previews/1787-fireflies-full.webp",
+    "rain-metropolis": "/course/effects/previews/1788-default-full.webp",
+    "home-windows": "/course/effects/previews/1788-home-windows-full.webp",
+    "fogged-glass": "/course/effects/previews/1789-default-full.webp",
+    "fogged-blackheads": "/course/effects/previews/1789-fogged-blackheads-full.webp",
+    "burner-pair": "/course/effects/previews/1791-default-full.webp",
+    "led-matrix": "/course/effects/previews/1792-default-full.webp",
+    "digital-rain": "/course/effects/previews/1792-digital-rain-full.webp",
+    "lcd-screen": "/course/effects/previews/1792-lcd-screen-full.webp",
+    "nixie-clock": "/course/effects/previews/1792-nixie-clock-full.webp",
+    "kaleidoscope": "/course/effects/previews/1794-default-full.webp",
+    "glitter": "/course/effects/previews/1794-glitter-full-full.webp",
+    "liquid-cascade-timer": "/course/effects/previews/liquid-cascade-timer.webp",
+    "aurora": "/course/effects/previews/aurora.webp",
+    "black-star": "/course/effects/previews/black-star.webp",
+    "bokeh-warm": "/course/effects/previews/bokeh-warm.webp",
+    "cloud-carnival-original": "/course/effects/previews/cloud-carnival-original.webp",
+    "cloud-carnival-party-v1": "/course/effects/previews/cloud-carnival-party-v1.webp",
+    "crystal-reef": "/course/effects/previews/crystal-reef.webp",
+    "domino-cascade": "/course/effects/previews/domino-cascade.webp",
+    "domino-workshop": "/course/effects/previews/domino-workshop.webp",
+    "pinball-reactor-classic": "/course/effects/previews/pinball-reactor-classic.webp",
+    "pinball-skyline": "/course/effects/previews/pinball-skyline.webp",
+    "dragon-burner": "/course/effects/previews/dragon-burner.webp",
+    "dragon-burner-card": "/course/effects/previews/dragon-burner-card-v1.webp",
+    "dragon-smoke": "/course/effects/previews/dragon-smoke.webp",
+    "ecg": "/course/effects/previews/ecg.webp",
+    "equalizer": "/course/effects/previews/equalizer.webp",
+    "forge": "/course/effects/previews/forge.webp",
+    "fountain": "/course/effects/previews/fountain.webp",
+    "gears": "/course/effects/previews/gears.webp",
+    "glass-fountain": "/course/effects/previews/glass-fountain.webp",
+    "globe": "/course/effects/previews/globe.webp",
+    "lab-caustics": "/course/effects/previews/lab-caustics.webp",
+    "lab-circuit": "/course/effects/previews/lab-circuit.webp",
+    "lab-contours": "/course/effects/previews/lab-contours.webp",
+    "lab-ferrofluid": "/course/effects/previews/lab-ferrofluid.webp",
+    "lab-opal": "/course/effects/previews/lab-opal.webp",
+    "lab-plasma": "/course/effects/previews/lab-plasma.webp",
+    "lab-silk": "/course/effects/previews/lab-silk.webp",
+    "lab-vortex": "/course/effects/previews/lab-vortex.webp",
+    "lab-weave": "/course/effects/previews/lab-weave.webp",
+    "mercury-iris": "/course/effects/previews/mercury-iris.webp",
+    "mist-forest": "/course/effects/previews/mist-forest.webp",
+    "mountains": "/course/effects/previews/mountains.webp",
+    "ocean": "/course/effects/previews/ocean.webp",
+    "prom-board": "/course/effects/previews/prom-board.webp",
+    "rain-glass": "/course/effects/previews/rain-glass.webp",
+    "rainbow": "/course/effects/previews/rainbow.webp",
+    "sand-art": "/course/effects/previews/sand-art.webp",
+    "service-route": "/course/effects/previews/service-route.webp",
+    "skyline": "/course/effects/previews/skyline.webp",
+    "snow-lantern": "/course/effects/previews/snow-lantern.webp",
+    "soap-film": "/course/effects/previews/soap-film.webp",
+    "stellar-foundry": "/course/effects/previews/stellar-foundry.webp",
+    "sunset": "/course/effects/previews/sunset.webp",
+    "neon-market": "/course/effects/previews/neon-market.webp",
+    "late-postcards": "/course/effects/lifelong/postcards-poster-full.webp",
+    "late-choir": "/course/effects/lifelong/choir-poster-full.webp",
+    "late-workshop": "/course/effects/lifelong/workshop-poster-full.webp",
+    "late-neighbours": "/course/effects/lifelong/neighbours-poster-full.webp",
+    "family-campfire": "/course/effects/previews/family-campfire-full.webp",
+    "day-astrolabe": "/course/effects/previews/day-astrolabe-full.webp",
+    "spiral-library": "/course/effects/previews/spiral-library-full.webp",
+    "snow-globe-town": "/course/effects/previews/snow-globe-town-full.webp",
+    "week-gardens": "/course/effects/previews/week-gardens-full.webp",
+    "folding-home": "/course/effects/previews/folding-home-full.webp"
+  },
+  "kinds": {
+    "scene": "/course/effects/previews/1763-certificate-bureau-card.webp",
+    "video": "/course/effects/previews/1770-default-card.webp",
+    "sparkle": "/course/effects/previews/1772-street-relight-card.webp",
+    "sakura": "/course/effects/previews/1778-default-card.webp",
+    "ambient": "/course/effects/previews/1778-leaves-card.webp",
+    "lantern-water": "/course/effects/previews/1782-default-card.webp",
+    "latvia-cube": "/course/effects/previews/1785-default-card.webp",
+    "pulse-rings": "/course/effects/previews/1790-default-card.webp",
+    "water": "/course/effects/previews/1791-default-card.webp",
+    "circuit": "/course/effects/previews/1796-default-card.webp",
+    "storm": "/course/effects/previews/1797-default-card.webp",
+    "sun-water": "/course/effects/previews/1797-sun-water-card.webp",
+    "mine": "/course/effects/previews/1798-default-card.webp",
+    "image-reveal": "/course/effects/previews/1799-default-card.webp",
+    "amber-words": "/course/effects/previews/1800-amber-card.webp",
+    "embroidery": "/course/effects/previews/1800-default-card.webp",
+    "song-fire": "/course/effects/previews/1800-song-fire-card.webp",
+    "compass": "/course/effects/chick-5.svg"
+  },
+  "bodies": {
+    "street-relight": "/course/effects/previews/1772-street-relight-full.webp",
+    "holo-island": "/course/effects/previews/1777-holo-island-full.webp",
+    "holo-silver": "/course/effects/previews/1777-holo-silver-full.webp",
+    "sakura-card": "/course/effects/previews/1778-default-full.webp",
+    "leaves": "/course/effects/previews/1778-leaves-full-full.webp",
+    "sakura": "/course/effects/previews/1778-sakura-landscape-full.webp",
+    "liquid-glass": "/course/effects/previews/1781-default-full.webp",
+    "lantern-water": "/course/effects/previews/1782-default-full.webp",
+    "liquid-drops": "/course/effects/previews/1790-default-full.webp",
+    "pottery": "/course/effects/previews/1793-default-full.webp",
+    "fluid": "/course/effects/previews/1795-default-full.webp",
+    "grid": "/course/effects/previews/1796-default-full.webp"
+  }
+}

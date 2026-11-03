@@ -1,0 +1,80 @@
+
+
+/* === moved from grammar-component-tables.css (page-prefix stripped) === */
+.card.table-verb-endings-present,
+.card.table-verb-endings-past {
+  position: relative;
+}
+
+.card.table-verb-endings-present .table-container,
+.card.table-verb-endings-past .table-container {
+  position: relative;
+}
+
+.card.table-verb-endings-present .polygon-overlay,
+.card.table-verb-endings-past .polygon-overlay {
+  position: absolute;
+  inset: 0;
+  width: 95%;
+  left: 7px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+  overflow: visible;
+}
+
+.card.table-verb-endings-present .polygon-stamp,
+.card.table-verb-endings-past .polygon-stamp {
+  position: absolute;
+  z-index: 10;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.card.table-verb-endings-present .polygon-stamp svg,
+.card.table-verb-endings-past .polygon-stamp svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.card.table-verb-endings-present .float-letters-layer,
+.card.table-verb-endings-past .float-letters-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.card.table-verb-endings-present .float-letter,
+.card.table-verb-endings-past .float-letter {
+  position: absolute;
+  z-index: 11;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+/* Endings are short fixed strings — never let a cell break them across lines. */
+.card.table-verb-endings-present th,
+.card.table-verb-endings-present td,
+.card.table-verb-endings-past th,
+.card.table-verb-endings-past td {
+  white-space: nowrap;
+}
+
+/* No wrapping means the table is as wide as its longest endings; trim the side
+   padding so it still fits the card instead of being clipped on the right. */
+.card.table-verb-endings-present td:not(.persona),
+.card.table-verb-endings-present th,
+.card.table-verb-endings-past td:not(.persona),
+.card.table-verb-endings-past th {
+  padding-left: 6px;
+  padding-right: 6px;
+}

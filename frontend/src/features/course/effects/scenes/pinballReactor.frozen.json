@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-22",
+  "sceneId": "pinball-reactor-classic",
+  "description": "Preserved flat reactor with physical spinner, drop targets and two-ball mode. Evolve pinballSkyline instead.",
+  "sha256": {
+    "ledPinball.ts": "e2db549af9ee9cf92397dce3135bbfce6eb9a0d0f795ab43b3869c4e046b6c0e",
+    "pinballArtwork.ts": "dd003a61388f141a4ce765324ba511179acb2432cd0593d8302c74f581d02684",
+    "pinballPhysics.ts": "bbaee958d2556dc3c211ec0044d4009689718d98f1944c569cda2fc68bf0ca3e"
+  }
+}

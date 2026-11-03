@@ -1,0 +1,107 @@
+.table-container{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+
+.polygon-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+    overflow: visible;
+  }
+
+.polygon-overlay.editing{
+    pointer-events: all;
+  }
+
+.polygon-overlay svg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: visible;
+  }
+
+.table-container:hover .polygon-toolbar, .table-container.editing .polygon-toolbar, .polygon-toolbar:hover{
+    opacity: 1;
+    pointer-events: all;
+  }
+
+.card.table-word4 .word4-flex-table{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid var(--border-strong);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+.card.table-word4 .word4-header{
+    display: flex;
+    width: 100%;
+    background: var(--table-head);
+    font-weight: 600;
+    border-bottom: 1px solid var(--border-strong);
+  }
+
+.card.table-word4 .word4-header > div{
+    padding: 8px;
+    text-align: left;
+    border-right: 1px solid var(--border-strong);
+    box-sizing: border-box;
+  }
+
+.card.table-word4 .word4-header > div:first-child{
+    width: 350px;
+    flex: 0 0 350px;
+  }
+
+.card.table-word4 .word4-header > div:last-child{
+    border-right: none;
+    flex: 1;
+  }
+
+.card.table-word4 .word4-row{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid var(--border-strong);
+  }
+
+.card.table-word4 .word4-row:last-child{
+    border-bottom: none;
+  }
+
+.card.table-word4 .word4-cell{
+    padding: 0 8px;
+    border-right: 1px solid var(--border-strong);
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 0.95rem;
+    line-height: 1.2;
+  }
+
+.card.table-word4 .word4-cell:first-child{
+    width: 350px;
+    flex: 0 0 350px;
+  }
+
+.card.table-word4 .word4-cell:last-child{
+    border-right: none;
+    flex: 1;
+  }
+
+.card.table-word4 .word4-example{
+    display: block;
+    margin-bottom: 4px;
+  }
+
+.card.table-word4 .word4-arrow{
+    margin: 0 4px;
+  }

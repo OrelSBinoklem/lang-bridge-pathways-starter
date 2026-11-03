@@ -1,0 +1,111 @@
+.card.table-netiesa-runa {
+  background: var(--card, #fff);
+  color: var(--text, #1b1f2b);
+  padding: 14px 16px 16px;
+  border-radius: 10px;
+  max-width: 46em;
+  margin: 0 auto;
+  line-height: 1.35;
+}
+
+.card.table-netiesa-runa .nr-intro {
+  margin-bottom: 10px;
+  font-size: max(18px, 0.8em);
+  line-height: 1.4;
+}
+
+.card.table-netiesa-runa .nr-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1.5px solid var(--border-strong, #c3cfee);
+  table-layout: fixed;
+}
+
+.card.table-netiesa-runa .nr-table th,
+.card.table-netiesa-runa .nr-table td {
+  border: 1px solid var(--border-strong, #c3cfee);
+  padding: 8px 10px;
+  vertical-align: top;
+  text-align: left;
+}
+
+.card.table-netiesa-runa .nr-table th {
+  background: var(--table-head, #f1f3fb);
+  font-size: max(18px, 0.82em);
+  font-weight: 800;
+}
+
+.card.table-netiesa-runa .nr-th-source {
+  width: 30%;
+}
+
+.card.table-netiesa-runa .nr-th-ist {
+  color: var(--accent1, #3a7df2);
+}
+
+.card.table-netiesa-runa .nr-th-ats {
+  color: var(--accent3, #d96b28);
+}
+
+.card.table-netiesa-runa .nr-th-ru {
+  display: block;
+  font-size: max(18px, 0.72em);
+  font-weight: 600;
+  color: var(--muted, #6a748b);
+}
+
+.card.table-netiesa-runa .nr-source {
+  background: var(--table-row-odd, #f5f7ff);
+}
+
+.card.table-netiesa-runa .nr-ist {
+  background: var(--accent1-bg, rgba(58, 125, 242, 0.1));
+}
+
+.card.table-netiesa-runa .nr-ats {
+  background: var(--accent3-bg, rgba(217, 107, 40, 0.1));
+}
+
+.card.table-netiesa-runa .nr-lv {
+  display: block;
+  font-size: max(18px, 0.85em);
+  font-weight: 700;
+  font-style: italic;
+}
+
+.card.table-netiesa-runa .nr-ru {
+  display: block;
+  margin-top: 2px;
+  font-size: max(18px, 0.72em);
+  color: var(--muted, #6a748b);
+}
+
+.card.table-netiesa-runa .nr-hit {
+  color: var(--accent2, #3fa872);
+  font-weight: 800;
+  border-bottom: 2px solid var(--accent2, #3fa872);
+}
+
+/* The reported-mood ending is the one new thing to learn here. */
+.card.table-netiesa-runa .nr-end {
+  color: var(--card, #fff);
+  background: var(--accent3, #d96b28);
+  font-weight: 800;
+  font-style: normal;
+  padding: 0 0.2em;
+  border-radius: 0.25em;
+}
+
+.card.table-netiesa-runa .nr-note {
+  margin-top: 10px;
+  padding: 7px 9px;
+  border-radius: 8px;
+  background: var(--accent3-bg, rgba(217, 107, 40, 0.1));
+  border-left: 3px solid var(--accent3, #d96b28);
+  font-size: max(18px, 0.75em);
+  line-height: 1.4;
+}
+
+.card.table-netiesa-runa .nr-note em {
+  font-weight: 800;
+}

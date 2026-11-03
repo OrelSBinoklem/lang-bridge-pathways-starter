@@ -1,0 +1,69 @@
+
+
+/* === moved from grammar-component-tables.css (page-prefix stripped) === */
+.card.table-word2 .word2-flex-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card.table-word2 .word2-section {
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.card.table-word2 .word2-section:last-child {
+  border-bottom: none;
+}
+
+.card.table-word2 .word2-section-header {
+  padding: 12px;
+  background: var(--table-head);
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.card.table-word2 .word2-section-content {
+  padding: 12px;
+}
+
+.card.table-word2 .word2-subtable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+}
+
+.card.table-word2 .word2-subtable th, .card.table-word2 .word2-subtable td {
+  padding: 0 8px;
+  text-align: left;
+  border: 1px solid var(--border-strong);
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+
+.card.table-word2 .word2-subtable th {
+  background: var(--table-row-odd);
+  font-weight: 600;
+}
+
+.card.table-word2 .word2-root {
+  font-weight: 600;
+  color: #0066cc;
+}
+
+.card.table-word2 .word2-prefix {
+  font-weight: 600;
+  color: #cc0066;
+}
+
+.card.table-word2 .word2-suffix {
+  font-weight: 600;
+  color: #009900;
+}
+
+.card.table-word2 .word2-ending {
+  font-weight: 600;
+  color: #ff6600;
+}

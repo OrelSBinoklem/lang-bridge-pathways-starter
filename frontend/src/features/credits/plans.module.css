@@ -1,0 +1,21 @@
+.page { width: min(100% - 32px, 1080px); margin: 32px auto 64px; color: var(--text-color); letter-spacing: 0; }
+.page h1 { font-size: 30px; margin: 0 0 28px; }
+.page h2 { font-size: 21px; margin: 12px 0; }
+.offers { border-bottom: 1px solid var(--surface-border); padding-bottom: 24px; }
+.offers section { min-width: 0; }
+.offers .featureList { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 24px; }
+.status { font-weight: 700; }
+.free { font-weight: 700; color: #15836a; }
+.featureList { list-style: none; padding: 0; margin: 24px 0 0; }
+.featureList li { display: flex; align-items: center; gap: 12px; padding: 16px 0; border-bottom: 1px solid var(--surface-border); font-size: 16px; line-height: 1.5; }
+.featureList i { flex: 0 0 auto; color: #15836a; font-size: 20px; }
+.featureList span { min-width: 0; overflow-wrap: anywhere; }
+.aiAccess { margin-block: 28px; }
+.aiAccess .featureList i { color: #c17318; }
+.note { font-size: 14px; line-height: 1.6; color: var(--text-color-secondary); }
+.aiPresets { margin-block: 28px; }
+@media (max-width: 600px) {
+  .offers .featureList { grid-template-columns: 1fr; }
+  .page h1 { font-size: 26px; }
+  .featureList li { font-size: 15px; }
+}

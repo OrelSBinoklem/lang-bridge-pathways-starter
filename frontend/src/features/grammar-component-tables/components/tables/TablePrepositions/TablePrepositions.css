@@ -1,0 +1,95 @@
+.card.table-prepositions {
+  background: var(--card, #fff);
+  padding: 0;
+  overflow: hidden;
+  margin: 0;
+  /* Matches the hand-tuned mobile override in the original cheat sheet
+     (mobile-styles.css) — this table is dense enough that the ambient
+     1.45 line-height from the page wrapper reads as too loose. */
+  line-height: 1.1;
+}
+
+.card.table-prepositions .prepositions-grid {
+  display: flex;
+  gap: 1em;
+}
+
+.card.table-prepositions table {
+  width: 100%;
+  table-layout: auto;
+}
+
+.card.table-prepositions .prepositions-grid > div {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.card.table-prepositions th:first-child,
+.card.table-prepositions td:first-child {
+  width: 70px;
+  min-width: 70px;
+  font-weight: 700;
+}
+
+.card.table-prepositions td.loc-case {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  background: var(--table-head);
+  font-weight: 700;
+  text-align: center;
+  padding: 0.125em 0;
+  border-right: 1.5px solid var(--border-strong);
+  white-space: nowrap;
+  width: 1%;
+}
+
+.card.table-prepositions th.loc-case-header {
+  width: 1%;
+  padding: 0;
+}
+
+.card.table-prepositions .predl-separate {
+  border-bottom: 2px solid #6a748b;
+}
+
+/* === moved from grammar-component-tables.css (page-prefix stripped) === */
+.card.table-prepositions .prepositions-grid {
+  display: flex;
+  gap: 16px;
+}
+
+.card.table-prepositions table {
+  width: 100%;
+  table-layout: auto;
+}
+
+.card.table-prepositions th:first-child, .card.table-prepositions td:first-child {
+  /* Поменяй это значение под себя, напр. 80px или 6rem */
+  width: 60px;
+  font-weight: 700; /* Латышские предлоги жирным */
+}
+
+.card.table-prepositions .prepositions-grid > div {
+  flex: 1 1 0;
+}
+
+.card.table-prepositions td.loc-case {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  background: var(--table-head);
+  font-weight: 700;
+  text-align: center;
+  padding: 2px 0;
+  border-right: 1.5px solid var(--border-strong);
+  white-space: nowrap;
+  width: 1%;
+}
+
+.card.table-prepositions th.loc-case-header {
+  width: 1%;
+  padding: 0;
+}
+
+.card.table-prepositions .predl-separate {
+  border-bottom: 2px solid #6a748b;
+}

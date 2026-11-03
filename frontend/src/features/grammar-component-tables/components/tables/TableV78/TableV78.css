@@ -1,0 +1,77 @@
+
+
+/* === moved from grammar-component-tables.css (page-prefix stripped) === */
+.card.table-v78 .v78-flex-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card.table-v78 .v78-header {
+  display: flex;
+  width: 100%;
+  background: var(--table-head);
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.card.table-v78 .v78-header > div {
+  padding: 8px;
+  text-align: center;
+  border-right: 1px solid var(--border-strong);
+  box-sizing: border-box;
+}
+
+.card.table-v78 .v78-header > div:first-child {
+  width: 200px;
+  text-align: left;
+  padding-left: 12px;
+}
+
+.card.table-v78 .v78-header > div:last-child {
+  border-right: none;
+  flex: 1;
+}
+
+.card.table-v78 .v78-row {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.card.table-v78 .v78-row:last-child {
+  border-bottom: none;
+}
+
+.card.table-v78 .v78-cell {
+  padding: 8px 12px;
+  border-right: 1px solid var(--border-strong);
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.card.table-v78 .v78-cell:first-child {
+  width: 200px;
+  font-weight: 600;
+  flex: 0 0 200px;
+}
+
+.card.table-v78 .v78-cell:nth-child(2) {
+  width: 300px;
+  flex: 0 0 300px;
+}
+
+.card.table-v78 .v78-cell:last-child {
+  border-right: none;
+  flex: 1;
+}
+
+.card.table-v78 .v78-ending {
+  color: #0066cc;
+  font-weight: 600;
+}

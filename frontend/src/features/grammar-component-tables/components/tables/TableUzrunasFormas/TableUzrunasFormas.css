@@ -1,0 +1,115 @@
+.card.table-uzrunas-formas {
+  background: var(--card, #fff);
+  color: var(--text, #1b1f2b);
+  padding: 14px 16px 16px;
+  border-radius: 10px;
+  max-width: 46em;
+  margin: 0 auto;
+  line-height: 1.35;
+}
+
+.card.table-uzrunas-formas .uf-intro {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: max(18px, 0.8em);
+  color: var(--muted, #6a748b);
+}
+
+.card.table-uzrunas-formas .uf-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  align-items: stretch;
+}
+
+.card.table-uzrunas-formas .uf-col {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-strong, #c3cfee);
+  border-radius: 10px;
+  padding: 9px 10px 10px;
+  background: var(--table-row-odd, #f5f7ff);
+}
+
+.card.table-uzrunas-formas .uf-col-head {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 6px;
+  margin-bottom: 7px;
+  border-bottom: 2px solid var(--border-strong, #c3cfee);
+}
+
+.card.table-uzrunas-formas .uf-lv {
+  font-size: max(18px, 0.9em);
+  font-weight: 800;
+}
+
+.card.table-uzrunas-formas .uf-col--voc .uf-lv { color: var(--accent1, #3a7df2); }
+.card.table-uzrunas-formas .uf-col--nom .uf-lv { color: var(--accent3, #d96b28); }
+.card.table-uzrunas-formas .uf-col--acc .uf-lv { color: var(--accent4, #d3547f); }
+
+.card.table-uzrunas-formas .uf-ru {
+  font-size: max(18px, 0.72em);
+  color: var(--muted, #6a748b);
+}
+
+.card.table-uzrunas-formas .uf-when {
+  margin-bottom: 8px;
+  font-size: max(18px, 0.74em);
+  line-height: 1.35;
+}
+
+.card.table-uzrunas-formas .uf-words {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: auto;
+}
+
+.card.table-uzrunas-formas .uf-word {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-size: max(18px, 0.85em);
+  font-weight: 700;
+  font-style: italic;
+}
+
+.card.table-uzrunas-formas .uf-base {
+  color: var(--muted, #6a748b);
+}
+
+.card.table-uzrunas-formas .uf-arrow {
+  color: var(--muted, #6a748b);
+  font-style: normal;
+}
+
+.card.table-uzrunas-formas .uf-form {
+  padding: 0 0.35em;
+  border-radius: 0.35em;
+  background: var(--card, #fff);
+  border: 1px solid var(--border-strong, #c3cfee);
+}
+
+/* What falls away vs. what the address form ends in. */
+.card.table-uzrunas-formas .uf-cut {
+  color: var(--accent4, #d3547f);
+  text-decoration: line-through;
+  text-decoration-thickness: 0.1em;
+}
+
+.card.table-uzrunas-formas .uf-new {
+  color: var(--accent2, #3fa872);
+  font-weight: 800;
+  border-bottom: 2px solid var(--accent2, #3fa872);
+}
+
+.card.table-uzrunas-formas .uf-note {
+  margin-top: 10px;
+  padding: 7px 9px;
+  border-radius: 8px;
+  background: var(--accent1-bg, rgba(58, 125, 242, 0.1));
+  border-left: 3px solid var(--accent1, #3a7df2);
+  font-size: max(18px, 0.75em);
+  line-height: 1.4;
+}

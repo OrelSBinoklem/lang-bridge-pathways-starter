@@ -1,0 +1,159 @@
+.card.table-decl2-exceptions {
+  background: var(--card, #fff);
+  padding: 0;
+  overflow: hidden;
+  margin: 0;
+  --head: var(--table-head, #e2e8fb);
+  --cell1: var(--table-row-odd, #f7f9ff);
+  --cell2: var(--table-row-even, #eff3ff);
+  --sub: var(--table-row-odd, #f4f7ff);
+}
+
+.card.table-decl2-exceptions .decl2-exceptions-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--card, #fff);
+  border: 1.5px solid var(--border-strong, #c3cfee);
+  box-shadow: var(--table-shadow, 0 10px 26px rgba(41, 56, 101, 0.12));
+}
+
+.card.table-decl2-exceptions th,
+.card.table-decl2-exceptions td {
+  border: 1.5px solid var(--border-strong, #c3cfee);
+  padding: 10px 12px;
+  text-align: center;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+
+.card.table-decl2-exceptions thead th {
+  background: var(--head, var(--table-head, #e2e8fb));
+  font-weight: 700;
+  color: var(--text, #1b1f2b);
+}
+
+.card.table-decl2-exceptions .decl2-exceptions-title {
+  text-align: left;
+  padding: 12px 16px;
+  font-weight: 700;
+  font-size: 0.95em;
+  background: var(--head, var(--table-head, #e2e8fb));
+  color: var(--text, #1b1f2b);
+}
+
+.card.table-decl2-exceptions .decl2-exceptions-noun {
+  text-align: center;
+  padding: 8px;
+  background: var(--cell1, var(--table-row-odd, #f7f9ff));
+  font-size: 0.9em;
+  vertical-align: middle;
+  font-weight: 500;
+  color: var(--text, #1b1f2b);
+}
+
+.card.table-decl2-exceptions .decl2-exceptions-ru {
+  font-size: 1em;
+  font-weight: 400;
+  color: var(--muted, #6d778f);
+}
+
+.card.table-decl2-exceptions .decl2-exceptions-note {
+  text-align: left;
+  padding: 16px;
+  line-height: 1.6;
+  font-size: 0.9em;
+  background: var(--card, #fff);
+  color: var(--text, #1b1f2b);
+}
+
+.card.table-decl2-exceptions .decl2-exceptions-highlight {
+  color: #ff9800;
+}
+
+:root.dark .card.table-decl2-exceptions .decl2-exceptions-highlight {
+  color: #ffb74d;
+}
+
+/* === moved from grammar-component-tables.css (page-prefix stripped) === */
+.card.table-decl2-exceptions {
+  background: var(--card, #fff);
+  padding: 0;
+  overflow: hidden;
+  margin: 0;
+  --head: var(--table-head, #e2e8fb);
+  --cell1: var(--table-row-odd, #f7f9ff);
+  --cell2: var(--table-row-even, #eff3ff);
+  --sub: var(--table-row-odd, #f4f7ff);
+}
+
+.card.table-decl2-exceptions .decl2-exceptions-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--card, #fff);
+  border: 1.5px solid var(--border-strong, #c3cfee);
+  box-shadow: var(--table-shadow, 0 10px 26px rgba(41, 56, 101, 0.12));
+}
+
+.card.table-decl2-exceptions th,
+.card.table-decl2-exceptions td {
+  border: 1.5px solid var(--border-strong, #c3cfee);
+  padding: 10px 12px;
+  text-align: center;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+
+.card.table-decl2-exceptions thead th {
+  background: var(--head, var(--table-head, #e2e8fb));
+  font-weight: 700;
+  color: var(--text, #1b1f2b);
+}
+
+.card.table-decl2-exceptions .decl2-exceptions-title {
+  text-align: left;
+  padding: 12px 16px;
+  font-weight: 700;
+  font-size: 0.95em;
+  background: var(--head, var(--table-head, #e2e8fb));
+  color: var(--text, #1b1f2b);
+}
+
+.card.table-decl2-exceptions .decl2-exceptions-noun {
+  text-align: center;
+  padding: 8px;
+  background: var(--cell1, var(--table-row-odd, #f7f9ff));
+  font-size: 0.9em;
+  vertical-align: middle;
+  font-weight: 500;
+  color: var(--text, #1b1f2b);
+}
+
+.card.table-decl2-exceptions .decl2-exceptions-ru {
+  font-size: 1em;
+  font-weight: 400;
+  color: var(--muted, #6d778f);
+}
+
+.card.table-decl2-exceptions .decl2-exceptions-note {
+  text-align: left;
+  padding: 16px;
+  line-height: 1.6;
+  font-size: 0.9em;
+  background: var(--card, #fff);
+  color: var(--text, #1b1f2b);
+}
+
+.card.table-decl2-exceptions .decl2-exceptions-highlight {
+  color: #ff9800;
+}
+
+/* leftover dark rule */
+:root.dark .card.table-decl2-exceptions .decl2-exceptions-highlight {
+  color: #ffb74d;
+}

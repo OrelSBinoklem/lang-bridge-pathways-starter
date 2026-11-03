@@ -1,0 +1,31 @@
+.toggle {
+  position: fixed;
+  bottom: calc(max(28px, env(safe-area-inset-bottom)) + 30px);
+  left: env(safe-area-inset-left, 0px);
+  z-index: 2147483647;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid #61726c;
+  border-radius: 0 6px 6px 0;
+  background: #fff;
+  color: #16382c;
+  box-shadow: 0 2px 9px #0004;
+  font-size: 14px;
+  letter-spacing: 0;
+  cursor: pointer;
+}
+
+.toggle[aria-pressed='true'] { background: #ffe698; color: #322608; border-color: #92701b; }
+.toggle:hover { filter: brightness(.95); }
+.toggle:focus-visible { outline: 3px solid #14866b; outline-offset: 3px; }
+
+/* Laravel injects the toolbar outside the React tree; keep it mounted for restoration. */
+:global(html[data-lbp-user-preview] .phpdebugbar),
+:global(html[data-lbp-user-preview] .phpdebugbar-openhandler),
+:global(html[data-lbp-user-preview] .phpdebugbar-minimized) { display: none !important; }
+
+@media print { .toggle { display: none; } }

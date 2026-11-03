@@ -1,0 +1,75 @@
+[
+  {
+    "id": "structured-command",
+    "label": "Команды репетитора",
+    "kind": "command",
+    "sourceFile": "tools/tutor-gateway/src/commands/adapters/CommandAdapterRegistry.ts",
+    "contractFile": "tools/tutor-gateway/src/commands/adapters/contracts.ts",
+    "commands": ["web.sources", "web.reference", "commands.list", "commands.describe", "routes.list", "site.character.describe", "site.character.emotion", "site.character.point", "navigate", "memory.get", "learning.context", "learning.category_vocabulary", "site.menu.describe", "site.menu.activate", "verb.search.open", "verb.form.highlight", "memory.search_history", "memory.notes.search", "history.get_around_message", "memory.save_difficult_word", "memory.note.save", "memory.save_progress_estimate", "lesson.block.complete", "grammar.tables.list", "grammar.table.get_structure", "grammar.table.doc", "grammar.table.highlight", "grammar.table.get_content", "grammar.table.get_hint", "grammar.lesson.present"],
+    "executionPath": ["dispatchRegisteredCommand", "tools/tutor-gateway/src/commands/dispatcher.mjs", "tools/tutor-gateway/src/commands/registry.mjs"],
+    "description": "Проверка параметров и создание исходного command.result выполняются существующим dispatchStructuredCommand. UI-команды исполняет браузер."
+  },
+  {
+    "id": "mcp-grammar-search",
+    "label": "MCP · поиск грамматики",
+    "kind": "mcp",
+    "service": "grammar_search",
+    "sourceFile": "tools/tutor-gateway/src/commands/adapters/CommandAdapterRegistry.ts",
+    "contractFile": "tools/tutor-gateway/src/commands/adapters/contracts.ts",
+    "commands": ["grammar_search"],
+    "executionPath": ["runRegisteredMcp", "tools/tutor-gateway/src/flows/mcp/McpFlowRunner.mjs", "tools/tutor-gateway/src/flows/mcp/GrammarMcpServer.mjs", "tools/tutor-gateway/src/commands/grammarTables.mjs"],
+    "description": "Существующий MCP runner создаёт локальный сервер грамматики на один вызов и ищет зарегистрированные документы таблиц."
+  },
+  {
+    "id": "mcp-grammar-table",
+    "label": "MCP · документ таблицы",
+    "kind": "mcp",
+    "service": "grammar_table",
+    "sourceFile": "tools/tutor-gateway/src/commands/adapters/CommandAdapterRegistry.ts",
+    "contractFile": "tools/tutor-gateway/src/commands/adapters/contracts.ts",
+    "commands": ["grammar_table"],
+    "executionPath": ["runRegisteredMcp", "tools/tutor-gateway/src/flows/mcp/McpFlowRunner.mjs", "tools/tutor-gateway/src/flows/mcp/GrammarMcpServer.mjs", "tools/tutor-gateway/src/commands/grammarTables.mjs"],
+    "description": "Читает документ зарегистрированной таблицы и именованные CSS-цели через существующий MCP-сервер; не выполняет подсветку."
+  },
+  {
+    "id": "mcp-web-search",
+    "label": "MCP · веб-поиск",
+    "kind": "mcp",
+    "service": "web_search",
+    "sourceFile": "tools/tutor-gateway/src/commands/adapters/CommandAdapterRegistry.ts",
+    "contractFile": "tools/tutor-gateway/src/commands/adapters/contracts.ts",
+    "commands": ["tavily-search", "tavily_search"],
+    "executionPath": ["runRegisteredMcp", "tools/tutor-gateway/src/flows/mcp/McpFlowRunner.mjs", "tools/tutor-gateway/src/flows/mcp/TavilyResults.mjs"],
+    "description": "Существующий runner подключается к закреплённому Tavily MCP endpoint. Сессия создаётся и закрывается на каждый вызов; автоматические сетевые повторы выключены."
+  },
+  {
+    "id": "memory-search-history",
+    "label": "Память · поиск истории",
+    "kind": "command",
+    "sourceFile": "tools/tutor-gateway/src/commands/adapters/CommandAdapterRegistry.ts",
+    "contractFile": "tools/tutor-gateway/src/commands/adapters/contracts.ts",
+    "commands": ["memory.search_history"],
+    "executionPath": ["dispatchRegisteredCommand", "tools/tutor-gateway/src/commands/dispatcher.mjs", "tools/tutor-gateway/src/commands/registry.mjs", "frontend/src/features/tutor/FloatingTutorAssistant.tsx", "POST /tutor/memory/search-history"],
+    "description": "Валидированный command.result содержит UI client_api. Браузер вызывает существующий авторизованный маршрут Laravel через clientApi; шлюз не хранит пользовательскую память."
+  },
+  {
+    "id": "memory-notes-search",
+    "label": "Память · поиск заметок",
+    "kind": "command",
+    "sourceFile": "tools/tutor-gateway/src/commands/adapters/CommandAdapterRegistry.ts",
+    "contractFile": "tools/tutor-gateway/src/commands/adapters/contracts.ts",
+    "commands": ["memory.notes.search"],
+    "executionPath": ["dispatchRegisteredCommand", "tools/tutor-gateway/src/commands/dispatcher.mjs", "tools/tutor-gateway/src/commands/registry.mjs", "frontend/src/features/tutor/FloatingTutorAssistant.tsx", "POST /tutor/memory/notes/search"],
+    "description": "Тот же UI client_api и текущая авторизация браузера; поиск важных заметок остаётся в Laravel."
+  },
+  {
+    "id": "history-around-message",
+    "label": "История · соседние сообщения",
+    "kind": "command",
+    "sourceFile": "tools/tutor-gateway/src/commands/adapters/CommandAdapterRegistry.ts",
+    "contractFile": "tools/tutor-gateway/src/commands/adapters/contracts.ts",
+    "commands": ["history.get_around_message"],
+    "executionPath": ["dispatchRegisteredCommand", "tools/tutor-gateway/src/commands/dispatcher.mjs", "tools/tutor-gateway/src/commands/registry.mjs", "frontend/src/features/tutor/FloatingTutorAssistant.tsx", "GET /tutor/memory/history-around/{message_id}?before={before}&after={after}"],
+    "description": "Существующий dispatcher проверяет message_id/before/after и создаёт GET client_api, который выполняется от текущего пользователя."
+  }
+]

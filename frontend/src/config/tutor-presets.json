@@ -1,0 +1,52 @@
+{
+  "economy": {
+    "maxOutputTokens": 8192,
+    "tutorModel": "gpt-6-luna",
+    "transcriptionModel": "gpt-transcribe",
+    "dualTranscriptionEnabled": false,
+    "contextCompressionEnabled": true,
+    "longMemoryEnabled": false,
+    "reasoningEnabled": false,
+    "reasoningEffort": "none",
+    "contextMode": "basic",
+    "ttsMode": "api",
+    "ttsModel": "gemini-3.8-flash-lite-tts",
+    "ttsVoice": "Enceladus"
+  },
+  "standard": {
+    "maxOutputTokens": 8192,
+    "tutorModel": "gpt-6-luna",
+    "transcriptionModel": "gpt-transcribe",
+    "dualTranscriptionEnabled": false,
+    "contextCompressionEnabled": true,
+    "longMemoryEnabled": true,
+    "reasoningEnabled": false,
+    "reasoningEffort": "none",
+    "contextMode": "full",
+    "ttsMode": "api"
+  },
+  "quality": {
+    "maxOutputTokens": 8192,
+    "tutorModel": "gpt-6.1-terra",
+    "transcriptionModel": "gpt-transcribe",
+    "dualTranscriptionEnabled": true,
+    "contextCompressionEnabled": true,
+    "longMemoryEnabled": true,
+    "reasoningEnabled": false,
+    "reasoningEffort": "none",
+    "contextMode": "full",
+    "ttsMode": "api"
+  },
+  "uncompromising": {
+    "maxOutputTokens": 8192,
+    "tutorModel": "gpt-6-sol",
+    "transcriptionModel": "gpt-transcribe",
+    "dualTranscriptionEnabled": true,
+    "contextCompressionEnabled": true,
+    "longMemoryEnabled": true,
+    "reasoningEnabled": false,
+    "reasoningEffort": "none",
+    "contextMode": "full",
+    "ttsMode": "api"
+  }
+}

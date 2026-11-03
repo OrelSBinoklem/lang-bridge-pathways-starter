@@ -1,0 +1,430 @@
+#verbs-tables-container-5 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 18px;
+  font-weight: bold;
+}
+
+#verbs-tables-container-5 .card {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  position: relative;
+}
+
+@media (max-width: 1200px) {
+  #verbs-tables-container-5 {
+    grid-template-columns: 1fr;
+  }
+}
+
+#verbs-tables-container-5 .verb-flex-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#verbs-tables-container-5 .verb-flex-table > div:first-child {
+  padding: 0 10px;
+  text-align: left;
+  font-size: 1.3em;
+  background: #d4d4d4;
+  box-sizing: border-box;
+}
+
+#verbs-tables-container-5 .verb-flex-table > div:not(:first-child) {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#verbs-tables-container-5 .verb-flex-table .persona {
+  width: 70px;
+  flex-shrink: 0;
+  padding: 0 8px;
+  box-sizing: border-box;
+  font-weight: 400;
+  text-align: left;
+  white-space: nowrap;
+}
+
+#verbs-tables-container-5 .verb-flex-table .persona.group-iii {
+  background: var(--group3-bg) !important;
+}
+
+#verbs-tables-container-5 .verb-flex-table > div:not(:first-child) > div:not(.persona) {
+  flex: 1;
+  padding: 0 8px;
+  box-sizing: border-box;
+}
+
+/* Окончания в ячейках глаголов */
+#verbs-tables-container-5 .ending {
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 8px;
+}
+
+#verbs-tables-container-5 .c1,
+#verbs-tables-container-5 .c2,
+#verbs-tables-container-5 .c3,
+#verbs-tables-container-5 .c4 {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#verbs-tables-container-5 .c1 {
+  background: var(--accent1-bg);
+  color: var(--accent1);
+}
+
+#verbs-tables-container-5 .c2 {
+  background: var(--accent2-bg);
+  color: var(--accent2);
+}
+
+#verbs-tables-container-5 .c3 {
+  background: var(--accent3-bg);
+  color: var(--accent3);
+}
+
+#verbs-tables-container-5 .c4 {
+  background: var(--accent4-bg);
+  color: var(--accent4);
+}
+
+#verbs-tables-container-5 .verb-flex-table { background: #ffffff; }
+#verbs-tables-container-5 .verb-flex-table > div:not(:first-child),
+#verbs-tables-container-5 .verb-flex-table > div:not(:first-child) > div { background: #ffffff !important; }
+#verbs-tables-container-5 .verb-flex-table .persona.group-iii { background: var(--group3-bg) !important; }
+
+/* Force opaque white fill for irregular-verb tables (beat theme / gallery). */
+.grammar-component-tables-page #verbs-tables-container,
+.grammar-component-tables-page #verbs-tables-container-2,
+.grammar-component-tables-page #verbs-tables-container-5,
+#verbs-tables-container,
+#verbs-tables-container-2,
+#verbs-tables-container-5 {
+  background: #ffffff !important;
+}
+.grammar-component-tables-page #verbs-tables-container .card,
+.grammar-component-tables-page #verbs-tables-container-2 .card,
+.grammar-component-tables-page #verbs-tables-container-5 .card,
+#verbs-tables-container .card,
+#verbs-tables-container-2 .card,
+#verbs-tables-container-5 .card {
+  background: #ffffff !important;
+}
+.grammar-component-tables-page #verbs-tables-container .verb-flex-table,
+.grammar-component-tables-page #verbs-tables-container-2 .verb-flex-table,
+.grammar-component-tables-page #verbs-tables-container-5 .verb-flex-table,
+#verbs-tables-container .verb-flex-table,
+#verbs-tables-container-2 .verb-flex-table,
+#verbs-tables-container-5 .verb-flex-table {
+  background: #ffffff !important;
+}
+.grammar-component-tables-page #verbs-tables-container .verb-flex-table > div:not(:first-child),
+.grammar-component-tables-page #verbs-tables-container .verb-flex-table > div:not(:first-child) > div,
+.grammar-component-tables-page #verbs-tables-container-2 .verb-flex-table > div:not(:first-child),
+.grammar-component-tables-page #verbs-tables-container-2 .verb-flex-table > div:not(:first-child) > div,
+.grammar-component-tables-page #verbs-tables-container-5 .verb-flex-table > div:not(:first-child),
+.grammar-component-tables-page #verbs-tables-container-5 .verb-flex-table > div:not(:first-child) > div,
+#verbs-tables-container .verb-flex-table > div:not(:first-child),
+#verbs-tables-container .verb-flex-table > div:not(:first-child) > div,
+#verbs-tables-container-2 .verb-flex-table > div:not(:first-child),
+#verbs-tables-container-2 .verb-flex-table > div:not(:first-child) > div,
+#verbs-tables-container-5 .verb-flex-table > div:not(:first-child),
+#verbs-tables-container-5 .verb-flex-table > div:not(:first-child) > div {
+  background: #ffffff !important;
+}
+#verbs-tables-container .verb-flex-table .persona,
+#verbs-tables-container-2 .verb-flex-table .persona,
+#verbs-tables-container-5 .verb-flex-table .persona {
+  background: var(--group2-bg, #e8f0fe) !important;
+}
+/* keep gray headers */
+.grammar-component-tables-page #verbs-tables-container .verb-flex-table > div:first-child,
+.grammar-component-tables-page #verbs-tables-container-2 .verb-flex-table > div:first-child,
+.grammar-component-tables-page #verbs-tables-container-5 .verb-flex-table > div:first-child,
+#verbs-tables-container .verb-flex-table > div:first-child,
+#verbs-tables-container-2 .verb-flex-table > div:first-child,
+#verbs-tables-container-5 .verb-flex-table > div:first-child {
+  background: #d4d4d4 !important;
+}
+
+/* Left persona cells: restore group tint (not forced white) */
+.grammar-component-tables-page #verbs-tables-container .verb-flex-table .persona.group-iii,
+.grammar-component-tables-page #verbs-tables-container-2 .verb-flex-table .persona.group-iii,
+.grammar-component-tables-page #verbs-tables-container-5 .verb-flex-table .persona.group-iii,
+#verbs-tables-container .verb-flex-table .persona.group-iii,
+#verbs-tables-container-2 .verb-flex-table .persona.group-iii,
+#verbs-tables-container-5 .verb-flex-table .persona.group-iii {
+  background: var(--group3-bg) !important;
+}
+.grammar-component-tables-page #verbs-tables-container .verb-flex-table .persona:not(.group-iii),
+.grammar-component-tables-page #verbs-tables-container-2 .verb-flex-table .persona:not(.group-iii),
+.grammar-component-tables-page #verbs-tables-container-5 .verb-flex-table .persona:not(.group-iii),
+#verbs-tables-container .verb-flex-table .persona:not(.group-iii),
+#verbs-tables-container-2 .verb-flex-table .persona:not(.group-iii),
+#verbs-tables-container-5 .verb-flex-table .persona:not(.group-iii) {
+  background: var(--persona-bg) !important;
+}
+
+/* Conjugation forms: normal weight; labels/headers stay bold */
+.grammar-component-tables-page #verbs-tables-container,
+.grammar-component-tables-page #verbs-tables-container-2,
+.grammar-component-tables-page #verbs-tables-container-5,
+#verbs-tables-container,
+#verbs-tables-container-2,
+#verbs-tables-container-5 {
+  font-weight: 400;
+}
+.grammar-component-tables-page #verbs-tables-container .verb-flex-table > div:first-child,
+.grammar-component-tables-page #verbs-tables-container-2 .verb-flex-table > div:first-child,
+.grammar-component-tables-page #verbs-tables-container-5 .verb-flex-table > div:first-child,
+#verbs-tables-container .verb-flex-table > div:first-child,
+#verbs-tables-container-2 .verb-flex-table > div:first-child,
+#verbs-tables-container-5 .verb-flex-table > div:first-child {
+  font-weight: 400;
+}
+.grammar-component-tables-page #verbs-tables-container .verb-flex-table > div:first-child span[style*="fontWeight: 'bold'"],
+.grammar-component-tables-page #verbs-tables-container-2 .verb-flex-table > div:first-child span[style*="fontWeight: 'bold'"],
+.grammar-component-tables-page #verbs-tables-container-5 .verb-flex-table > div:first-child span[style*="fontWeight: 'bold'"] {
+  font-weight: 700;
+}
+.grammar-component-tables-page #verbs-tables-container .persona,
+.grammar-component-tables-page #verbs-tables-container-2 .persona,
+.grammar-component-tables-page #verbs-tables-container-5 .persona,
+#verbs-tables-container .persona,
+#verbs-tables-container-2 .persona,
+#verbs-tables-container-5 .persona {
+  font-weight: 700 !important;
+}
+.grammar-component-tables-page #verbs-tables-container .verb-flex-table > div:not(:first-child) > div:not(.persona),
+.grammar-component-tables-page #verbs-tables-container-2 .verb-flex-table > div:not(:first-child) > div:not(.persona),
+.grammar-component-tables-page #verbs-tables-container-5 .verb-flex-table > div:not(:first-child) > div:not(.persona),
+#verbs-tables-container .verb-flex-table > div:not(:first-child) > div:not(.persona),
+#verbs-tables-container-2 .verb-flex-table > div:not(:first-child) > div:not(.persona),
+#verbs-tables-container-5 .verb-flex-table > div:not(:first-child) > div:not(.persona) {
+  font-weight: 400 !important;
+}
+
+/* === moved from grammar-component-tables.css (page-prefix stripped) === */
+#verbs-tables-container-5 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 18px;
+  font-weight: 400;
+}
+
+#verbs-tables-container-5 .card {
+  margin: 0;
+  padding: 0;
+  background: var(--card);
+  position: relative;
+}
+
+@media (max-width: 1200px) {
+#verbs-tables-container-5 {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+#verbs-tables-container-5 .verb-flex-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#verbs-tables-container-5 .verb-flex-table > div:first-child {
+  padding: 0 10px;
+  text-align: left;
+  font-size: 1.3em;
+  background: #d4d4d4;
+  box-sizing: border-box;
+}
+
+#verbs-tables-container-5 .verb-flex-table > div:not(:first-child) {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#verbs-tables-container-5 .verb-flex-table > div:not(:first-child) > div:not(.persona) {
+  flex: 1;
+  padding: 0 8px;
+  box-sizing: border-box;
+}
+
+#verbs-tables-container-5 .ending {
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 8px;
+}
+
+#verbs-tables-container-5 .c1,
+#verbs-tables-container-5 .c2,
+#verbs-tables-container-5 .c3,
+#verbs-tables-container-5 .c4 {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#verbs-tables-container-5 .c1 {
+  background: var(--accent1-bg);
+  color: var(--accent1);
+}
+
+#verbs-tables-container-5 .c2 {
+  background: var(--accent2-bg);
+  color: var(--accent2);
+}
+
+#verbs-tables-container-5 .c3 {
+  background: var(--accent3-bg);
+  color: var(--accent3);
+}
+
+#verbs-tables-container-5 .c4 {
+  background: var(--accent4-bg);
+  color: var(--accent4);
+}
+
+#verbs-tables-container .verb-flex-table,
+#verbs-tables-container-2 .verb-flex-table,
+#verbs-tables-container-5 .verb-flex-table {
+  background: #ffffff;
+}
+
+#verbs-tables-container .verb-flex-table > div:not(:first-child),
+#verbs-tables-container .verb-flex-table > div:not(:first-child) > div,
+#verbs-tables-container-2 .verb-flex-table > div:not(:first-child),
+#verbs-tables-container-2 .verb-flex-table > div:not(:first-child) > div,
+#verbs-tables-container-5 .verb-flex-table > div:not(:first-child),
+#verbs-tables-container-5 .verb-flex-table > div:not(:first-child) > div {
+  background: #ffffff !important;
+}
+
+#verbs-tables-container .verb-flex-table .persona.group-iii,
+#verbs-tables-container-2 .verb-flex-table .persona.group-iii,
+#verbs-tables-container-5 .verb-flex-table .persona.group-iii {
+  background: var(--group3-bg) !important;
+}
+
+#verbs-tables-container,
+#verbs-tables-container-2,
+#verbs-tables-container-5,
+#verbs-tables-container,
+#verbs-tables-container-2,
+#verbs-tables-container-5 {
+  background: #ffffff !important;
+}
+
+#verbs-tables-container .card,
+#verbs-tables-container-2 .card,
+#verbs-tables-container-5 .card,
+#verbs-tables-container .card,
+#verbs-tables-container-2 .card,
+#verbs-tables-container-5 .card {
+  background: #ffffff !important;
+}
+
+#verbs-tables-container .verb-flex-table,
+#verbs-tables-container-2 .verb-flex-table,
+#verbs-tables-container-5 .verb-flex-table,
+#verbs-tables-container .verb-flex-table,
+#verbs-tables-container-2 .verb-flex-table,
+#verbs-tables-container-5 .verb-flex-table {
+  background: #ffffff !important;
+}
+
+#verbs-tables-container .verb-flex-table > div:not(:first-child),
+#verbs-tables-container .verb-flex-table > div:not(:first-child) > div,
+#verbs-tables-container-2 .verb-flex-table > div:not(:first-child),
+#verbs-tables-container-2 .verb-flex-table > div:not(:first-child) > div,
+#verbs-tables-container-5 .verb-flex-table > div:not(:first-child),
+#verbs-tables-container-5 .verb-flex-table > div:not(:first-child) > div,
+#verbs-tables-container .verb-flex-table > div:not(:first-child),
+#verbs-tables-container .verb-flex-table > div:not(:first-child) > div,
+#verbs-tables-container-2 .verb-flex-table > div:not(:first-child),
+#verbs-tables-container-2 .verb-flex-table > div:not(:first-child) > div,
+#verbs-tables-container-5 .verb-flex-table > div:not(:first-child),
+#verbs-tables-container-5 .verb-flex-table > div:not(:first-child) > div {
+  background: #ffffff !important;
+}
+
+#verbs-tables-container .verb-flex-table .persona,
+#verbs-tables-container-2 .verb-flex-table .persona,
+#verbs-tables-container-5 .verb-flex-table .persona {
+  background: var(--group2-bg, #e8f0fe) !important;
+}
+
+#verbs-tables-container .verb-flex-table > div:first-child,
+#verbs-tables-container-2 .verb-flex-table > div:first-child,
+#verbs-tables-container-5 .verb-flex-table > div:first-child,
+#verbs-tables-container .verb-flex-table > div:first-child,
+#verbs-tables-container-2 .verb-flex-table > div:first-child,
+#verbs-tables-container-5 .verb-flex-table > div:first-child {
+  background: #d4d4d4 !important;
+}
+
+#verbs-tables-container .verb-flex-table .persona.group-iii,
+#verbs-tables-container-2 .verb-flex-table .persona.group-iii,
+#verbs-tables-container-5 .verb-flex-table .persona.group-iii,
+#verbs-tables-container .verb-flex-table .persona.group-iii,
+#verbs-tables-container-2 .verb-flex-table .persona.group-iii,
+#verbs-tables-container-5 .verb-flex-table .persona.group-iii {
+  background: var(--group3-bg) !important;
+}
+
+#verbs-tables-container .verb-flex-table .persona:not(.group-iii),
+#verbs-tables-container-2 .verb-flex-table .persona:not(.group-iii),
+#verbs-tables-container-5 .verb-flex-table .persona:not(.group-iii),
+#verbs-tables-container .verb-flex-table .persona:not(.group-iii),
+#verbs-tables-container-2 .verb-flex-table .persona:not(.group-iii),
+#verbs-tables-container-5 .verb-flex-table .persona:not(.group-iii) {
+  background: var(--persona-bg) !important;
+}
+
+#verbs-tables-container,
+#verbs-tables-container-2,
+#verbs-tables-container-5,
+#verbs-tables-container,
+#verbs-tables-container-2,
+#verbs-tables-container-5 {
+  font-weight: 400;
+}
+
+#verbs-tables-container .verb-flex-table > div:first-child,
+#verbs-tables-container-2 .verb-flex-table > div:first-child,
+#verbs-tables-container-5 .verb-flex-table > div:first-child,
+#verbs-tables-container .verb-flex-table > div:first-child,
+#verbs-tables-container-2 .verb-flex-table > div:first-child,
+#verbs-tables-container-5 .verb-flex-table > div:first-child {
+  font-weight: 400;
+}
+
+#verbs-tables-container .verb-flex-table > div:first-child span[style*="fontWeight: 'bold'"],
+#verbs-tables-container-2 .verb-flex-table > div:first-child span[style*="fontWeight: 'bold'"],
+#verbs-tables-container-5 .verb-flex-table > div:first-child span[style*="fontWeight: 'bold'"] {
+  font-weight: 700;
+}
+
+#verbs-tables-container .persona,
+#verbs-tables-container-2 .persona,
+#verbs-tables-container-5 .persona,
+#verbs-tables-container .persona,
+#verbs-tables-container-2 .persona,
+#verbs-tables-container-5 .persona {
+  font-weight: 700 !important;
+}
+
+#verbs-tables-container .verb-flex-table > div:not(:first-child) > div:not(.persona),
+#verbs-tables-container-2 .verb-flex-table > div:not(:first-child) > div:not(.persona),
+#verbs-tables-container-5 .verb-flex-table > div:not(:first-child) > div:not(.persona),
+#verbs-tables-container .verb-flex-table > div:not(:first-child) > div:not(.persona),
+#verbs-tables-container-2 .verb-flex-table > div:not(:first-child) > div:not(.persona),
+#verbs-tables-container-5 .verb-flex-table > div:not(:first-child) > div:not(.persona) {
+  font-weight: 400 !important;
+}

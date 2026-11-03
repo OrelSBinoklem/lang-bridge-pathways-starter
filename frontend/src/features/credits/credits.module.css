@@ -1,0 +1,48 @@
+.balance { display: flex; width: 100%; box-sizing: border-box; gap: 8px; align-items: center; padding: 8px 12px; border: 1px solid var(--surface-border, #b9ceca); border-radius: 6px; background: var(--surface-card, white); color: var(--text-color, #173d36); cursor: pointer; white-space: nowrap; font: inherit; font-size: 14px; }
+.content { font-size: 15px; line-height: 1.5; }
+.summary { display: flex; gap: 32px; flex-wrap: wrap; margin: 0; }
+.summary dt { font-size: 14px; }
+.summary dd { margin: 0; font-size: 24px; font-weight: 700; }
+.scroll { overflow-x: auto; }
+.scroll table { border-collapse: collapse; width: 100%; min-width: 540px; font-size: 13px; }
+.model { display: block; margin-top: 4px; color: var(--text-color-secondary, #617370); font-size: 11px; }
+.scroll th, .scroll td { padding: 10px 8px; border-bottom: 1px solid var(--surface-border, #ccd8d5); text-align: left; overflow-wrap: anywhere; }
+.statistics { margin: 24px 0; padding: 20px 0 12px; border-top: 1px solid var(--surface-border, #ccd8d5); border-bottom: 1px solid var(--surface-border, #ccd8d5); }
+.chartHeader { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; justify-content: space-between; }
+.chartHeader h3 { margin: 0; font-size: 17px; }
+.periods { display: inline-flex; border: 1px solid var(--surface-border, #b9ceca); border-radius: 6px; overflow: hidden; }
+.periods button, .chartNavigation button, .chartState button { cursor: pointer; font: inherit; color: var(--text-color, #173d36); background: var(--surface-card, #fff); }
+.periods button { border: 0; border-right: 1px solid var(--surface-border, #b9ceca); padding: 8px 12px; font-size: 13px; min-height: 36px; }
+.periods button:last-child { border-right: 0; }
+.periods button[aria-pressed='true'] { background: var(--highlight-bg, #dbeee8); color: var(--highlight-text-color, #115c4d); font-weight: 700; }
+.periods button:focus-visible, .chartNavigation :focus-visible, .chartState button:focus-visible { outline: 2px solid var(--primary-color, #167e69); outline-offset: -3px; }
+.chartNavigation { display: flex; gap: 6px; align-items: center; margin-top: 14px; }
+.chartNavigation button, .chartState button { width: 36px; height: 36px; padding: 0; display: inline-grid; place-items: center; border: 1px solid var(--surface-border, #b9ceca); border-radius: 4px; flex-shrink: 0; }
+.chartNavigation button:disabled { opacity: .4; cursor: default; }
+.chartNavigation input { width: 158px; min-width: 0; height: 36px; border: 1px solid var(--surface-border, #b9ceca); border-radius: 4px; padding: 5px 8px; color: var(--text-color, #173d36); background: var(--surface-card, #fff); font: inherit; font-size: 14px; color-scheme: inherit; }
+.chartNavigation input[type='number'] { width: 100px; }
+.chartTotals { margin: 20px 0 8px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.chartTotals div { min-width: 0; }
+.chartTotals dt { display: flex; gap: 6px; align-items: center; font-size: 12px; color: var(--text-color-secondary, #617370); }
+.chartTotals dd { font-size: 18px; margin: 3px 0 0; font-weight: 700; overflow-wrap: anywhere; }
+.incomingSwatch, .spentSwatch { display: inline-block; width: 9px; height: 9px; flex-shrink: 0; border-radius: 1px; }
+.incomingBar, .incomingSwatch { fill: #16876a; background: #16876a; }
+.spentBar, .spentSwatch { fill: #cf8429; background: #cf8429; }
+.chart { width: 100%; min-width: 0; }
+.chart svg { display: block; overflow: visible; }
+.gridLine line { stroke: var(--surface-border, #ccd8d5); stroke-dasharray: 3 4; }
+.gridLine text, .axisLabel { fill: var(--text-color-secondary, #617370); font-size: 11px; font-family: inherit; }
+.chartBucket { cursor: pointer; outline: none; }
+.chartBucket:focus-visible > rect:first-child { stroke: var(--primary-color, #167e69); stroke-width: 1; }
+.emptyChart { fill: var(--text-color-secondary, #617370); font-size: 12px; pointer-events: none; }
+.chartDetail { min-height: 42px; display: flex; flex-wrap: wrap; align-content: start; gap: 3px 14px; font-size: 12px; color: var(--text-color-secondary, #617370); }
+.chartDetail strong { color: var(--text-color, #173d36); font-weight: 600; }
+.chartState { min-height: 352px; display: flex; align-items: center; justify-content: center; gap: 12px; color: var(--text-color-secondary, #617370); }
+@media (max-width: 480px) {
+  .chartHeader { align-items: flex-start; gap: 10px; }
+  .periods { width: 100%; }
+  .periods button { flex: 1; padding-inline: 8px; }
+  .chartTotals { gap: 8px; }
+  .chartTotals dt { font-size: 11px; }
+  .chartTotals dd { font-size: 16px; }
+}

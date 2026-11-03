@@ -1,0 +1,251 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 10px 10px 10px;
+  overflow-y: auto;
+}
+
+.content {
+  position: relative;
+  max-width: min(1100px, 95vw);
+  background: #f8f9fa;
+  padding: 24px 28px;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #1a1a1a;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+}
+
+.closeBtn:hover {
+  background: #c82333;
+  transform: scale(1.1);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.infoLine {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  row-gap: 8px;
+}
+
+.lemma {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f2933;
+}
+
+.classChip {
+  background: #0d6efd;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.transLabel {
+  font-weight: 700;
+  font-size: 18px;
+  color: #0d6efd;
+  letter-spacing: 0.5px;
+}
+
+.transValue {
+  font-weight: 800;
+  font-size: 22px;
+  color: #0b1526;
+}
+
+.transInline {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(13, 110, 253, 0.12);
+  border-radius: 14px;
+  padding: 8px 14px;
+  box-shadow: inset 0 0 0 1px rgba(13, 110, 253, 0.15);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bodyWithReference {
+  display: grid;
+  gap: 22px;
+}
+
+@media (min-width: 992px) {
+  .bodyWithReference {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+  }
+}
+
+.tableWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  flex: 1 1 auto;
+}
+
+.tableTitle {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  color: #0b1526;
+}
+
+.referenceMissing {
+  padding: 18px;
+  border-radius: 12px;
+  background: rgba(220, 53, 69, 0.08);
+  color: #b02a37;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.formsTable {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+}
+
+.formsTable thead th {
+  background: linear-gradient(135deg, rgba(13, 110, 253, 0.92), rgba(50, 159, 255, 0.85));
+  color: #fff;
+  padding: 14px 16px;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.formsTable tbody td {
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+  font-size: 16px;
+  color: #1f2933;
+  background: rgba(248, 249, 250, 0.85);
+  vertical-align: middle;
+}
+
+.formsTable tbody tr:nth-child(even) td {
+  background: rgba(241, 245, 249, 0.85);
+}
+
+.pronoun {
+  font-weight: 700;
+  color: #0d6efd;
+  width: 28%;
+  white-space: nowrap;
+}
+
+.formValue {
+  font-weight: 500;
+}
+
+.formValue:global(.tutor-verb-highlight) {
+  background: #fde68a !important;
+  box-shadow: inset 0 0 0 3px #f59e0b;
+  color: #111827;
+  font-weight: 800;
+}
+
+.formsGrid {
+  column-count: 3;
+  column-gap: 24px;
+}
+
+.formCell {
+  break-inside: avoid;
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  padding: 6px 10px;
+  margin-bottom: 6px;
+  background: rgba(15, 23, 42, 0.04);
+  border-radius: 10px;
+}
+
+.formIndex {
+  font-weight: 700;
+  color: #0d6efd;
+  min-width: 26px;
+}
+
+.formText {
+  color: #1f2933;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 20px;
+  }
+
+  .formsTable thead th,
+  .formsTable tbody td {
+    padding: 10px 12px;
+  }
+
+  .formsGrid {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .formsGrid {
+    column-count: 1;
+  }
+
+  .lemma {
+    font-size: 24px;
+  }
+}

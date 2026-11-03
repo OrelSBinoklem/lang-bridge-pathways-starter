@@ -1,0 +1,13 @@
+[
+  {
+    "table_id": "en-demo-sentence",
+    "title": "Схема утверждения",
+    "summary": "Кто выполняет действие + действие",
+    "columns": [{"key":"subject","label":"Кто"},{"key":"action","label":"Действие"}],
+    "rows": [
+      {"id":"first","label":"Я","cells":{"subject":"I","action":"read"}},
+      {"id":"second","label":"Ты","cells":{"subject":"You","action":"draw"}},
+      {"id":"third","label":"Мы","cells":{"subject":"We","action":"study"}}
+    ]
+  }
+]

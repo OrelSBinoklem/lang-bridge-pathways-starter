@@ -1,0 +1,30 @@
+.dialog { width: min(1800px, 96vw); max-width: 96vw; height: 94dvh; max-height: 94dvh; margin: auto; padding: 0; border: 1px solid var(--surface-border, #cbd5e1); border-radius: 16px; background: var(--surface-card, #fff); color: var(--text-color, #26364d); }
+.dialog::backdrop { background: #12203799; }
+.dialog[open] { display: flex; flex-direction: column; }
+.header, .toolbar, .settings, .footer { padding: 14px 20px; border-bottom: 1px solid var(--surface-border, #d9e0eb); }
+.header { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.header h2 { margin: 0; font-size: 23px; font-weight: 700; }
+.header p { margin: 5px 0 0; font-size: 13px; color: var(--text-color-secondary, #62748c); }
+.toolbar { display: flex; align-items: end; gap: 10px; flex-wrap: wrap; }
+.dialog label { display: flex; flex-direction: column; gap: 5px; font-size: 13px; }
+.dialog input, .dialog select, .dialog button { border: 1px solid var(--surface-border, #cbd5e1); padding: 8px 10px; border-radius: 7px; background: var(--surface-ground, #f6f8fb); color: inherit; font: inherit; }
+.dialog button { cursor: pointer; }
+.dialog button:disabled { opacity: .5; cursor: default; }
+.settings { display: grid; grid-template-columns: minmax(160px, 1fr) 2fr 2fr; gap: 12px; max-height: 150px; overflow-y: auto; flex-shrink: 0; }
+.settings fieldset { margin: 0; min-width: 0; padding: 8px; border: 1px solid var(--surface-border, #cbd5e1); }
+.settings input[type=number] { width: 74px; }
+.portNames { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.portNames label { flex: 1 1 115px; min-width: 90px; }
+.portNames input { min-width: 0; width: 100%; }
+.workspace { display: grid; grid-template-columns: 180px minmax(0, 1fr) 300px; min-height: 300px; flex: 1; overflow: auto; }
+.workspace aside { padding: 14px; overflow: auto; border-right: 1px solid var(--surface-border, #d9e0eb); }
+.workspace aside h3 { font-size: 15px; font-weight: 700; margin: 5px 0 12px; }
+.workspace aside > button { display: block; width: 100%; text-align: left; margin-bottom: 8px; }
+.workspace aside > p, .footer { font-size: 12px; line-height: 1.6; color: var(--text-color-secondary, #62748c); }
+.workspace .inspector { border-left: 1px solid var(--surface-border, #d9e0eb); border-right: none; }
+.canvas { min-height: 300px; min-width: 0; background: var(--surface-ground, #f6f8fb); position: relative; }
+.header, .toolbar, .footer { flex-shrink: 0; }
+.wireForm { display: flex; flex-wrap: wrap; align-items: end; gap: 8px; padding: 12px 20px; border-bottom: 1px solid var(--surface-border, #d9e0eb); }
+.wireForm label { min-width: 80px; flex: 1; }
+.wireForm select { width: 100%; max-width: 300px; }
+@media(max-width: 900px) { .workspace { grid-template-columns: 130px minmax(0, 1fr); } .workspace .inspector { grid-column: 1 / -1; max-height: 400px; } .settings { grid-template-columns: 1fr 1fr; } .settings > label { grid-column: 1 / -1; } .header { align-items: start; } }

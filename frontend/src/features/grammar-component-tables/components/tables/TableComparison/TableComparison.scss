@@ -1,0 +1,116 @@
+.card.table-comparison {
+  background: var(--card, #fff);
+  padding: 0;
+  overflow: hidden;
+  margin: 0;
+}
+
+.card.table-comparison table.comparison {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  border: 1.5px solid var(--border-strong, #c3cfee);
+  box-shadow: var(--table-shadow, 0 10px 26px rgba(41, 56, 101, 0.12));
+}
+
+.card.table-comparison table.comparison th,
+.card.table-comparison table.comparison td {
+  border: 1.5px solid var(--border-strong, #c3cfee);
+  padding: 8px 10px;
+  text-align: center;
+  vertical-align: middle;
+  box-sizing: border-box;
+  color: var(--text, #1b1f2b);
+}
+
+.card.table-comparison table.comparison thead th {
+  background: var(--table-head, #e2e8fb);
+  font-weight: 600;
+}
+
+.card.table-comparison table.comparison .comparison-title {
+  text-align: left;
+  padding: 12px 16px;
+  font-weight: 700;
+  font-size: 0.95em;
+  background: var(--table-head, #e2e8fb);
+  color: #1b1f2b;
+}
+
+.card.table-comparison table.comparison .comparison-corner {
+  width: 42px;
+  min-width: 42px;
+}
+
+/* Data cells: white like the reference image (not zebra blue). */
+.card.table-comparison table.comparison tbody td {
+  background: #fff;
+  white-space: nowrap;
+  font-size: 0.9em;
+}
+
+.card.table-comparison table.comparison .case {
+  text-align: center;
+  font-weight: 700;
+  min-width: 42px;
+  width: 42px;
+  color: #1b1f2b;
+  border-right: 1.5px solid var(--border-strong, #c3cfee);
+  white-space: nowrap;
+  font-size: 1em;
+  padding: 8px 6px;
+}
+
+.card.table-comparison table.comparison tbody td.case.case-masc,
+.card.table-comparison table.comparison .case.case-masc {
+  background: rgba(0, 102, 204, 0.1);
+}
+
+.card.table-comparison table.comparison tbody td.case.case-fem,
+.card.table-comparison table.comparison .case.case-fem {
+  background: rgba(204, 0, 102, 0.1);
+}
+
+/* Image palette: blue masc, pink fem, orange vis/āk */
+.card.table-comparison .comparison-ending-masc {
+  color: #0066cc !important;
+  font-weight: 600;
+}
+
+.card.table-comparison .comparison-ending-fem {
+  color: #cc0066 !important;
+  font-weight: 600;
+}
+
+.card.table-comparison .comparison-prefix-vis,
+.card.table-comparison .comparison-suffix-ak {
+  color: #ff9800 !important;
+  font-weight: 600;
+}
+
+:root.dark .card.table-comparison table.comparison {
+  background: var(--card, #12141a);
+}
+
+:root.dark .card.table-comparison table.comparison tbody td {
+  background: var(--card, #12141a);
+  color: var(--text, #e8ecf4);
+}
+
+:root.dark .card.table-comparison table.comparison .comparison-title {
+  color: var(--text, #e8ecf4);
+}
+
+:root.dark .card.table-comparison table.comparison tbody td.case.case-masc,
+:root.dark .card.table-comparison table.comparison .case.case-masc {
+  background: rgba(0, 102, 204, 0.22);
+  color: var(--text, #e8ecf4);
+}
+
+:root.dark .card.table-comparison table.comparison tbody td.case.case-fem,
+:root.dark .card.table-comparison table.comparison .case.case-fem {
+  background: rgba(204, 0, 102, 0.22);
+  color: var(--text, #e8ecf4);
+}

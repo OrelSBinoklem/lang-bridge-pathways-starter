@@ -1,0 +1,151 @@
+.card.table-decimali {
+  background: var(--card, #fff);
+  color: var(--text, #1b1f2b);
+  padding: 14px 16px 16px;
+  border-radius: 10px;
+  max-width: 42em;
+  margin: 0 auto;
+  line-height: 1.35;
+}
+
+.card.table-decimali .td-formula {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.card.table-decimali .td-part {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  min-width: 5.5em;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border-strong, #c3cfee);
+  background: var(--table-row-odd, #f5f7ff);
+}
+
+.card.table-decimali .td-part--komats {
+  background: rgba(63, 168, 114, 0.12);
+  border-color: var(--accent2, #3fa872);
+}
+
+.card.table-decimali .td-part-label {
+  font-size: max(18px, 0.68em);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--muted, #6a748b);
+}
+
+.card.table-decimali .td-part-value {
+  font-size: max(18px, 1.45em);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.card.table-decimali .td-part--whole .td-part-value {
+  color: var(--accent1, #3a7df2);
+}
+
+.card.table-decimali .td-part--komats .td-part-value {
+  color: var(--accent2, #3fa872);
+  font-size: max(18px, 1.8em);
+}
+
+.card.table-decimali .td-part--frac .td-part-value {
+  color: var(--accent3, #d96b28);
+}
+
+.card.table-decimali .td-part-ru {
+  font-size: max(18px, 0.7em);
+  color: var(--muted, #6a748b);
+}
+
+.card.table-decimali .td-plus {
+  align-self: center;
+  font-size: max(18px, 1.1em);
+  font-weight: 700;
+  color: var(--muted, #6a748b);
+  padding: 0 2px;
+}
+
+.card.table-decimali .td-rule {
+  margin: 0 0 12px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: var(--table-row-odd, #f5f7ff);
+  border: 1px solid var(--border-strong, #c3cfee);
+  font-size: max(18px, 0.82em);
+  line-height: 1.4;
+}
+
+.card.table-decimali .td-rule em {
+  font-weight: 800;
+  font-style: italic;
+  color: var(--accent2, #3fa872);
+}
+
+.card.table-decimali .td-examples {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.card.table-decimali .td-ex {
+  border: 1px solid var(--border-strong, #c3cfee);
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: var(--card, #fff);
+  text-align: center;
+}
+
+.card.table-decimali .td-ex-digits {
+  font-size: max(18px, 1.55em);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: var(--text, #1b1f2b);
+  margin-bottom: 6px;
+}
+
+.card.table-decimali .td-ex-words {
+  font-size: max(18px, 0.92em);
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1.35;
+  margin-bottom: 4px;
+}
+
+.card.table-decimali .td-komats {
+  color: var(--accent2, #3fa872);
+  font-weight: 800;
+}
+
+.card.table-decimali .td-ex-ru {
+  font-size: max(18px, 0.72em);
+  color: var(--muted, #6a748b);
+}
+
+.card.table-decimali .td-note {
+  margin: 12px 0 0;
+  padding: 7px 9px;
+  border-radius: 8px;
+  background: rgba(63, 168, 114, 0.1);
+  border-left: 3px solid var(--accent2, #3fa872);
+  font-size: max(18px, 0.75em);
+  line-height: 1.4;
+}
+
+.card.table-decimali .td-note em {
+  font-weight: 700;
+  font-style: italic;
+}
+
+.card.table-decimali .td-note strong {
+  font-weight: 800;
+}

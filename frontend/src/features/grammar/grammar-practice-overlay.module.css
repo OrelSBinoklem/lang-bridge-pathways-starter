@@ -1,0 +1,123 @@
+.overlay {
+  --expanded-size: 34px;
+  --item-width: var(--expanded-size);
+  --item-height: 4px;
+  --item-radius: 1px;
+  --detail-opacity: 0;
+  --panel-surface: rgb(255 255 255 / 88%);
+  --bar-track: #cfd3d7;
+  position: absolute;
+  z-index: 13;
+  bottom: var(--panel-bottom, 0px);
+  left: 6px;
+  max-width: calc(100% - 70px);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border-radius: 8px;
+  padding: 3px 3px var(--panel-padding-bottom, 0px);
+  background: var(--panel-background, transparent);
+  backdrop-filter: var(--panel-blur, none);
+  box-shadow: var(--panel-shadow, none);
+  color: #27313c;
+  cursor: default;
+}
+.circles { display: flex; flex-wrap: wrap; gap: 3px; min-width: 0; padding: 2px 2px var(--row-padding-bottom, 0px); }
+.circle {
+  position: relative;
+  display: grid;
+  place-items: center;
+  flex: 0 0 var(--item-width);
+  width: var(--item-width);
+  height: var(--item-height);
+  border-radius: var(--item-radius);
+  background: var(--item-background, linear-gradient(to right, var(--bar-color, #23859e) var(--progress), var(--bar-track) var(--progress)));
+  box-shadow: var(--item-shadow, 0 0 0 1px #fff, 0 0 0 2px #18212f);
+  text-decoration: none;
+  isolation: isolate;
+  overflow: hidden;
+}
+.circle:focus-visible { outline: 2px solid #147fba; outline-offset: 1px; }
+.circle:hover .medal { filter: brightness(1.15); }
+.circle[data-state='locked'] { cursor: pointer; }
+.ring {
+  opacity: var(--detail-opacity);
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(#ad703d 0% 60%, #91a5b8 60% 80%, #d5a019 80% 90%, #57cfe8 90% 100%);
+}
+.ring::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: conic-gradient(transparent 0% var(--progress), #cfd3d7 var(--progress) 100%);
+}
+.medal {
+  opacity: var(--detail-opacity);
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #f0f2f4;
+  box-shadow: 0 0 0 2px #fff;
+  color: #37424f;
+  font: 700 12px/1 Arial, sans-serif;
+}
+.circle[data-rank='bronze'] .medal { background: linear-gradient(135deg, #f4d1a1, #b97b49 55%, #f1c895); color: #47240f; }
+.circle[data-rank='bronze'] { --bar-color: #ad703d; }
+.circle[data-rank='silver'] { --bar-color: #91a5b8; }
+.circle[data-rank='gold'] { --bar-color: #d5a019; }
+.circle[data-rank='diamond'] { --bar-color: #57cfe8; }
+.circle[data-state='locked'] { --bar-color: #9ca8ad; }
+.circle[data-rank='silver'] .medal { background: linear-gradient(135deg, #fff, #aab9c7 55%, #eaf0f6); color: #293642; }
+.circle[data-rank='gold'] .medal { background: linear-gradient(135deg, #fff1b2, #e7b732 55%, #ffeaa0); color: #503c06; }
+.circle[data-rank='diamond'] .medal { background: conic-gradient(#defdff, #8fdfe9, #f0e2ff, #fff, #8fdfe9, #defdff); color: #124655; box-shadow: 0 0 0 2px #fff, 0 0 8px #57cfe899; }
+.circle[data-state='locked'] .ring { background: #9ca8ad; }
+.circle[data-state='locked'] .medal { background: #dbe0e2; color: #66747b; }
+.circle[data-state='learning'] .medal { background: #d9eaf0; color: #20576a; }
+:global(.dark) .overlay { --panel-surface: rgb(30 34 39 / 88%); --bar-track: #59616b; color: #edf1f5; }
+:global(.dark) .ring::after { background: conic-gradient(transparent 0% var(--progress), #59616b var(--progress) 100%); }
+:global(.dark) .medal { box-shadow: 0 0 0 2px #252a30; }
+:global(.dark) .circle[data-rank='none'] .medal { background: #353d46; color: #e9edf1; }
+:global(.dark) .circle[data-state='locked'] .medal { background: #343c41; color: #a8b4b9; }
+
+:global([data-grammar-practice-host]:hover) .overlay,
+:global([data-tour-show-practice]) .overlay,
+.overlay:focus-within {
+  --item-height: var(--expanded-size);
+  --item-radius: 50%;
+  --item-background: transparent;
+  --detail-opacity: 1;
+  --panel-background: var(--panel-surface);
+  --panel-blur: blur(2px);
+  --panel-shadow: 0 1px 5px #0003;
+  --panel-bottom: var(--expanded-bottom, 4px);
+  --panel-padding-bottom: var(--expanded-padding, 3px);
+  --row-padding-bottom: 2px;
+  --item-shadow: none;
+}
+
+@media (hover: none) {
+  .overlay {
+    --item-height: var(--expanded-size);
+    --item-radius: 50%;
+    --item-background: transparent;
+    --detail-opacity: 1;
+    --panel-background: var(--panel-surface);
+    --panel-blur: blur(2px);
+    --panel-shadow: 0 1px 5px #0003;
+    --panel-bottom: var(--expanded-bottom, 4px);
+    --panel-padding-bottom: var(--expanded-padding, 3px);
+    --row-padding-bottom: 2px;
+    --item-shadow: none;
+  }
+}
+
+@container (max-width: 180px) {
+  .overlay { --expanded-size: 24px; --expanded-bottom: 24px; --expanded-padding: 1px; left: 2px; max-width: calc(100% - 4px); gap: 1px; padding: 1px 1px var(--panel-padding-bottom, 0px); }
+  .medal { width: 15px; height: 15px; font-size: 9px; }
+}

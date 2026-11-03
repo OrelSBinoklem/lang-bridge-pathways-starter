@@ -1,0 +1,101 @@
+
+
+/* === moved from grammar-component-tables.css (page-prefix stripped) === */
+.card.table-declensions {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.card.table-declensions col:first-child {
+  width: 170px;
+  min-width: 170px;
+}
+
+.card.table-declensions .case {
+  text-align: left;
+  background: var(--table-row-odd);
+  font-weight: normal;
+  min-width: 170px;
+  color: var(--text);
+  border-right: 1.5px solid var(--border-strong);
+  white-space: nowrap;
+}
+
+.card.table-declensions th {
+  font-weight: normal;
+}
+
+.card.table-declensions td {
+  padding-left: 38px;
+  text-align: left;
+  font-weight: bold;
+  border: none;
+}
+
+.card.table-declensions td:first-child {
+  padding-left: 10px;
+  background: var(--table-head);
+}
+
+.card.table-declensions .case .ru {
+  color: #a7a7a7;
+}
+
+.card.table-declensions .groups {
+  background: var(--table-head);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: var(--text);
+}
+
+.card.table-declensions .tehnical-row {
+  background: var(--table-head);
+  border: 1.5px solid var(--border-strong);
+}
+
+.card.table-declensions .subhead .sub {
+  background: var(--table-row-odd);
+  font-weight: 700;
+  text-align: left;
+  border: 1.5px solid var(--border-strong);
+}
+
+.card.table-declensions .domrow td {
+  padding-left: 46px;
+  background: var(--table-head);
+  border: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: normal;
+}
+
+.card.table-declensions tr.types th {
+  background: var(--table-head);
+  white-space: nowrap;
+  color: var(--text);
+}
+
+.card.table-declensions .dom {
+  font-weight: 700;
+}
+
+.card.table-declensions .delta {
+  color: #d64343;
+  font-weight: 700;
+}
+
+.card.table-declensions .domrow td:first-child {
+  padding-left: 46px;
+}
+
+/* === moved pass2 from grammar-component-tables.css === */
+:root.dark .card.table-declensions .delta {
+  color: #ff5fa2;
+}
+
+:root.dark .table-declensions .subhead .sub,
+:root.dark .card.table-declensions .subhead .sub {
+  background: var(--table-head) !important;
+  color: var(--text) !important;
+}

@@ -1,0 +1,157 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+/* Future theme palette (not active until the ordinary light/dark themes are unified):
+   cyber light: #eef8fa / #102832 / #e2f1f2 / #087f89
+   cyber dark:  #0b101b / #e3f7f6 / #111a27 / #43ddd2
+   anime light: #fff8fc / #30222c / #fff0f6 / #bf527d
+   anime dark:  #211b29 / #fff1f7 / #2c2335 / #f391b7
+*/
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+/* Toggled by CoursePath while a whole-page background effect (grid or fluid) is selected. Those
+   effects' canvases sit behind everything with pointer-events: none, so a click-and-drag gesture
+   meant to paint/light up the effect falls straight through onto the page's own text — without
+   this, dragging across body copy just highlights it like a normal text selection instead of
+   feeding the effect. */
+body.body-effect-active:not(.genome-garden-active) {
+  user-select: none;
+}
+
+body.body-effect-active {
+  background: transparent;
+}
+
+/* Пока подгружается тема PrimeReact — не вспыхивать белым холстом */
+html.dark .p-component,
+html.dark .p-dialog,
+html.dark .p-tabview {
+  color-scheme: dark;
+}
+
+/* Only grammar table embeds consume this setting. */
+html.lbp-font-large {
+  --grammar-table-font-scale: 1.12;
+}
+
+/* точечный override PrimeReact menubar */
+.p-menubar {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Компактные Dropdown в админке */
+.lbp-dropdown-sm.p-dropdown {
+  min-height: 2rem;
+  height: 2rem;
+  font-size: 0.8125rem;
+}
+
+.lbp-dropdown-sm.p-dropdown .p-dropdown-label,
+.lbp-dropdown-sm.p-dropdown .p-dropdown-label.p-placeholder {
+  padding: 0.3rem 0.5rem;
+  line-height: 1.25;
+  font-size: 0.8125rem;
+}
+
+.lbp-dropdown-sm.p-dropdown .p-dropdown-trigger {
+  width: 2rem;
+}
+
+.lbp-dropdown-panel-sm.p-dropdown-panel .p-dropdown-item,
+.lbp-dropdown-panel-sm.p-dropdown-panel .p-dropdown-empty-message {
+  padding: 0.3rem 0.55rem;
+  font-size: 0.8125rem;
+  line-height: 1.25;
+}
+
+.lbp-dropdown-panel-sm.p-dropdown-panel .p-dropdown-header {
+  padding: 0.35rem 0.5rem;
+}
+
+.lbp-dropdown-panel-sm.p-dropdown-panel .p-dropdown-filter {
+  padding: 0.3rem 0.45rem;
+  font-size: 0.8125rem;
+  line-height: 1.25;
+}
+
+/* Списки категорий — минимум половина экрана */
+.lbp-dropdown-panel-tall.p-dropdown-panel .p-dropdown-items-wrapper {
+  min-height: 50vh !important;
+  max-height: 50vh !important;
+  height: 50vh !important;
+}
+
+/*
+ * Course: focus on a group's effect (CoursePath.tsx, EffectVariantSwitch.tsx). The page stops scrolling and everything
+ * disappears and ignores clicks, except the effects drawn over the whole page (portals under <body>, aria-hidden),
+ * the chosen group's card with its effect layer and effect switch (not its title and skills). A group whose effect
+ * covers the whole page also hides its card's own tinted layer and frame.
+ */
+html.course-effect-focus,
+html.course-effect-focus body {
+  overflow: hidden;
+  overscroll-behavior: none;
+  scrollbar-gutter: auto;
+}
+html.course-effect-focus body * {
+  visibility: hidden !important;
+}
+html.course-effect-focus body > [data-effect-page-viewport],
+html.course-effect-focus body > [data-effect-page-viewport] *,
+html.course-effect-focus body > [aria-hidden='true'],
+html.course-effect-focus body > [aria-hidden='true'] *,
+html.course-effect-focus body > [data-effect-toolbar],
+html.course-effect-focus body > [data-effect-toolbar] *,
+html.course-effect-focus body > [data-effect-debug],
+html.course-effect-focus body > [data-effect-debug] *,
+html.course-effect-focus body > [data-effect-settings],
+html.course-effect-focus body > [data-effect-settings] *,
+html.course-effect-focus [data-effect-focus='host'],
+html.course-effect-focus [data-effect-focus='host'] > :not([data-effect-focus='content']),
+html.course-effect-focus [data-effect-focus='host'] > :not([data-effect-focus='content']) * {
+  visibility: visible !important;
+}
+html.course-effect-focus [data-effect-focus='host'][data-effect-body] {
+  background: transparent !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+/* Card-only looks become actual viewport-sized renders in focus mode, not a small rectangle on an empty page. */
+html.course-effect-focus [data-effect-focus='host']:not([data-effect-body]) {
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100vw !important;
+  height: 100dvh !important;
+  max-width: none !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  z-index: 10000 !important;
+}
+html.course-effect-focus [data-effect-focus='host'][data-effect-body] > [aria-hidden='true'],
+html.course-effect-focus [data-effect-focus='host'][data-effect-body] > [aria-hidden='true'] * {
+  visibility: hidden !important;
+}

@@ -1,0 +1,80 @@
+
+
+/* === moved from grammar-component-tables.css (page-prefix stripped) === */
+.card.table-participles .participles-flex-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card.table-participles .participles-header {
+  display: flex;
+  width: 100%;
+  background: var(--table-head);
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.card.table-participles .participles-header > div {
+  padding: 8px;
+  text-align: center;
+  border-right: 1px solid var(--border-strong);
+  box-sizing: border-box;
+}
+
+.card.table-participles .participles-header > div:last-child {
+  border-right: none;
+}
+
+.card.table-participles .participles-row {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.card.table-participles .participles-row:not(:last-child) {
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.card.table-participles .participles-cell {
+  padding: 0 8px;
+  text-align: center;
+  border-right: 1px solid var(--border-strong);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.2;
+  box-sizing: border-box;
+}
+
+.card.table-participles .participles-cell:last-child {
+  border-right: none;
+}
+
+.card.table-participles .participles-cell.verb-cell {
+  font-weight: 600;
+  text-align: left;
+  padding-left: 12px;
+  width: 25%;
+}
+
+.card.table-participles .participles-cell.singular-cell, .card.table-participles .participles-cell.plural-cell {
+  width: 37.5%;
+}
+
+.card.table-participles .participle-form {
+  line-height: 1.6;
+}
+
+.card.table-participles .participle-ending-masc {
+  color: #0066cc; /* Синий для мужских окончаний */
+  font-weight: 600;
+}
+
+.card.table-participles .participle-ending-fem {
+  color: #cc0000; /* Красный для женских окончаний */
+  font-weight: 600;
+}

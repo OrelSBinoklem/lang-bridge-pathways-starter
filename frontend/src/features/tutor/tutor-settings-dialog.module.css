@@ -1,0 +1,8 @@
+.dialog { font-family: Arial, sans-serif; }
+.content { min-width: 0; padding: 12px; background: #fbfdff; color: #1f2937; }
+:global(.dark) .dialog :global(.p-dialog-header),
+:global(.dark) .content { background: #1d2933; color: #edf3f7; }
+@media (max-width: 540px) {
+  .dialog :global(.p-dialog-header) { padding: 14px; }
+  .dialog :global(.p-dialog-title) { font-size: 16px; }
+}

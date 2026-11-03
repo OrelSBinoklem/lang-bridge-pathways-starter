@@ -1,0 +1,17 @@
+[
+  {
+    "category": "Демо: библиотека",
+    "sub_catgories": [
+      {"sub_category": "Предметы", "words": [
+        {"word": "grāmata", "translated": ["книга", "книжка"], "type": "noun", "gender": "f", "level": 1, "maxLevel": 1},
+        {"word": "galds", "translated": "стол", "type": "noun", "gender": "m", "level": 1, "maxLevel": 1},
+        {"word": "karte", "translated": ["карта", "карточка"], "type": "noun", "gender": "f", "level": 1, "maxLevel": 1}
+      ]},
+      {"sub_category": "Действия", "words": [
+        {"word": "lasīt", "translated": "читать", "type": "verb", "level": 1, "maxLevel": 1},
+        {"word": "meklēt", "translated": "искать", "type": "verb", "level": 1, "maxLevel": 1},
+        {"word": "paldies", "translated": "спасибо", "level": 1, "maxLevel": 1}
+      ]}
+    ]
+  }
+]

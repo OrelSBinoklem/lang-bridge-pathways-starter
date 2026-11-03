@@ -1,0 +1,270 @@
+.root { --green: #167d58; --ink: #202831; background: #f6f8fa; color: var(--ink); min-height: 80vh; padding: 32px; letter-spacing: 0; }
+.header { max-width: 1240px; margin: 0 auto 24px; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.header h1 { font-size: 30px; margin: 0; font-weight: 750; }
+.tourEntry { max-width: 1240px; margin: 0 auto 16px; }
+.eyebrow { color: #66727b; font-size: 12px; font-weight: 700; margin: 0 0 8px; }
+.tools { display: flex; gap: 8px; }
+.tools button { width: 40px; height: 40px; border: 1px solid #d5dce2; border-radius: 6px; background: white; cursor: pointer; }
+.tools button:disabled { opacity: .5; }
+.tabs { max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); border-bottom: 1px solid #cbd4dc; }
+.tab { --rank-color: #81919b; position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: 6px; min-width: 0; padding: 18px 20px; border: 0; border-bottom: 3px solid transparent; background: transparent; cursor: pointer; text-align: left; color: #64717c; }
+.tab[aria-pressed=true] { background: white; border-bottom-color: var(--green); color: var(--ink); }
+.tabTop { position: relative; display: flex; justify-content: space-between; align-items: center; gap: 8px; width: 100%; min-height: 32px; }
+.tabTop strong { font-size: 24px; }
+.tab small { font-size: 12px; }
+.tabProgressLabel { display: flex; justify-content: space-between; align-items: baseline; gap: 6px; width: 100%; min-height: 19px; font-size: 13px; font-weight: 700; }
+.tabRank { display: inline-flex; align-items: center; gap: 6px; max-width: 100%; min-height: 32px; padding: 5px 8px; border: 1px solid var(--rank-color); border-radius: 4px; background: #e5ebf0; color: #233746; font-size: 13px; font-weight: 750; line-height: 1.2; letter-spacing: 0; text-shadow: none; box-shadow: 0 1px 2px rgb(26 45 55 / 12%); }
+.tabRank span { min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
+.tabRank i { flex: 0 0 auto; font-size: 16px; }
+.tab.bronze .tabRank { background: #f1d9c8; color: #713c1f; }
+.tab.silver .tabRank { background: linear-gradient(135deg, #edf3f8, #bdcbd8); color: #233746; border-color: #718799; }
+.tab.gold .tabRank { background: #f6e3ac; color: #694a00; }
+.tab.diamond .tabRank { background: #c9f0f7; color: #065363; }
+.tabProgressLabel { align-items: center; flex-wrap: wrap; }
+.tabProgress { display: block; width: 100%; height: 5px; overflow: hidden; border-radius: 3px; background: #d9e0e4; }
+.tabProgress > span { display: block; height: 100%; background: var(--rank-color); }
+.tab.bronze { --rank-color: #a6653a; }
+.tab.silver { --rank-color: #667989; }
+.tab.gold { --rank-color: #a6770a; }
+.tab.diamond { --rank-color: #137f91; }
+.perfectBadge { position: absolute; top: 9px; right: 9px; color: #a6770a; font-size: 11px; }
+.tab .perfect { color: #946400; font-weight: 700; min-height: 16px; }
+:global(.dark) .tab .perfect { color: #f6ce63; }
+.tab.completed .tabTop { color: var(--green); }
+.tab.active .tabTop { color: #247aba; }
+.workspace { max-width: 1240px; margin: auto; display: grid; grid-template-columns: minmax(0,1fr) minmax(300px,.9fr); align-items: start; }
+.path { list-style: none; margin: 0; padding: 32px 28px 80px 0; }
+.groups { min-width: 0; padding-right: 24px; }
+.group { border-bottom: 1px solid #cbd4dc; padding: 24px 0; position: relative; overflow: hidden; transition: box-shadow .3s ease; }
+.group { scroll-margin-top: 96px; }
+.group:not([data-effect-focus=host]) { cursor: pointer; }
+.group[data-effect-focus=host] { pointer-events: none; }
+.groupSelected { background: rgb(22 125 88 / 6%); }
+:global(.dark) .groupSelected { background: rgb(105 201 156 / 8%); }
+.groupThemed { box-shadow: 0 8px 30px -14px var(--themeGlow, #167d58); border-radius: 16px; }
+/* While a group's effect is on, the cursor plays with it: dragging must not select text or start dragging a picture. */
+.groupThemed { -webkit-user-select: none; user-select: none; }
+.group[data-effect-card-contained] .groupTitle h2 { color: #fff; text-shadow: 0 1px 3px #000, 0 0 7px rgba(0,0,0,.7); }
+.group[data-effect-card-contained] .learningState { color: #b5f7df; text-shadow: 0 1px 3px #000; }
+.groupThemed img { -webkit-user-drag: none; user-drag: none; }
+/* Debug readings belong in isolated previews, never over the learning controls. */
+.group :global([data-scene-load]) { display: none; }
+/* Effects that live right under the card's controls (the embroidered belt): the picture and the skill icons are half
+   transparent so the effect shows through, and solid again under the cursor. */
+.groupSeeThrough .groupArtwork, .groupSeeThrough .skillIcon { opacity: .5; transition: opacity .18s ease; }
+.groupSeeThrough .groupArtwork:hover, .groupSeeThrough .skillIcon:hover, .groupSeeThrough .skillIcon:focus-visible { opacity: 1; }
+.groupHeader { display: flex; align-items: center; gap: 16px; position: relative; z-index: 1; padding-left: 12px; }
+.groupHeader:focus-visible { outline: 3px solid #e2aa20; outline-offset: 4px; }
+.groupFootnote { position: absolute; left: 14px; right: 14px; bottom: 6px; z-index: 1; margin: 0; text-align: right; color: #fff; text-shadow: none; font-size: 13px; font-weight: 650; letter-spacing: .03em; }
+.groupArtwork { position: relative; isolation: isolate; width: 102px; height: 102px; flex: 0 0 102px; }
+.groupArtwork::before { content: ''; position: absolute; inset: 0; border-radius: 50%; background: rgb(220 235 229 / 80%); -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px); z-index: -1; }
+.groupImage { position: relative; width: 100%; height: 100%; border-radius: 50%; object-fit: contain; display: block; }
+.groupTitle { flex: 1; min-width: 0; }
+.groupTitle h2 { font-size: 20px; line-height: 1.35; overflow-wrap: anywhere; margin: 0 0 8px; }
+.skillRow { display: flex; align-items: center; gap: 18px; margin-top: 14px; }
+.skillGrid { display: grid; grid-template-columns: 46px minmax(0, 140px); grid-template-rows: repeat(2, 46px); grid-auto-flow: column; gap: 10px; width: min(100%, 196px); }
+.practiceTile { --practice-surface: rgb(243 248 246 / 65%); position: relative; grid-row: 1 / span 2; align-self: center; display: flex; align-items: center; justify-content: space-between; gap: 8px; width: 100%; min-width: 0; height: 48px; padding: 8px 12px; border: 1px solid #719c8c; border-radius: 6px; background: var(--practice-surface); color: #195842; text-decoration: none; text-shadow: none; box-shadow: 0 2px 0 #d7e5df; transition: background .15s, border-color .15s; }
+.practiceTile[href]:hover { --practice-surface: rgb(230 243 237 / 80%); border-color: #247957; }
+.practiceTile:focus-visible { outline: 3px solid #2389b0; outline-offset: 5px; }
+.practiceTile[aria-disabled=true] { border-style: dashed; }
+.practiceTitle { min-width: 0; font-size: 15px; line-height: 20px; font-weight: 650; }
+.practiceArrow { flex: 0 0 auto; font-size: 12px; }
+.practiceAwards { position: absolute; top: -7px; left: 8px; display: flex; justify-content: space-between; gap: 5px; height: 14px; pointer-events: none; }
+.practiceAward { display: grid; place-items: center; width: 16px; height: 14px; color: #81978c; background: transparent; }
+.practiceAward i { grid-area: 1 / 1; font-size: 12px; }
+.practiceAward .practiceStarBacking { color: var(--practice-surface); }
+.practiceAward[data-state=completed] { color: #b18113; }
+.practiceMastery { display: inline-flex; align-items: center; gap: 4px; height: 18px; margin-top: -2px; padding: 1px 6px; border: 1px solid #bb8b21; border-radius: 4px; background: #fff1ba; color: #705000; font-size: 11px; line-height: 14px; font-weight: 750; }
+.practiceMastery i { font-size: 12px; }
+.practiceTile[data-practice-mastery='3'] { --practice-surface: rgb(255 247 220 / 65%); border-color: #b88a24; color: #69501a; box-shadow: 0 2px 0 #ddbf73, 0 0 0 3px #edc75b20; }
+.practiceTile[data-practice-mastery='3']:hover { --practice-surface: rgb(255 240 187 / 80%); }
+:global(.dark) .practiceTile { --practice-surface: rgb(37 60 51 / 65%); color: #dcf1e5; border-color: #659582; box-shadow: 0 2px 0 #15271e; }
+:global(.dark) .practiceTile[href]:hover { --practice-surface: rgb(48 77 64 / 80%); border-color: #9aceb3; }
+:global(.dark) .practiceAward { color: #a5b9ae; }
+:global(.dark) .practiceAward[data-state=completed] { color: #edc45b; }
+:global(.dark) .practiceMastery { background: #5a471b; color: #ffe7a0; border-color: #d4ac4d; }
+:global(.dark) .practiceTile[data-practice-mastery='3'] { --practice-surface: rgb(64 57 31 / 65%); border-color: #d2ad50; color: #ffe5a1; box-shadow: 0 2px 0 #241f0e, 0 0 0 3px #e7c26024; }
+:global(.dark) .practiceTile[data-practice-mastery='3']:hover { --practice-surface: rgb(81 70 38 / 80%); }
+/* Recommended for later, not disabled: existing practice remains freely accessible. */
+.practiceTile.practiceLocked { --practice-surface: rgb(224 228 232 / 50%); color: #7d878d; border-color: #b7c0c6; box-shadow: none; }
+.practiceTile.practiceLocked[href]:hover { --practice-surface: rgb(224 228 232 / 80%); color: #596970; border-color: #909fa8; }
+.practiceLocked .practiceAward[data-state=empty] { color: #8a959c; }
+:global(.dark) .practiceTile.practiceLocked { --practice-surface: rgb(49 55 59 / 50%); color: #9da9af; border-color: #56626b; box-shadow: none; }
+:global(.dark) .practiceTile.practiceLocked[href]:hover { --practice-surface: rgb(65 73 79 / 80%); color: #cbd5db; border-color: #87969f; }
+/* Decorations are transparent to mouse, pen and touch hit-testing; only actual controls are targets. */
+.group .learningState { display: none; }
+.group[data-effect-focus=host] .groupHeader, .group[data-effect-focus=host] .groupFootnote { pointer-events: none; }
+.groupHeader button.skillIcon:not(:disabled), .groupHeader a.practiceTile { pointer-events: auto; touch-action: manipulation; }
+.groupHeader button.skillIcon *, .groupHeader a.practiceTile * { pointer-events: none; }
+.group :global([data-effect-toolbar]) { pointer-events: none; }
+.group :global([data-effect-toolbar]) button { pointer-events: auto; touch-action: manipulation; }
+.group :global([data-effect-toolbar]) button * { pointer-events: none; }
+@media(max-width: 400px) {
+  .groupHeader { gap: 8px; padding-left: 0; }
+  .groupArtwork { width: 72px; height: 72px; flex-basis: 72px; }
+  .skillGrid { gap: 8px; }
+}
+.skillIcon { --skill-color: #167d58; --ring-color: var(--skill-color); --ring-track: #c7d4d7; display: grid; place-items: center; position: relative; width: 46px; height: 46px; flex: 0 0 46px; border-radius: 50%; font-size: 20px; border: 2px solid transparent; padding: 0; font-family: inherit; text-shadow: none; box-shadow: none; transition: background .18s ease, color .18s ease; }
+.skillIcon::before { content: ''; position: absolute; inset: -2px; border-radius: 50%; pointer-events: none; background: conic-gradient(var(--ring-color) var(--ring-progress, 0%), var(--ring-track) 0); mask: radial-gradient(farthest-side, transparent calc(100% - 4px), #000 calc(100% - 3px)); }
+.skillIcon[data-skill='pi-table'] { --skill-color: #087c88; }
+.skillIcon[data-skill='pi-volume-up'] { --skill-color: #2567b5; }
+.skillIcon[data-skill='pi-file'] { --skill-color: #7952a5; }
+.skillIcon[data-skill='pi-pencil'] { --skill-color: #a66113; }
+.skillIcon[data-skill='pi-comments'] { --skill-color: #b04e6b; }
+.skillIcon[data-state='bronze'] { --skill-color: #96532c; --ring-color: #bb7847; }
+.skillIcon[data-state='silver'] { --skill-color: #516878; --ring-color: #889dab; }
+.skillIcon[data-state='gold'] { --skill-color: #976900; --ring-color: #d6a21d; }
+.skillIcon[data-state='diamond'] { --skill-color: #09798e; --ring-color: #33b9d5; }
+.skillIcon[data-state='locked'] { --ring-color: #99a3aa; }
+.skillIcon[href] { text-decoration: none; }
+.skillIcon i { opacity: 1; position: relative; z-index: 1; }
+.skillBadge { position: absolute; z-index: 2; right: -8px; bottom: -6px; min-width: 20px; height: 19px; padding: 0 3px; display: grid; place-items: center; border-radius: 9px; background: var(--skill-color); color: #fff; border: 1px solid #fff; font-size: 10px; line-height: 1; white-space: nowrap; }
+button.skillIcon { cursor: pointer; }
+button.skillIcon:disabled { cursor: default; }
+.skillActive { background: linear-gradient(145deg, color-mix(in srgb, var(--skill-color) 6%, #fff), color-mix(in srgb, var(--skill-color) 22%, #fff)); backdrop-filter: blur(2px); color: var(--skill-color); }
+.skillActive[data-state='bronze'], .skillActive[data-state='silver'], .skillActive[data-state='gold'], .skillActive[data-state='diamond'] { background: linear-gradient(135deg, color-mix(in srgb, var(--skill-color) 32%, #fff) 0%, #fff 36%, color-mix(in srgb, var(--skill-color) 38%, #fff) 72%, color-mix(in srgb, var(--skill-color) 18%, #fff)); }
+.skillSoon { background: rgba(236,239,241,.7); backdrop-filter: blur(2px); color: #9aa5ac; }
+.skillLocked { background: rgba(224,228,232,.5); color: #7d878d; opacity: .6; box-shadow: none; }
+.skillIcon[aria-pressed=true] { border-color: var(--skill-color); }
+:global(.dark) .skillIcon { --skill-color: #7fd8ac; --ring-track: #50616a; }
+:global(.dark) .skillIcon[data-skill='pi-table'] { --skill-color: #76d9e2; }
+:global(.dark) .skillIcon[data-skill='pi-volume-up'] { --skill-color: #8bbaf6; }
+:global(.dark) .skillIcon[data-skill='pi-file'] { --skill-color: #c4a5eb; }
+:global(.dark) .skillIcon[data-skill='pi-pencil'] { --skill-color: #e9ba72; }
+:global(.dark) .skillIcon[data-skill='pi-comments'] { --skill-color: #eda0b7; }
+:global(.dark) .skillIcon[data-state='bronze'] { --skill-color: #e8ad80; --ring-color: #d89864; }
+:global(.dark) .skillIcon[data-state='silver'] { --skill-color: #dae5ef; --ring-color: #b9cfdf; }
+:global(.dark) .skillIcon[data-state='gold'] { --skill-color: #ffe083; --ring-color: #efc65c; }
+:global(.dark) .skillIcon[data-state='diamond'] { --skill-color: #99eef8; --ring-color: #63d5e9; }
+:global(.dark) .skillActive { background: linear-gradient(145deg, color-mix(in srgb, var(--skill-color) 13%, #20282b), color-mix(in srgb, var(--skill-color) 29%, #20282b)); color: var(--skill-color); }
+:global(.dark) .skillActive[data-state='bronze'], :global(.dark) .skillActive[data-state='silver'], :global(.dark) .skillActive[data-state='gold'], :global(.dark) .skillActive[data-state='diamond'] { background: linear-gradient(135deg, color-mix(in srgb, var(--skill-color) 25%, #20282b), color-mix(in srgb, var(--skill-color) 8%, #20282b) 36%, color-mix(in srgb, var(--skill-color) 33%, #20282b) 72%, color-mix(in srgb, var(--skill-color) 17%, #20282b)); }
+:global(.dark) .skillSoon { background: rgba(51,57,62,.7); backdrop-filter: blur(2px); color: #6b757c; }
+:global(.dark) .skillLocked { background: rgba(49,55,59,.5); color: #9da9af; }
+:global(.dark) .skillBadge { color: #202831; border-color: #202428; }
+:global(.dark) .skillIcon[aria-pressed=true] { border-color: var(--skill-color); }
+@media (prefers-reduced-motion: reduce) { .skillIcon { transition: none; } }
+.group .path { padding: 24px 0 0 12px; position: relative; z-index: 1; }
+:global(.dark) .group { border-color: #454e56; }
+:global(.dark) .groupArtwork::before { background: rgb(48 57 64 / 80%); }
+.step { position: relative; min-height: 132px; padding-bottom: 18px; }
+.step:not(:last-child)::after { content: ''; position: absolute; top: 77px; bottom: -18px; left: 39px; width: 4px; background: #cdd6df; }
+.step.completed::after { background: var(--green); }
+.stepButton { display: flex; align-items: center; gap: 20px; width: 100%; min-height: 108px; border: 1px solid transparent; border-radius: 8px; background: transparent; text-align: left; cursor: pointer; padding: 8px 12px 8px 0; position: relative; z-index: 1; color: inherit; }
+.stepButton[aria-pressed=true] { background: #fff; border-color: #bdcedb; }
+.circle { display: grid; place-items: center; flex: 0 0 78px; height: 78px; border: 5px solid #e4e9ee; border-radius: 50%; background: #d4dde5; color: #596b79; font-size: 24px; }
+.active .circle { background: #258a67; border-color: #cce9dd; color: white; box-shadow: 0 4px 0 #12523d; }
+.completed .circle { background: #e0f3e9; border-color: #54a780; color: #176b49; }
+.circle { position: relative; }
+.categoryIcon { display: block; width: 68px; height: 68px; object-fit: contain; border-radius: 50%; background: white; }
+.completedBadge { position: absolute; bottom: -4px; right: -4px; width: 24px; height: 24px; display: grid; place-items: center; border-radius: 50%; background: #167d58; color: white; font-size: 12px; border: 2px solid white; }
+.stepText { display: flex; min-width: 0; flex: 1; flex-direction: column; gap: 7px; }
+.stepText strong { font-size: 16px; overflow-wrap: anywhere; }
+.stepText small, .stepText > span { color: #657583; font-size: 12px; }
+.detail { position: sticky; top: 20px; margin: 32px 0; padding: 12px 0 24px 32px; border-left: 1px solid #d5dce2; overflow-wrap: anywhere; }
+.detail h2 { font-size: 24px; line-height: 1.35; margin: 10px 0; }
+.detail p { line-height: 1.6; }
+.status { color: #537067; font-size: 13px; }
+.description { white-space: pre-wrap; }
+.customTrainer { margin: 20px 0; max-width: 100%; overflow-x: auto; }
+.preview { display: block; margin: 24px 0; background: white; }
+.preview img { display: block; width: 100%; height: auto; max-height: 360px; object-fit: contain; }
+.openButton { display: inline-flex; align-items: center; gap: 10px; padding: 13px 18px; border-radius: 6px; background: #167d58; color: white; text-decoration: none; margin-top: 16px; font-weight: 650; }
+.progressHeader { display: flex; justify-content: space-between; margin: 24px 0 12px; }
+.progressHeader strong { font-size: 28px; }
+.detail progress { width: 100%; height: 10px; accent-color: var(--green); }
+.empty { max-width: 1240px; margin: 40px auto; padding: 24px 0; }
+:global(.dark) .root { --ink: #edf0f2; --green: #69c99c; background: #202428; color: var(--ink); }
+
+/* Toggled on <body> while a group with a whole-page background effect (e.g. the
+   Связь-и-технологии grid) is selected — this card, not `.main`, is the actual visible content
+   surface, so it's the one that goes translucent to let that effect show through it. */
+:global(body.body-effect-active) .root { background: color-mix(in srgb, #f6f8fa 90%, transparent); }
+:global(html.dark) :global(body.body-effect-active) .root { background: color-mix(in srgb, #202428 90%, transparent); }
+/* The liquid-drops background is meant to be seen through the page, so its card is more transparent. */
+:global(body.liquid-drops-active) .root { background: rgb(246 248 250 / 72%); }
+:global(html.dark) :global(body.liquid-drops-active) .root { background: rgb(24 28 31 / 76%); }
+:global(body.liquid-glass-active) .root { background: rgb(246 248 250 / 78%); }
+:global(html.dark) :global(body.liquid-glass-active) .root { background: rgb(24 28 31 / 80%); }
+/* A full-page scene (fireworks, aurora…) is meant to be seen behind the page too. */
+:global(body.scene-body-active) .root { background: rgb(246 248 250 / 78%); }
+:global(html.dark) :global(body.scene-body-active) .root { background: rgb(24 28 31 / 80%); }
+/* Keep the painted sky and crown legible in the margins without losing contrast in the course text. */
+:global(body.scene-sakura-active) .root { background: rgb(246 248 250 / 72%); }
+:global(html.dark) :global(body.scene-sakura-active) .root { background: rgb(24 28 31 / 76%); }
+:global(body.scene-nature-active) .root { background: rgb(246 248 250 / 48%); }
+:global(html.dark) :global(body.scene-nature-active) .root { background: rgb(24 28 31 / 45%); }
+/* The garden must not resize the course columns or wash out the content when activated. */
+:global(body.genome-garden-active) .root { background: rgb(246 248 250 / 84%); }
+:global(html.dark) :global(body.genome-garden-active) .root { background: rgb(32 36 40 / 86%); }
+/* The lit room behind the page is the whole point of the string lights, so the card lets it glow through. */
+:global(body.scene-string-lights-active) .root { background: rgb(246 248 250 / 56%); }
+:global(html.dark) :global(body.scene-string-lights-active) .root { background: rgb(24 28 31 / 58%); }
+/* The optics bench stands in the margins: keep them almost clear, the content column readable. */
+:global(body.scene-optics-lab-active) .root { background: linear-gradient(90deg, rgb(246 248 250 / 10%), rgb(246 248 250 / 72%) calc(50% - 600px), rgb(246 248 250 / 72%) calc(50% + 600px), rgb(246 248 250 / 10%)); }
+:global(html.dark) :global(body.scene-optics-lab-active) .root { background: linear-gradient(90deg, rgb(24 28 31 / 8%), rgb(24 28 31 / 70%) calc(50% - 600px), rgb(24 28 31 / 70%) calc(50% + 600px), rgb(24 28 31 / 8%)); }
+/* A faint halo so text does not melt into a busy background effect: light on the light theme, dark on the dark one. */
+.root { text-shadow: 0 1px 2px rgb(255 255 255 / 60%), 0 0 7px rgb(255 255 255 / 45%); }
+:global(.dark) .root { text-shadow: 0 1px 2px rgb(0 0 0 / 65%), 0 0 7px rgb(0 0 0 / 50%); }
+:global(.dark) .eyebrow, :global(.dark) .stepText small, :global(.dark) .stepText > span { color: #b5bec5; }
+:global(.dark) .tools button { background: #30363b; color: #edf0f2; border-color: #4b555e; }
+:global(.dark) .tabs, :global(.dark) .detail { border-color: #454e56; }
+:global(.dark) .tab { color: #b5bec5; }
+:global(.dark) .tab[aria-pressed=true], :global(.dark) .stepButton[aria-pressed=true] { background: #2c3338; color: #edf0f2; border-color: #6b8a80; }
+:global(.dark) .tab.active .tabTop { color: #81c8ed; }
+:global(.dark) .tabProgress { background: #46525b; }
+:global(.dark) .tab.bronze { --rank-color: #d9a077; }
+:global(.dark) .tab.silver { --rank-color: #b8c8d4; }
+:global(.dark) .tab.gold { --rank-color: #efc75d; }
+:global(.dark) .tab.diamond { --rank-color: #7bd8e7; }
+:global(.dark) .tab.bronze .tabRank { background: #d9aa86; color: #442312; }
+:global(.dark) .tab.silver .tabRank { background: linear-gradient(135deg, #e4edf4, #a7becf); color: #193345; border-color: #d5e3ed; }
+:global(.dark) .tab.gold .tabRank { background: #e8cb75; color: #473200; }
+:global(.dark) .tab.diamond .tabRank { background: #8cdae7; color: #073f4b; }
+:global(.dark) .categoryIcon { background: #202428; }
+:global(.dark) .circle { border-color: #47535e; background: #303940; color: #d2dce3; }
+:global(.dark) .active .circle { border-color: #438b72; background: #22634f; }
+:global(.dark) .completed .circle { border-color: #69c99c; background: #294f40; color: #bcf0d3; }
+:global(.dark) .status { color: #a2d8bd; }
+:global(.dark) .step:not(:last-child)::after { background: #46525b; }
+:global(.dark) .step.completed::after { background: #69c99c; }
+.root button:focus-visible, .root a:focus-visible { outline: 3px solid #e2aa20; outline-offset: 4px; }
+@media(max-width: 760px) {
+  .root { padding: 20px 12px; }
+  .header h1 { font-size: 24px; }
+  .tab { padding: 12px 7px; font-size: 11px; }
+  .tabTop strong { font-size: 20px; }
+  .tabTop { flex-direction: column; align-items: flex-start; gap: 6px; min-height: 70px; }
+  .tabIcon { position: absolute; top: 4px; right: 0; }
+  .tab small { font-size: 10px; }
+  .tabProgressLabel { flex-direction: column; gap: 0; align-items: flex-start; min-height: 32px; font-size: 12px; }
+  .tabRank { flex-direction: column; justify-content: center; gap: 2px; width: 100%; min-height: 36px; padding: 3px 2px; font-size: 10px; text-align: center; }
+  .tabRank span { white-space: nowrap; }
+  .tab.diamond .tabRank span { font-size: 9px; }
+  .tabRank i { font-size: 14px; }
+  .workspace { display: flex; flex-direction: column-reverse; }
+  .detail { position: static; width: 100%; padding: 20px 0; margin: 0; border-left: 0; border-bottom: 1px solid #d5dce2; }
+  .detail h2 { font-size: 20px; }
+  .preview img { max-height: 180px; }
+  .path { width: 100%; padding-right: 0; }
+  .groups { width: 100%; padding-right: 0; }
+  .groupTitle h2 { font-size: 18px; }
+  .stepText strong { font-size: 15px; }
+}
+@media(max-width: 480px) {
+  .tab { padding-inline: 4px; }
+}
+.learningState {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 0;
+  color: var(--text-color-secondary, #5c706c);
+  font-size: 14px;
+  font-weight: 600;
+}
+.learningState[data-learning-active="true"] { color: #14806b; }
+.courseLanguage { font-size: .6em; font-weight: 500; }
+.englishTopics { display: flex; flex-wrap: wrap; gap: 7px; margin: 12px 0 18px; }
+.englishTopics button { padding: 7px 10px; border: 1px solid var(--surface-border, #cddcd7); border-radius: 7px; background: var(--surface-card, #fff); color: inherit; text-align: start; font-size: 13px; cursor: pointer; }
+.englishTopics button[aria-pressed="true"] { border-color: #14806b; background: #14806b15; }
+.group[data-learning-active="true"] { border-inline-start: 3px solid #14806b; }

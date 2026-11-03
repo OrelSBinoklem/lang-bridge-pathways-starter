@@ -1,0 +1,279 @@
+.card.table-paligteikumi {
+  background: var(--card, #fff);
+  color: var(--text, #1b1f2b);
+  padding: 14px 16px 16px;
+  border-radius: 10px;
+  max-width: 46em;
+  margin: 0 auto;
+  line-height: 1.35;
+}
+
+.card.table-paligteikumi .pt-intro {
+  margin-bottom: 10px;
+  font-size: max(18px, 0.8em);
+  line-height: 1.4;
+}
+
+/* Worked example: question from the main clause names the type. */
+.card.table-paligteikumi .pt-how {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 10px;
+  padding: 9px 10px;
+  border-radius: 10px;
+  background: var(--table-head, #f1f3fb);
+  border: 1px solid var(--border-strong, #c3cfee);
+}
+
+.card.table-paligteikumi .pt-how-row {
+  font-size: max(18px, 0.9em);
+  font-weight: 700;
+  font-style: italic;
+}
+
+.card.table-paligteikumi .pt-how-steps {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.card.table-paligteikumi .pt-step {
+  padding: 0.1em 0.55em;
+  border-radius: 0.4em;
+  font-size: max(18px, 0.78em);
+  font-weight: 800;
+}
+
+.card.table-paligteikumi .pt-step--main {
+  background: var(--card, #fff);
+  border: 1px solid var(--border-strong, #c3cfee);
+}
+
+.card.table-paligteikumi .pt-step--q {
+  background: var(--accent3, #d96b28);
+  color: var(--card, #fff);
+}
+
+.card.table-paligteikumi .pt-step--sub {
+  background: var(--accent2, #3fa872);
+  color: var(--card, #fff);
+}
+
+.card.table-paligteikumi .pt-arrow {
+  color: var(--muted, #6a748b);
+  font-weight: 800;
+}
+
+.card.table-paligteikumi .pt-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4px 18px;
+  margin-bottom: 8px;
+  font-size: max(18px, 0.74em);
+}
+
+.card.table-paligteikumi .pt-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  align-items: stretch;
+}
+
+.card.table-paligteikumi .pt-type {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border: 1px solid var(--border-strong, #c3cfee);
+  border-radius: 10px;
+  padding: 8px 10px 9px;
+  background: var(--table-row-odd, #f5f7ff);
+}
+
+.card.table-paligteikumi .pt-type-head {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid var(--border-strong, #c3cfee);
+}
+
+.card.table-paligteikumi .pt-type-name {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0 8px;
+}
+
+.card.table-paligteikumi .pt-lv {
+  font-size: max(18px, 0.86em);
+  font-weight: 800;
+  color: var(--accent1, #3a7df2);
+}
+
+.card.table-paligteikumi .pt-ru {
+  font-size: max(18px, 0.72em);
+  color: var(--muted, #6a748b);
+}
+
+.card.table-paligteikumi .pt-pos {
+  display: flex;
+  gap: 4px;
+}
+
+.card.table-paligteikumi .pt-pill {
+  padding: 0 0.45em;
+  border-radius: 999px;
+  font-size: max(18px, 0.66em);
+  font-weight: 700;
+  color: var(--muted, #6a748b);
+  border: 1px dashed var(--border-strong, #c3cfee);
+  opacity: 0.55;
+}
+
+.card.table-paligteikumi .pt-pill--on {
+  opacity: 1;
+  color: var(--card, #fff);
+  background: var(--accent1, #3a7df2);
+  border: 1px solid var(--accent1, #3a7df2);
+}
+
+.card.table-paligteikumi .pt-q {
+  font-size: max(18px, 0.8em);
+  font-weight: 800;
+  color: var(--accent3, #d96b28);
+}
+
+.card.table-paligteikumi .pt-q-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 999px;
+  background: var(--accent3, #d96b28);
+  color: var(--card, #fff);
+  font-size: 1em;
+}
+
+.card.table-paligteikumi .pt-words {
+  font-size: max(18px, 0.76em);
+  font-weight: 700;
+  font-style: italic;
+}
+
+.card.table-paligteikumi .pt-sample {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  padding-top: 5px;
+  border-top: 1px dashed var(--border-strong, #c3cfee);
+}
+
+.card.table-paligteikumi .pt-sample-lv {
+  font-size: max(18px, 0.8em);
+  font-weight: 600;
+  font-style: italic;
+}
+
+.card.table-paligteikumi .pt-sample-ru {
+  font-size: max(18px, 0.7em);
+  color: var(--muted, #6a748b);
+}
+
+.card.table-paligteikumi .pt-sub {
+  color: var(--accent2, #3fa872);
+  font-weight: 800;
+  border-bottom: 2px solid var(--accent2, #3fa872);
+}
+
+.card.table-paligteikumi .pt-comma {
+  color: var(--accent4, #d3547f);
+  font-weight: 900;
+  font-style: normal;
+  font-size: 1.25em;
+}
+
+.card.table-paligteikumi .pt-foot {
+  margin-top: 10px;
+  text-align: center;
+  font-size: max(18px, 0.75em);
+  color: var(--muted, #6a748b);
+}
+
+.card.table-paligteikumi .pt-foot--warn {
+  text-align: left;
+  padding: 7px 9px;
+  border-radius: 8px;
+  background: var(--accent4-bg, rgba(211, 84, 127, 0.1));
+  border-left: 3px solid var(--accent4, #d3547f);
+  color: var(--text, #1b1f2b);
+  line-height: 1.4;
+}
+
+/* Intro-word groups (card 88). */
+.card.table-paligteikumi .pt-groups {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  align-items: start;
+}
+
+.card.table-paligteikumi .pt-group {
+  border: 1px solid var(--border-strong, #c3cfee);
+  border-radius: 10px;
+  padding: 8px 10px 9px;
+  background: var(--table-row-odd, #f5f7ff);
+}
+
+.card.table-paligteikumi .pt-group--conj {
+  grid-row: span 3;
+}
+
+.card.table-paligteikumi .pt-group-head {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 5px;
+  margin-bottom: 6px;
+  border-bottom: 2px solid var(--border-strong, #c3cfee);
+}
+
+.card.table-paligteikumi .pt-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.card.table-paligteikumi .pt-li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  padding: 1px 4px;
+  border-radius: 6px;
+}
+
+.card.table-paligteikumi .pt-li--trap {
+  background: var(--card, #fff);
+  border: 1px solid var(--accent4, #d3547f);
+}
+
+.card.table-paligteikumi .pt-li-lv {
+  font-size: max(18px, 0.84em);
+  font-weight: 700;
+  font-style: italic;
+}
+
+.card.table-paligteikumi .pt-li-ru {
+  font-size: max(18px, 0.72em);
+  color: var(--muted, #6a748b);
+  text-align: right;
+}

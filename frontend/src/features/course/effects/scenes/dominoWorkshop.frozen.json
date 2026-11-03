@@ -1,0 +1,10 @@
+{
+  "version": "impulse-ii-2026-10-19-friction",
+  "sceneId": "domino-workshop",
+  "description": "Owner-approved preserved variant. Evolve domino-archipelago instead.",
+  "sha256Lf": {
+    "dominoWorkshop.ts": "023db651574bc4db95f3d753a24e507e5142ee825e58246020ba6e14c3bfdd20",
+    "dominoWorkshopPhysics.ts": "1c038c1a4db24f45a640cf907bffb7456ce09073eccdf1887b7751926976af5d",
+    "dominoWorkshopPhysics.test.mjs": "a1760ca984db65428d4feec31633c8fc0f86a770a8568276bb64434ecbdbe537"
+  }
+}

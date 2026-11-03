@@ -1,0 +1,194 @@
+.card.table-comparison .comparison-flex-table{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid var(--border-strong);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+.card.table-comparison .comparison-section{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid var(--border-strong);
+  }
+
+.card.table-comparison .comparison-section:last-child{
+    border-bottom: none;
+  }
+
+.card.table-comparison .comparison-header{
+    display: flex;
+    width: 100%;
+    background: var(--head);
+    font-weight: 600;
+    border-bottom: 1px solid var(--border-strong);
+  }
+
+.card.table-comparison .comparison-header > div{
+    padding: 8px;
+    text-align: center;
+    border-right: 1px solid var(--border-strong);
+    box-sizing: border-box;
+  }
+
+.card.table-comparison .comparison-header > div:first-child{
+    text-align: left;
+    padding-left: 12px;
+  }
+
+.card.table-comparison .comparison-header > div:last-child{
+    border-right: none;
+  }
+
+.card.table-comparison .comparison-header-sub{
+    display: flex;
+    width: 100%;
+    background: var(--table-head);
+    border-bottom: 1px solid var(--border-strong);
+  }
+
+.card.table-comparison .comparison-header-sub > div{
+    padding: 4px 8px;
+    border-right: 1px solid var(--border-strong);
+    box-sizing: border-box;
+  }
+
+.card.table-comparison .comparison-header-sub > div:first-child{
+    border-right: 1px solid var(--border-strong);
+  }
+
+.card.table-comparison .comparison-header-sub2{
+    display: flex;
+    width: 100%;
+    background: var(--table-row-odd);
+    border-bottom: 1px solid var(--border-strong);
+    font-size: 0.9rem;
+  }
+
+.card.table-comparison .comparison-header-sub2 > div{
+    padding: 4px;
+    text-align: center;
+    border-right: 1px solid var(--border-strong);
+    box-sizing: border-box;
+  }
+
+.card.table-comparison .comparison-header-sub2 > div:last-child{
+    border-right: none;
+  }
+
+.card.table-comparison .comparison-row{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid var(--border-strong);
+  }
+
+.card.table-comparison .comparison-row:last-child{
+    border-bottom: none;
+  }
+
+.card.table-comparison .comparison-row:nth-child(odd){
+    background: var(--cell1);
+  }
+
+.card.table-comparison .comparison-row:nth-child(even){
+    background: var(--cell2);
+  }
+
+.card.table-comparison .comparison-cell{
+    padding: 8px;
+    border-right: 1px solid var(--border-strong);
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    flex: 1 1 auto;
+    min-width: 100px;
+    vertical-align: middle;
+  }
+
+.card.table-comparison .comparison-cell:last-child{
+    border-right: none;
+  }
+
+.card.table-comparison .comparison-ending-masc{
+    color: #0066cc;
+    font-weight: 600;
+  }
+
+.card.table-comparison .comparison-ending-fem{
+    color: #cc0066;
+    font-weight: 600;
+  }
+
+.card.table-comparison .comparison-prefix-vis{
+    color: #ff9800;
+    font-weight: 600;
+  }
+
+.card.table-comparison .comparison-suffix-ak{
+    color: #ff9800;
+    font-weight: 600;
+  }
+
+.card.table-comparison .comparison-header-sub{
+    background: var(--head);
+  }
+
+.card.table-comparison .comparison-header-sub2{
+    background: var(--cell1);
+  }
+
+.card.table-comparison .comparison-gender-cell{
+    background: linear-gradient(to right, #e3f2fd, transparent);
+  }
+
+.card.table-comparison .comparison-gender-cell.fem{
+    background: linear-gradient(to right, #fce4ec, transparent);
+  }
+
+.card.table-comparison table.comparison{
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 14px;
+    overflow: hidden;
+    background: var(--card);
+    border: 1.5px solid var(--border-strong);
+    box-shadow: var(--table-shadow);
+  }
+
+.card.table-comparison table.comparison th, .card.table-comparison table.comparison td{
+    border: 1.5px solid var(--border-strong);
+    padding: 8px 10px;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+.card.table-comparison table.comparison thead th{
+    background: var(--head);
+    font-weight: 600;
+  }
+
+.card.table-comparison table.comparison tbody td{
+    background: var(--cell2);
+    white-space: nowrap;
+  }
+
+.card.table-comparison table.comparison tbody tr:nth-child(odd) td{
+    background: var(--cell1);
+  }
+
+.card.table-comparison table.comparison tbody tr:nth-child(even) td{
+    background: var(--cell2);
+  }
+
+.card.table-comparison table.comparison .case{
+    text-align: left;
+    background: var(--sub);
+    font-weight: 600;
+    min-width: 120px;
+    width: 120px;
+    color: var(--text);
+    border-right: 1.5px solid var(--border-strong);
+  }

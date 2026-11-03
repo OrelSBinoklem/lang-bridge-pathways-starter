@@ -1,0 +1,214 @@
+.card.table-galotnes {
+  background: var(--card, #fff);
+  color: var(--text, #1b1f2b);
+  padding: 14px 16px 16px;
+  border-radius: 10px;
+  max-width: 46em;
+  margin: 0 auto;
+  line-height: 1.35;
+}
+
+/* One adjective in both forms — the contrast the whole card is about. */
+.card.table-galotnes .gl-hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px 16px;
+  margin: 12px 0 14px;
+  padding: 10px;
+  border-radius: 10px;
+  background: var(--table-head, #f1f3fb);
+  border: 1px solid var(--border-strong, #c3cfee);
+}
+
+.card.table-galotnes .gl-hero-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.card.table-galotnes .gl-hero-word {
+  font-size: max(18px, 1.05em);
+  font-weight: 800;
+}
+
+.card.table-galotnes .gl-hero-word--indef {
+  color: var(--accent1, #3a7df2);
+}
+
+.card.table-galotnes .gl-hero-word--def {
+  color: var(--accent3, #d96b28);
+}
+
+.card.table-galotnes .gl-hero-note {
+  font-size: max(18px, 0.7em);
+  color: var(--muted, #6a748b);
+}
+
+.card.table-galotnes .gl-hero-arrow {
+  color: var(--muted, #6a748b);
+  font-weight: 700;
+}
+
+.card.table-galotnes .gl-cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  gap: 10px;
+  align-items: start;
+}
+
+.card.table-galotnes .gl-col {
+  border: 1px solid var(--border-strong, #c3cfee);
+  border-radius: 10px;
+  padding: 10px 12px 12px;
+  background: var(--table-row-odd, #f5f7ff);
+}
+
+.card.table-galotnes .gl-col-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  border-bottom: 2px solid var(--border-strong, #c3cfee);
+}
+
+.card.table-galotnes .gl-col-titles {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.card.table-galotnes .gl-lv {
+  font-weight: 800;
+  font-size: max(18px, 0.95em);
+}
+
+.card.table-galotnes .gl-col--indef .gl-lv {
+  color: var(--accent1, #3a7df2);
+}
+
+.card.table-galotnes .gl-col--def .gl-lv {
+  color: var(--accent3, #d96b28);
+}
+
+.card.table-galotnes .gl-ru {
+  font-size: max(18px, 0.72em);
+  color: var(--muted, #6a748b);
+}
+
+.card.table-galotnes .gl-endings {
+  flex: 0 0 auto;
+  padding: 0.15em 0.5em;
+  border-radius: 0.4em;
+  font-size: max(18px, 0.78em);
+  font-weight: 800;
+  color: var(--card, #fff);
+}
+
+.card.table-galotnes .gl-col--indef .gl-endings {
+  background: var(--accent1, #3a7df2);
+}
+
+.card.table-galotnes .gl-col--def .gl-endings {
+  background: var(--accent3, #d96b28);
+}
+
+.card.table-galotnes .gl-rules {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.card.table-galotnes .gl-rule {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.card.table-galotnes .gl-icon {
+  flex: 0 0 auto;
+  font-size: max(18px, 1.05em);
+  line-height: 1.25;
+}
+
+.card.table-galotnes .gl-rule-body {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.card.table-galotnes .gl-label {
+  font-size: max(18px, 0.72em);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--muted, #6a748b);
+}
+
+.card.table-galotnes .gl-sentence {
+  display: flex;
+  flex-direction: column;
+}
+
+.card.table-galotnes .gl-lv-text {
+  font-size: max(18px, 0.85em);
+  font-weight: 700;
+  font-style: italic;
+}
+
+.card.table-galotnes .gl-words {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.card.table-galotnes .gl-word {
+  display: inline-flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  align-items: baseline;
+  gap: 0.3em;
+  padding: 0.12em 0.45em;
+  border-radius: 0.4em;
+  background: var(--card, #fff);
+  border: 1px solid var(--border-strong, #c3cfee);
+  font-size: max(18px, 0.85em);
+  font-weight: 700;
+}
+
+/* The ending itself — the one thing that has to jump out. */
+.card.table-galotnes .gl-end {
+  color: var(--accent2, #3fa872);
+  font-weight: 800;
+  border-bottom: 2px solid var(--accent2, #3fa872);
+}
+
+.card.table-galotnes .gl-note {
+  margin: 10px 0 0;
+  padding: 7px 9px;
+  border-radius: 8px;
+  background: var(--accent1-bg, rgba(58, 125, 242, 0.1));
+  border-left: 3px solid var(--accent1, #3a7df2);
+  font-size: max(18px, 0.75em);
+  line-height: 1.4;
+  color: var(--text, #1b1f2b);
+}
+
+.card.table-galotnes .gl-gloss {
+  font-size: max(18px, 0.8em);
+  font-weight: 500;
+  font-style: normal;
+  color: var(--muted, #6a748b);
+}
+
+.card.table-galotnes .gl-sentence .gl-gloss {
+  font-size: max(18px, 0.72em);
+}

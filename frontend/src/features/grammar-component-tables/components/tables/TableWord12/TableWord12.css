@@ -1,0 +1,78 @@
+
+
+/* === moved from grammar-component-tables.css (page-prefix stripped) === */
+.card.table-word12 {
+  padding: 20px;
+}
+
+.card.table-word12 .word12-title {
+  color: #2d5016;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.3em;
+}
+
+.card.table-word12 .word12-content {
+  line-height: 1.8;
+  font-size: 1em;
+  color: #333;
+}
+
+.card.table-word12 .word12-content p {
+  margin-bottom: 16px;
+}
+
+.card.table-word12 .word12-content strong {
+  font-weight: 600;
+}
+
+.card.table-word12 .word12-example {
+  margin-top: 12px;
+  padding-left: 20px;
+  font-style: italic;
+}
+
+.card.table-word12 .word12-example-label {
+  font-weight: 600;
+  font-style: normal;
+}
+
+.card.table-word12 {
+  padding: 20px;
+}
+
+.card.table-word12 .word12-title {
+  color: #2d5016;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.3em;
+}
+
+.card.table-word12 .word12-content {
+  line-height: 1.8;
+  font-size: 1em;
+  color: #333;
+}
+
+.card.table-word12 .word12-content p {
+  margin-bottom: 16px;
+}
+
+.card.table-word12 .word12-content strong {
+  font-weight: 600;
+}
+
+.card.table-word12 .word12-example {
+  margin-top: 12px;
+  padding-left: 20px;
+  font-style: italic;
+}
+
+.card.table-word12 .word12-example-label {
+  font-weight: 600;
+  font-style: normal;
+}

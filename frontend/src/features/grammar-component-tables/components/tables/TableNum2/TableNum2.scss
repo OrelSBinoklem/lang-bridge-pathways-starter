@@ -1,0 +1,153 @@
+.table-container{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+
+.polygon-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+    overflow: visible;
+  }
+
+.polygon-overlay.editing{
+    pointer-events: all;
+  }
+
+.polygon-overlay svg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: visible;
+  }
+
+.table-container:hover .polygon-toolbar, .table-container.editing .polygon-toolbar, .polygon-toolbar:hover{
+    opacity: 1;
+    pointer-events: all;
+  }
+
+.card.table-num2 .num2-flex-table{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid var(--border-strong);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+.card.table-num2 .num2-section{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid var(--border-strong);
+  }
+
+.card.table-num2 .num2-section:last-child{
+    border-bottom: none;
+  }
+
+.card.table-num2 .num2-section-header{
+    display: flex;
+    width: 100%;
+    background: var(--table-head);
+    font-weight: 600;
+    border-bottom: 1px solid var(--border-strong);
+  }
+
+.card.table-num2 .num2-section-header > div{
+    padding: 8px;
+    text-align: center;
+    border-right: 1px solid var(--border-strong);
+    box-sizing: border-box;
+  }
+
+.card.table-num2 .num2-section-header > div:first-child{
+    width: 100px;
+    text-align: left;
+    padding-left: 12px;
+  }
+
+.card.table-num2 .num2-section-header > div:last-child{
+    border-right: none;
+  }
+
+.card.table-num2 .num2-gender-header{
+    display: flex;
+    width: 100%;
+    background: var(--table-row-odd);
+    font-weight: 600;
+    border-bottom: 1px solid var(--border-strong);
+  }
+
+.card.table-num2 .num2-gender-header.masc{
+    background: rgba(0, 102, 204, 0.15);
+  }
+
+.card.table-num2 .num2-gender-header.fem{
+    background: rgba(204, 0, 102, 0.15);
+  }
+
+.card.table-num2 .num2-gender-header > div{
+    padding: 4px 8px;
+    text-align: center;
+    border-right: 1px solid var(--border-strong);
+    box-sizing: border-box;
+    font-size: 0.9rem;
+  }
+
+.card.table-num2 .num2-gender-header > div:first-child{
+    width: 100px;
+    text-align: left;
+    padding-left: 12px;
+  }
+
+.card.table-num2 .num2-gender-header > div:last-child{
+    border-right: none;
+  }
+
+.card.table-num2 .num2-row{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid var(--border-strong);
+  }
+
+.card.table-num2 .num2-row:last-child{
+    border-bottom: none;
+  }
+
+.card.table-num2 .num2-cell{
+    padding: 0 8px;
+    border-right: 1px solid var(--border-strong);
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 0.9rem;
+    line-height: 1.2;
+  }
+
+.card.table-num2 .num2-cell:first-child{
+    width: 100px;
+    text-align: left;
+    padding-left: 12px;
+    font-weight: 600;
+  }
+
+.card.table-num2 .num2-cell:last-child{
+    border-right: none;
+  }
+
+.card.table-num2 .num2-ending-masc{
+    color: #0066cc;
+    font-weight: 600;
+  }
+
+.card.table-num2 .num2-ending-fem{
+    color: #cc0066;
+    font-weight: 600;
+  }

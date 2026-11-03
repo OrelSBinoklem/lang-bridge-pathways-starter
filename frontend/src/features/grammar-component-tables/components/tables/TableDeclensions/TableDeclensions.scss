@@ -1,0 +1,91 @@
+﻿.table-declensions col:first-child{
+    width: 170px;
+    min-width: 170px;
+  }
+
+.table-declensions .case{
+    text-align: left;
+    background: var(--table-row-odd);
+    font-weight: normal;
+    min-width: 170px;
+    color: var(--text);
+    border-right: 1.5px solid var(--border-strong);
+    white-space: nowrap;
+  }
+
+.table-declensions th{
+    font-weight: normal;
+  }
+
+.table-declensions td{
+    padding-left: 38px;
+    text-align: left;
+    font-weight: bold;
+    border: none;
+  }
+
+.table-declensions td:first-child{
+    padding-left: 10px;
+    background: var(--table-head);
+  }
+
+.table-declensions .case .ru{
+    color: #A7A7A7;
+  }
+
+.table-declensions .groups{
+    background: var(--table-head);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+    color: var(--text);
+  }
+
+.table-declensions .tehnical-row{
+    background: var(--table-head);
+    border: 1.5px solid var(--border-strong);
+  }
+
+.table-declensions .subhead .sub{
+    background: var(--table-row-odd);
+    font-weight: 700;
+    text-align: left;
+    border: 1.5px solid var(--border-strong);
+  }
+
+.table-declensions .domrow td{
+    padding-left: 46px;
+    /*background: transparent;*/
+    background: var(--table-head);
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: normal;
+  }
+
+.table-declensions tr.types th{
+    background: var(--table-head);
+    white-space: nowrap;
+    color: var(--text);
+  }
+
+.table-declensions .dom{
+    font-weight: 700;
+  }
+
+.table-declensions .delta{
+    color: #d64343;
+    font-weight: 700;
+  }
+
+.table-declensions:nth-of-type(2) td:nth-child(2), .table-declensions:nth-of-type(2) th:nth-child(2), .table-declensions:nth-of-type(2) td:nth-child(6), .table-declensions:nth-of-type(2) th:nth-child(6){
+    border-left: 1.5px solid var(--border-strong);
+  }
+
+:root[data-theme="dark"] .table-declensions .delta{
+    color: #ff5fa2;
+  }
+
+.table-declensions .domrow td:first-child{
+    padding-left: 46px;
+  }

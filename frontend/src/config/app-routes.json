@@ -1,0 +1,183 @@
+[
+  {
+    "id": "home",
+    "title": "Главная",
+    "path": "/",
+    "assistantDescription": "Главная страница сайта и стартовая точка для словарей.",
+    "hints": ["главная", "домой", "home"],
+    "params": []
+  },
+  {
+    "id": "dictionaries",
+    "title": "Словари",
+    "path": "/dictionaries/1",
+    "assistantDescription": "Страница словарей. Сейчас открывает основной словарь по умолчанию.",
+    "hints": ["словар", "словарь", "словари", "dictionary", "dictionaries"],
+    "params": []
+  },
+  {
+    "id": "dictionary",
+    "title": "Словарь",
+    "path": "/dictionaries/:dictionary_id",
+    "assistantDescription": "Конкретный словарь по id.",
+    "hints": ["словар", "словарь", "dictionary"],
+    "params": [
+      {
+        "name": "dictionary_id",
+        "type": "number",
+        "required": true,
+        "description": "ID словаря"
+      }
+    ]
+  },
+  {
+    "id": "category",
+    "title": "Категория",
+    "path": "/dictionaries/:dictionary_id/category/:category_id",
+    "assistantDescription": "Категория слов внутри словаря. Если dictionary_id не указан голосом, используй 1.",
+    "hints": ["категори", "категория", "category"],
+    "params": [
+      {
+        "name": "dictionary_id",
+        "type": "number",
+        "required": false,
+        "default": 1,
+        "description": "ID словаря"
+      },
+      {
+        "name": "category_id",
+        "type": "number",
+        "required": true,
+        "description": "ID категории"
+      }
+    ]
+  },
+  {
+    "id": "grammar",
+    "title": "Грамматика",
+    "path": "/grammar",
+    "assistantDescription": "Грамматические таблицы и формы.",
+    "hints": ["граммат", "грамматика", "grammar", "таблиц", "таблица", "таблицы"],
+    "params": []
+  },
+  {
+    "id": "grammar_english",
+    "title": "Английская грамматика",
+    "path": "/grammar/english",
+    "assistantDescription": "Английские грамматические таблицы A1–B2. На /grammar/english уже можно читать и подсвечивать английские таблицы; не переходи на латышскую /grammar.",
+    "hints": ["английская грамматика", "английские таблицы", "english grammar"],
+    "params": []
+  },
+  {
+    "id": "course",
+    "title": "Путь курса · латышский",
+    "path": "/course",
+    "assistantDescription": "Латышский путь курса A1–B2: слова, грамматика, четыре навыка практики.",
+    "hints": ["латышский курс", "путь курса", "latvian course"],
+    "params": []
+  },
+  {
+    "id": "course_english",
+    "title": "Путь курса · английский",
+    "path": "/course/english",
+    "assistantDescription": "Английский путь курса A1–B2: словарь и грамматика.",
+    "hints": ["английский курс", "english course"],
+    "params": []
+  },
+  {
+    "id": "grammar_practice",
+    "title": "Задания грамматики · латышский",
+    "path": "/grammar/practice",
+    "assistantDescription": "Список заданий по латышской грамматике.",
+    "hints": ["латышские упражнения"],
+    "params": []
+  },
+  {
+    "id": "grammar_practice_english",
+    "title": "Задания грамматики · английский",
+    "path": "/grammar/practice?learn_lang=en",
+    "assistantDescription": "Список заданий по английской грамматике.",
+    "hints": ["английские упражнения"],
+    "params": []
+  },
+  {
+    "id": "exams",
+    "title": "Экзамены · латышский",
+    "path": "/exams",
+    "assistantDescription": "Латышские экзамены A1–B2 и история попыток. Не начинай попытку без просьбы ученика.",
+    "hints": ["латышские экзамены"],
+    "params": []
+  },
+  {
+    "id": "exams_english",
+    "title": "Экзамены · английский",
+    "path": "/exams?learn_lang=en",
+    "assistantDescription": "Английские экзамены A1–B2 и история попыток. Не начинай попытку без просьбы ученика.",
+    "hints": ["английские экзамены"],
+    "params": []
+  },
+  {
+    "id": "plans",
+    "title": "Доступ и ИИ",
+    "path": "/plans",
+    "assistantDescription": "Бесплатные возможности, режимы AI-репетитора и стоимость в кредитах.",
+    "hints": ["тарифы", "режимы", "кредиты", "plans"],
+    "params": []
+  },
+  {
+    "id": "grammar_components",
+    "title": "HTML грамматические таблицы",
+    "path": "/grammar/components",
+    "assistantDescription": "Тестовая страница с грамматическими таблицами, перенесёнными как React/HTML-компоненты.",
+    "hints": ["html таблицы", "компоненты таблиц", "живые таблицы", "react таблицы", "grammar components"],
+    "params": []
+  },
+  {
+    "id": "dashboard",
+    "title": "Кабинет",
+    "path": "/dashboard",
+    "assistantDescription": "Личный кабинет пользователя, профиль и пользовательские данные.",
+    "hints": ["кабинет", "профиль", "dashboard"],
+    "params": []
+  },
+  {
+    "id": "login",
+    "title": "Вход",
+    "path": "/login",
+    "assistantDescription": "Страница входа пользователя.",
+    "hints": ["логин", "вход", "login"],
+    "params": []
+  },
+  {
+    "id": "register",
+    "title": "Регистрация",
+    "path": "/register",
+    "assistantDescription": "Страница регистрации нового пользователя.",
+    "hints": ["регистрация", "register"],
+    "params": []
+  },
+  {
+    "id": "forgot_password",
+    "title": "Восстановление пароля",
+    "path": "/forgot-password",
+    "assistantDescription": "Страница запроса восстановления пароля.",
+    "hints": ["забыл пароль", "восстановить пароль", "forgot password"],
+    "params": []
+  },
+  {
+    "id": "reset_password",
+    "title": "Сброс пароля",
+    "path": "/reset-password",
+    "assistantDescription": "Страница установки нового пароля после восстановления.",
+    "hints": ["сброс пароля", "reset password"],
+    "params": []
+  },
+  {
+    "id": "tutor",
+    "title": "Репетитор",
+    "path": "/tutor",
+    "assistantDescription": "Тестовая страница AI-репетитора и отладочного интерфейса.",
+    "hints": ["репетитор", "бот", "tutor"],
+    "params": []
+  }
+]

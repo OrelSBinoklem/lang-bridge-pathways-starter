@@ -1,0 +1,20 @@
+[
+  {
+    "table_id": "en-demo-sentence",
+    "title": "Соберите предложение",
+    "variants": [
+      {
+        "title": "Демонстрационный вариант",
+        "config": {
+          "task_kind": "grammar_order",
+          "instruction": "Расположите слова в порядке предложения.",
+          "questions": [
+            {"prompt":"Мы учимся.","accepted_answers":["We study."],"tokens":["study","We","."],"explanation":"Сначала подлежащее, затем глагол."},
+            {"prompt":"Я читаю.","accepted_answers":["I read."],"tokens":["read",".","I"],"explanation":"I стоит перед действием."},
+            {"prompt":"Ты рисуешь.","accepted_answers":["You draw."],"tokens":["draw","You","."],"explanation":"You стоит перед действием."}
+          ]
+        }
+      }
+    ]
+  }
+]

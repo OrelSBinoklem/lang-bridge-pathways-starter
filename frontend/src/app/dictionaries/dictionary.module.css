@@ -1,0 +1,255 @@
+.title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0.5rem 0 1.25rem;
+  line-height: 1.35;
+}
+
+.titleBtn {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+}
+
+/* Дерево категорий: L1 заголовок + L2 чипы — как WP .category-three (Tahoma, помельче) */
+.tree {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: Tahoma, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.treeL1 {
+  display: flex;
+  margin-top: 25px;
+  font-weight: 700;
+}
+
+.treeL1:first-child {
+  margin-top: 0;
+}
+
+.treeL1Name {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  width: 25%;
+  flex-shrink: 0;
+  height: 40px;
+  box-sizing: border-box;
+  padding: 0 0.5rem;
+  margin-right: 0.5rem;
+  line-height: 1.35;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 2px;
+}
+
+.treeL1Name::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: calc(var(--category-progress, 0) * 100%);
+  background: linear-gradient(90deg, #e8f5e9 0%, #c8e6c9 100%);
+  border-radius: 2px;
+  z-index: 0;
+  transition: width 0.25s ease;
+}
+
+.treeL1NameFull::before {
+  background: #c8e6c9;
+}
+
+:global(html.dark) .treeL1Name::before {
+  background: linear-gradient(90deg, rgba(46, 125, 50, 0.35) 0%, rgba(76, 175, 80, 0.55) 100%);
+}
+
+:global(html.dark) .treeL1NameFull::before {
+  background: rgba(76, 175, 80, 0.55);
+}
+
+.treeL1NameText {
+  position: relative;
+  z-index: 1;
+}
+
+.treeL2 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 75%;
+  font-weight: 400;
+  column-count: 3;
+  column-gap: 1rem;
+}
+
+.treeL2 > li {
+  break-inside: avoid;
+  margin-bottom: 0.5rem;
+}
+
+.chip {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  border-radius: 0;
+  padding: 0 0.5rem;
+  text-align: left;
+  cursor: pointer;
+  font-family: Tahoma, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.35;
+  color: inherit;
+}
+
+:global(html.dark) .chip {
+  border-color: #3f3f46;
+  background: #18181b;
+  color: #e4e4e7;
+}
+
+.chip::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: calc(var(--category-progress, 0) * 100%);
+  background: linear-gradient(90deg, #e8f5e9 0%, #c8e6c9 100%);
+  border-radius: 2px;
+  z-index: 0;
+  transition: width 0.25s ease;
+}
+
+.chipFull::before {
+  background: #c8e6c9;
+}
+
+:global(html.dark) .chip::before {
+  background: linear-gradient(90deg, rgba(46, 125, 50, 0.35) 0%, rgba(76, 175, 80, 0.5) 100%);
+}
+
+:global(html.dark) .chipFull::before {
+  background: rgba(76, 175, 80, 0.5);
+}
+
+.chip:hover {
+  border-color: #f59e0b;
+}
+
+:global(html.dark) .chip:hover {
+  border-color: #f59e0b;
+  background: #27272a;
+}
+
+.chipLabel {
+  position: relative;
+  z-index: 1;
+}
+
+.progressDone {
+  margin-left: auto;
+  flex-shrink: 0;
+  color: #2e7d32;
+  font-weight: 700;
+  position: relative;
+  z-index: 2;
+  padding-left: 0.35rem;
+}
+
+.adminBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem 0 1rem;
+  padding: 0.75rem;
+  border: 1px dashed #f59e0b;
+  border-radius: 0.75rem;
+  background: #fffbeb;
+}
+
+.adminToggle {
+  border-radius: 0.5rem;
+  border: none;
+  background: #6c757d;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.adminToggleOn {
+  background: #28a745;
+}
+
+.adminAction {
+  border-radius: 0.5rem;
+  border: 1px solid #28a745;
+  background: #fff;
+  color: #1b5e20;
+  padding: 0.5rem 0.85rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.adminAction:hover {
+  background: #e8f5e9;
+}
+
+.adminHint {
+  width: 100%;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #92400e;
+}
+
+@media (max-width: 1365px) {
+  .treeL1 {
+    display: block;
+    margin-top: 35px;
+  }
+
+  .treeL1Name {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+    padding-right: 0.5rem;
+  }
+
+  .treeL2 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .treeL2 {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 419px) {
+  .treeL2 {
+    column-count: 1;
+  }
+}

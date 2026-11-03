@@ -1,0 +1,303 @@
+.card.table-participle-v70v71 .participle-v70v71-flex-table{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid var(--border-strong);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+.card.table-participle-v70v71 .participle-v70v71-section-title{
+    padding: 10px 16px;
+    background: var(--table-head);
+    font-weight: 700;
+    font-size: 0.95em;
+    color: var(--text);
+    border-bottom: 2px solid #9fa8c0;
+  }
+
+:root[data-theme="dark"] .card.table-participle-v70v71 .participle-v70v71-section-title{
+    border-bottom-color: #5a6478;
+  }
+
+.card.table-participle-v70v71 .participle-v70v71-header{
+    display: flex;
+    width: 100%;
+    background: var(--table-head);
+    font-weight: 600;
+    border-bottom: 1px solid var(--border-strong);
+    color: var(--text);
+    font-size: 0.9em;
+  }
+
+.card.table-participle-v70v71 .participle-v70v71-header > div{
+    padding: 8px 12px;
+    text-align: center;
+    border-right: 1px solid var(--border-strong);
+    box-sizing: border-box;
+  }
+
+.card.table-participle-v70v71 .participle-v70v71-header > div:first-child{
+    width: 200px;
+    text-align: left;
+    flex: 0 0 200px;
+  }
+
+.card.table-participle-v70v71 .participle-v70v71-header > div:last-child{
+    border-right: none;
+    flex: 1;
+  }
+
+.card.table-participle-v70v71 .participle-v70v71-subheader{
+    display: flex;
+    width: 100%;
+    background: var(--table-head);
+    font-weight: 600;
+    border-bottom: 1px solid var(--border-strong);
+    font-size: 0.85em;
+    color: var(--text);
+  }
+
+.card.table-participle-v70v71 .participle-v70v71-subheader > div{
+    padding: 6px 12px;
+    text-align: center;
+    border-right: 1px solid var(--border-strong);
+    box-sizing: border-box;
+  }
+
+.card.table-participle-v70v71 .participle-v70v71-subheader > div:first-child{
+    width: 200px;
+    flex: 0 0 200px;
+  }
+
+.card.table-participle-v70v71 .participle-v70v71-subheader > div:last-child{
+    border-right: none;
+    flex: 1;
+    min-width: 0;
+  }
+
+.card.table-participle-v70v71 .participle-v70v71-row{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid var(--border-strong);
+    background: var(--table-row-even);
+  }
+
+.card.table-participle-v70v71 .participle-v70v71-row:last-child{
+    border-bottom: none;
+  }
+
+.card.table-participle-v70v71 .participle-v70v71-cell{
+    padding: 8px 12px;
+    border-right: 1px solid var(--border-strong);
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 0.9em;
+    line-height: 1.4;
+  }
+
+.card.table-participle-v70v71 .participle-v70v71-cell:first-child{
+    width: 200px;
+    font-weight: 600;
+    flex: 0 0 200px;
+  }
+
+.card.table-participle-v70v71 .participle-v70v71-cell:last-child{
+    border-right: none;
+    flex: 1;
+    min-width: 0;
+  }
+
+.card.table-participle-v70v71 .participle-v70v71-cell:last-child:has(.participle-v70v71-cell-inner){
+    padding: 0;
+  }
+
+.card.table-participle-v70v71 .participle-v70v71-cell-inner{
+    display: flex;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+.card.table-participle-v70v71 .participle-v70v71-cell-col{
+    flex: 0 0 50%;
+    width: 50%;
+    min-width: 0;
+    padding: 8px;
+    border-right: 1px solid var(--border-strong);
+    box-sizing: border-box;
+    text-align: left;
+  }
+
+.card.table-participle-v70v71 .participle-v70v71-cell-col:last-child{
+    border-right: none;
+  }
+
+.card.table-participle-v70v71 .participle-v70v71-ending-dam{
+    color: #0066cc;
+    font-weight: 600;
+  }
+
+.card.table-participle-v70v71 .participle-v70v71-ending-dam-orange{
+    color: #ff9800;
+    font-weight: 600;
+  }
+
+.card.table-participle-v70v71 .participle-v70v71-ending-dama{
+    color: #cc0066;
+    font-weight: 600;
+  }
+
+/* === moved from grammar-component-tables.css (page-prefix stripped) === */
+.card.table-participle-v70v71 .participle-v70v71-flex-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card.table-participle-v70v71 .participle-v70v71-section-title {
+  padding: 10px 16px;
+  background: var(--table-head);
+  font-weight: 700;
+  font-size: 0.95em;
+  color: var(--text);
+  border-bottom: 2px solid #9fa8c0;
+}
+
+.card.table-participle-v70v71 .participle-v70v71-header {
+  display: flex;
+  width: 100%;
+  background: var(--table-head);
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-strong);
+  color: var(--text);
+  font-size: 0.9em;
+}
+
+.card.table-participle-v70v71 .participle-v70v71-header > div {
+  padding: 8px 12px;
+  text-align: center;
+  border-right: 1px solid var(--border-strong);
+  box-sizing: border-box;
+}
+
+.card.table-participle-v70v71 .participle-v70v71-header > div:first-child {
+  width: 200px;
+  text-align: left;
+  flex: 0 0 200px;
+}
+
+.card.table-participle-v70v71 .participle-v70v71-header > div:last-child {
+  border-right: none;
+  flex: 1;
+}
+
+.card.table-participle-v70v71 .participle-v70v71-subheader {
+  display: flex;
+  width: 100%;
+  background: var(--table-head);
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-strong);
+  font-size: 0.85em;
+  color: var(--text);
+}
+
+.card.table-participle-v70v71 .participle-v70v71-subheader > div {
+  padding: 6px 12px;
+  text-align: center;
+  border-right: 1px solid var(--border-strong);
+  box-sizing: border-box;
+}
+
+.card.table-participle-v70v71 .participle-v70v71-subheader > div:first-child {
+  width: 200px;
+  flex: 0 0 200px;
+}
+
+.card.table-participle-v70v71 .participle-v70v71-subheader > div:last-child {
+  border-right: none;
+  flex: 1;
+  min-width: 0;
+}
+
+.card.table-participle-v70v71 .participle-v70v71-row {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--border-strong);
+  background: var(--table-row-even);
+}
+
+.card.table-participle-v70v71 .participle-v70v71-row:last-child {
+  border-bottom: none;
+}
+
+.card.table-participle-v70v71 .participle-v70v71-cell {
+  padding: 8px 12px;
+  border-right: 1px solid var(--border-strong);
+  box-sizing: border-box;
+  text-align: left;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+.card.table-participle-v70v71 .participle-v70v71-cell:first-child {
+  width: 200px;
+  font-weight: 600;
+  flex: 0 0 200px;
+}
+
+.card.table-participle-v70v71 .participle-v70v71-cell:last-child {
+  border-right: none;
+  flex: 1;
+  min-width: 0;
+}
+
+.card.table-participle-v70v71 .participle-v70v71-cell:last-child:has(.participle-v70v71-cell-inner) {
+  padding: 0;
+}
+
+.card.table-participle-v70v71 .participle-v70v71-cell-inner {
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.card.table-participle-v70v71 .participle-v70v71-cell-col {
+  flex: 0 0 50%;
+  width: 50%;
+  min-width: 0;
+  padding: 8px;
+  border-right: 1px solid var(--border-strong);
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.card.table-participle-v70v71 .participle-v70v71-cell-col:last-child {
+  border-right: none;
+}
+
+.card.table-participle-v70v71 .participle-v70v71-ending-dam {
+  color: #0066cc;
+  font-weight: 600;
+}
+
+.card.table-participle-v70v71 .participle-v70v71-ending-dam-orange {
+  color: #ff9800;
+  font-weight: 600;
+}
+
+.card.table-participle-v70v71 .participle-v70v71-ending-dama {
+  color: #cc0066;
+  font-weight: 600;
+}
+
+/* === moved pass2 from grammar-component-tables.css === */
+:root.dark .card.table-participle-v70v71 .participle-v70v71-section-title {
+  border-bottom-color: #5a6478;
+}

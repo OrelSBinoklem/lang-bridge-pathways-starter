@@ -1,0 +1,170 @@
+// BACKUP — lightning implementation before the midpoint-displacement rewrite (see presets.tsx).
+// Not compiled/imported by anything; kept for reference/rollback only.
+// Approach: per-point independent random jitter along a straight line (uniform segments),
+// single dark-blue triangle-ribbon mesh, background flash synced to the same trigger.
+
+type Point = { x: number; y: number };
+
+/** A jagged polyline from (x0,y0) to (x1,y1): interior points get perpendicular-ish random jitter. */
+function jaggedPath(x0: number, y0: number, x1: number, y1: number, segments: number, jitter: number): Point[] {
+  const points: Point[] = [];
+  for (let i = 0; i <= segments; i++) {
+    const t = i / segments;
+    let x = THREE.MathUtils.lerp(x0, x1, t);
+    let y = THREE.MathUtils.lerp(y0, y1, t);
+    if (i > 0 && i < segments) {
+      x += (Math.random() * 2 - 1) * jitter;
+      y += (Math.random() * 2 - 1) * jitter;
+    }
+    points.push({ x, y });
+  }
+  return points;
+}
+
+// THREE.LineBasicMaterial ignores `linewidth` in WebGL (spec limitation — lines always render
+// exactly 1px wide), which made every earlier version of this bolt technically present but
+// practically invisible. Building a real triangle ribbon guarantees a visible stroke width.
+function appendStrokeQuad(x0: number, y0: number, x1: number, y1: number, width: number, z: number, out: number[]): void {
+  const dx = x1 - x0;
+  const dy = y1 - y0;
+  const len = Math.hypot(dx, dy) || 1;
+  const nx = (-dy / len) * (width / 2);
+  const ny = (dx / len) * (width / 2);
+  const ax = x0 + nx, ay = y0 + ny;
+  const bx = x0 - nx, by = y0 - ny;
+  const cx = x1 - nx, cy = y1 - ny;
+  const dx2 = x1 + nx, dy2 = y1 + ny;
+  out.push(ax, ay, z, bx, by, z, cx, cy, z, ax, ay, z, cx, cy, z, dx2, dy2, z);
+}
+
+function appendPathStroke(points: Point[], width: number, z: number, out: number[]): void {
+  for (let i = 0; i < points.length - 1; i++) {
+    appendStrokeQuad(points[i].x, points[i].y, points[i + 1].x, points[i + 1].y, width, z, out);
+    // Small square "joint" at each interior vertex so the ribbon doesn't show gaps on sharp turns.
+    if (i > 0) {
+      const p = points[i];
+      out.push(
+        p.x - width / 2, p.y - width / 2, z, p.x + width / 2, p.y - width / 2, z, p.x + width / 2, p.y + width / 2, z,
+        p.x - width / 2, p.y - width / 2, z, p.x + width / 2, p.y + width / 2, z, p.x - width / 2, p.y + width / 2, z,
+      );
+    }
+  }
+}
+
+/** Picks a random point on the block's boundary, used as a bolt's start/end so it always reaches the edge. */
+function randomEdgePoint(halfW: number, halfH: number): Point {
+  const edge = Math.floor(Math.random() * 4);
+  if (edge === 0) return { x: -halfW, y: (Math.random() * 2 - 1) * halfH };
+  if (edge === 1) return { x: halfW, y: (Math.random() * 2 - 1) * halfH };
+  if (edge === 2) return { x: (Math.random() * 2 - 1) * halfW, y: halfH };
+  return { x: (Math.random() * 2 - 1) * halfW, y: -halfH };
+}
+
+/** Main trunk (edge to edge, or cursor to edge) plus 1-3 jagged offshoot branches peeling off it. */
+function buildBoltPaths(x0: number, y0: number, x1: number, y1: number): Point[][] {
+  const mainSegments = 9;
+  const main = jaggedPath(x0, y0, x1, y1, mainSegments, 16);
+  const paths: Point[][] = [main];
+
+  const mainDx = x1 - x0;
+  const mainDy = y1 - y0;
+  const mainLen = Math.max(Math.hypot(mainDx, mainDy), 1);
+  const mainAngle = Math.atan2(mainDy, mainDx);
+  const branchCount = 1 + Math.floor(Math.random() * 3);
+  for (let b = 0; b < branchCount; b++) {
+    const startIdx = 2 + Math.floor(Math.random() * (mainSegments - 3));
+    const start = main[startIdx];
+    const angle = mainAngle + (Math.random() * 2 - 1) * 1.1;
+    const length = (0.2 + Math.random() * 0.35) * mainLen;
+    const bx = start.x + Math.cos(angle) * length;
+    const by = start.y + Math.sin(angle) * length;
+    paths.push(jaggedPath(start.x, start.y, bx, by, 4, 9));
+  }
+  return paths;
+}
+
+/** Builds one stroke buffer from precomputed paths — main trunk gets `mainWidth`, branches `branchWidth`. */
+function buildStroke(paths: Point[][], mainWidth: number, branchWidth: number, z: number): Float32Array {
+  const positions: number[] = [];
+  paths.forEach((path, idx) => appendPathStroke(path, idx === 0 ? mainWidth : branchWidth, z, positions));
+  return new Float32Array(positions);
+}
+
+/**
+ * Branching lightning bolts: fire on their own every couple of seconds (sky-to-ground, edge to
+ * edge) and also spring from the cursor toward a random edge while actively hovering. Rendered as
+ * a single dark-blue triangle ribbon (LineBasicMaterial's `linewidth` is ignored by every browser
+ * and would otherwise draw a practically-invisible 1px hairline).
+ */
+function CursorLightningBolts({ width, height, pointerRef }: { width: number; height: number; pointerRef: MutableRefObject<PointerState> }) {
+  const boltRef = useRef<THREE.Mesh>(null);
+  const impactRef = useRef<THREE.Mesh>(null);
+  const flashRef = useRef<THREE.Mesh>(null);
+  const impactPos = useRef({ x: 0, y: 0 });
+  const timer = useRef<number | null>(null);
+  const life = useRef(0);
+  const flashLife = useRef(0);
+  const LIFETIME = 1.1;
+  const FLASH_LIFETIME = 0.22;
+
+  useFrame((_, delta) => {
+    const bolt = boltRef.current;
+    const impact = impactRef.current;
+    const flash = flashRef.current;
+    if (!bolt || !impact || !flash) return;
+    if (timer.current === null) timer.current = 1 + Math.random() * 1.5;
+    const boltMat = bolt.material as THREE.MeshBasicMaterial;
+    const impactMat = impact.material as THREE.MeshBasicMaterial;
+    const flashMat = flash.material as THREE.MeshBasicMaterial;
+
+    if (life.current > 0) {
+      life.current = Math.max(0, life.current - delta);
+      const t = life.current / LIFETIME;
+      boltMat.opacity = t * t * 0.7 + t * 0.3;
+      impactMat.opacity = t * 0.8;
+      impact.position.set(impactPos.current.x, impactPos.current.y, 4.5);
+    }
+    if (flashLife.current > 0) {
+      flashLife.current = Math.max(0, flashLife.current - delta);
+      flashMat.opacity = (flashLife.current / FLASH_LIFETIME) * 0.4;
+    }
+
+    timer.current -= delta;
+    if (timer.current <= 0) {
+      timer.current = 1.8 + Math.random() * 2.4;
+      const halfW = Math.max(width, 1) / 2;
+      const halfH = Math.max(height, 1) / 2;
+      const cursor = pointerRef.current;
+      const start = cursor.active ? { x: cursor.x, y: cursor.y } : randomEdgePoint(halfW, halfH);
+      const end = randomEdgePoint(halfW, halfH);
+      const paths = buildBoltPaths(start.x, start.y, end.x, end.y);
+
+      bolt.geometry.dispose();
+      const boltGeo = new THREE.BufferGeometry();
+      boltGeo.setAttribute('position', new THREE.BufferAttribute(buildStroke(paths, 3.2, 1.8, 4), 3));
+      bolt.geometry = boltGeo;
+
+      impactPos.current = { x: end.x, y: end.y };
+      life.current = LIFETIME;
+      flashLife.current = FLASH_LIFETIME;
+    }
+  });
+
+  return (
+    <>
+      {/* Background flash, triggered in the same frame as the bolt so it reads as one event. */}
+      <mesh ref={flashRef} position={[0, 0, 3.5]}>
+        <planeGeometry args={[Math.max(width, 1), Math.max(height, 1)]} />
+        <meshBasicMaterial color="#dfe9ff" transparent opacity={0} depthWrite={false} />
+      </mesh>
+      <mesh ref={boltRef}>
+        <bufferGeometry />
+        <meshBasicMaterial color="#1c3f8f" transparent opacity={0} depthWrite={false} />
+      </mesh>
+      <mesh ref={impactRef} position={[0, 0, -1000]}>
+        <planeGeometry args={[20, 20]} />
+        <meshBasicMaterial color="#1c3f8f" transparent opacity={0} depthWrite={false} />
+      </mesh>
+    </>
+  );
+}

@@ -1,0 +1,63 @@
+.card.table-adverbs-tenses table.adverbs-tenses{
+    table-layout: fixed;
+  }
+
+.card.table-adverbs-tenses table.adverbs-tenses thead th{
+    background: var(--head);
+    font-weight: 700;
+    font-size: 0.95rem;
+    vertical-align: middle;
+  }
+
+.card.table-adverbs-tenses table.adverbs-tenses .tense-header{
+    background: var(--sub);
+    font-weight: 700;
+    text-align: center;
+  }
+
+.card.table-adverbs-tenses table.adverbs-tenses .col-adverb{
+    width: 33.33%;
+    text-align: left;
+    padding: 8px 10px;
+  }
+
+.card.table-adverbs-tenses table.adverbs-tenses tbody td{
+    width: 33.33%;
+    vertical-align: top;
+    font-size: 0.9rem;
+    text-align: left;
+    padding: 8px 10px;
+  }
+
+.card.table-adverbs-tenses table.adverbs-tenses tbody tr:nth-child(odd) td{
+    background: var(--cell1);
+  }
+
+.card.table-adverbs-tenses table.adverbs-tenses tbody tr:nth-child(even) td{
+    background: var(--cell2);
+  }
+
+.card.table-adverbs-tenses table.adverbs-tenses .adv-lv{
+    font-weight: 600;
+  }
+
+.card.table-adverbs-tenses table.adverbs-tenses .adv-ru{
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+
+.card.table-adverbs-tenses table.adverbs-examples tbody td{
+    width: 33.33%;
+    vertical-align: top;
+    font-size: 0.9rem;
+    text-align: left;
+    padding: 8px 10px;
+  }
+
+.card.table-adverbs-tenses table.adverbs-examples tbody tr:nth-child(odd) td{
+    background: var(--cell1);
+  }
+
+.card.table-adverbs-tenses table.adverbs-examples tbody tr:nth-child(even) td{
+    background: var(--cell2);
+  }

@@ -1,0 +1,27 @@
+{
+  "title": "Демонстрация A1: библиотека",
+  "level": "A1",
+  "sections": [
+    {"skill": "listening", "seconds": 120, "tasks": [{
+      "id": "demo-listening", "title": "Klausieties paziņojumu!",
+      "segments": [{"speaker": "female", "text": "Bibliotēka šodien ir atvērta līdz pieciem. Grāmatu var lasīt pie loga."}],
+      "questions": [{"id": "demo-listening-q1", "type": "choice", "prompt": "Līdz cikiem bibliotēka ir atvērta?", "points": 1,
+        "options": [{"id": "a", "text": "Līdz pieciem."}, {"id": "b", "text": "Līdz trim."}, {"id": "c", "text": "Līdz septiņiem."}], "correct": "a", "explanation": "Paziņojumā teikts: līdz pieciem."}]
+    }]},
+    {"skill": "reading", "seconds": 120, "tasks": [{
+      "id": "demo-reading", "title": "Izlasiet un atbildiet!", "text": "Uz galda ir grāmata par putniem. Marta to lasa pie loga.",
+      "questions": [{"id": "demo-reading-q1", "type": "choice", "prompt": "Par ko ir grāmata?", "points": 1,
+        "options": [{"id": "a", "text": "Par putniem."}, {"id": "b", "text": "Par zivīm."}, {"id": "c", "text": "Par kokiem."}], "correct": "a", "explanation": "Tekstā minēti putni."}]
+    }]},
+    {"skill": "writing", "seconds": 180, "tasks": [{
+      "id": "demo-writing", "title": "Uzrakstiet īsu ziņu!",
+      "questions": [{"id": "demo-writing-q1", "type": "essay", "prompt": "Uzaiciniet draugu uz bibliotēku un pasakiet, ko vēlaties lasīt.", "points": 2,
+        "rubric": "Viens punkts par saprotamu uzaicinājumu un viens par lasāmvielas nosaukšanu; pieņem dabiskus formulējumus."}]
+    }]},
+    {"skill": "speaking", "seconds": 120, "tasks": [{
+      "id": "demo-speaking", "title": "Atbildiet uz jautājumu!",
+      "questions": [{"id": "demo-speaking-q1", "type": "speaking", "prompt": "Ko jums patīk lasīt?", "points": 1,
+        "rubric": "Viens punkts par saprotamu atbildi par lasāmvielu; personiskas detaļas drīkst izdomāt."}]
+    }]}
+  ]
+}

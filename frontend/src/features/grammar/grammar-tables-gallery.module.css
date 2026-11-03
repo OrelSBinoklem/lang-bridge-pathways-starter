@@ -1,0 +1,793 @@
+.root {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #212529;
+  color: #1b1f2b;
+  min-height: calc(100vh - 70px);
+}
+.galleryHeading { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 15px 0; color: #e8eef7; font-size: 14px; font-weight: 650; }
+.galleryHeading input { flex: 1; min-width: 100px; max-width: 480px; padding: 7px 10px; color: #23374a; background: #fff; border: 1px solid #adc0cf; border-radius: 4px; font: inherit; font-weight: 400; }
+@media(max-width: 650px) { .galleryHeading { flex-wrap: wrap; }.galleryHeading input { flex-basis: 100%; order: 2; max-width: none; } }
+
+:global(html.dark) .root {
+  background: #2a303a;
+  color: #fff;
+}
+
+/* контролы внутри бургера (#grammar-menu-portal-root) — как WP mobile menu */
+.menuPortal {
+  padding: 12px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.menuBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.menuLabel {
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.menuModeRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.levelFilters {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.levelFilterBtn {
+  flex: 1;
+  min-width: 50px;
+  padding: 6px 8px;
+  border: 2px solid;
+  background: transparent;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 13px;
+}
+
+.levelFilterBtnActive {
+  color: #fff !important;
+}
+
+.colsGroup {
+  display: flex;
+  gap: 5px;
+}
+
+.colBtn {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 600;
+}
+
+.colBtnActive {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.colBtn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.modeBtn {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.modeBtn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.modeIcon {
+  display: inline-block;
+  transition: transform 0.2s ease;
+  font-size: 12px;
+}
+
+.viewHorizontal .galleries {
+  min-height: calc(100vh - 70px);
+}
+
+.galleries {
+  padding: 10px 0;
+  min-height: calc(100vh - 70px);
+  box-sizing: border-box;
+}
+
+.tutorPresentation .galleries {
+  animation: tutorPresentationFadeIn 0.22s ease-out;
+}
+
+.galleryWrapper {
+  display: block;
+}
+
+@keyframes tutorPresentationFadeIn {
+  from {
+    opacity: 0.35;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.viewVertical .galleryWrapper + .galleryWrapper {
+  margin-top: 12px;
+}
+
+.gallery {
+  --cols: 3;
+  column-count: var(--cols);
+  column-gap: 12px;
+  padding: 12px;
+}
+
+.tableImg {
+  container-type: inline-size;
+  width: 100%;
+  margin: 0 0 12px;
+  break-inside: avoid;
+  position: relative;
+  cursor: pointer;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.tableImg img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #fff;
+}
+
+.adminTableId {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 12;
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgba(17, 24, 39, 0.88);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.2;
+  pointer-events: none;
+}
+
+.componentPreview {
+  width: 100%;
+  overflow: hidden;
+  background: #eef1f7;
+  border-radius: 8px;
+}
+
+/* HTML tables inherit the grammar palette; source-image tables deliberately stay untouched. */
+:global(html.dark) .componentPreview,
+:global(html.dark) .modalComponent {
+  background: #1e2430;
+  border: 1px solid #3d475c;
+}
+
+.componentPreview :global(.table-card) {
+  margin-bottom: 0;
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+.componentPreview :global(.card) {
+  margin: 0;
+}
+
+.componentPreview :global(.card h1),
+.componentPreview :global(.card h2),
+.componentPreview :global(.card h3),
+.componentPreview :global(.card > p),
+.componentPreview :global(.card .muted),
+.componentPreview :global(.card > .muted),
+.componentPreview :global(.card details),
+.componentPreview :global(.card [class*='title-banner']),
+.componentPreview :global(.card [class*='-title-banner']),
+.componentPreview :global(.card .section-title),
+.modalComponent :global(.card h1),
+.modalComponent :global(.card h2),
+.modalComponent :global(.card h3),
+.modalComponent :global(.card > p),
+.modalComponent :global(.card .muted),
+.modalComponent :global(.card > .muted),
+.modalComponent :global(.card details),
+.modalComponent :global(.card [class*='title-banner']),
+.modalComponent :global(.card [class*='-title-banner']),
+.modalComponent :global(.card .section-title) {
+  display: none;
+}
+
+/* Keep alphabet section headers visible. */
+.componentPreview :global(.card .alphabet-section-title),
+.modalComponent :global(.card .alphabet-section-title) {
+  display: block !important;
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/* Keep card titles visible where the card is built around them (gallery hides .card h2). */
+.componentPreview :global(.card .vs-head),
+.modalComponent :global(.card .vs-head),
+.componentPreview :global(.card .vs-title),
+.modalComponent :global(.card .vs-title),
+.componentPreview :global(.card .dk-intro),
+.modalComponent :global(.card .dk-intro) {
+  display: block !important;
+  visibility: visible;
+  opacity: 1;
+}
+/* Keep pronoun intros visible (gallery hides generic .card > p). */
+.componentPreview :global(.card .pron1-intro),
+.componentPreview :global(.card .pron2-intro),
+.componentPreview :global(.card .pron3-intro),
+.componentPreview :global(.card .pron4-intro),
+.componentPreview :global(.card .pron5-intro),
+.componentPreview :global(.card .pron6-intro),
+.componentPreview :global(.card .pron7-intro),
+.componentPreview :global(.card .pron10-intro),
+.componentPreview :global(.card .pron11-intro),
+.componentPreview :global(.card .pron12-intro),
+.componentPreview :global(.card .pron13-intro),
+.modalComponent :global(.card .pron1-intro),
+.modalComponent :global(.card .pron2-intro),
+.modalComponent :global(.card .pron3-intro),
+.modalComponent :global(.card .pron4-intro),
+.modalComponent :global(.card .pron5-intro),
+.modalComponent :global(.card .pron6-intro),
+.modalComponent :global(.card .pron7-intro),
+.modalComponent :global(.card .pron10-intro),
+.modalComponent :global(.card .pron11-intro),
+.modalComponent :global(.card .pron12-intro),
+.modalComponent :global(.card .pron13-intro) {
+  display: block !important;
+  visibility: visible;
+  opacity: 1;
+  margin: 0 0 12px 0;
+  padding-left: 12px;
+  color: #4a5568;
+}
+
+/* Keep table footnotes visible (gallery hides generic .card > p). */
+.componentPreview :global(.card .prepositions-note),
+.modalComponent :global(.card .prepositions-note),
+.componentPreview :global(.card .vv-note),
+.modalComponent :global(.card .vv-note),
+.componentPreview :global(.card .tj-note),
+.modalComponent :global(.card .tj-note),
+.componentPreview :global(.card .dl-note),
+.modalComponent :global(.card .dl-note) {
+  display: block !important;
+  visibility: visible;
+  opacity: 1;
+}
+
+.levelBadge {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px 0 0 0;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  opacity: 0.85;
+  background: #007bff;
+}
+
+.badgeA1 {
+  background: #c82341;
+}
+.badgeA2 {
+  background: #fc8423;
+}
+.badgeB1 {
+  background: #4a9f14;
+}
+.badgeB2 {
+  background: #018587;
+}
+
+
+.badgeSuper {
+  background: #0050b3;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+}
+
+.hintIcon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #3498db;
+  color: #fff;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+  opacity: 0;
+  border: none;
+  padding: 0;
+}
+
+.tableImg:hover .hintIcon {
+  opacity: 1;
+}
+
+.hintIcon:hover {
+  background: #2980b9;
+  transform: scale(1.12);
+}
+
+.tableModeToggle {
+  position: absolute;
+  top: 23px;
+  left: 8px;
+  z-index: 11;
+  min-width: 48px;
+  height: 28px;
+  border: none;
+  border-radius: 999px;
+  background: rgba(20, 30, 48, 0.86);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.tableImg:hover .tableModeToggle {
+  opacity: 1;
+}
+
+.tableModeToggle:hover {
+  background: #111827;
+  transform: translateY(-1px);
+}
+
+.componentAdminPanel {
+  position: fixed;
+  top: 78px;
+  right: 16px;
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border: 1px solid rgba(148, 163, 184, 0.36);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.94);
+  color: #162033;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.15);
+  backdrop-filter: blur(8px);
+  /* Almost invisible until the pointer (or keyboard focus) reaches it. */
+  opacity: 0.12;
+  transition: opacity 0.2s ease;
+}
+
+.componentAdminPanel:hover,
+.componentAdminPanel:focus-within {
+  opacity: 1;
+}
+
+.componentAdminPanel button {
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #fff;
+  color: #1f2937;
+  padding: 6px 10px;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.componentAdminPanel button:hover,
+.componentAdminPanel .adminModeActive {
+  border-color: #2563eb;
+  background: #2563eb;
+  color: #fff;
+}
+
+
+/* horizontal mode */
+.horizontalMode {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  overflow-y: hidden;
+  height: calc(100vh - 70px);
+  gap: 0;
+  padding: 10px 12px;
+  box-sizing: border-box;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.horizontalMode::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.horizontalMode .galleryWrapper {
+  flex: 0 0 auto;
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.horizontalMode .galleryWrapper + .galleryWrapper {
+  margin-left: 12px;
+}
+
+.horizontalMode .gallery {
+  height: 100%;
+  overflow: hidden;
+  padding: 0;
+  box-sizing: border-box;
+  column-count: 1 !important;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 12px;
+}
+
+.horizontalMode .tableImg {
+  margin-bottom: 0;
+  width: calc(
+    (var(--real-vw, 100vw) - 25px) / var(--cols) - 12px * (var(--cols) - 1) / var(--cols)
+  );
+  flex: 0 0 auto;
+}
+
+.pageIndicator {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.72);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.pageNavBtn {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.pageNavBtn:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.empty {
+  padding: 48px 16px;
+  text-align: center;
+  color: rgba(27, 31, 43, 0.55);
+}
+
+:global(html.dark) .empty {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* lightbox */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: min(4vh, 32px);
+}
+
+.modalContent {
+  position: relative;
+  max-width: 95vw;
+  max-height: 95vh;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* Let backdrop clicks pass through empty flex space; children re-enable hits. */
+  pointer-events: none;
+}
+
+.modalContent > * {
+  pointer-events: auto;
+}
+
+.modalClose {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(0, 0, 0, 0.65);
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.modalClose:hover {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.modalImage {
+  max-width: 95vw;
+  max-height: 92vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  background: #fff;
+}
+
+.modalComponentFrame {
+  width: min(1180px, 95vw);
+  max-width: 95vw;
+  /* Explicit viewport height so ScaledTableEmbed contain can measure boxH (not % of auto parent). */
+  height: 92vh;
+  max-height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalComponent {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  background: #eef1f7;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+.modalComponent :global(.table-card) {
+  margin-bottom: 0;
+  box-shadow: none;
+}
+
+.modalComponent :global(.card) {
+  margin: 0;
+}
+
+.modalCaption {
+  margin-top: 12px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+  max-width: 90vw;
+  text-align: center;
+}
+
+.modalLevel {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+/* hint modal */
+.hintModal {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.hintContent {
+  position: relative;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  max-width: 1200px;
+  width: 90%;
+  max-height: calc(100vh - 40px);
+  overflow: hidden;
+  border: 2px solid #dee2e6;
+}
+
+.hintClose {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.hintClose:hover {
+  background: #c82333;
+}
+
+.hintFrame {
+  width: 100%;
+  min-height: min(80vh, 720px);
+  height: calc(100vh - 80px);
+  max-height: calc(100vh - 40px);
+  border: none;
+  display: block;
+  background: #fff;
+}
+
+:global(html.dark) .hintContent {
+  background: #12141a;
+  border-color: #3d475c;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    --cols: 1;
+  }
+
+  .hintModal {
+    padding: 12px 0;
+  }
+
+  .hintContent {
+    width: 100%;
+    max-height: calc(100vh - 24px);
+    border-radius: 0;
+  }
+
+  .hintFrame {
+    min-height: calc(100vh - 24px);
+    height: calc(100vh - 24px);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .gallery {
+    --cols: 2;
+  }
+}
+
+
+/* Design-size font for scaled HTML tables (matches screenshot density). */
+:global(.grammar-component-table-scale-inner) {
+  font-size: var(--grammar-embed-font-size, 24px);
+  line-height: 1.45;
+  box-sizing: border-box;
+}
+
+:global(.grammar-component-table-scale-inner .table-card),
+:global(.grammar-component-table-scale-inner .card) {
+  width: 100%;
+  max-width: none;
+}
+/* Keep word-structure notes visible */
+.componentPreview :global(.card .vs-notes),
+.modalComponent :global(.card .vs-notes),
+.componentPreview :global(.card .vs-note),
+.modalComponent :global(.card .vs-note) {
+  display: block !important;
+  visibility: visible;
+  opacity: 1;
+}
+.practiceCatalog {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  color: #e2f5ee;
+}

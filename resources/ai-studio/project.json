@@ -1,0 +1,447 @@
+{
+  "version": 2,
+  "anchors": [
+    {
+      "id": "events",
+      "name": "События сайта",
+      "icon": "pi-bolt",
+      "colour": "#cf7900",
+      "description": "Сообщение, аудио, отправка задания или экзамена, фоновое резюме.",
+      "position": {
+        "x": 0,
+        "y": 470
+      }
+    },
+    {
+      "id": "storage",
+      "name": "Хранилище проекта",
+      "icon": "pi-server",
+      "colour": "#64748b",
+      "description": "Диалоги и резюме, ответы на задания, экзаменационные попытки. Данные разделены по пользователям.",
+      "position": {
+        "x": 1620,
+        "y": 500
+      }
+    }
+  ],
+  "connections": [
+    {
+      "id": "chat_event",
+      "source": "events",
+      "target": "tutor",
+      "label": "Сообщение / голос",
+      "channel": "event",
+      "description": "WebSocket принимает сообщение или подготовленные варианты распознавания. Это вход основного чата.",
+      "handler": "tools/tutor-gateway/src/server.mjs"
+    },
+    {
+      "id": "exam_event",
+      "source": "events",
+      "target": "exams",
+      "label": "Латышский экзамен",
+      "channel": "event",
+      "description": "Запись ответа и сдача экзамена — разные события внутри модуля экзаменов.",
+      "handler": "app/Services/Exams/ExamAi.php"
+    },
+    {
+      "id": "english_exam_event",
+      "source": "events",
+      "target": "english_exams",
+      "label": "Английский экзамен",
+      "channel": "event",
+      "description": "Английские ответы и их оценивание используют отдельные профили и рубрики.",
+      "handler": "app/Services/Exams/ExamAi.php"
+    },
+    {
+      "id": "translation_event",
+      "source": "events",
+      "target": "translation",
+      "label": "Проверить перевод",
+      "channel": "event",
+      "description": "Проверка отправленного перевода запускается его учебным обработчиком.",
+      "handler": "app/Services/TranslationAssessment.php"
+    },
+    {
+      "id": "daily_memory_event",
+      "source": "events",
+      "target": "memory",
+      "label": "Суточное резюме",
+      "channel": "event",
+      "description": "Фоновое резюме выполняется планировщиком, не после каждого ответа чата.",
+      "handler": "app/Services/Tutor/OpenAiSummaryService.php"
+    },
+    {
+      "id": "compress_dialogue",
+      "source": "tutor",
+      "target": "memory",
+      "label": "Сжать переписку",
+      "channel": "request",
+      "description": "При сжатии основного разговора отдельная модель получает накопленную переписку и состояния. Это условный вызов, а не обязательный запуск после каждой реплики.",
+      "handler": "tools/tutor-gateway/src/server.mjs"
+    },
+    {
+      "id": "summary_context",
+      "source": "memory",
+      "target": "tutor",
+      "label": "Резюме в контекст",
+      "channel": "result",
+      "description": "Результат сжатия используется при восстановлении и сборке контекста основного чата.",
+      "handler": "tools/tutor-gateway/src/context/TutorContextBuilder.mjs"
+    },
+    {
+      "id": "chat_reference",
+      "source": "tutor",
+      "target": "references",
+      "label": "web.reference",
+      "channel": "request",
+      "description": "Основной бот может запросить языковой справочник командой. Табличник по грамматическим таблицам остаётся отдельным инструментом внутри модуля чата.",
+      "handler": "tools/tutor-gateway/src/commands/registry.mjs"
+    },
+    {
+      "id": "exam_reference",
+      "source": "exams",
+      "target": "references",
+      "label": "Проверить форму",
+      "channel": "request",
+      "description": "Латышский экзаменатор вызывает справочник при необходимости; количество вызовов ограничено обработчиком.",
+      "handler": "app/Services/Language/AssessmentReferences.php"
+    },
+    {
+      "id": "translation_reference",
+      "source": "translation",
+      "target": "references",
+      "label": "Проверить латышский",
+      "channel": "request",
+      "description": "Проверка перевода может использовать тот же справочный инструмент. Внешние данные не становятся инструкциями модели.",
+      "handler": "app/Services/Language/AssessmentReferences.php"
+    },
+    {
+      "id": "reference_chat_result",
+      "source": "references",
+      "target": "tutor",
+      "label": "Результат поиска",
+      "channel": "result",
+      "description": "Справочный результат возвращается вызвавшему его основному боту.",
+      "handler": "tools/tutor-gateway/src/server.mjs"
+    },
+    {
+      "id": "reference_exam_result",
+      "source": "references",
+      "target": "exams",
+      "label": "Ответ справочника",
+      "channel": "result",
+      "description": "Информация справочника возвращается экзаменатору в следующем шаге его ограниченного цикла инструментов.",
+      "handler": "app/Services/Language/AssessmentReferences.php"
+    },
+    {
+      "id": "reference_translation_result",
+      "source": "references",
+      "target": "translation",
+      "label": "Ответ справочника",
+      "channel": "result",
+      "description": "Справочная информация возвращается обработчику проверки перевода.",
+      "handler": "app/Services/Language/AssessmentReferences.php"
+    },
+    {
+      "id": "dialogue_store",
+      "source": "tutor",
+      "target": "storage",
+      "label": "Сообщения и состояния",
+      "channel": "stored",
+      "description": "Переписка и состояния сохраняются за текущим пользователем и разговором.",
+      "handler": "tools/tutor-gateway/src/server.mjs"
+    },
+    {
+      "id": "dialogue_restore",
+      "source": "storage",
+      "target": "tutor",
+      "label": "Восстановить контекст",
+      "channel": "stored",
+      "description": "При восстановлении разговора история, заметки и резюме поступают из постоянного хранилища.",
+      "handler": "tools/tutor-gateway/src/context/TutorContextBuilder.mjs"
+    },
+    {
+      "id": "memory_store",
+      "source": "memory",
+      "target": "storage",
+      "label": "Резюме и память",
+      "channel": "stored",
+      "description": "Итоговые резюме сохраняются для последующего восстановления и поиска.",
+      "handler": "app/Services/Tutor/OpenAiSummaryService.php"
+    },
+    {
+      "id": "exam_store",
+      "source": "exams",
+      "target": "storage",
+      "label": "Попытка и результат",
+      "channel": "stored",
+      "description": "Экзаменационные ответы и результаты принадлежат своей попытке и пользователю.",
+      "handler": "app/Services/Exams/ExamAi.php"
+    },
+    {
+      "id": "english_exam_store",
+      "source": "english_exams",
+      "target": "storage",
+      "label": "Попытка и результат",
+      "channel": "stored",
+      "description": "Английские экзаменационные попытки сохраняются отдельно от курса и чата.",
+      "handler": "app/Services/Exams/ExamAi.php"
+    },
+    {
+      "id": "translation_store",
+      "source": "translation",
+      "target": "storage",
+      "label": "Ответ и оценка",
+      "channel": "stored",
+      "description": "Перевод и его проверка сохраняются в ответе на учебное задание.",
+      "handler": "app/Services/TranslationAssessment.php"
+    }
+  ],
+  "modules": [
+    {
+      "id": "tutor",
+      "name": "Основной чат",
+      "icon": "pi-comments",
+      "colour": "#2563eb",
+      "roles": [
+        "tutor"
+      ],
+      "position": {
+        "x": 400,
+        "y": 0
+      },
+      "kind": "application",
+      "binding": {
+        "engine": "tutor_flow",
+        "key": "tutor"
+      },
+      "inputs": [
+        {
+          "id": "chat_event",
+          "label": "Сообщение / голос"
+        },
+        {
+          "id": "summary_context",
+          "label": "Резюме в контекст"
+        },
+        {
+          "id": "reference_chat_result",
+          "label": "Результат поиска"
+        },
+        {
+          "id": "dialogue_restore",
+          "label": "Восстановить контекст"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "compress_dialogue",
+          "label": "Сжать переписку"
+        },
+        {
+          "id": "chat_reference",
+          "label": "web.reference"
+        },
+        {
+          "id": "dialogue_store",
+          "label": "Сообщения и состояния"
+        }
+      ]
+    },
+    {
+      "id": "memory",
+      "name": "Память диалогов",
+      "icon": "pi-database",
+      "colour": "#008b83",
+      "roles": [
+        "dialogue_summary",
+        "daily_summary"
+      ],
+      "position": {
+        "x": 1020,
+        "y": 0
+      },
+      "kind": "application",
+      "binding": {
+        "engine": "service_workflow",
+        "key": "memory"
+      },
+      "inputs": [
+        {
+          "id": "daily_memory_event",
+          "label": "Суточное резюме"
+        },
+        {
+          "id": "compress_dialogue",
+          "label": "Сжать переписку"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "summary_context",
+          "label": "Резюме в контекст"
+        },
+        {
+          "id": "memory_store",
+          "label": "Резюме и память"
+        }
+      ]
+    },
+    {
+      "id": "exams",
+      "name": "Экзамены",
+      "icon": "pi-file-check",
+      "colour": "#7c3aed",
+      "roles": [
+        "examiner",
+        "exam_stt_primary",
+        "exam_stt_secondary"
+      ],
+      "position": {
+        "x": 400,
+        "y": 440
+      },
+      "kind": "application",
+      "binding": {
+        "engine": "service_workflow",
+        "key": "exams"
+      },
+      "inputs": [
+        {
+          "id": "exam_event",
+          "label": "Латышский экзамен"
+        },
+        {
+          "id": "reference_exam_result",
+          "label": "Ответ справочника"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "exam_reference",
+          "label": "Проверить форму"
+        },
+        {
+          "id": "exam_store",
+          "label": "Попытка и результат"
+        }
+      ]
+    },
+    {
+      "id": "english_exams",
+      "name": "Экзамены · английский",
+      "icon": "pi-language",
+      "colour": "#5260bd",
+      "roles": [
+        "examiner_en",
+        "exam_stt_en_primary",
+        "exam_stt_en_secondary"
+      ],
+      "position": {
+        "x": 400,
+        "y": 820
+      },
+      "kind": "application",
+      "binding": {
+        "engine": "service_workflow",
+        "key": "english_exams"
+      },
+      "inputs": [
+        {
+          "id": "english_exam_event",
+          "label": "Английский экзамен"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "english_exam_store",
+          "label": "Попытка и результат"
+        }
+      ]
+    },
+    {
+      "id": "translation",
+      "name": "Проверка перевода",
+      "icon": "pi-pencil",
+      "colour": "#b34e27",
+      "roles": [
+        "translation"
+      ],
+      "position": {
+        "x": 400,
+        "y": 1180
+      },
+      "kind": "application",
+      "binding": {
+        "engine": "service_workflow",
+        "key": "translation"
+      },
+      "inputs": [
+        {
+          "id": "translation_event",
+          "label": "Проверить перевод"
+        },
+        {
+          "id": "reference_translation_result",
+          "label": "Ответ справочника"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "translation_reference",
+          "label": "Проверить латышский"
+        },
+        {
+          "id": "translation_store",
+          "label": "Ответ и оценка"
+        }
+      ]
+    },
+    {
+      "id": "references",
+      "name": "Латышские справочники",
+      "icon": "pi-book",
+      "colour": "#56851c",
+      "roles": [
+        "reference"
+      ],
+      "position": {
+        "x": 1020,
+        "y": 680
+      },
+      "kind": "application",
+      "binding": {
+        "engine": "service_workflow",
+        "key": "references"
+      },
+      "inputs": [
+        {
+          "id": "chat_reference",
+          "label": "web.reference"
+        },
+        {
+          "id": "exam_reference",
+          "label": "Проверить форму"
+        },
+        {
+          "id": "translation_reference",
+          "label": "Проверить латышский"
+        }
+      ],
+      "outputs": [
+        {
+          "id": "reference_chat_result",
+          "label": "Результат поиска"
+        },
+        {
+          "id": "reference_exam_result",
+          "label": "Ответ справочника"
+        },
+        {
+          "id": "reference_translation_result",
+          "label": "Ответ справочника"
+        }
+      ]
+    }
+  ]
+}

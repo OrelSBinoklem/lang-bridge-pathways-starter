@@ -1,0 +1,31 @@
+.page { width: min(100% - 32px, 1240px); margin: 28px auto 60px; color: var(--text-color); }
+.header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+.header h1 { margin: 0; font-size: clamp(24px, 3vw, 34px); font-weight: 750; }
+.header p { color: var(--text-color-secondary); }
+.page button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 13px; border: 1px solid var(--surface-border); border-radius: 6px; background: var(--surface-card); color: var(--text-color); font: inherit; cursor: pointer; }
+.page button:disabled { opacity: .5; cursor: not-allowed; }
+.page button:focus-visible, .page select:focus-visible, .page textarea:focus-visible { outline: 2px solid #15927b; outline-offset: 2px; }
+.note { font-size: 14px; line-height: 1.6; color: var(--text-color-secondary); }
+.capabilities { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; padding: 12px; background: var(--surface-ground); border: 1px solid var(--surface-border); border-radius: 8px; font-size: 13px; }
+.tempo { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin: 18px 0; font-size: 14px; }
+.tempo input { width: 170px; accent-color: #15836a; }
+.tempo output { font-variant-numeric: tabular-nums; }
+.cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.card { min-width: 0; border: 1px solid var(--surface-border); border-radius: 10px; padding: 18px; background: var(--surface-card); }
+.card h2 { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px; margin: 0 0 18px; font-size: 24px; font-weight: 750; }
+.card h2 small { color: var(--text-color-secondary); font-size: 12px; font-weight: 500; }
+.card label { display: grid; gap: 7px; min-width: 0; margin: 12px 0; font-size: 13px; font-weight: 650; }
+.card textarea, .card select { width: 100%; min-width: 0; box-sizing: border-box; border: 1px solid var(--surface-border); border-radius: 6px; padding: 10px; background: var(--surface-ground); color: var(--text-color); font: inherit; font-weight: 400; }
+.card textarea { min-height: 125px; resize: vertical; font-size: 16px; line-height: 1.6; }
+.card select { font-size: 14px; }
+.voiceNote { min-height: 60px; color: var(--text-color-secondary); font-size: 12px; line-height: 1.6; }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+.actions button:first-child { background: #117560; border-color: #117560; color: white; }
+.recognition { border-top: 1px solid var(--surface-border); margin-top: 18px; padding-top: 16px; }
+.recognition h3 { margin: 0; font-size: 17px; font-weight: 700; }
+.recognition p { font-size: 13px; line-height: 1.6; }
+.status { min-height: 42px; color: var(--text-color-secondary); overflow-wrap: anywhere; }
+.inventory { margin-top: 24px; padding: 14px; border: 1px solid var(--surface-border); border-radius: 8px; font-size: 13px; overflow-wrap: anywhere; }
+.inventory summary { cursor: pointer; }
+.inventory li { padding: 5px 0; }
+@media(max-width: 900px) { .cards { grid-template-columns: 1fr; } .voiceNote { min-height: 0; } }
